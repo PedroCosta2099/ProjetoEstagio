@@ -1,0 +1,630 @@
+[2021-04-07 11:53:18] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:53:18] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:53:18] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:53:19] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:53:19] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:53:19] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:53:20] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:53:20] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:53:20] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:53:23] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:53:23] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:53:23] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:54:46] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:54:46] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:54:46] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:55:42] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:55:42] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:55:42] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:56:15] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:56:15] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:56:15] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:57:51] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:57:51] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 11:57:51] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 12:23:59] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 12:23:59] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 12:23:59] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:27:01] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:27:01] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:27:01] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:27:04] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:27:04] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:27:04] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:29:58] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:29:58] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:29:58] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:30:04] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:30:04] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:30:04] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:30:19] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:30:19] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:30:19] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:30:38] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:30:38] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:30:38] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:31:29] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:31:29] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:31:29] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:31:43] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:31:43] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:31:43] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:32:04] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:32:04] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 13:32:04] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:06:42] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:06:42] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:06:42] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:06:44] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:06:44] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:06:44] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:06:47] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:06:47] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:06:47] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:12:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:12:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:12:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:12:44] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:12:44] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:12:44] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:12:52] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:12:52] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:12:52] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:12:54] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:12:54] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:12:54] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:13:07] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:13:07] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 15:13:07] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 18:13:30] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 18:13:30] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 18:13:30] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 18:13:31] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 18:13:31] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 18:13:31] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 18:13:34] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 18:13:34] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 18:13:34] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 18:13:38] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 18:13:38] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-07 18:13:38] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://homestead.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.114 Safari/537.36
+IP: 192.168.10.1
+  

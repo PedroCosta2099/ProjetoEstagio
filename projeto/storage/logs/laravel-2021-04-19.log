@@ -1,0 +1,63 @@
+[2021-04-19 16:53:17] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-19 16:53:17] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-19 16:53:17] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-19 16:53:20] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-19 16:53:20] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-19 16:53:20] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-19 16:53:32] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-19 16:53:32] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-04-19 16:53:32] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/uploads/users/ecz1yqjat3.png:999999
+Method: GET
+File: /home/vagrant/Projetos/projeto_base/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.128 Safari/537.36
+IP: 192.168.10.1
+  
