@@ -1,3 +1,0 @@
-<span>
-    €{{ $row->vat}}
-</span>
