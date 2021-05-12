@@ -1,1 +1,0 @@
-{{ Form::checkbox('row-select', $row->id, null, array('class' => 'row-select')) }}
