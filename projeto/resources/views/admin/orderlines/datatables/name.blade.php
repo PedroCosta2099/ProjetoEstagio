@@ -1,0 +1,2 @@
+{{$row->product->name}}
+

@@ -1,0 +1,3 @@
+<span>
+    €{{ $row->price}}
+</span>
