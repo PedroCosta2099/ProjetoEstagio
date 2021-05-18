@@ -4,6 +4,7 @@
 
 @section('content-header')
     Pedidos
+    
 @stop
 
 @section('breadcrumb')
@@ -20,11 +21,6 @@
                     <li>
                         <button class="btn btn-default btn-sm" id="refresh"><i style="color:rgba(0,0,0,0.6)" class="fas fa-sync"></i></button>
                     </li>
-                    <li>
-                        <a href="{{ route('admin.orders.sort') }}" class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-remote">
-                            <i class="fas fa-sort-amount-down"></i> Ordenar
-                        </a>
-                    </li>
                 </ul>
                 <div class="table-responsive">
                     <table id="datatable" class="table table-striped table-dashed table-hover table-condensed">
@@ -34,6 +30,7 @@
                                 <th>Pedido</th>
                                 <th>Preço</th>
                                 <th>IVA</th>
+                                <th class="w-1">Estado</th>
                                 <th class="w-65px">Ações</th>
                             </tr>
                         </thead>
@@ -63,6 +60,7 @@
                 {data: 'id', name: 'id',orderable:false,searchable:true},
                 {data: 'total_price', name:'price', orderable: false, searchable: false},
                 {data: 'vat', name:'vat', orderable: false, searchable: false},
+                {data: 'status_id', name:'status_id'},
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},
             ],
             ajax: {

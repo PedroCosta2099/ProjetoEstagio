@@ -255,6 +255,9 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
                 ->edit_column('vat', function($row) {
                     return view('admin.orders.datatables.vat', compact('row'))->render();
                 })
+                ->edit_column('status_id', function($row) {
+                    return view('admin.orders.datatables.status', compact('row'))->render();
+                })
                 ->add_column('select', function($row) {
                     return view('admin.partials.datatables.select', compact('row'))->render();
                 })

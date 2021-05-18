@@ -67,4 +67,17 @@ class Order extends BaseModel implements Sortable
     public function orderCols(){
         return $this->belongsToMany(Orderline::class,'order_lines','order_id','product_id');
     }
+
+      /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    |
+    | Define current model relationships
+    */
+
+    public function status()
+    {
+        return $this->belongsTo('App\Models\Status','status_id');
+    }
 }

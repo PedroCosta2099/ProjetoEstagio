@@ -17,7 +17,7 @@
        <div class="col-sm-3">
             <div class="form-group is-required">
                 {{ Form::label('product_id', 'Produto') }}
-                {{ Form::hidden('orderLineId', $orderline['id'],['id'=>'orderLineId'])}}
+                {{ Form::hidden('', $orderline['id'],['class'=>'orderLineId'])}}
                 {{ Form::text('', $orderline['product_id'], ['class' => 'form-control ','readonly'])}}
             </div>
         </div>
@@ -36,7 +36,7 @@
         <div class="col-sm-3">
             <div class="form-group is-required">
                 {{ Form::label('quantity', 'Quantidade') }}
-                {{ Form::number('quantity',$orderline['quantity'], ['class' => 'form-control  uppercase ', 'required','id' => 'quantity','min' => '0']) }}
+                {{ Form::number('',$orderline['quantity'], ['class' => 'quantity form-control  uppercase ', 'required','min' => '0']) }}
             </div>
         </div>  
     @endforeach
@@ -54,7 +54,7 @@
     $('input').iCheck(Init.iCheck());
     $('[data-toggle="tooltip"]').tooltip();
     
-    $('#quantity').change(function(){
+    $('.quantity').change(function(){
         
         var quantity = $(this).val();
         
@@ -66,7 +66,8 @@
         else if(quantity > 0)
         {
             
-        var id = $('#orderLineId').val();
+        var id = $('.orderLineId').val();
+        
         $.ajax({
            type:"get",
            url:"{{url('admin/orderlines/updatePriceVat')}}/"+ id + "/" +quantity,

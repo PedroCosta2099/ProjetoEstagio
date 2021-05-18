@@ -211,6 +211,9 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'auth.admin', 'namespace
     
     Route::get('payments/statusEdit/{id}', 'PaymentsController@statusEdit')
         ->name('admin.payments.statusEdit');
+    
+    Route::get('payments/{id}/payed','PaymentsController@payed')
+        ->name('admin.payments.payed');
 
     Route::resource('payments', 'PaymentsController', [
         'as' => 'admin',
@@ -326,12 +329,13 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'auth.admin', 'namespace
         ->name('admin.orderlines.selected.destroy');
 
     Route::get('orderlines/sort', 'OrderLinesController@sortEdit')
-        ->name('admin.orderlines.sort');
+        ->name('admin.orderlines.sort_status');
 
     Route::post('orderlines/sort', 'OrderLinesController@sortUpdate')
         ->name('admin.orderlines.sort.update');
 
     Route::get('orderlines/updatePriceVat/{id}/{quantity}','OrderLinesController@updatePriceVat');
+
     Route::resource('orderlines', 'OrderLinesController', [
         'as' => 'admin',
         'except' => ['show']]);

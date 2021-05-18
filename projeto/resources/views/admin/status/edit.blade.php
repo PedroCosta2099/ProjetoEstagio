@@ -1,3 +1,4 @@
+
 {{ Form::model($status, $formOptions) }}
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">
@@ -16,8 +17,8 @@
         </div>
         <div class="col-sm-12">
             <div class="form-group is-required">
-                {{ Form::label('status_color', 'Cor') }}
-                {{ Form::text('status_color', null, ['class' => 'form-control uppercase', 'required']) }}
+                {{ Form::label('status_color', 'Cor Atribuida') }}
+                {{ Form::text('status_color', null, ['class' => 'form-control uppercase', 'required','autocomplete'=>'off']) }}
             </div>
         </div>
     </div>
@@ -32,4 +33,9 @@
     $('.select2').select2(Init.select2());
     $('input').iCheck(Init.iCheck());
     $('[data-toggle="tooltip"]').tooltip();
-</script>
+</script>@section('javascript')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/js/bootstrap-colorpicker.min.js"></script>
+    <script>
+        $('#status_color').colorpicker();
+    </script>
+

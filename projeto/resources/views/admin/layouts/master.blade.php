@@ -16,6 +16,7 @@
             <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
             <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/css/bootstrap-colorpicker.min.css" rel="stylesheet">
     </head>
     <body class="{{ app_skin() }} fixed sidebar-mini sidebar-collapse">
         <div class="wrapper">
@@ -45,5 +46,6 @@
 
         @include('admin.partials.scripts')
         @include('admin.partials.alerts')
+
     </body>
 </html>

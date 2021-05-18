@@ -133,8 +133,7 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
     }
 
     public function updatePriceVat($id,$quantity)
-    {
-        
+    { 
         $IVA = 0.23;
         $orderline = OrderLine::findOrfail($id);
         $product = Product::where('id', $orderline->product_id)
@@ -242,6 +241,9 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
                 ->edit_column('status_id', function($row) {
                     return view('admin.orderlines.datatables.status', compact('row'))->render();
                 })
+                ->edit_column('order_id', function($row) {
+                    return view('admin.orderlines.datatables.order', compact('row'))->render();
+                })
                 ->add_column('select', function($row) {
                     return view('admin.partials.datatables.select', compact('row'))->render();
                 })
@@ -267,7 +269,7 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
 
         $route = route('admin.orderlines.sort.update');
 
-        return view('admin.partials.modals.sort', compact('items', 'route'))->render();
+        return view('admin.partials.modals.sort_status', compact('items', 'route'))->render();
     }
 
     /**

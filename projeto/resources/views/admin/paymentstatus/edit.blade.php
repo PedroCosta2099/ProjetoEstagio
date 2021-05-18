@@ -34,4 +34,10 @@
     $('.select2').select2(Init.select2());
     $('input').iCheck(Init.iCheck());
     $('[data-toggle="tooltip"]').tooltip();
+    
 </script>
+</script>@section('javascript')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/js/bootstrap-colorpicker.min.js"></script>
+    <script>
+        $('#status_color').colorpicker();
+    </script>

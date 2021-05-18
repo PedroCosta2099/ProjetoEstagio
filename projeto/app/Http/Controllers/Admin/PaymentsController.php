@@ -10,6 +10,8 @@ use App\Models\User;
 use App\Models\Payment;
 use App\Models\PaymentType;
 use App\Models\PaymentStatus;
+use App\Models\Order;
+use App\Models\Status;
 
 
 class PaymentsController extends \App\Http\Controllers\Admin\Controller {
@@ -126,6 +128,19 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
         return view('admin.payments.edit', $data)->render();
     }
 
+    public function payed($id){
+
+        $payment = Payment::where('id',$id)
+                            ->first();
+
+        $status = PaymentStatus::where('name','like','PAGO')
+                            ->first();
+                                       
+        $payment->payment_status_id = $status->id;
+        $payment->save();
+        return Redirect::back()->with('success', 'Dados gravados com sucesso.');
+
+    }
 
     /**
      * Update the specified resource in storage.
@@ -224,15 +239,19 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
                 ->edit_column('order_id', function($row) {
                     return view('admin.payments.datatables.order', compact('row'))->render();
                 })
+                ->edit_column('id', function($row) {
+                    return view('admin.payments.datatables.id', compact('row'))->render();
+                })
+                ->edit_column('pay', function($row) {
+                    return view('admin.payments.datatables.pay', compact('row'))->render();
+                })
                 ->add_column('select', function($row) {
                     return view('admin.partials.datatables.select', compact('row'))->render();
                 })
                 ->add_column('actions', function($row) {
                     return view('admin.payments.datatables.actions', compact('row'))->render();
                 })
-                ->add_column('pay', function($row) {
-                    return view('admin.payments.datatables.pay', compact('row'))->render();
-                })
+
                 ->make(true);
     }
 

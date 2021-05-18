@@ -1,11 +1,11 @@
-<!--<div>
+<div>
     @if($row->payment_status->name === 'PAGO')
 
     @else
     <div>
-    <a href="{{ route('admin.payments.statusEdit', $row->id) }}" class="btn  btn-sm btn-default" data-toggle="modal" data-target="#modal-remote">
+    <a href="{{ route('admin.payments.payed', $row->id) }}" class="btn  btn-sm btn-default">
         Marcar como Pago
     </a>
     </div>
     @endif
-</div>-->
+</div>

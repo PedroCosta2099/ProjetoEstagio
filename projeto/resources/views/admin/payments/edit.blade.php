@@ -56,4 +56,5 @@
     $('.select2').select2(Init.select2());
     $('input').iCheck(Init.iCheck());
     $('[data-toggle="tooltip"]').tooltip();
+
 </script>
