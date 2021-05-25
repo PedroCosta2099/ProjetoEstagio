@@ -96,9 +96,11 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
         $order = Order::findOrfail($id);
         
         $orderlines = OrderLine::where('order_id',$order->id)
-                    ->get()
-                    ->toArray();
-        
+                                ->get()
+                                ->toArray();
+                              
+        $orderTotalPrice = OrderLine::where('order_id',$order->id)
+                                    ->sum('total_price');
         $operators = User::orderBy('code', 'asc')
                 ->pluck('name', 'id')
                 ->toArray();
@@ -110,6 +112,7 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
         $data = compact(
             'order',
             'action',
+            'orderTotalPrice',
             'orderlines',
             'formOptions',
             'operators'
@@ -122,8 +125,10 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
     {
         $order = Order::where('id',$request->id);
         $orderLines = OrderLine::where('order_id',$request->id);
-        $totalPrice = $orderlines->sum('total_price');
-        $order->total_price = $totalPrice;
+        $orderTotalPrice = $orderlines->sum('total_price');
+        $order->total_price = $orderTotalPrice;
+        dd($orderTotalPrice);
+        return response()->json($orderTotalPrice);
     }
 
     public function createOrder(Request $request){

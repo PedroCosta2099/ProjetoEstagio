@@ -102,22 +102,23 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
         $productId = $product[0]['id'];
         $productName = $product[0]['name'];
         $productPrice = $product[0]['price'];
-        $totalPrice = $product[0]['price']*$orderline->quantity;
-        $vatNotRounded = $totalPrice*$IVA;
-        $order = $orderline->order_id;
+        $totalPriceNotRounded = $product[0]['price']*$orderline->quantity;
+        $vatNotRounded = $totalPriceNotRounded*$IVA;
+        $orderId = $orderline->order_id;
+        $totalPrice = number_format((float)$totalPriceNotRounded, 2, '.', '');
         $vat = number_format((float)$vatNotRounded, 2, '.', '');
 
         $operators = User::orderBy('code', 'asc')
                 ->pluck('name', 'id')
-                ->toArray();
-
+                ->toArray();   
+        
         $action = 'Editar Estado';
         
         $formOptions = array('route' => array('admin.orderlines.update', $orderline->id), 'method' => 'PUT', 'class' => 'form-orderlines');
 
         $data = compact(
             'id',
-            'order',
+            'orderId',
             'orderline',
             'action',
             'productName',
@@ -134,14 +135,16 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
 
     public function updatePriceVat($id,$quantity)
     { 
+        
         $IVA = 0.23;
         $orderline = OrderLine::findOrfail($id);
         $product = Product::where('id', $orderline->product_id)
                                 ->get()
                                 ->toArray();
-        $totalPrice = $product[0]['price']*$quantity;
+        $totalPriceNotRounded = $product[0]['price']*$quantity;
+        $totalPrice = number_format((float)$totalPriceNotRounded,2, '.', '');
         $vatNotRounded = $totalPrice*$IVA;
-        $vat = number_format((float)$vatNotRounded, 2, '.', '');
+        $vat = number_format((float)$vatNotRounded,2, '.', '');
         
         $data = compact(
             'totalPrice',

@@ -1,0 +1,872 @@
+[2021-05-25 09:19:54] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:19:54] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:20:27] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:20:27] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:20:30] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:20:30] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:42:51] local.WARNING: ErrorException: Undefined variable: totalPrice in [GET] http://projeto.test/admin/orderlines/94/edit:999999
+Method: GET
+User ID: 1
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrderLinesController.php
+Line: 106
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:42:51] local.ERROR: ErrorException: Undefined variable: totalPrice in /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrderLinesController.php:106
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrderLinesController.php(106): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/vagrant/P...', 106, Array)
+#1 [internal function]: App\Http\Controllers\Admin\OrderLinesController->edit('94')
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrderLinesController), 'edit')
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#6 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#45 {main}  
+[2021-05-25 09:43:03] local.WARNING: ErrorException: Undefined variable: totalPrice in [GET] http://projeto.test/admin/orderlines/94/edit:999999
+Method: GET
+User ID: 1
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrderLinesController.php
+Line: 106
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:43:03] local.ERROR: ErrorException: Undefined variable: totalPrice in /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrderLinesController.php:106
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrderLinesController.php(106): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/vagrant/P...', 106, Array)
+#1 [internal function]: App\Http\Controllers\Admin\OrderLinesController->edit('94')
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrderLinesController), 'edit')
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#6 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#45 {main}  
+[2021-05-25 09:46:17] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:46:17] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:46:24] local.WARNING: ErrorException: Parse error: syntax error, unexpected ')' (View: /home/vagrant/Projetos/ProjetoEstagio/projeto/resources/views/admin/orders/edit.blade.php) in [GET] http://projeto.test/admin/orders/209/edit:999999
+Method: GET
+User ID: 1
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php
+Line: 59
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:46:24] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected ')' in /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php:59
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/vagrant/P...', Array)
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(149): Illuminate\View\Engines\CompilerEngine->get('/home/vagrant/P...', Array)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\View->getContents()
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(85): Illuminate\View\View->renderContents()
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrdersController.php(119): Illuminate\View\View->render()
+#5 [internal function]: App\Http\Controllers\Admin\OrdersController->edit('209')
+#6 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrdersController), 'edit')
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#47 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#48 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#49 {main}
+
+Next ErrorException: Parse error: syntax error, unexpected ')' (View: /home/vagrant/Projetos/ProjetoEstagio/projeto/resources/views/admin/orders/edit.blade.php) in /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php:59
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(46): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(Symfony\Component\Debug\Exception\FatalThrowableError), 1)
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/vagrant/P...', Array)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(149): Illuminate\View\Engines\CompilerEngine->get('/home/vagrant/P...', Array)
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\View->getContents()
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(85): Illuminate\View\View->renderContents()
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrdersController.php(119): Illuminate\View\View->render()
+#6 [internal function]: App\Http\Controllers\Admin\OrdersController->edit('209')
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrdersController), 'edit')
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#45 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#46 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#47 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#48 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#49 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#50 {main}  
+[2021-05-25 09:46:27] local.WARNING: ErrorException: Parse error: syntax error, unexpected ')' (View: /home/vagrant/Projetos/ProjetoEstagio/projeto/resources/views/admin/orders/edit.blade.php) in [GET] http://projeto.test/admin/orders/209/edit:999999
+Method: GET
+User ID: 1
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php
+Line: 59
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:46:27] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected ')' in /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php:59
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/vagrant/P...', Array)
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(149): Illuminate\View\Engines\CompilerEngine->get('/home/vagrant/P...', Array)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\View->getContents()
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(85): Illuminate\View\View->renderContents()
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrdersController.php(119): Illuminate\View\View->render()
+#5 [internal function]: App\Http\Controllers\Admin\OrdersController->edit('209')
+#6 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrdersController), 'edit')
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#47 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#48 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#49 {main}
+
+Next ErrorException: Parse error: syntax error, unexpected ')' (View: /home/vagrant/Projetos/ProjetoEstagio/projeto/resources/views/admin/orders/edit.blade.php) in /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php:59
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(46): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(Symfony\Component\Debug\Exception\FatalThrowableError), 1)
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/vagrant/P...', Array)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(149): Illuminate\View\Engines\CompilerEngine->get('/home/vagrant/P...', Array)
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\View->getContents()
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(85): Illuminate\View\View->renderContents()
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrdersController.php(119): Illuminate\View\View->render()
+#6 [internal function]: App\Http\Controllers\Admin\OrdersController->edit('209')
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrdersController), 'edit')
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#45 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#46 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#47 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#48 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#49 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#50 {main}  
+[2021-05-25 09:46:31] local.WARNING: ErrorException: Parse error: syntax error, unexpected ')' (View: /home/vagrant/Projetos/ProjetoEstagio/projeto/resources/views/admin/orders/edit.blade.php) in [GET] http://projeto.test/admin/orders/209/edit:999999
+Method: GET
+User ID: 1
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php
+Line: 59
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:46:31] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected ')' in /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php:59
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/vagrant/P...', Array)
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(149): Illuminate\View\Engines\CompilerEngine->get('/home/vagrant/P...', Array)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\View->getContents()
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(85): Illuminate\View\View->renderContents()
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrdersController.php(119): Illuminate\View\View->render()
+#5 [internal function]: App\Http\Controllers\Admin\OrdersController->edit('209')
+#6 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrdersController), 'edit')
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#47 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#48 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#49 {main}
+
+Next ErrorException: Parse error: syntax error, unexpected ')' (View: /home/vagrant/Projetos/ProjetoEstagio/projeto/resources/views/admin/orders/edit.blade.php) in /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php:59
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(46): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(Symfony\Component\Debug\Exception\FatalThrowableError), 1)
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/vagrant/P...', Array)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(149): Illuminate\View\Engines\CompilerEngine->get('/home/vagrant/P...', Array)
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\View->getContents()
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(85): Illuminate\View\View->renderContents()
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrdersController.php(119): Illuminate\View\View->render()
+#6 [internal function]: App\Http\Controllers\Admin\OrdersController->edit('209')
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrdersController), 'edit')
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#45 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#46 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#47 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#48 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#49 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#50 {main}  
+[2021-05-25 09:56:03] local.WARNING: ErrorException: Parse error: syntax error, unexpected ')' (View: /home/vagrant/Projetos/ProjetoEstagio/projeto/resources/views/admin/orders/edit.blade.php) in [GET] http://projeto.test/admin/orders/209/edit:999999
+Method: GET
+User ID: 1
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php
+Line: 59
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:56:03] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Parse error: syntax error, unexpected ')' in /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php:59
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/vagrant/P...', Array)
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(149): Illuminate\View\Engines\CompilerEngine->get('/home/vagrant/P...', Array)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\View->getContents()
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(85): Illuminate\View\View->renderContents()
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrdersController.php(119): Illuminate\View\View->render()
+#5 [internal function]: App\Http\Controllers\Admin\OrdersController->edit('209')
+#6 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrdersController), 'edit')
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#45 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#46 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#47 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#48 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#49 {main}
+
+Next ErrorException: Parse error: syntax error, unexpected ')' (View: /home/vagrant/Projetos/ProjetoEstagio/projeto/resources/views/admin/orders/edit.blade.php) in /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php:59
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(46): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(Symfony\Component\Debug\Exception\FatalThrowableError), 1)
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/vagrant/P...', Array)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(149): Illuminate\View\Engines\CompilerEngine->get('/home/vagrant/P...', Array)
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\View->getContents()
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(85): Illuminate\View\View->renderContents()
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrdersController.php(119): Illuminate\View\View->render()
+#6 [internal function]: App\Http\Controllers\Admin\OrdersController->edit('209')
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrdersController), 'edit')
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#45 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#46 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#47 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#48 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#49 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#50 {main}  
+[2021-05-25 09:57:07] local.WARNING: ErrorException: htmlspecialchars() expects parameter 1 to be string, array given (View: /home/vagrant/Projetos/ProjetoEstagio/projeto/resources/views/admin/orders/edit.blade.php) in [GET] http://projeto.test/admin/orders/209/edit:999999
+Method: GET
+User ID: 1
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Support/helpers.php
+Line: 519
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 09:57:07] local.ERROR: ErrorException: htmlspecialchars() expects parameter 1 to be string, array given in /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Support/helpers.php:519
+Stack trace:
+#0 [internal function]: Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(2, 'htmlspecialchar...', '/home/vagrant/P...', 519, Array)
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Support/helpers.php(519): htmlspecialchars(Array, 3, 'UTF-8', false)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravelcollective/html/src/HtmlBuilder.php(459): e(Array)
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravelcollective/html/src/HtmlBuilder.php(424): Collective\Html\HtmlBuilder->attributeElement('value', Array)
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravelcollective/html/src/FormBuilder.php(280): Collective\Html\HtmlBuilder->attributes(Array)
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravelcollective/html/src/FormBuilder.php(363): Collective\Html\FormBuilder->input('number', 'orderTotalPrice', Array, Array)
+#6 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(237): Collective\Html\FormBuilder->number('orderTotalPrice', Array)
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/storage/framework/views/a169f1483e9445d49f1320b3d577b687618d95f6.php(59): Illuminate\Support\Facades\Facade::__callStatic('number', Array)
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(42): include('/home/vagrant/P...')
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/vagrant/P...', Array)
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(149): Illuminate\View\Engines\CompilerEngine->get('/home/vagrant/P...', Array)
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\View->getContents()
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(85): Illuminate\View\View->renderContents()
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrdersController.php(119): Illuminate\View\View->render()
+#14 [internal function]: App\Http\Controllers\Admin\OrdersController->edit('209')
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrdersController), 'edit')
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#45 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#46 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#47 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#48 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#49 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#50 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#51 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#52 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#53 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#54 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#55 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#56 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#57 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#58 {main}
+
+Next ErrorException: htmlspecialchars() expects parameter 1 to be string, array given (View: /home/vagrant/Projetos/ProjetoEstagio/projeto/resources/views/admin/orders/edit.blade.php) in /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Support/helpers.php:519
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/PhpEngine.php(44): Illuminate\View\Engines\CompilerEngine->handleViewException(Object(ErrorException), 1)
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Engines/CompilerEngine.php(59): Illuminate\View\Engines\PhpEngine->evaluatePath('/home/vagrant/P...', Array)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(149): Illuminate\View\Engines\CompilerEngine->get('/home/vagrant/P...', Array)
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(120): Illuminate\View\View->getContents()
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/View.php(85): Illuminate\View\View->renderContents()
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrdersController.php(119): Illuminate\View\View->render()
+#6 [internal function]: App\Http\Controllers\Admin\OrdersController->edit('209')
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrdersController), 'edit')
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#45 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#46 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#47 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#48 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#49 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#50 {main}  
+[2021-05-25 10:00:12] local.WARNING: Symfony\Component\Debug\Exception\FatalThrowableError: Call to a member function sum() on array in [GET] http://projeto.test/admin/orders/209/edit:999999
+Method: GET
+User ID: 1
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrdersController.php
+Line: 102
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 10:00:12] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Call to a member function sum() on array in /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrdersController.php:102
+Stack trace:
+#0 [internal function]: App\Http\Controllers\Admin\OrdersController->edit('209')
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('edit', Array)
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrdersController), 'edit')
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#6 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#44 {main}  
+[2021-05-25 10:03:28] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 10:03:29] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 10:07:10] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 10:07:10] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 10:08:35] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 10:08:35] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 10:10:33] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 10:10:34] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 10:16:21] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-25 10:16:21] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
