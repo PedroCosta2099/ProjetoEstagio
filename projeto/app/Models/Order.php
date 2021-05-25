@@ -80,4 +80,5 @@ class Order extends BaseModel implements Sortable
     {
         return $this->belongsTo('App\Models\Status','status_id');
     }
+
 }

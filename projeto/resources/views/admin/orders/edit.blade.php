@@ -17,26 +17,25 @@
        <div class="col-sm-3">
             <div class="form-group is-required">
                 {{ Form::label('product_id', 'Produto') }}
-                {{ Form::hidden('', $orderline['id'],[''=>'orderLineId'])}}
-                {{ Form::text('', $orderline['product_id'], ['class' => 'form-control ','readonly'])}}
+                {{ Form::text('', $orderline->product->name, ['class' => 'form-control ','readonly'])}}
             </div>
         </div>
         <div class="col-sm-3">
             <div class="form-group is-required">
                 {{ Form::label('total_price', 'Preço') }}
-                {{ Form::text('total_price',$orderline['total_price'], ['class' => 'form-control uppercase','data-id'=>$orderline['id'], 'id'=>'total_price_'.$orderline['id'], 'required','readonly']) }}
+                {{ Form::number('totalPrice[]',$orderline['total_price'], ['class' => 'form-control uppercase totalPrice','data-id'=>$orderline['id'], 'id'=>'total_price_'.$orderline['id'], 'required','readonly']) }}
             </div>
         </div>
         <div class="col-sm-3">
             <div class="form-group is-required">
                 {{ Form::label('vat', 'IVA') }}
-                {{ Form::text('vat',$orderline['vat'], ['class' => 'form-control uppercase','data-id'=>$orderline['id'], 'id'=>'vat_'.$orderline['id'],  'required','readonly','step' => '0.01']) }}
+                {{ Form::number('orderlineVat[]',$orderline['vat'], ['class' => 'form-control uppercase','data-id'=>$orderline['id'], 'id'=>'vat_'.$orderline['id'],  'required','readonly','step' => '0.01']) }}
             </div>
         </div>
         <div class="col-sm-3">
             <div class="form-group is-required">
                 {{ Form::label('quantity', 'Quantidade') }}
-                {{ Form::number('',$orderline['quantity'], ['class' => 'quantity form-control  uppercase ','data-id'=>$orderline['id'],'required','min' => '0']) }}
+                {{ Form::number('quantity[]',$orderline['quantity'], ['class' => 'quantity form-control  uppercase ','data-id'=>$orderline['id'],'required','min' => '0']) }}
             </div>
         </div>  
     @endforeach
@@ -44,7 +43,13 @@
     <div class = "row row-5 text-center">
         <div class = "col-sm-6 col-sm-offset-3">
             {{ Form::label('orderTotalPrice', 'Preço do Pedido') }}
-            {{ Form::number('orderTotalPrice',$orderTotalPrice,['class'=>'form-control uppercase text-center','readonly'])}}
+            {{ Form::text('total_price',$orderTotalPrice,['class'=>'form-control uppercase text-center','readonly'])}}
+        </div>
+    </div>
+    <div class = "row row-5 text-center">
+        <div class = "col-sm-6 col-sm-offset-3">
+            {{ Form::label('orderTotalPrice', 'IVA') }}
+            {{ Form::text('vat',$orderVat,['class'=>'form-control uppercase text-center','readonly'])}}
         </div>
     </div>
 </div>
@@ -59,15 +64,26 @@
     $('.select2').select2(Init.select2());
     $('input').iCheck(Init.iCheck());
     $('[data-toggle="tooltip"]').tooltip();
-    
+ 
+ 
+
     $('.quantity').change(function(){
         
         var quantity = $(this).val();
         var id = $(this).attr('data-id');
+        var IVA = 0.23;
         if(quantity <= 0)
         {
-            document.getElementById('total_price_'+id).value = 0;
-            document.getElementById('vat_'+id).value = 0;
+            document.getElementById('total_price_'+id).value = 0.00;
+            document.getElementById('vat_'+id).value = 0.00;
+            var sum = 0;
+                $(".totalPrice").each(function(){
+                    sum += +$(this).val();
+                    total = sum.toFixed(2);
+                });
+                document.getElementById('total_price').value = total;
+                document.getElementById('vat'). value = (total*IVA).toFixed(2);
+            
         }
         else if(quantity > 0)
         {
@@ -79,8 +95,16 @@
            {    
                 if(res){ //mudar 
                   
-               document.getElementById('total_price_'+id).value = res['totalPrice'];
+               document.getElementById('total_price_'+id).value =  res['totalPrice'];
                document.getElementById('vat_'+id).value = res['vat'];
+
+               var sum = 0;
+                $(".totalPrice").each(function(){
+                    sum += +$(this).val();
+                    total = sum.toFixed(2);
+                });
+                document.getElementById('total_price').value = total;
+                document.getElementById('vat'). value = (total*IVA).toFixed(2);
                }
            },
            error:function()

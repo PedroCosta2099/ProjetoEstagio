@@ -93,18 +93,22 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
      */
     public function edit($id) {
 
+        $IVA = 0.23;
         $order = Order::findOrfail($id);
         
         $orderlines = OrderLine::where('order_id',$order->id)
-                                ->get()
-                                ->toArray();
-                              
+                                ->with('product')
+                                ->get();
+                                  
         $orderTotalPrice = OrderLine::where('order_id',$order->id)
                                     ->sum('total_price');
+        $orderVatNotRounded = $orderTotalPrice * $IVA;
+        $orderVat = number_format((float)$orderVatNotRounded,2, '.', '');
+
         $operators = User::orderBy('code', 'asc')
                 ->pluck('name', 'id')
                 ->toArray();
-
+        
         $action = 'Editar Pedido';
 
         $formOptions = array('route' => array('admin.orders.update', $order->id), 'method' => 'PUT', 'class' => 'form-orders');
@@ -113,6 +117,7 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
             'order',
             'action',
             'orderTotalPrice',
+            'orderVat',
             'orderlines',
             'formOptions',
             'operators'
@@ -121,7 +126,7 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
         return view('admin.orders.edit', $data)->render();
     }
 
-    public function totalPrice(Request $request)
+    /*public function totalPrice(Request $request)
     {
         $order = Order::where('id',$request->id);
         $orderLines = OrderLine::where('order_id',$request->id);
@@ -129,7 +134,7 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
         $order->total_price = $orderTotalPrice;
         dd($orderTotalPrice);
         return response()->json($orderTotalPrice);
-    }
+    }*/
 
     public function createOrder(Request $request){
 
@@ -187,7 +192,26 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
 
         $input = $request->all();
         $order = Order::findOrNew($id);
+        $orderlines = OrderLine::where('order_id',$id)
+                                ->pluck('id')
+                                ->toArray();
         
+        $totalPrices = $request->get('totalPrice');
+        $orderLineVats = $request->get('orderlineVat');
+        $quantities = $request->get('quantity');
+        
+        $x=0;
+        foreach($orderlines as $orderline){
+            $aux = OrderLine::findOrFail($orderline);
+            //dd($aux);
+            $aux->total_price = $totalPrices[$x];
+            $aux->vat = $orderLineVats[$x]; 
+            $aux->quantity = $quantities[$x];
+
+            
+            $x++;
+            $aux->save();
+        }
         if ($order->validate($input)) {
             $order->fill($input);
             $order->save();

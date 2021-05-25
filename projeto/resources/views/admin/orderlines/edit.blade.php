@@ -11,7 +11,7 @@
 
         <div class="col-sm-12">
 
-            {{ Form::label('order_id', 'Pedido') }} : {{ Form::label('', $order)}}
+            {{ Form::label('order_id', 'Pedido') }} : {{ Form::label('', $orderId)}}
             {{ Form::hidden('', $id,['id'=>'orderLineId'])}}
 
         </div>        
@@ -24,13 +24,13 @@
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('total_price', 'Preço') }}
-                {{ Form::text('total_price',$totalPrice, ['class' => 'form-control uppercase', 'required','readonly','id' => 'total_price']) }}
+                {{ Form::text('total_price','€'.$totalPrice.'', ['class' => 'form-control uppercase', 'required','readonly','id' => 'total_price']) }}
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('vat', 'IVA') }}
-                {{ Form::text('vat',$vat, ['class' => 'form-control uppercase', 'required','readonly','id' => 'vat2']) }}
+                {{ Form::text('vat','€'.$vat.'', ['class' => 'form-control uppercase', 'required','readonly','id' => 'vat2']) }}
             </div>
         </div>
         <div class="col-sm-6">
@@ -64,8 +64,8 @@
         var quantity = $(this).val();
         if(quantity <= 0)
         {
-            document.getElementById('total_price').value = 0;
-            document.getElementById('vat2').value = 0;
+            document.getElementById('total_price').value = '€'+0.00;
+            document.getElementById('vat2').value = '€'+0.00;
         }
         else if(quantity > 0)
         {
@@ -76,8 +76,8 @@
            success:function(res)
            {    
                 if(res){
-               document.getElementById('total_price').value = res['totalPrice'];
-               document.getElementById('vat2').value = res['vat'];
+               document.getElementById('total_price').value = '€'+res['totalPrice'];
+               document.getElementById('vat2').value = '€'+res['vat'];
                }
            },
            error:function()
