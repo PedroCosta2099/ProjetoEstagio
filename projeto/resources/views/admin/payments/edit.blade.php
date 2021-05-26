@@ -41,7 +41,7 @@
         <div class="col-sm-12">
             <div class="form-group is-required">
                 {{ Form::label('payment_status_id', 'Estado do Pagamento') }}
-                {{ Form::select('payment_status_id', ['' => 'NENHUM'] + $payment_status, null, ['class' => 'form-control select2']) }}
+                {{ Form::select('payment_status_id',$payment_status, null, ['class' => 'form-control select2']) }}
             </div>
         </div>
     </div>

@@ -11,6 +11,8 @@ use App\Models\Order;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Orderline;
+use App\Models\Payment;
+use App\Models\Status;
 
 
 class OrdersController extends \App\Http\Controllers\Admin\Controller {
@@ -104,7 +106,10 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
                                     ->sum('total_price');
         $orderVatNotRounded = $orderTotalPrice * $IVA;
         $orderVat = number_format((float)$orderVatNotRounded,2, '.', '');
-
+        $status = Status::where('id',$order->status_id)
+                            ->first()
+                            ->toArray(); 
+    
         $operators = User::orderBy('code', 'asc')
                 ->pluck('name', 'id')
                 ->toArray();
@@ -118,6 +123,7 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
             'action',
             'orderTotalPrice',
             'orderVat',
+            'status',
             'orderlines',
             'formOptions',
             'operators'
@@ -195,7 +201,11 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
         $orderlines = OrderLine::where('order_id',$id)
                                 ->pluck('id')
                                 ->toArray();
-        
+
+        $payment = Payment::findOrFail($order->payment_id);
+        $payment->amount = $order->total_price;
+        $payment->save();
+
         $totalPrices = $request->get('totalPrice');
         $orderLineVats = $request->get('orderlineVat');
         $quantities = $request->get('quantity');
@@ -207,11 +217,21 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
             $aux->total_price = $totalPrices[$x];
             $aux->vat = $orderLineVats[$x]; 
             $aux->quantity = $quantities[$x];
-
+            if($aux->quantity == 0)
+            {
+                OrderLine::destroy($orderline);
+            }
             
-            $x++;
             $aux->save();
+            $x++;
+            
         }
+
+        if($orderlines == null)
+            {
+                Payment::destroy($order->payment_id);
+                $this->destroy($id);
+            }
         if ($order->validate($input)) {
             $order->fill($input);
             $order->save();
@@ -236,7 +256,7 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
                             ->delete();
 
         if (!$result) {
-            return Redirect::back()->with('error', 'Ocorreu um erro ao tentar remover o estado');
+            return Redirect::back()->with('error', 'Ocorreu um erro ao tentar remover o pedido');
         }
 
         return Redirect::route('admin.orders.index')->with('success', 'Pedido removido com sucesso.');
@@ -287,6 +307,7 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
                 ->edit_column('status_id', function($row) {
                     return view('admin.orders.datatables.status', compact('row'))->render();
                 })
+                
                 ->add_column('select', function($row) {
                     return view('admin.partials.datatables.select', compact('row'))->render();
                 })

@@ -76,4 +76,9 @@ class Payment extends BaseModel implements Sortable
     {
         return $this->belongsTo('App\Models\PaymentStatus','payment_status_id');
     }
+
+    public function order()
+    {
+        return $this->hasOne('App\Models\Order');
+    }
 }

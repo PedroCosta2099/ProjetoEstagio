@@ -1,4 +1,4 @@
-{{ Form::model($orderlines,$formOptions,$orderTotalPrice) }}
+{{ Form::model($orderlines,$formOptions,$orderTotalPrice,$orderVat) }}
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal">
         <span class="fs-15" aria-hidden="true"><i class="fas fa-times"></i></span>
@@ -11,7 +11,8 @@
         <div class="col-sm-12">
 
             {{ Form::label('order_id', 'Pedido') }} : {{ Form::label('', $order['id'])}}
-            
+            <span class="pull-right label label "  style="background-color:{{ $status['status_color'] }};color:white;">{{ $status['name'] }}</span>
+            <p></p>
         </div>   
     @foreach($orderlines as $orderline)
        <div class="col-sm-3">
@@ -28,7 +29,7 @@
         </div>
         <div class="col-sm-3">
             <div class="form-group is-required">
-                {{ Form::label('vat', 'IVA') }}
+                {{ Form::label('', 'IVA') }}
                 {{ Form::number('orderlineVat[]',$orderline['vat'], ['class' => 'form-control uppercase','data-id'=>$orderline['id'], 'id'=>'vat_'.$orderline['id'],  'required','readonly','step' => '0.01']) }}
             </div>
         </div>
@@ -42,14 +43,14 @@
     </div>
     <div class = "row row-5 text-center">
         <div class = "col-sm-6 col-sm-offset-3">
-            {{ Form::label('orderTotalPrice', 'Preço do Pedido') }}
-            {{ Form::text('total_price',$orderTotalPrice,['class'=>'form-control uppercase text-center','readonly'])}}
+            {{ Form::label('orderTotalPrice', 'Total') }}
+            {{ Form::number('total_price',$orderTotalPrice,['class'=>'form-control uppercase text-center','readonly'])}}
         </div>
     </div>
     <div class = "row row-5 text-center">
         <div class = "col-sm-6 col-sm-offset-3">
-            {{ Form::label('orderTotalPrice', 'IVA') }}
-            {{ Form::text('vat',$orderVat,['class'=>'form-control uppercase text-center','readonly'])}}
+            {{ Form::label('vat', 'IVA') }}
+            {{ Form::number('vat',$orderVat,['class'=>'form-control uppercase text-center','readonly','id'=>'vat2'])}}
         </div>
     </div>
 </div>
@@ -82,7 +83,7 @@
                     total = sum.toFixed(2);
                 });
                 document.getElementById('total_price').value = total;
-                document.getElementById('vat'). value = (total*IVA).toFixed(2);
+                document.getElementById('vat2').value = (total*IVA).toFixed(2);
             
         }
         else if(quantity > 0)
@@ -93,7 +94,7 @@
            url:"{{url('admin/orderlines/updatePriceVat')}}/"+ id + "/" +quantity,
            success:function(res)
            {    
-                if(res){ //mudar 
+                if(res){  
                   
                document.getElementById('total_price_'+id).value =  res['totalPrice'];
                document.getElementById('vat_'+id).value = res['vat'];
@@ -104,7 +105,7 @@
                     total = sum.toFixed(2);
                 });
                 document.getElementById('total_price').value = total;
-                document.getElementById('vat'). value = (total*IVA).toFixed(2);
+                document.getElementById('vat2').value = (total*IVA).toFixed(2);
                }
            },
            error:function()

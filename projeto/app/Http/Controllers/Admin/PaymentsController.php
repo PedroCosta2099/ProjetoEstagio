@@ -245,6 +245,9 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
                 ->edit_column('pay', function($row) {
                     return view('admin.payments.datatables.pay', compact('row'))->render();
                 })
+                ->edit_column('amount', function($row) {
+                    return view('admin.payments.datatables.amount', compact('row'))->render();
+                })
                 ->add_column('select', function($row) {
                     return view('admin.partials.datatables.select', compact('row'))->render();
                 })

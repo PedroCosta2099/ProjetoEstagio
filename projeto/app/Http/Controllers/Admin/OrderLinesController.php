@@ -169,8 +169,15 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
         
         $orderline = OrderLine::findOrNew($id);
         
+        
         if ($orderline->validate($input)) {
             $orderline->fill($input);
+
+            if($orderline->quantity <= 0)
+            {
+                $this->destroy($orderline->id);
+            }
+            
             $orderline->save();
 
             return Redirect::back()->with('success', 'Dados gravados com sucesso.');

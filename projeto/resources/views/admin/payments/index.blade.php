@@ -20,12 +20,6 @@
                     <li>
                         <button class="btn btn-default btn-sm" id="refresh"><i style="color:rgba(0,0,0,0.6)" class="fas fa-sync"></i></button>
                     </li>
-  
-                    <li>
-                        <a href="{{ route('admin.payments.create') }}" class="btn btn-success btn-sm" data-toggle="modal" data-target="#modal-remote">
-                            <i class="fas fa-plus"></i> Novo
-                        </a>
-                    </li>
                     <li>
                         <a href="{{ route('admin.payments.sort') }}" class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-remote">
                             <i class="fas fa-sort-amount-down"></i> Ordenar
