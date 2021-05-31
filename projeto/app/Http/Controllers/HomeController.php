@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Product;
 use Setting;
 
 class HomeController extends \App\Http\Controllers\Controller
@@ -35,8 +36,8 @@ class HomeController extends \App\Http\Controllers\Controller
         $users = User::where('id', '>', 1)
                     ->orderBy('name', 'asc')
                     ->get(); //obtem todos os utilizadores cujo id > 1 ordenados por nome ascendente
-
-        return $this->setContent('home', compact('users')); //chama a página HTML e envia a variavel users
+                    
+        return $this->setContent('customer.test', compact('users')); //chama a página HTML e envia a variavel users
     }
 
 }

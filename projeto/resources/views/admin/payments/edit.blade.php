@@ -29,7 +29,7 @@
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('amount', 'Montante') }}
-                {{ Form::number('amount',null, ['class' => 'form-control uppercase'],'required') }}
+                {{ Form::number('amount',null, ['class' => 'form-control uppercase','readonly']) }}
             </div>
         </div>
         <div class="col-sm-6">

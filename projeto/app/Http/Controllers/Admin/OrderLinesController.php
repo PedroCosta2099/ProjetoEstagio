@@ -7,9 +7,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Yajra\Datatables\Facades\Datatables;
 use App\Models\OrderLine;
+use App\Models\Order;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Status;
+use App\Models\Payment;
 
 class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
 
@@ -164,11 +166,11 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
 
         OrderLine::flushCache(OrderLine::CACHE_TAG);
         User::flushCache(User::CACHE_TAG);
-
+        $IVA = 0.23;
         $input = $request->all();
-        
-        $orderline = OrderLine::findOrNew($id);
-        
+
+        $orderline = OrderLine::findOrNew($id);       
+        $order = Order::findOrFail($orderline->order_id);
         
         if ($orderline->validate($input)) {
             $orderline->fill($input);
@@ -177,9 +179,17 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
             {
                 $this->destroy($orderline->id);
             }
-            
             $orderline->save();
-
+            $orderTotalPrice = Orderline::where('order_id',$orderline->order_id)
+                                    ->sum('total_price');
+            $order->total_price = $orderTotalPrice;
+            $orderVatNotRounded = $orderTotalPrice * $IVA;
+            $order->vat = number_format((float)$orderVatNotRounded,2, '.', '');
+            $order->save();
+            $payment = Payment::findOrFail($order->payment_id);
+            $payment->amount = $order->total_price;
+            $payment->save();
+            
             return Redirect::back()->with('success', 'Dados gravados com sucesso.');
         }
         

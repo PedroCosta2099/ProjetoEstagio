@@ -202,9 +202,6 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
                                 ->pluck('id')
                                 ->toArray();
 
-        $payment = Payment::findOrFail($order->payment_id);
-        $payment->amount = $order->total_price;
-        $payment->save();
 
         $totalPrices = $request->get('totalPrice');
         $orderLineVats = $request->get('orderlineVat');
@@ -236,6 +233,9 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
             $order->fill($input);
             $order->save();
 
+            $payment = Payment::findOrFail($order->payment_id);
+            $payment->amount = $order->total_price;
+            $payment->save();
             return Redirect::back()->with('success', 'Dados gravados com sucesso.');
         }
         

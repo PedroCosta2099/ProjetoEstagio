@@ -62,8 +62,7 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
         $operators = User::orderBy('id', 'asc')
                         ->pluck('name', 'id')
                         ->toArray();
-       // $categories = Categories::orderBy('id','asc')
-        
+      
         $action = 'Adicionar Produto';
         $formOptions = array('route' => array('admin.products.store'), 'method' => 'POST', 'class' => 'form-products','files' => true);
         

@@ -37,7 +37,7 @@ Linhas de Pedidos
                                 <th>Preço</th>
                                 <th>IVA</th>
                                 <th>Quantidade</th>
-                                <th>Estado</th>
+                                <th class="w-1">Estado</th>
                                 <th class="w-65px">Ações</th>
                             </tr>
                         </thead>

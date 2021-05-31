@@ -9198,3 +9198,1033 @@ Line: 161
 User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
 IP: 192.168.10.1
   
+[2021-05-26 12:29:55] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:29:55] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:30:11] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:30:11] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:30:17] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:30:17] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:37:51] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:37:51] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:37:59] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:37:59] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:38:36] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:38:36] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:38:37] local.WARNING: InvalidArgumentException: The "/home/vagrant/Projetos/ProjetoEstagio/projeto/storage/importer" directory does not exist. in [POST] http://projeto.test/admin/settings/directory/load:999999
+Method: POST
+User ID: 1
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/symfony/finder/Finder.php
+Line: 546
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:38:37] local.ERROR: InvalidArgumentException: The "/home/vagrant/Projetos/ProjetoEstagio/projeto/storage/importer" directory does not exist. in /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/symfony/finder/Finder.php:546
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Filesystem/Filesystem.php(400): Symfony\Component\Finder\Finder->in('/home/vagrant/P...')
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Support/Facades/Facade.php(237): Illuminate\Filesystem\Filesystem->allFiles('/home/vagrant/P...')
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/SettingsController.php(425): Illuminate\Support\Facades\Facade::__callStatic('allFiles', Array)
+#3 [internal function]: App\Http\Controllers\Admin\SettingsController->loadDirectories(Object(Illuminate\Http\Request))
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('loadDirectories', Array)
+#6 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\SettingsController), 'loadDirectories')
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/zizaco/entrust/src/Entrust/Middleware/EntrustAbility.php(44): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Zizaco\Entrust\Middleware\EntrustAbility->handle(Object(Illuminate\Http\Request), Object(Closure), 'administrator', 'admin_settings')
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#45 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#46 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#47 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#48 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#49 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#50 {main}  
+[2021-05-26 12:39:24] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:39:24] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:39:53] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:39:53] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:40:02] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:40:02] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:43:52] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:43:52] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:49:58] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 12:49:58] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:45:11] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:45:11] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:53:13] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:53:13] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:56:17] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:56:17] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:56:26] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:56:26] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:56:30] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:56:30] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:56:40] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:56:40] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:57:53] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:57:53] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:58:09] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 14:58:09] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:04:47] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:04:47] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:05:58] local.WARNING: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\Http\Controllers\Admin\Order' not found in [PUT] http://projeto.test/admin/orderlines/94:999999
+Method: PUT
+Input: {"_method":"PUT","total_price":"1.50","vat":"0.35","quantity":"1","status_id":"7","delete_photo":""}
+User ID: 1
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrderLinesController.php
+Line: 174
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:05:58] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Class 'App\Http\Controllers\Admin\Order' not found in /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrderLinesController.php:174
+Stack trace:
+#0 [internal function]: App\Http\Controllers\Admin\OrderLinesController->update(Object(Illuminate\Http\Request), '94')
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('update', Array)
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrderLinesController), 'update')
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#6 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#44 {main}  
+[2021-05-26 15:07:08] local.WARNING: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Illuminate\Database\Grammar::columnize() must be of the type array, integer given, called in /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Query/Grammars/Grammar.php on line 123 in [PUT] http://projeto.test/admin/orderlines/94:999999
+Method: PUT
+Input: {"_method":"PUT","total_price":"1.50","vat":"0.35","quantity":"1","status_id":"7","delete_photo":""}
+User ID: 1
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Grammar.php
+Line: 107
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:07:08] local.ERROR: Symfony\Component\Debug\Exception\FatalThrowableError: Type error: Argument 1 passed to Illuminate\Database\Grammar::columnize() must be of the type array, integer given, called in /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Query/Grammars/Grammar.php on line 123 in /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Grammar.php:107
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Query/Grammars/Grammar.php(123): Illuminate\Database\Grammar->columnize(209)
+#1 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Query/Grammars/Grammar.php(77): Illuminate\Database\Query\Grammars\Grammar->compileColumns(Object(Watson\Rememberable\Query\Builder), 209)
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Query/Grammars/Grammar.php(53): Illuminate\Database\Query\Grammars\Grammar->compileComponents(Object(Watson\Rememberable\Query\Builder))
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Query/Grammars/MySqlGrammar.php(38): Illuminate\Database\Query\Grammars\Grammar->compileSelect(Object(Watson\Rememberable\Query\Builder))
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1581): Illuminate\Database\Query\Grammars\MySqlGrammar->compileSelect(Object(Watson\Rememberable\Query\Builder))
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1648): Illuminate\Database\Query\Builder->toSql()
+#6 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php(1634): Illuminate\Database\Query\Builder->runSelect()
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/watson/rememberable/src/Query/Builder.php(56): Illuminate\Database\Query\Builder->get(209)
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(638): Watson\Rememberable\Query\Builder->get(209)
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(327): Illuminate\Database\Eloquent\Builder->getModels(209)
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(297): Illuminate\Database\Eloquent\Builder->get(209)
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(171): Illuminate\Database\Eloquent\Builder->first(209)
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php(203): Illuminate\Database\Eloquent\Builder->find('id', 209)
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(3561): Illuminate\Database\Eloquent\Builder->findOrFail('id', 209)
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php(3573): Illuminate\Database\Eloquent\Model->__call('findOrFail', Array)
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrderLinesController.php(175): Illuminate\Database\Eloquent\Model::__callStatic('findOrFail', Array)
+#16 [internal function]: App\Http\Controllers\Admin\OrderLinesController->update(Object(Illuminate\Http\Request), '94')
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('update', Array)
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrderLinesController), 'update')
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#45 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#46 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#47 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#48 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#49 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#50 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#51 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#52 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#53 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#54 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#55 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#56 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#57 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#58 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#59 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#60 {main}  
+[2021-05-26 15:08:38] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:08:38] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:08:52] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:08:52] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:09:10] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:09:10] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:09:41] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:09:41] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:09:50] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:09:50] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:10:03] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:10:03] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:13:06] local.WARNING: ErrorException: Undefined variable: orderline in [PUT] http://projeto.test/admin/orderlines/98:999999
+Method: PUT
+Input: {"_method":"PUT","total_price":"5.99","vat":"1.38","quantity":"1","status_id":"3","delete_photo":""}
+User ID: 1
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrderLinesController.php
+Line: 171
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:13:06] local.ERROR: ErrorException: Undefined variable: orderline in /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrderLinesController.php:171
+Stack trace:
+#0 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/OrderLinesController.php(171): Illuminate\Foundation\Bootstrap\HandleExceptions->handleError(8, 'Undefined varia...', '/home/vagrant/P...', 171, Array)
+#1 [internal function]: App\Http\Controllers\Admin\OrderLinesController->update(Object(Illuminate\Http\Request), '98')
+#2 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Controllers/Admin/Controller.php(52): call_user_func_array(Array, Array)
+#3 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/ControllerDispatcher.php(44): App\Http\Controllers\Admin\Controller->callAction('update', Array)
+#4 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(189): Illuminate\Routing\ControllerDispatcher->dispatch(Object(Illuminate\Routing\Route), Object(App\Http\Controllers\Admin\OrderLinesController), 'update')
+#5 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Route.php(144): Illuminate\Routing\Route->runController()
+#6 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(653): Illuminate\Routing\Route->run(Object(Illuminate\Http\Request))
+#7 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Routing\Router->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#8 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/AdminAuthenticate.php(32): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#9 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\AdminAuthenticate->handle(Object(Illuminate\Http\Request), Object(Closure))
+#10 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#11 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Middleware/SubstituteBindings.php(41): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#12 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Routing\Middleware\SubstituteBindings->handle(Object(Illuminate\Http\Request), Object(Closure))
+#13 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#14 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Middleware/VerifyCsrfToken.php(65): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#15 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Foundation\Http\Middleware\VerifyCsrfToken->handle(Object(Illuminate\Http\Request), Object(Closure))
+#16 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#17 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/View/Middleware/ShareErrorsFromSession.php(49): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#18 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\View\Middleware\ShareErrorsFromSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#19 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#20 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Session/Middleware/StartSession.php(64): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#21 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Session\Middleware\StartSession->handle(Object(Illuminate\Http\Request), Object(Closure))
+#22 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#23 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/AddQueuedCookiesToResponse.php(37): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#24 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse->handle(Object(Illuminate\Http\Request), Object(Closure))
+#25 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#26 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Cookie/Middleware/EncryptCookies.php(59): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#27 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Illuminate\Cookie\Middleware\EncryptCookies->handle(Object(Illuminate\Http\Request), Object(Closure))
+#28 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#29 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#30 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(655): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#31 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(629): Illuminate\Routing\Router->runRouteWithinStack(Object(Illuminate\Routing\Route), Object(Illuminate\Http\Request))
+#32 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Router.php(607): Illuminate\Routing\Router->dispatchToRoute(Object(Illuminate\Http\Request))
+#33 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(268): Illuminate\Routing\Router->dispatch(Object(Illuminate\Http\Request))
+#34 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(53): Illuminate\Foundation\Http\Kernel->Illuminate\Foundation\Http\{closure}(Object(Illuminate\Http\Request))
+#35 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/barryvdh/laravel-debugbar/src/Middleware/Debugbar.php(51): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#36 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): Barryvdh\Debugbar\Middleware\Debugbar->handle(Object(Illuminate\Http\Request), Object(Closure))
+#37 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#38 /home/vagrant/Projetos/ProjetoEstagio/projeto/app/Http/Middleware/CheckForMaintenanceMode.php(48): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#39 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(137): App\Http\Middleware\CheckForMaintenanceMode->handle(Object(Illuminate\Http\Request), Object(Closure))
+#40 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/Pipeline.php(33): Illuminate\Pipeline\Pipeline->Illuminate\Pipeline\{closure}(Object(Illuminate\Http\Request))
+#41 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Pipeline/Pipeline.php(104): Illuminate\Routing\Pipeline->Illuminate\Routing\{closure}(Object(Illuminate\Http\Request))
+#42 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(150): Illuminate\Pipeline\Pipeline->then(Object(Closure))
+#43 /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(117): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
+#44 /home/vagrant/Projetos/ProjetoEstagio/projeto/public/index.php(53): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
+#45 {main}  
+[2021-05-26 15:13:53] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:13:53] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:16:02] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:16:02] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:16:10] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:16:10] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:17:23] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:17:23] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:17:29] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:17:29] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:18:42] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:18:42] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:18:48] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:18:48] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:21:41] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:21:41] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:24:19] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:24:19] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:24:29] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:24:29] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:24:36] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:24:36] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:30:52] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:30:52] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:30:59] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:30:59] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:31:02] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:31:02] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:39:30] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:39:30] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:39:41] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:39:41] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:44:25] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:44:25] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:59:27] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 15:59:27] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 16:17:36] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 16:17:36] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 16:32:36] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 16:32:36] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 16:39:24] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 16:39:24] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 17:05:41] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 17:05:41] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 17:05:41] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 17:05:41] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 17:32:36] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 17:32:36] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 17:32:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 17:32:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 17:34:36] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 17:34:36] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 18:42:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 18:42:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 18:52:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 18:52:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 19:02:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 19:02:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 19:09:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-05-26 19:09:37] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36
+IP: 192.168.10.1
+  

@@ -42,7 +42,7 @@
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('status_id', 'Estados') }}
-                {{ Form::select('status_id', ['0' => 'NENHUM'] + $status, null, ['class' => 'form-control select2','id' => 'status_id']) }}
+                {{ Form::select('status_id',$status, null, ['class' => 'form-control select2','id' => 'status_id']) }}
             </div>
         </div> 
     </div>
@@ -62,12 +62,12 @@
     $('#quantity').change(function(){
         
         var quantity = $(this).val();
-        if(quantity <= 0)
+        if(quantity < 0)
         {
             document.getElementById('total_price').value = 0.00;
             document.getElementById('vat2').value = 0.00;
         }
-        else if(quantity > 0)
+        else if(quantity >= 0)
         {
         var id = $('#orderLineId').val();
         $.ajax({

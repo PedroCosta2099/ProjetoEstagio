@@ -73,7 +73,7 @@
         var quantity = $(this).val();
         var id = $(this).attr('data-id');
         var IVA = 0.23;
-        if(quantity <= 0)
+        if(quantity < 0)
         {
             document.getElementById('total_price_'+id).value = 0.00;
             document.getElementById('vat_'+id).value = 0.00;
@@ -86,7 +86,7 @@
                 document.getElementById('vat2').value = (total*IVA).toFixed(2);
             
         }
-        else if(quantity > 0)
+        else if(quantity >= 0)
         {
             
         $.ajax({
