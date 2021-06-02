@@ -292,7 +292,7 @@ return [
         Laravel\Passport\PassportServiceProvider::class,
         //Webklex\IMAP\Providers\LaravelServiceProvider::class,
         Brotzka\DotenvEditor\DotenvEditorServiceProvider::class,
-        //Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+        
         
 
         /*
@@ -303,6 +303,8 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        Syscover\ShoppingCart\ShoppingCartServiceProvider::class,
         
 
        
@@ -405,7 +407,7 @@ return [
         /**
          * Cart
          */
-        'Cart'                  => Gloudemans\Shoppingcart\Facades\Cart::class,
+        'CartProvider'          => Syscover\ShoppingCart\Facades\CartProvider::class,
     ],
 
 ];

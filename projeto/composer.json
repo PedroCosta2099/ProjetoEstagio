@@ -39,7 +39,8 @@
         "brotzka/laravel-dotenv-editor": "^2.1",
         "mpdf/qrcode": "^1.0",
         "doctrine/dbal": "^2.9",
-        "phpseclib/phpseclib": "^2.0"
+        "phpseclib/phpseclib": "^2.0",
+        "syscover/shopping-cart": "~2.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
