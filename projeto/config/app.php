@@ -267,6 +267,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        
 
         /*
          * Package Service Providers
@@ -291,6 +292,8 @@ return [
         Laravel\Passport\PassportServiceProvider::class,
         //Webklex\IMAP\Providers\LaravelServiceProvider::class,
         Brotzka\DotenvEditor\DotenvEditorServiceProvider::class,
+        //Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
+        
 
         /*
          * Application Service Providers
@@ -300,6 +303,9 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        
+
+       
 
     ],
 
@@ -396,6 +402,10 @@ return [
          */
         'Easypay'               => App\Models\GatewayPayment\Easypay::class,
         'Eupago'                => App\Models\GatewayPayment\Eupago::class,
+        /**
+         * Cart
+         */
+        'Cart'                  => Gloudemans\Shoppingcart\Facades\Cart::class,
     ],
 
 ];

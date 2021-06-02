@@ -237,6 +237,9 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
                 ->edit_column('price', function($row) {
                     return view('admin.products.datatables.price', compact('row'))->render();
                 })
+                ->edit_column('vat', function($row) {
+                    return view('admin.products.datatables.vat', compact('row'))->render();
+                })
                 ->edit_column('category_id', function($row) {
                     return view('admin.products.datatables.category', compact('row'))->render();
                 })

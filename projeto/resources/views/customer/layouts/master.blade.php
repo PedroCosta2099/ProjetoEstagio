@@ -19,13 +19,11 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/css/bootstrap-colorpicker.min.css" rel="stylesheet">
     </head>
     <body class="{{ app_skin() }} fixed sidebar-mini sidebar-collapse">
-        <div class="wrapper">
+        
             @include('customer.partials.header')
-            @include('customer.partials.menu')
+            
             <div class="content-wrapper">
-                @if(Auth::user()->count_notices)
-                @include('customer.partials.notices')
-                @endif
+                
                 <section class="content-header">
                     <h1>@yield('content-header')</h1>
                     @include('customer.partials.breadcrumb')
@@ -35,16 +33,11 @@
                 </section>
             </div>
             @include('customer.partials.footer')
-        </div>
-        @include('customer.partials.modals.password')
-        @include('customer.partials.modals.remote_xs')
-        @include('customer.partials.modals.remote_md')
-        @include('customer.partials.modals.remote_lg')
-        @include('customer.partials.modals.remote_xl')
+        
 
         @yield('modals')
 
-        @include('customer.partials.scripts')
+       
         @include('customer.partials.alerts')
 
     </body>

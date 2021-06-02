@@ -41,4 +41,12 @@ class ProductsController extends \App\Http\Controllers\Customer\Controller {
                         
         return view('customer.products.index',compact('products'))->render();
     }
+
+    public function showProduct($id)
+    {
+        $product = Product::where('id',$id)
+                    ->first()
+                    ->toArray();
+        return view('customer.products.productShow',compact('product'))->render();
+    }
 }

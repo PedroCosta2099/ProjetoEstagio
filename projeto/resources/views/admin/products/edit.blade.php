@@ -11,7 +11,7 @@
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('name', 'Produto') }}
-                {{ Form::text('name', null, ['class' => 'form-control uppercase', 'required']) }}
+                {{ Form::text('name', null, ['class' => 'form-control', 'required']) }}
             </div>
         </div>
         <div class="col-sm-4 col-lg-3">
@@ -38,22 +38,22 @@
             </div>
         </div>
         <div class="col-sm-12">
-            <div class="form-group is-required">
+            <div class="form-group">
                 {{ Form::label('description', 'Descrição') }}
-                {{ Form::text('description', null, ['class' => 'form-control', 'required']) }}
+                {{ Form::text('description', null, ['class' => 'form-control']) }}
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('price', 'Preço') }}
-                {{ Form::text('price', null, ['class' => 'form-control uppercase', 'required']) }}
+                {{ Form::text('price', null, ['class' => 'form-control', 'required']) }}
             </div>
         </div>
 
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('vat', 'IVA') }}
-                {{ Form::number('vat',null, ['class' => 'form-control uppercase', 'required','readonly','step' => '0.01']) }}
+                {{ Form::number('vat',null, ['class' => 'form-control', 'required','readonly','step' => '0.01']) }}
             </div>
         </div>
         <div class="col-sm-6">
