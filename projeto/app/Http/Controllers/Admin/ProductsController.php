@@ -207,7 +207,7 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
     public function massDestroy(Request $request) {
 
         Product::flushCache(Product::CACHE_TAG);
-
+        
         $ids = explode(',', $request->ids);
         
         $result = Product::whereIn('id', $ids)

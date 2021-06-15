@@ -60,34 +60,6 @@
     $(".select2").select2(Init.select2())
 
 
-    @if(Auth::user()->isAdmin())
-    $('[name="app_switcher"]').on('change', function () {
-        var target = $(this).val();
-        var url  = $(this).data('base-url');
-        var url  = url+"/" + target;
-        var win  = window.open(url, '_blank');
-        if (win) {
-            win.focus();
-        } else {
-            alert('Popups bloqueados para esta plataforma.');
-        }
-    })
-    @endif
-
-    @if(!Auth::user()->hasRole(config('permissions.role.admin')) && (isset($license) && @$license))
-    $('#licence-expired').modal({
-        backdrop: 'static',
-        keyboard: false
-    })
-    @endif
-
-    @if(Auth::user()->hasRole('acesso-a-licenca') && (isset($enovoPayments) && @$enovoPayments))
-    $('#enovo-pending-payments').modal({
-        backdrop: 'static',
-        keyboard: false
-    })
-    @endif
-
     // Enable pusher logging - don't include this in production
     //Pusher.logToConsole = true;
     @if(Setting::get('notification_push_messages') && config('app.env') != 'local')

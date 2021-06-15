@@ -6,6 +6,7 @@
 {{ Html::style('/vendor/intl-tel-input/build/css/intlTelInput.min.css') }}
 
 {!! Minify::stylesheet([
+
         '/assets/admin/css/template.css',
         '/assets/admin/css/skins/' . app_skin() . '.css',
 

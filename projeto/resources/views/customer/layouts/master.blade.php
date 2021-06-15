@@ -37,7 +37,7 @@
 
         @yield('modals')
 
-       
+        @include('customer.partials.scripts')
         @include('customer.partials.alerts')
 
     </body>

@@ -150,7 +150,7 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
         foreach($ids as $id){
            $order->orderCols()->attach($id);
         }
-       return Redirect::route('admin.orders.index')->with('success', 'Pedido adicionado com sucesso.');
+       return Redirect::route('admin.orders.index')->with('success', 'Pedido criado com sucesso.');
     }
 
     /** 

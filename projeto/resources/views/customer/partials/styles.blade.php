@@ -6,6 +6,7 @@
 {{ Html::style('/vendor/intl-tel-input/build/css/intlTelInput.min.css') }}
 
 {!! Minify::stylesheet([
+        '/assets/customer/css/payment.css',
         '/assets/admin/css/template.css',
         '/assets/admin/css/skins/' . app_skin() . '.css',
 
@@ -16,8 +17,10 @@
         '/vendor/jasny-bootstrap/dist/css/jasny-bootstrap.min.css',
         '/vendor/magicsuggest/magicsuggest-min.css',
         '/vendor/animate.css/animate.css',
-
+       
         '/assets/admin/css/helper.css',
         '/assets/admin/css/main.css',
+
+    
     ])->withFullUrl()
 !!}
