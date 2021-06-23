@@ -24,13 +24,13 @@
         <div class="col-sm-3">
             <div class="form-group is-required">
                 {{ Form::label('total_price', 'Preço') }}
-                {{ Form::number('totalPrice[]',$orderline['total_price'], ['class' => 'form-control uppercase totalPrice','data-id'=>$orderline['id'], 'id'=>'total_price_'.$orderline['id'], 'required','readonly']) }}
+                {{ Form::number('totalPrice[]',number_format($orderline['total_price'],2), ['class' => 'form-control uppercase totalPrice','data-id'=>$orderline['id'], 'id'=>'total_price_'.$orderline['id'], 'required','readonly','step' => '0.01']) }}
             </div>
         </div>
         <div class="col-sm-3">
             <div class="form-group is-required">
                 {{ Form::label('', 'IVA') }}
-                {{ Form::number('orderlineVat[]',$orderline['vat'], ['class' => 'form-control uppercase','data-id'=>$orderline['id'], 'id'=>'vat_'.$orderline['id'],  'required','readonly','step' => '0.01']) }}
+                {{ Form::number('orderlineVat[]',number_format($orderline['vat'],2), ['class' => 'form-control uppercase','data-id'=>$orderline['id'], 'id'=>'vat_'.$orderline['id'],  'required','readonly','step' => '0.01']) }}
             </div>
         </div>
         <div class="col-sm-3">
@@ -44,13 +44,13 @@
     <div class = "row row-5 text-center">
         <div class = "col-sm-6 col-sm-offset-3">
             {{ Form::label('orderTotalPrice', 'Total') }}
-            {{ Form::number('total_price',$orderTotalPrice,['class'=>'form-control uppercase text-center','readonly'])}}
+            {{ Form::number('total_price',number_format($orderTotalPrice,2),['class'=>'form-control uppercase text-center','readonly'])}}
         </div>
     </div>
     <div class = "row row-5 text-center">
         <div class = "col-sm-6 col-sm-offset-3">
             {{ Form::label('vat', 'IVA') }}
-            {{ Form::number('vat',$orderVat,['class'=>'form-control uppercase text-center','readonly','id'=>'vat2'])}}
+            {{ Form::number('vat',number_format($orderVat,2),['class'=>'form-control uppercase text-center','readonly','id'=>'vat2'])}}
         </div>
     </div>
 </div>

@@ -24,13 +24,13 @@
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('total_price', 'Preço') }}
-                {{ Form::text('total_price',$totalPrice, ['class' => 'form-control uppercase', 'required','readonly','id' => 'total_price']) }}
+                {{ Form::number('total_price',$totalPrice, ['class' => 'form-control uppercase', 'required','readonly','id' => 'total_price','step'=>'0.01']) }}
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('vat', 'IVA') }}
-                {{ Form::text('vat',$vat, ['class' => 'form-control uppercase', 'required','readonly','id' => 'vat2']) }}
+                {{ Form::number('vat',$vat, ['class' => 'form-control uppercase', 'required','readonly','id' => 'vat2','step'=>'0.01']) }}
             </div>
         </div>
         <div class="col-sm-6">
@@ -62,12 +62,12 @@
     $('#quantity').change(function(){
         
         var quantity = $(this).val();
-        if(quantity < 0)
+        if(quantity <= 0)
         {
             document.getElementById('total_price').value = 0.00;
             document.getElementById('vat2').value = 0.00;
         }
-        else if(quantity >= 0)
+        else if(quantity > 0)
         {
         var id = $('#orderLineId').val();
         $.ajax({

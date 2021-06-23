@@ -16,7 +16,7 @@ Produtos
                             </a>
                         </p>
                         <p class="text-center"> 
-                            €{{$product['price']}} 
+                            €{{ number_format($product['price'], 2,',','.') }} 
                         </p>
 	    		    </div>
                 @endforeach

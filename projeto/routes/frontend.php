@@ -35,4 +35,6 @@ Route::group(array('prefix' => LaravelLocalization::setLocale(), 'namespace' => 
                 ->name('customer.cart.paymentMethod');
         Route::get('cart/resumeOrder','CartController@resumeOrder')
                 ->name('customer.cart.resumeOrder');
+        Route::get('cart/deleteCartAndPayment','CartController@deleteCartAndPayment')
+                ->name('customer.cart.deleteCartAndPayment');
 });

@@ -1,3 +1,3 @@
 <span>
-    €{{ $row->price}}
+€{{number_format($row->price,2,',','.')}}
 </span>

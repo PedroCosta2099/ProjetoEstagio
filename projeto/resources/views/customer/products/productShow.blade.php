@@ -9,7 +9,7 @@
 	    		    <div class="col-sm-3">
                         <img class="center-block" src="<?=Croppa::url($product['filepath'],200,200)?>" id="{{$product['filename']}}"/>
                         <p class="text-center"><a href="{{route('customer.products.productShow',$product['id'])}}"> {{$product['name']}} </a></p>
-                        <p class="text-center"> €{{$product['price']}} </p>
+                        <p class="text-center"> €{{ number_format($product['price'], 2,',','.') }}  </p>
                         <label>Quantidade</label>
                         <input  id="quantity" class="form-control" type="number" min="1" value="1" autocomplete="off"></input>
                         <p class="text-center">

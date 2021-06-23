@@ -20,7 +20,7 @@ Carrinho
       <th scope="row" >{{$cartProduct->id}}</th>
       <td class="w-1"><img class="center-block" src="<?=Croppa::url($cartProduct->options->image,20,20)?>"/></td>
       <td>{{$cartProduct->name}}</td>
-      <td class=" w-1 subTotal" id="subTotal_{{$cartProduct->id}}" value="{{$cartProduct->subtotal}}">€{{$cartProduct->subtotal}}</td>
+      <td class=" w-1 subTotal" id="subTotal_{{$cartProduct->id}}" value="{{$cartProduct->subtotal}}">€{{number_format($cartProduct->subtotal,2,',','.')}}</td>
       <td class="w-1"><input id="quantity_{{$cartProduct->id}}" rowId="{{$cartProduct->rowId}}" autocomplete="off"  class="form-control quantity" type="number" value="{{$cartProduct->quantity}}" min="1"></input></td>
       <td class="w-1"><a type="button" class="btn btn-default btn-danger" href="{{route('customer.cart.destroyRow',$cartProduct->rowId)}}" ><i class="fas fa-trash-alt" style="color:white"></i></td>
     </tr>

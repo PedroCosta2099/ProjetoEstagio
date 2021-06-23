@@ -2,6 +2,6 @@
     @if($row->amount === null || $row->amount=== 0 )
         
     @else
-         €{{$row->amount}}
+    €{{number_format($row->amount,2,',','.')}}
     @endif
 </div>

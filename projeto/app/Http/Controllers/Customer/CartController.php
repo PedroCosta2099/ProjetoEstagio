@@ -17,6 +17,7 @@ use App\Models\Status;
 use App\Models\Payment;
 use App\Models\PaymentStatus;
 use App\Models\PaymentType;
+use App\Http\Controllers\Customer\ProductsController;
 use Auth;
 use Validator;
 use File,Croppa;
@@ -37,7 +38,9 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         
     }
         
-   
+   /**
+    * Show cart 
+    */
     public function index()
     {
         
@@ -45,6 +48,10 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         return view('customer.cart.index',compact('product'))->render();
     }
 
+
+    /** 
+     * Add to cart
+     */
     public function addToCart($id,$quantity)
     {
         $product = Product::where('id',$id)
@@ -54,6 +61,11 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         CartProvider::instance()->add(new Item($product['id'],$product['name'],$quantity,$product['price'],0,true,[],['image' => $product['filepath']]));
         return Redirect::back();
     }
+
+
+    /**
+     * Cart items with details
+     */
 
     public function cartItems()
     {
@@ -81,6 +93,8 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         return view('customer.cart.index',compact('cartProducts','products','orderTotal'))->render();
     }
     }
+
+
     /**
      * Update price and quantity
      */
@@ -94,6 +108,8 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         CartProvider::instance()->setQuantity($rowId,$quantity);
         return response()->json($subTotal);
     }
+
+
     /**
      * Delete 1 product 
      */
@@ -108,6 +124,8 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         return Redirect::route('customer.cart.index')->with('success', 'Produto removido com sucesso.');
         }
     }
+
+
     /**
      * Clean all cart
      */
@@ -117,17 +135,28 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         return Redirect::route('customer.products.index')->with('success', 'Produtos removidos com sucesso.');
     }
 
+    /**
+     * Save Payment Method
+     */
+
     public function savePaymentMethod($id)
     {
+        if(CartProvider::instance()->getQuantity() == 0)
+        {
+            return Redirect::back()->with('error','Ainda não tem items no seu carrinho');
+        }
+        else{
         $paymentMethod = PaymentType::where('id',$id)
                                     ->first();
         Session::put('paymentMethodAux',$paymentMethod->id);
         $paymentMethodName = $paymentMethod->name;                            
         return  response()->json($paymentMethodName);
     }
+    }
+
 
     /**
-     * Create order with order lines 
+     * Create order with order lines/ create payment 
      */
 
     public function createOrder(){
@@ -201,22 +230,40 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         
         $order->payment_id = $payment->id;
         $order->save();
-        CartProvider::instance()->destroy();
-        Session::forget('paymentMethodAux');
+        /*CartProvider::instance()->destroy();
+        Session::forget('paymentMethodAux');*/
         return view('customer.cart.finalizeOrder',compact('order','orderlines','payment'))->render();
     }
 }
 
+public function deleteCartAndPayment()
+{
+    CartProvider::instance()->destroy();
+    Session::forget('paymentMethodAux');
+    return Redirect('products');
+}
+
+/**
+ * Get all payment methods
+ */
 public function paymentMethod()
 {
+    if(CartProvider::instance()->getQuantity() == 0)
+        {
+            return Redirect::back()->with('error','Ainda não tem items no seu carrinho');
+        }
+    else{
     $paymentMethods = PaymentType::get()->toArray();
     return view('customer.cart.payment',compact('paymentMethods'))->render();
 }
+}
 
+
+/**
+ * Resume Order with details
+ */
 public function resumeOrder()
 {
-    
-    
     if(CartProvider::instance()->getQuantity() == 0)
     {
         return Redirect::back()->with('error','Ainda não tem items no seu carrinho');
@@ -242,6 +289,4 @@ public function resumeOrder()
     
     return view('customer.cart.resumeOrder',compact('cartProducts','orderTotal','paymentMethod'))->render();
 }
-
-
 }

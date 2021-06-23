@@ -19,7 +19,7 @@ Resumo
       <th scope="row" >{{$cartProduct->id}}</th>
       <td class="w-1"><img class="center-block" src="<?=Croppa::url($cartProduct->options->image,20,20)?>"/></td>
       <td>{{$cartProduct->name}}</td>
-      <td class=" w-1 subTotal" id="subTotal_{{$cartProduct->id}}" value="{{$cartProduct->subtotal}}">€{{$cartProduct->subtotal}}</td>
+      <td class=" w-1 subTotal" id="subTotal_{{$cartProduct->id}}" value="{{$cartProduct->subtotal}}">€{{number_format($cartProduct->subtotal,2,',','.')}}</td>
       <td class="w-1">{{$cartProduct->quantity}}</td>
     </tr>
     @endforeach
