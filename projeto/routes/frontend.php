@@ -27,12 +27,12 @@ Route::group(array('prefix' => LaravelLocalization::setLocale(), 'namespace' => 
                 ->name('customer.cart.destroyRow');
         Route::get('/cart/cleanCart','CartController@cleanCart')
                 ->name('customer.cart.cleanCart');
-        Route::get('cart/createOrder','CartController@createOrder')
-                ->name('customer.cart.createOrder');
+        Route::get('cart/finalizeOrder','CartController@createOrder')
+                ->name('customer.cart.finalizeOrder');
         Route::get('cart/payment','CartController@paymentMethod')
                 ->name('customer.cart.payment');
         Route::get('cart/paymentMethod/{id}','CartController@savePaymentMethod')
                 ->name('customer.cart.paymentMethod');
-        Route::get('cart/resumerOrder','CartController@resumeOrder')
+        Route::get('cart/resumeOrder','CartController@resumeOrder')
                 ->name('customer.cart.resumeOrder');
 });

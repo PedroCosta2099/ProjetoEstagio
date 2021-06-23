@@ -34,7 +34,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
      */
     public function __construct()
     {
-        $paymentMethodAux;
+        
     }
         
    
@@ -122,8 +122,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         $paymentMethod = PaymentType::where('id',$id)
                                     ->first();
         Session::put('paymentMethodAux',$paymentMethod->id);
-        $paymentMethodName = $paymentMethod->name;  
-        dd($paymentMethod);                           
+        $paymentMethodName = $paymentMethod->name;                            
         return  response()->json($paymentMethodName);
     }
 
@@ -199,11 +198,12 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
             $payment->entity = 12345;
         }
         $payment->save();
+        
         $order->payment_id = $payment->id;
         $order->save();
         CartProvider::instance()->destroy();
         Session::forget('paymentMethodAux');
-       return Redirect::route('customer.products.index')->with('success', 'Pedido adicionado com sucesso.');
+        return view('customer.cart.finalizeOrder',compact('order','orderlines','payment'))->render();
     }
 }
 
@@ -215,8 +215,32 @@ public function paymentMethod()
 
 public function resumeOrder()
 {
-    Session::forget('paymentMethodAux');
-    dd(CartProvider::instance()->getCartItems(),Session::get('paymentMethodAux'));
+    
+    
+    if(CartProvider::instance()->getQuantity() == 0)
+    {
+        return Redirect::back()->with('error','Ainda não tem items no seu carrinho');
+    }
+    else{
+    $productIds = [];
+    $cartProducts = CartProvider::instance()->getCartItems();
+    
+    foreach($cartProducts as $cartProduct)
+    {
+        
+    $product = Product::where('id',$cartProduct->id)
+                                ->get()
+                                ->toArray();
+                                
+     array_push($productIds,$product[0]['id']);
+    }
+    
+    $products = Product::whereIn('id',$productIds)->get()->toArray();
+    $orderTotal = CartProvider::instance()->getTotal();
+}
+    $paymentMethod = PaymentType::where('id',Session::get('paymentMethodAux'))->first();
+    
+    return view('customer.cart.resumeOrder',compact('cartProducts','orderTotal','paymentMethod'))->render();
 }
 
 

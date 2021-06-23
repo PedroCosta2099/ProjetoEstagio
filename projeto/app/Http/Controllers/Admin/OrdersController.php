@@ -251,10 +251,15 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
     public function destroy($id) {
 
         Order::flushCache(Order::CACHE_TAG);
-
+        $order = Order::where('id',$id)->first();
+        
+        $payment = Payment::where('id',$order->payment_id)
+                            ->delete();
         $result = Order::whereId($id)
                             ->delete();
-
+        $orderlines = OrderLine::where('order_id',$id)
+                            ->delete();
+        
         if (!$result) {
             return Redirect::back()->with('error', 'Ocorreu um erro ao tentar remover o pedido');
         }
@@ -277,7 +282,11 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
         
         $result = Order::whereIn('id', $ids)
                             ->delete();
+        foreach($ids as $id){
+        $orderline = OrderLine::where('order_id',$id)
+                            ->delete();
         
+        }
         if (!$result) {
             return Redirect::back()->with('error', 'Não foi possível remover os registos selecionados');
         }
