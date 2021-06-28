@@ -230,8 +230,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         
         $order->payment_id = $payment->id;
         $order->save();
-        /*CartProvider::instance()->destroy();
-        Session::forget('paymentMethodAux');*/
+        
         return view('customer.cart.finalizeOrder',compact('order','orderlines','payment'))->render();
     }
 }

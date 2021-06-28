@@ -26,8 +26,7 @@ Resumo
     <p>{{$payment->reference}}</p>
     <p>€{{ number_format($payment->amount, 2,',','.') }}</p>
 </div>
-<a type="button" class="btn btn-default" href="{{route('customer.cart.resumeOrder')}}">Voltar</a>
-<a type="button" class="btn btn-default" href="{{route('customer.cart.deleteCartAndPayment')}}">Continuar</a>
+<a type="button"  class="btn btn-default" href="{{route('customer.cart.deleteCartAndPayment')}}">Continuar</a>
 @stop
 @section('scripts')
 
