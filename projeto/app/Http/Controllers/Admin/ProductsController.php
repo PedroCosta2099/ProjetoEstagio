@@ -53,7 +53,7 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
     public function create() {
         
         $product = new Product();
-        $categories = Category::orderBy('id','asc')
+        $categories = Category::where('seller_id',Auth::user()->id)
                         ->pluck('name','id')
                         ->toArray();
         $subcategories = SubCategory::where('category_id',$product->category_id)
@@ -97,7 +97,7 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
     public function edit($id) {
         
         $product = Product::findOrfail($id);
-        $categories = Category::orderBy('id','asc')
+        $categories = Category::where('seller_id',Auth::user()->id)
                             ->pluck('name','id')
                             ->toArray();
         $subcategories = SubCategory::where('category_id',$product->category_id)
@@ -209,7 +209,7 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
         Product::flushCache(Product::CACHE_TAG);
         
         $ids = explode(',', $request->ids);
-        
+        dd($request->ids);
         $result = Product::whereIn('id', $ids)
                            ->delete();
         
@@ -226,10 +226,18 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
      * @return Datatables
      */
     public function datatable(Request $request) {
+        if(Auth::user()->isAdmin()){
+            
+            $data = Product::select();
+        }
+        else{
+           
+        $currentUser = Auth::user()->id;
+        $categories = Category::where('seller_id',$currentUser)->pluck('id');
         
-        $data = Product::select()
+        $data = Product::whereIn('category_id',$categories)
                         ->orderBy('sort','asc');
-        
+        }
         return Datatables::of($data)
                 ->edit_column('name', function($row) {
                     return view('admin.products.datatables.name', compact('row'))->render();

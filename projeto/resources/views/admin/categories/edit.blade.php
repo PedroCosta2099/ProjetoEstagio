@@ -14,12 +14,6 @@
                 {{ Form::text('name', null, ['class' => 'form-control uppercase', 'required']) }}
             </div>
         </div>
-        <div class="col-sm-3">
-            <div class="form-group is-required">
-                {{ Form::label('seller_id', 'Vendedor') }}
-                {{ Form::select('seller_id', ['' => 'NENHUM'] + $sellers, null, ['class' => 'form-control select2']),'required' }}
-            </div>
-        </div>
     </div>
 </div>
 <div class="modal-footer">

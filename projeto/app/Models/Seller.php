@@ -744,6 +744,7 @@ class Seller extends Authenticatable
     |
     | Define current model relationships
     */
+
     public function vehicle_data()
     {
         if(hasModule('fleet')) {

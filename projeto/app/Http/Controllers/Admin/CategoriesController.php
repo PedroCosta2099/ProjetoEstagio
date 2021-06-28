@@ -9,6 +9,7 @@ use Yajra\Datatables\Facades\Datatables;
 use App\Models\Category;
 use App\Models\User;
 use App\Models\Seller;
+use Auth;
 
 
 class CategoriesController extends \App\Http\Controllers\Admin\Controller {
@@ -49,10 +50,6 @@ class CategoriesController extends \App\Http\Controllers\Admin\Controller {
 
         $category = new Category();
 
-        $sellers = Seller::orderBy('id','asc')
-                ->pluck('name', 'id')
-                ->toArray();
-
         $action = 'Adicionar Categoria';
         
         $formOptions = array('route' => array('admin.categories.store'), 'method' => 'POST', 'class' => 'form-status');
@@ -60,7 +57,6 @@ class CategoriesController extends \App\Http\Controllers\Admin\Controller {
         $data = compact(
             'category',
             'action',
-            'sellers',
             'formOptions'
         );
 
@@ -86,11 +82,6 @@ class CategoriesController extends \App\Http\Controllers\Admin\Controller {
     public function edit($id) {
 
         $category = Category::findOrfail($id);
-
-
-        $sellers = Seller::orderBy('id','asc')
-                ->pluck('name', 'id')
-                ->toArray();
         
         $action = 'Editar Categoria';
 
@@ -99,7 +90,6 @@ class CategoriesController extends \App\Http\Controllers\Admin\Controller {
         $data = compact(
             'category',
             'action',
-            'sellers',
             'formOptions'
 
         );
@@ -124,6 +114,7 @@ class CategoriesController extends \App\Http\Controllers\Admin\Controller {
         $category = Category::findOrNew($id);
 
         if ($category->validate($input)) {
+            $category->seller_id = Auth::user()->id;
             $category->fill($input);
             $category->save();
 

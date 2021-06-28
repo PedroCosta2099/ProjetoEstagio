@@ -10,7 +10,7 @@ use App\Models\SubCategory;
 use App\Models\Category;
 use App\Models\User;
 use App\Models\Seller;
-
+use Auth;
 
 class SubCategoriesController extends \App\Http\Controllers\Admin\Controller {
 
@@ -50,7 +50,7 @@ class SubCategoriesController extends \App\Http\Controllers\Admin\Controller {
 
         $subcategory = new SubCategory();
 
-        $categories = Category::orderBy('id','asc')
+        $categories = Category::where('seller_id',Auth::user()->id)
                 ->pluck('name', 'id')
                 ->toArray();
 
@@ -87,7 +87,7 @@ class SubCategoriesController extends \App\Http\Controllers\Admin\Controller {
     public function edit($id) {
 
         $subcategory = SubCategory::findOrfail($id);
-        $categories = Category::orderBy('id','asc')
+        $categories = Category::where('seller_id',Auth::user()->id)
         ->pluck('name', 'id')
         ->toArray();
         //dd($subcategory->category_id);

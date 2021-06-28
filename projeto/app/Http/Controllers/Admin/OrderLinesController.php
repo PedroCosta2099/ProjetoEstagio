@@ -12,6 +12,7 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Status;
 use App\Models\Payment;
+use Auth;
 
 class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
 
@@ -246,7 +247,8 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
      */
     public function datatable(Request $request) {
 
-        $data = OrderLine::select();
+
+        $data = OrderLine::where('seller_id',Auth::user()->id);
         
         return Datatables::of($data)
                 ->edit_column('name', function($row) {

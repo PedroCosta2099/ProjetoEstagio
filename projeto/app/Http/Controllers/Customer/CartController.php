@@ -14,6 +14,7 @@ use App\Models\Category;
 use App\Models\SubCategory;
 use App\Models\OrderLine;
 use App\Models\Status;
+use App\Models\Seller;
 use App\Models\Payment;
 use App\Models\PaymentStatus;
 use App\Models\PaymentType;
@@ -189,6 +190,11 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         $orderlineStatus = Status::where('name','like','PENDENTE')
                                     ->first();
         foreach($orderlines as $orderline){
+            $product = Product::where('id',$orderline['product_id'])->first();
+            $productCategory = Category::where('id',$product->category_id)->first();
+            $seller = Seller::where('id',$productCategory->seller_id)->first();
+        
+            $orderline->seller_id = $seller->id;
             $orderline->created_at = date("Y-m-d H:i:s", time());
             $orderline->vat = number_format((float)$orderline->total_price * $IVA, 2, '.', '');
             $orderline->status_id = $orderlineStatus['id'];

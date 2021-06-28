@@ -39,6 +39,7 @@
                                 <th class="w-1">{{ Form::checkbox('select-all', '') }}</th>
                                 <th></th>
                                 <th>Estado</th>
+                                <th>Vendedor</th>
                                 <th class="w-65px">Ações</th>
                             </tr>
                         </thead>
@@ -67,6 +68,7 @@
                 {data: 'select', name: 'select', orderable: false, searchable: false},
                 {data: 'id', name: 'id', visible: false},
                 {data: 'name', name:'name'},
+                {data:'seller_id',name:'seller_id'},
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},
             ],
             ajax: {

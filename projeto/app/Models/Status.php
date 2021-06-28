@@ -59,4 +59,18 @@ class Status extends BaseModel implements Sortable
     public $sortable = [
         'order_column_name' => 'sort'
     ];
+
+
+ /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    |
+    | Define current model relationships
+    */
+
+    public function seller()
+    {
+        return $this->belongsTo('App\Models\Seller','seller_id');
+    }
 }

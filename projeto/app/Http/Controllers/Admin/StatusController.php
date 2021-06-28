@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 use Yajra\Datatables\Facades\Datatables;
 use App\Models\Status;
 use App\Models\User;
+use Auth;
 
 
 class StatusController extends \App\Http\Controllers\Admin\Controller {
@@ -121,6 +122,7 @@ class StatusController extends \App\Http\Controllers\Admin\Controller {
         $status = Status::findOrNew($id);
 
         if ($status->validate($input)) {
+            $status->seller_id = Auth::user()->id;
             $status->fill($input);
             $status->save();
 
@@ -180,11 +182,14 @@ class StatusController extends \App\Http\Controllers\Admin\Controller {
      */
     public function datatable(Request $request) {
 
-        $data = Status::select();
+        $data = Status::where('seller_id',Auth::user()->id);
         
         return Datatables::of($data)
                 ->edit_column('name', function($row) {
                     return view('admin.status.datatables.name', compact('row'))->render();
+                })
+                ->edit_column('seller_id', function($row) {
+                    return view('admin.status.datatables.seller', compact('row'))->render();
                 })
                 ->add_column('select', function($row) {
                     return view('admin.partials.datatables.select', compact('row'))->render();

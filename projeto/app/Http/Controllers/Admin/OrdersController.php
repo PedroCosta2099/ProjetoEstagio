@@ -15,6 +15,7 @@ use App\Models\Payment;
 use App\Models\Status;
 
 
+
 class OrdersController extends \App\Http\Controllers\Admin\Controller {
 
     /**
@@ -40,7 +41,6 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        
         return $this->setContent('admin.orders.index');
     }
 
@@ -300,9 +300,22 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
      * @return Datatables
      */
     public function datatable(Request $request) {
-
-        $data = Order::select();
-        
+        if(Auth::user()->isAdmin())
+        {
+            $data = Order::select();
+        }
+        else{
+        $orderIds = [];
+        $orderlines = OrderLine::where('seller_id',Auth::user()->id)->get()->toArray();
+        foreach($orderlines as $orderline)
+        {
+            if(!in_array($orderline['order_id'], $orderIds, true)){
+                array_push($orderIds,$orderline['order_id']);
+            }
+            
+        }
+        $data = Order::whereIn('id',$orderIds);
+        }
         return Datatables::of($data)
                 ->edit_column('id', function($row) {
                     return view('admin.orders.datatables.id', compact('row'))->render();
