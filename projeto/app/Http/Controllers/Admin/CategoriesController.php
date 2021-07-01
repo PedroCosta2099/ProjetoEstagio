@@ -37,8 +37,10 @@ class CategoriesController extends \App\Http\Controllers\Admin\Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        
-        return $this->setContent('admin.categories.index');
+        $seller = Seller::orderBy('name','asc')
+                        ->pluck('name','id')
+                        ->toArray();
+        return $this->setContent('admin.categories.index',compact('seller'));
     }
 
     /**
@@ -114,7 +116,7 @@ class CategoriesController extends \App\Http\Controllers\Admin\Controller {
         $category = Category::findOrNew($id);
 
         if ($category->validate($input)) {
-            $category->seller_id = Auth::user()->id;
+            $category->seller_id = Auth::user()->seller_id;
             $category->fill($input);
             $category->save();
 
@@ -174,8 +176,30 @@ class CategoriesController extends \App\Http\Controllers\Admin\Controller {
      */
     public function datatable(Request $request) {
 
+        if(Auth::user()->isAdmin())
+        {
         $data = Category::select();
-        
+        }
+        else
+        {
+            $data = Category::where('seller_id',Auth::user()->seller_id);
+        }
+        //filter seller
+        if($request->seller)
+        {
+            $categoriesIds = [];
+            $categories = Category::where('seller_id',$request->seller)
+                                    ->get()
+                                    ->toArray();
+            
+            foreach($categories as $category)
+            {
+                if(!in_array($category['id'], $categoriesIds, true)){
+                    array_push($categoriesIds,$category['id']);
+                }
+            }
+            $data = $data->whereIn('id',$categoriesIds);
+        }
         return Datatables::of($data)
                 ->edit_column('name', function($row) {
                     return view('admin.categories.datatables.name', compact('row'))->render();

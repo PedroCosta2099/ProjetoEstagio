@@ -1,5 +1,5 @@
-@if(!(!Auth::user()->hasRole([config('permissions.role.admin')]) && $row->hasRole([config('permissions.role.admin')]))
-|| (!Auth::user()->hasRole([config('permissions.role.admin')]) && !$row->hasShop(Auth::user()->shops)))
+@if(!(!Auth::user()->hasRole([config('permissions.role.admin')]) && $row->hasRole([config('permissions.role.admin')])))
+
     @if($row->id != Auth::user()->id)
     <div class="btn-group btn-group-sm">
         <a href="{{ route('admin.users.edit', $row->id) }}" class="btn btn-sm btn-default">

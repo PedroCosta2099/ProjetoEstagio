@@ -91,7 +91,7 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'auth.admin', 'namespace
     Route::post('sellers/selected/destroy', 'SellersController@massDestroy')
         ->name('admin.sellers.selected.destroy');
 
-    Route::post('sellers/{id}/remote-login', 'SellerController@remoteLogin')
+    Route::post('sellers/{id}/remote-login', 'SellersController@remoteLogin')
         ->name('admin.sellers.remote-login');
 
     Route::get('sellers/{id}/remote-logout', 'HomeController@remoteLogout')

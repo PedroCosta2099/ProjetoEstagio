@@ -3,84 +3,60 @@
         {{ Form::model($seller, $formOptions) }}
         <div class="col-sm-8 col-lg-9">
             <div class="row row-5">
-                <div class="col-sm-7">
+                <div class="col-sm-8">
                     <div class="form-group is-required">
                         {{ Form::label('name', 'Nome a apresentar no sistema')}}
                         {{ Form::text('name', null, array('class' =>'form-control', 'required' => true)) }}
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-2">
+                    <div class="form-group is-required">
+                        {{ Form::label('nif', 'NIF')}}
+                        {{ Form::text('nif', null, array('class' =>'form-control','required' => true)) }}
+                    </div>
+                </div> 
+                <div class="form-group is-required col-sm-8">
+                {{ Form::label('email', 'E-mail')}}
+                {{ Form::email('email', null, array('class' =>'form-control', 'required' => true)) }}
+                </div>
+                <div class="col-sm-2">
                     <div class="form-group">
                         {{ Form::label('phone', 'Telemóvel')}}
                         {{ Form::text('phone', null, array('class' =>'form-control')) }}
                     </div>
                 </div>
+            <div class="form-group is-required col-sm-10">
+                {{ Form::label('address', 'Morada')}}
+                {{ Form::text('address', null, array('class' =>'form-control', 'required' => true)) }}
             </div>
-            <div class="form-group is-required">
-                {{ Form::label('email', 'E-mail')}}
-                {{ Form::email('email', null, array('class' =>'form-control', 'required' => true)) }}
-            </div>
-            @if(empty($seller->password))
-                <div class="form-group is-required">
-                    {{ Form::label('password', 'Password')}}
-                    <div class="input-group input-group">
-                        {{ Form::text('password', str_random(8), array('class' =>'form-control', 'required' => true)) }}
-                        <span class="input-group-btn">
-                            <button class="btn btn-default btn-flat" id="random-password" type="button">
-                                <i class="fa fa-refresh"></i>
-                            </button>
-                        </span>
-                    </div>
-                </div>
-            @else
-                <div class="row row-5">
-                    <div class="col-sm-6">
-                        <div class="form-group m-b-0">
-                            {{ Form::label('password', 'Password')}}
-                            {{ Form::password('password', array('class' =>'form-control', 'autocomplete' => 'off', 'placeholder' => 'Deixar vazio para não alterar')) }}
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group m-b-0">
-                            {{ Form::label('password_confirmation', 'Confirmar Password')}}
-                            {{ Form::password('password_confirmation', array('class' =>'form-control', 'autocomplete' => 'off')) }}
-                        </div>
-                    </div>
-                </div>
-            @endif
-
-            <h4 class="m-t-20 bold text-blue">Perfil e Permissões</h4>
-            <div class="row row-5">
-                <div class="col-sm-6">
-                    @if($seller->hasRole([config('permissions.role.admin')]) || Auth::user()->id != $seller->id)
-                    <div class="form-group is-required">
-                        {{ Form::label('role_id', 'Perfis do utilizador')}}
-                        {{ Form::select('role_id[]', $roles, $assignedRoles, array('class' =>'form-control select2', 'multiple' => true, 'style' => 'width: 100%;', Auth::user()->hasRole([config('permissions.role.admin')]) ? '' : 'required')) }}
-                    </div>
-                    @endif
-                </div>
-            </div>
-
-            @if($seller->hasRole([config('permissions.role.admin')]) || Auth::user()->id != $seller->id)
-            <h4 class="m-t-20 bold text-blue">Opções da conta</h4>
+            <div class="form-group is-required col-sm-5">
+                {{ Form::label('postal_code', 'Código Postal')}}
+                {{ Form::text('postal_code', null, array('class' =>'form-control', 'required' => true,'placeholder'=>'0000-000', 'pattern'=>'^\d{4}-\d{3}?$')) }}
+            </div> <p>
+            <div class="form-group is-required col-sm-5">
+                {{ Form::label('city', 'Localidade')}}
+                {{ Form::text('city', null, array('class' =>'form-control', 'required' => true)) }}
+            </div>  
+        </div>
+        <h4 class="m-t-20 bold text-blue">Opções da conta</h4>
             <div class="row row-5">
                 <div class="col-sm-6">
                     <table class="table table-condensed">
                         <tr>
                             <td>
                                 <p class="form-control-static" style="border: none; padding-left: 0;">
-                                    Bloquear acesso à administração <i class="fa fa-info-circle text-blue" data-toggle="tooltip" title="Impede o colaborador de iniciar sessão no programa."></i>
+                                    Empresa Ativa <i class="fa fa-info-circle text-blue" data-toggle="tooltip" title="Se a empresa estiver a trabalhar com a plataforma"></i>
                                 </p>
                             </td>
                             <td style="width: 120px">
-                                {{ Form::select('active', [1 => 'Sim', 0 => 'Não'], $seller->active ? 0 : 1, array('class' =>'form-control select2')) }}
+                                {{ Form::select('active', [1 => 'Sim', 0 => 'Não'],null, array('class' =>'form-control select2')) }}
                             </td>
                         </tr>
                     </table>
                 </div>
             </div>
-            @endif
-        </div>
+    </div>
+    
         <div class="col-sm-4 col-lg-3">
             {{ Form::label('image', 'Fotografia:', array('class' => 'form-label')) }}<br/>
             <div class="fileinput {{ $seller->filepath ? 'fileinput-exists' : 'fileinput-new'}}" data-provides="fileinput">

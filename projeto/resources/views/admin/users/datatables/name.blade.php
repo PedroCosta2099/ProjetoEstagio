@@ -1,5 +1,4 @@
-@if(!(!Auth::user()->hasRole([config('permissions.role.admin')]) && $row->hasRole([config('permissions.role.admin')]))
-|| (!Auth::user()->hasRole([config('permissions.role.admin')]) && !$row->hasShop(Auth::user()->shops)))
+@if(!(!Auth::user()->hasRole([config('permissions.role.admin')]) && $row->hasRole([config('permissions.role.admin')])))
 {{ Html::link(route('admin.users.edit', $row->id), $row->name) }}
 @else
     {{ $row->name }}

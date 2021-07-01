@@ -181,9 +181,14 @@ class StatusController extends \App\Http\Controllers\Admin\Controller {
      * @return Datatables
      */
     public function datatable(Request $request) {
-
+        if(Auth::user()->isAdmin())
+        {
+            $data = Status::select();
+            
+        }
+        else{
         $data = Status::where('seller_id',Auth::user()->id);
-        
+        }
         return Datatables::of($data)
                 ->edit_column('name', function($row) {
                     return view('admin.status.datatables.name', compact('row'))->render();

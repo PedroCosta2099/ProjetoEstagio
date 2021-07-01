@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\SubCategory;
 use App\Models\OrderLine;
+use App\Models\Seller;
 use Auth;
 use Validator;
 use File,Croppa;
@@ -41,8 +42,44 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        
-        return $this->setContent('admin.products.index');
+        if(Auth::user()->isAdmin()){
+        $category = Category::orderBy('name','asc')
+                            ->pluck('name','id')
+                            ->toArray();
+
+        $categories = Category::orderBy('name','asc')
+                            ->get()
+                            ->toArray();
+        }
+        else
+        {
+            $category = Category::where('seller_id',Auth::user()->seller_id)
+                            ->orderBy('name','asc')
+                            ->pluck('name','id')
+                            ->toArray();
+
+            $categories = Category::where('seller_id',Auth::user()->seller_id)
+                            ->orderBy('name','asc')
+                            ->get()
+                            ->toArray();
+        }        
+        $categoriesIds=[];
+        foreach($categories as $key)
+        {
+           
+            if(!in_array($key['id'], $categoriesIds, true)){
+                array_push($categoriesIds,$key['id']);
+            }
+            
+        }
+       
+        $subcategory = SubCategory::whereIn('category_id',$categoriesIds)
+                                    ->pluck('name','id')
+                                    ->toArray();
+        $seller = Seller::orderBy('name','asc')
+                        ->pluck('name','id')
+                        ->toArray();
+        return $this->setContent('admin.products.index',compact('category','subcategory','seller'));
     }
 
     /**
@@ -53,7 +90,7 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
     public function create() {
         
         $product = new Product();
-        $categories = Category::where('seller_id',Auth::user()->id)
+        $categories = Category::where('seller_id',Auth::user()->seller_id)
                         ->pluck('name','id')
                         ->toArray();
         $subcategories = SubCategory::where('category_id',$product->category_id)
@@ -97,7 +134,7 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
     public function edit($id) {
         
         $product = Product::findOrfail($id);
-        $categories = Category::where('seller_id',Auth::user()->id)
+        $categories = Category::where('seller_id',Auth::user()->seller_id)
                             ->pluck('name','id')
                             ->toArray();
         $subcategories = SubCategory::where('category_id',$product->category_id)
@@ -160,7 +197,7 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
         if ($product->validate($input)) {
             $product->fill($input);
             $product->save();
-            //dd('filepath:',$product->filepath,'filename:',$product->filename);
+            
             return Redirect::back()->with('success', 'Dados gravados com sucesso.');
         }
         
@@ -173,7 +210,11 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
             $subcategories = SubCategory::where('category_id',$id)
                             ->pluck('name','id')
                             ->toArray();
-      
+            if(count($subcategories) == 0)
+            {
+                $subcategories = ["NENHUM"];
+            }
+
             return response()->json($subcategories);
     }
 
@@ -232,12 +273,41 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
         }
         else{
            
-        $currentUser = Auth::user()->id;
+        $currentUser = Auth::user()->seller_id;
         $categories = Category::where('seller_id',$currentUser)->pluck('id');
         
         $data = Product::whereIn('category_id',$categories)
                         ->orderBy('sort','asc');
         }
+        //filter category
+        if($request->category)
+        {
+            $data = $data->where('category_id',$request->category);
+        }
+
+        //filter subcategory
+        if($request->subcategory)
+        {
+            
+            $data = $data->where('subcategory_id',$request->subcategory);
+        }
+        //filter seller
+        if($request->seller)
+        {
+            $categoriesIds = [];
+            $categories = Category::where('seller_id',$request->seller)
+                                    ->get()
+                                    ->toArray();
+            
+            foreach($categories as $category)
+            {
+                if(!in_array($category['id'], $categoriesIds, true)){
+                    array_push($categoriesIds,$category['id']);
+                }
+            }
+            $data = $data->whereIn('category_id',$categoriesIds);
+        }
+        
         return Datatables::of($data)
                 ->edit_column('name', function($row) {
                     return view('admin.products.datatables.name', compact('row'))->render();

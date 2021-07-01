@@ -29,11 +29,15 @@
                     </li>
                     <li>
                         <strong>Perfil</strong>
-                        {{ Form::select('role', array('' => 'Todos') + $roles, Request::has('role') ? Request::get('role') : null, array('class' => 'form-control input-sm filter-datatable')) }}
+                        {{ Form::select('role', array('' => 'Todos') + $roles, Request::has('role') ? Request::get('role') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
                     </li>
                     <li>
                         <strong>Estado</strong> 
-                        {{ Form::select('active', array('' => 'Todos') + $status, Request::has('active') ? Request::get('active') : null, array('class' => 'form-control input-sm filter-datatable')) }}
+                        {{ Form::select('active', array('' => 'Todos') + $status, Request::has('active') ? Request::get('active') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
+                    </li>
+                    <li>
+                        <strong>Restaurante</strong>
+                        {{ Form::select('seller', array('' => 'Todos') + $seller, Request::has('seller') ? Request::get('seller') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
                     </li>
                 </ul>
                 <div class="table-responsive">
@@ -44,6 +48,7 @@
                                 <th></th>
                                 <th>Nome</th>
                                 <th>Perfís</th>
+                                <th class="w-1">Restaurante</th>
                                 <th class="w-1">Estado</th>
                                 <th class="w-110px">Último Login</th>
                                 <th class="w-70px">Criado em</th>
@@ -75,6 +80,7 @@
                 {data: 'id', name: 'id', visible: false},
                 {data: 'name', name: 'name'},
                 {data: 'roles', name: 'roles', orderable: false, searchable: false},
+                {data:'seller_id',name:'seller_id'},
                 {data: 'active', name: 'active', orderable: false, searchable: false},
                 {data: 'last_login', name: 'last_login'},
                 {data: 'created_at', name: 'created_at'},
@@ -87,7 +93,8 @@
                 data: function (d) {
                     d.role   = $('select[name=role]').val();
                     d.active = $('select[name=active]').val();
-                    d.shop   = $('select[name=shop]').val();
+                    d.seller = $('select[name=seller]').val();
+
                 },
                 complete: function () {
                     $('input').iCheck(Init.iCheck());
@@ -104,6 +111,10 @@
             e.preventDefault();
         });
     });
-
+    $(document).ready(function () {
+        $(".select2").select2({
+            language: 'pt'
+        });
+    });
 </script>
 @stop

@@ -31,6 +31,16 @@
                             <i class="fas fa-sort-amount-down"></i> Ordenar
                         </a>
                     </li>
+                    <li>
+                        <strong>Categoria</strong> 
+                        {{ Form::select('category', array('' => 'Todos') + $category, Request::has('category') ? Request::get('category') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
+                    </li>
+                    @if(Auth::user()->isAdmin())
+                    <li>
+                        <strong>Vendedor</strong> 
+                        {{ Form::select('seller', array('' => 'Todos') + $seller, Request::has('seller') ? Request::get('seller') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
+                    </li>
+                    @endif
                 </ul>
                 <div class="table-responsive">
                     <table id="datatable" class="table table-striped table-dashed table-hover table-condensed">
@@ -40,7 +50,9 @@
                                 <th></th>
                                 <th>Nome</th>
                                 <th>Categoria</th>
+                                @if(Auth::user()->isAdmin())
                                 <th>Vendedor</th>
+                                @endif
                                 <th class="w-65px">Ações</th>
                             </tr>
                         </thead>
@@ -70,12 +82,19 @@
                 {data: 'id', name: 'id', visible: false},
                 {data: 'name', name:'name'},
                 {data: 'category_id', name:'category_id'},
+                @if(Auth::user()->isAdmin())
                 {data: 'seller', name:'seller'},
+                
+                @endif
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},
             ],
             ajax: {
                 url: "{{ route('admin.subcategories.datatable') }}",
                 type: "POST",
+                data: function (d) {
+                    d.seller   = $('select[name=seller]').val();
+                    d.category  = $('select[name=category]').val();
+                },
                 beforeSend: function () { Datatables.cancelDatatableRequest(oTable) },
                 complete: function () { Datatables.complete() }
             }
@@ -89,6 +108,11 @@
             oTable.draw();
             e.preventDefault();
         });
+        $(document).ready(function () {
+        $(".select2").select2({
+            language: 'pt'
+        });
+    });
     });
 </script>
 @stop

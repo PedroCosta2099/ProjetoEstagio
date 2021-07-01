@@ -77,4 +77,8 @@ class OrderLine extends BaseModel implements Sortable
     {
         return $this->belongsTo('App\Models\Status','status_id');
     }
+    public function seller()
+    {
+        return $this->belongsTo('App\Models\Seller','seller_id');
+    }
 }

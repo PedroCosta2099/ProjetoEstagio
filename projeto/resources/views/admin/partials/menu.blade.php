@@ -7,7 +7,7 @@
 
             {!! Html::sidebarTreeOpen('entities', 'Entidades', 'fas fa-fw fa-users') !!}
             {!! Html::sidebarOption('users', 'Colaboradores', route('admin.users.index'), 'admin_sellers') !!}
-            <!--{!! Html::sidebarOption('sellers', 'Vendedores', route('admin.sellers.index'), 'sellers') !!}-->
+            {!! Html::sidebarOption('sellers', 'Vendedores', route('admin.sellers.index'), 'admin_roles') !!}
             {!! Html::sidebarOption('admin_roles', 'Perfís e Permissões', route('admin.roles.index'), 'admin_roles') !!}
             {!! Html::sidebarTreeClose() !!} 
 

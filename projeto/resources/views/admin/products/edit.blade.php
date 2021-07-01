@@ -46,14 +46,14 @@
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('price', 'Preço') }}
-                {{ Form::number('price', number_format($product->price,2), ['class' => 'form-control', 'required','step' => '0.01']) }}
+                {{ Form::number('price', number_format($product->price,2), ['class' => 'form-control', 'required','step' => '0.01','min'=>'0']) }}
             </div>
         </div>
 
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('vat', 'IVA') }}
-                {{ Form::number('vat',number_format($product->vat,2), ['class' => 'form-control', 'required','readonly','step' => '0.01']) }}
+                {{ Form::number('vat',number_format($product->vat,2), ['class' => 'form-control', 'required','readonly','step' => '0.01','min'=>'0']) }}
             </div>
         </div>
         <div class="col-sm-6">

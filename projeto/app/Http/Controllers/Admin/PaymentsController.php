@@ -11,8 +11,9 @@ use App\Models\Payment;
 use App\Models\PaymentType;
 use App\Models\PaymentStatus;
 use App\Models\Order;
+use App\Models\OrderLine;
 use App\Models\Status;
-
+use Auth;
 
 class PaymentsController extends \App\Http\Controllers\Admin\Controller {
 
@@ -40,7 +41,13 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
      */
     public function index() {
         
-        return $this->setContent('admin.payments.index');
+        
+            $paymentType = PaymentType::orderBy('name','asc')
+                                    ->pluck('name','id')
+                                    ->toArray();
+        
+        
+        return $this->setContent('admin.payments.index',compact('paymentType'));
     }
 
     /**
@@ -217,9 +224,39 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
      * @return Datatables
      */
     public function datatable(Request $request) {
-
+        if(Auth::user()->isAdmin())
+        {
         $data = Payment::select();
-        
+        }
+        else{
+            $orderIds = [];
+            $payments = [];
+            $orderlines = OrderLine::where('seller_id',Auth::user()->seller_id)
+                                    ->get()
+                                    ->toArray();
+            foreach($orderlines as $orderline)
+            {
+                if(!in_array($orderline['order_id'], $orderIds, true)){
+                    array_push($orderIds,$orderline['order_id']);
+                }
+                
+            }
+            $orders = Order::whereIn('id',$orderIds)
+                            ->get()
+                            ->toArray();
+            foreach($orders as $order)
+            {
+                if(!in_array($order['payment_id'], $payments, true)){
+                    array_push($payments,$order['payment_id']);
+                }
+            }
+            $data = Payment::whereIn('id',$payments);
+            }
+             //filter payment type
+        if($request->paymentType)
+        {
+            $data = $data->where('payment_type_id',$request->paymentType);
+        }
         return Datatables::of($data)
                 ->edit_column('payment_type_id', function($row) {
                     return view('admin.payments.datatables.payment_type', compact('row'))->render();

@@ -20,6 +20,10 @@
                     <li>
                         <button class="btn btn-default btn-sm" id="refresh"><i style="color:rgba(0,0,0,0.6)" class="fas fa-sync"></i></button>
                     </li>
+                    <li>
+                        <strong>Método de Pagamento</strong> 
+                        {{ Form::select('paymentType', array('' => 'Todos') + $paymentType, Request::has('paymentType') ? Request::get('paymentType') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
+                    </li>
                 </ul>
                 <div class="table-responsive">
                     <table id="datatable" class="table table-striped table-dashed table-hover table-condensed">
@@ -76,6 +80,10 @@
             ajax: {
                 url: "{{ route('admin.payments.datatable') }}",
                 type: "POST",
+                data: function (d) {
+                    d.paymentType   = $('select[name=paymentType]').val();
+                    
+                },
                 beforeSend: function () { Datatables.cancelDatatableRequest(oTable) },
                 complete: function () { Datatables.complete() }
             }

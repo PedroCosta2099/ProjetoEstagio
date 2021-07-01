@@ -37,23 +37,12 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
      */
     public function index() {
 
-        if(Auth::user()->hasRole([config('permissions.role.admin')])) {
-            $roles = Role::orderBy('name')
-                ->pluck('display_name', 'id')
-                ->toArray();
-        } else {
-            $roles = Role::where('id', '>', '1')
-                ->orderBy('name')
-                ->pluck('display_name', 'id')
-                ->toArray();
-        }
-
         $status = array(
             '1' => 'Ativo',
             '0' => 'Bloqueado'
         );
 
-        return $this->setContent('admin.sellers.index', compact('roles', 'status'));
+        return $this->setContent('admin.sellers.index', compact('status'));
     }
 
     /**
@@ -69,22 +58,7 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
 
         $formOptions = array('route' => array('admin.sellers.store'));
 
-        if(Auth::user()->hasRole([config('permissions.role.admin')])) {
-            $roles = Role::orderBy('name')
-                ->pluck('display_name', 'id')
-                ->toArray();
-        } else {
-            $roles = Role::where('id', '>', '1')
-                ->orderBy('name')
-                ->pluck('display_name', 'id')
-                ->toArray();
-        }
-        
-        $assignedRoles = array();
-
-        $password = str_random(8);
-
-        return $this->setContent('admin.sellers.edit', compact('action', 'formOptions', 'seller', 'password', 'roles', 'assignedRoles'));
+        return $this->setContent('admin.sellers.edit', compact('action', 'formOptions', 'seller'));
     }
 
     /**
@@ -117,27 +91,11 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
         $action = 'Editar Vendedor';
 
         $seller = Seller::findOrfail($id);
-        
-        if(Auth::user()->hasRole([config('permissions.role.admin')])) {
-            $roles = Role::orderBy('name')
-                ->pluck('display_name', 'id')
-                ->toArray();
-        } else {
-            $roles = Role::where('id', '>', '1')
-                ->orderBy('name')
-                ->pluck('display_name', 'id')
-                ->toArray();
-        }
-        
-        $assignedRoles = $seller->roles()
-            ->pluck('role_id')
-            ->toArray();
-        //dd($seller->id,$assignedRoles);
-        $assignedRoles = array_map('intval', $assignedRoles);
+       
         
         $formOptions = array('route' => array('admin.sellers.update', $seller->id), 'method' => 'PUT', 'files' => true);
 
-        return $this->setContent('admin.sellers.edit', compact('seller', 'action', 'formOptions', 'roles', 'assignedRoles'));
+        return $this->setContent('admin.sellers.edit', compact('seller', 'action', 'formOptions'));
     }
 
     /**
@@ -150,37 +108,10 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
     public function update(Request $request, $id) {
 
         $seller  = Seller::findOrNew($id);
-
+        
         $input = $request->except('role_id');
-
-        $input['active'] = !$request->get('active', false);
-        $input['email'] = strtolower(@$input['email']);
-
-        $changePass = false;
-        $feedback = 'Dados gravados com sucesso.';
-        $rules = [];
-        if ($seller->exists && empty($input['password'])) {
-            $rules['name']  = 'required';
-            $rules['email'] = 'required|email|unique:users,email,' . $seller->id;
-        } elseif($seller->exists) {
-            $changePass = true;
-            $feedback = 'Palavra-passe alterada com sucesso.';
-            $rules['password'] = 'confirmed';
-        } elseif(!$seller->exists) {
-            $rules['name']  = 'required';
-            $rules['email'] = 'required|email|unique:users,email';
-        }
-
-        $validator = Validator::make($input, $rules);
-
-        if ($validator->passes()) {
-
-            if (empty($input['password'])) {
-                unset($input['password']);
-            } else {
-                $input['password'] = bcrypt($input['password']);
-            }
-
+        $seller->nif = $input['nif'];
+        $seller->postal_code = $input['postal_code'];
             $seller->fill($input);
             
             //delete image
@@ -203,18 +134,14 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
                 }
 
             } else {
+                
                 $seller->save();
             }
 
-            if(!$changePass && $seller->id != Auth::user()->id) {
-                $roles = $request->has('role_id') ? $request->get('role_id') : [];
-                $seller->roles()->sync($roles);
-            }
 
-            return Redirect::route('admin.sellers.edit', $seller->id)->with('success', $feedback);
-        }
+            return Redirect::route('admin.sellers.edit', $seller->id)->with('success', 'Gravado com sucesso');
 
-        return Redirect::back()->withInput()->with('error', $validator->errors()->first());
+        
     }
 
     /**
@@ -285,17 +212,14 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
             ->edit_column('name', function($row) {
                 return view('admin.sellers.datatables.name', compact('row'))->render();
             })
+            ->edit_column('address', function($row) {
+                return view('admin.sellers.datatables.address', compact('row'))->render();
+            })
             ->add_column('select', function($row) {
                 return view('admin.partials.datatables.select', compact('row'))->render();
             })
-            ->add_column('roles', function($row) {
-                return view('admin.sellers.datatables.roles', compact('row'))->render();
-            })
             ->add_column('active', function($row) {
                 return view('admin.sellers.datatables.active', compact('row'))->render();
-            })
-            ->add_column('last_login', function($row) {
-                return view('admin.sellers.datatables.last_login', compact('row'))->render();
             })
             ->edit_column('created_at', function($row) {
                 return view('admin.partials.datatables.created_at', compact('row'))->render();

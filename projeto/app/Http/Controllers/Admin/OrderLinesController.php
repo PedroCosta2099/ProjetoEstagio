@@ -39,8 +39,19 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        
-        return $this->setContent('admin.orderlines.index');
+        if(Auth::user()->isAdmin())
+        {
+            $status = Status::orderBy('name','asc')
+                            ->pluck('name','id')
+                            ->toArray();
+        }
+        else{
+        $status = Status::where('seller_id',Auth::user()->seller_id)
+                            ->orderBy('name','asc')
+                            ->pluck('name','id')
+                            ->toArray();
+        }
+        return $this->setContent('admin.orderlines.index',compact('status'));
     }
 
     /**
@@ -247,12 +258,25 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
      */
     public function datatable(Request $request) {
 
+        if(Auth::user()->isAdmin())
+        {
+            $data = OrderLine::select();
+        }
+        else{
+        $data = OrderLine::where('seller_id',Auth::user()->seller_id);
+        }
 
-        $data = OrderLine::where('seller_id',Auth::user()->id);
-        
+         //filter status
+         if($request->status)
+         {
+             $data = $data->where('status_id',$request->status);
+         }
         return Datatables::of($data)
                 ->edit_column('name', function($row) {
                     return view('admin.orderlines.datatables.name', compact('row'))->render();
+                })
+                ->edit_column('seller_id', function($row) {
+                    return view('admin.orderlines.datatables.seller', compact('row'))->render();
                 })
                 ->edit_column('total_price', function($row) {
                     return view('admin.orderlines.datatables.price', compact('row'))->render();

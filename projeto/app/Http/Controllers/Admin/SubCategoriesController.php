@@ -37,8 +37,24 @@ class SubCategoriesController extends \App\Http\Controllers\Admin\Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
+        if(Auth::user()->isAdmin())
+        {
+            $category = Category::orderBy('name','asc')
+            ->pluck('name','id')
+            ->toArray();
+        }
+        else{
+
         
-        return $this->setContent('admin.subcategories.index');
+        $category = Category::where('seller_id',Auth::user()->seller_id)
+                            ->orderBy('name','asc')
+                            ->pluck('name','id')
+                            ->toArray();
+        }
+        $seller = Seller::orderBy('name','asc')
+                        ->pluck('name','id')
+                        ->toArray();
+        return $this->setContent('admin.subcategories.index',compact('category','seller'));
     }
 
     /**
@@ -182,8 +198,51 @@ class SubCategoriesController extends \App\Http\Controllers\Admin\Controller {
      */
     public function datatable(Request $request) {
 
+        if(Auth::user()->isAdmin())
+        {
         $data = SubCategory::select();
+        }
+        else
+        {
+            $categoriesIds = [];
+            $categories = Category::where('seller_id',Auth::user()->seller_id)
+                                    ->get()
+                                    ->toArray();
+            
+        foreach($categories as $category)
+        {
+            
+            if(!in_array($category['id'], $categoriesIds, true)){
+                array_push($categoriesIds,$category['id']);
+            }
+            
+        }
+        
+            $data = SubCategory::whereIn('category_id',$categoriesIds);
+            
+        }
+        //filter category
+        if($request->category)
+        {
+            $data = $data->where('category_id',$request->category);
+        }
 
+        //filter seller
+        if($request->seller)
+        {
+            $categoriesIds = [];
+            $categories = Category::where('seller_id',$request->seller)
+                                    ->get()
+                                    ->toArray();
+            
+            foreach($categories as $category)
+            {
+                if(!in_array($category['id'], $categoriesIds, true)){
+                    array_push($categoriesIds,$category['id']);
+                }
+            }
+            $data = $data->whereIn('category_id',$categoriesIds);
+        }
         return Datatables::of($data)
                 ->edit_column('name', function($row) {
                     return view('admin.subcategories.datatables.name', compact('row'))->render();

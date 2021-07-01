@@ -41,41 +41,23 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        return $this->setContent('admin.orders.index');
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    /*public function create() {
-
-        $order = new Order();
-        
-        $product = Product::orderBy('id','asc')
-                    ->pluck('name','id')
-                    ->toArray();
-
-        $operators = User::orderBy('code', 'asc')
-                        ->pluck('name', 'id')
+        if(Auth::user()->isAdmin())
+        {
+            $status = Status::orderBy('name','asc')
+                            ->pluck('name','id')
+                            ->toArray();
+        }
+        else
+        {
+        $status = Status::where('seller_id',Auth::user()->seller_id)
+                        ->orderBy('name','asc')
+                        ->pluck('name','id')
                         ->toArray();
-  
-        $action = 'Criar Pedido';
-        
-        $formOptions = array('route' => array('admin.orders.store'), 'method' => 'POST', 'class' => 'form-orders');
-
-        $data = compact(
-            'order',
-            'action',
-            'orderlines',
-            'product',
-            'formOptions',
-            'operators'
-        );
-        return view('admin.orders.edit', $data)->render();
+        }
+        return $this->setContent('admin.orders.index',compact('status'));
     }
-*/
+
     /**
      * Store a newly created resource in storage.
      *
@@ -306,7 +288,7 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
         }
         else{
         $orderIds = [];
-        $orderlines = OrderLine::where('seller_id',Auth::user()->id)->get()->toArray();
+        $orderlines = OrderLine::where('seller_id',Auth::user()->seller_id)->get()->toArray();
         foreach($orderlines as $orderline)
         {
             if(!in_array($orderline['order_id'], $orderIds, true)){
@@ -316,6 +298,12 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
         }
         $data = Order::whereIn('id',$orderIds);
         }
+
+         //filter status
+         if($request->status)
+         {
+             $data = $data->where('status_id',$request->status);
+         }
         return Datatables::of($data)
                 ->edit_column('id', function($row) {
                     return view('admin.orders.datatables.id', compact('row'))->render();

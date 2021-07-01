@@ -1,0 +1,42 @@
+[2021-07-01 00:06:51] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-07-01 00:06:51] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-07-01 00:06:54] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-07-01 00:06:54] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-07-01 00:07:03] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_square_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-07-01 00:07:03] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] http://projeto.test/assets/img/logo/logo_white_xs.png:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36
+IP: 192.168.10.1
+  

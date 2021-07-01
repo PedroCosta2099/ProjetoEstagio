@@ -30,6 +30,20 @@
                             <i class="fas fa-sort-amount-down"></i> Ordenar
                         </a>
                     </li>
+                    <li>
+                        <strong>Categoria</strong> 
+                        {{ Form::select('category', array('' => 'Todos') + $category, Request::has('category') ? Request::get('category') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
+                    </li>
+                    <li>
+                        <strong>Subcategoria</strong> 
+                        {{ Form::select('subcategory', array('' => 'Todos') + $subcategory, Request::has('subcategory') ? Request::get('subcategory') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
+                    </li>
+                    @if(Auth::user()->isAdmin())
+                    <li>
+                        <strong>Vendedor</strong> 
+                        {{ Form::select('seller', array('' => 'Todos') + $seller, Request::has('seller') ? Request::get('seller') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
+                    </li>
+                    @endif
                 </ul>
                 <div class="table-responsive">
                     <table id="datatable" class="table table-striped table-dashed table-hover table-condensed">
@@ -43,7 +57,9 @@
                                 <th>IVA</th>
                                 <th>Categoria</th>
                                 <th>SubCategoria</th>
+                                @if(Auth::user()->isAdmin())
                                 <th>Vendedor</th>
+                                @endif
                                 <th class="w-65px">Ações</th>
                             </tr>
                         </thead>
@@ -76,12 +92,20 @@
                 {data: 'vat', name:'vat', orderable: false, searchable: false},
                 {data: 'category_id', name:'category_id', orderable: true, searchable: true},
                 {data: 'subcategory_id', name:'subcategory_id', orderable: true, searchable: true},
+                @if(Auth::user()->isAdmin())
                 {data: 'seller_id', name:'seller_id'},
+                @endif
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},
             ],
             ajax: {
                 url: "{{ route('admin.products.datatable') }}",
                 type: "POST",
+                data: function (d) {
+                    d.category   = $('select[name=category').val();
+                    d.subcategory   = $('select[name=subcategory').val();
+                    d.seller   = $('select[name=seller').val();
+                    
+                },
                 beforeSend: function () { Datatables.cancelDatatableRequest(oTable) },
                 complete: function () { Datatables.complete() }
             }
@@ -95,7 +119,11 @@
             oTable.draw();
             e.preventDefault();
         });
-        $()
+        $(document).ready(function () {
+        $(".select2").select2({
+            language: 'pt'
+        });
+    });
     });
 
 </script>

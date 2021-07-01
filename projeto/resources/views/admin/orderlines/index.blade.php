@@ -20,12 +20,10 @@ Linhas de Pedidos
                     <li>
                         <button class="btn btn-default btn-sm" id="refresh"><i style="color:rgba(0,0,0,0.6)" class="fas fa-sync"></i></button>
                     </li>
- 
-                    <!--<li>
-                        <a href="{{ route('admin.orderlines.sort_status') }}" class="btn btn-default btn-sm" data-toggle="modal" data-target="#modal-remote">
-                            <i class="fas fa-sort-amount-down"></i> Ordenar
-                        </a>
-                    </li>-->
+                    <li>
+                        <strong>Estado</strong> 
+                        {{ Form::select('status', array('' => 'Todos') + $status, Request::has('status') ? Request::get('status') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
+                    </li>
                 </ul>
                 <div class="table-responsive">
                     <table id="datatable" class="table table-striped table-dashed table-hover table-condensed">
@@ -37,6 +35,11 @@ Linhas de Pedidos
                                 <th>Preço</th>
                                 <th>IVA</th>
                                 <th>Quantidade</th>
+                                @if(Auth::user()->isAdmin())
+                                
+                                <th>Vendedor</th>
+                                
+                                @endif
                                 <th class="w-1">Estado</th>
                                 <th class="w-65px">Ações</th>
                             </tr>
@@ -72,12 +75,19 @@ Linhas de Pedidos
                 {data: 'total_price', name:'total_price', orderable: false, searchable: false},
                 {data: 'vat', name:'vat', orderable: false, searchable: false},
                 {data: 'quantity',name: 'quantity'},
+                @if(Auth::user()->isAdmin())
+                    {data: 'seller_id',name:'seller_id'},
+                @endif
                 {data: 'status_id',name:'status_id'},
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},
             ],
             ajax: {
                 url: "{{ route('admin.orderlines.datatable') }}",
                 type: "POST",
+                data: function (d) {
+                    d.status   = $('select[name=status]').val();
+                    
+                },
                 beforeSend: function () { Datatables.cancelDatatableRequest(oTable) },
                 complete: function () { Datatables.complete() }
             }
@@ -91,7 +101,11 @@ Linhas de Pedidos
             oTable.draw();
             e.preventDefault();
         });
-        $()
+        $(document).ready(function () {
+        $(".select2").select2({
+            language: 'pt'
+        });
+    });
     });
 </script>
 @stop

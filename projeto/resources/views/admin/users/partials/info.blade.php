@@ -3,37 +3,37 @@
         {{ Form::model($user, $formOptions) }}
         <div class="col-sm-8 col-lg-9">
             <div class="row row-5">
-                <div class="col-sm-2">
-                    <div class="form-group">
-                        {{ Form::label('code', 'Código')}}
-                        {{ Form::text('code', null, array('class' =>'form-control')) }}
-                    </div>
-                </div>
-                <div class="col-sm-7">
+                <div class="col-sm-8">
                     <div class="form-group is-required">
                         {{ Form::label('name', 'Nome a apresentar no sistema')}}
                         {{ Form::text('name', null, array('class' =>'form-control', 'required' => true)) }}
                     </div>
                 </div>
-                <div class="col-sm-3">
+                <div class="col-sm-4">
+                    <div class="form-group">
+                        {{ Form::label('seller_id', 'Vendedor') }}
+                        {{ Form::select('seller_id', ['0' => 'NENHUM'] + $sellers, null, ['class' => 'form-control select2']) }}
+                    </div>
+                </div> 
+            </div>
+            <div class="form-group is-required col-sm-8">
+                {{ Form::label('email', 'E-mail')}}
+                {{ Form::email('email', null, array('class' =>'form-control', 'required' => true)) }}
+            </div>
+            <div class="col-sm-4">
                     <div class="form-group">
                         {{ Form::label('phone', 'Telemóvel')}}
                         {{ Form::text('phone', null, array('class' =>'form-control')) }}
                     </div>
                 </div>
-            </div>
-            <div class="form-group is-required">
-                {{ Form::label('email', 'E-mail')}}
-                {{ Form::email('email', null, array('class' =>'form-control', 'required' => true)) }}
-            </div>
             @if(empty($user->password))
-                <div class="form-group is-required">
+                <div class="form-group is-required col-sm-12">
                     {{ Form::label('password', 'Password')}}
                     <div class="input-group input-group">
-                        {{ Form::text('password', str_random(8), array('class' =>'form-control', 'required' => true)) }}
+                        {{ Form::text('password', str_random(8), array('class' =>'form-control', 'required' => true,'autocomplete'=>'off')) }}
                         <span class="input-group-btn">
                             <button class="btn btn-default btn-flat" id="random-password" type="button">
-                                <i class="fa fa-refresh"></i>
+                                <i class="fas fa-redo"></i>
                             </button>
                         </span>
                     </div>
@@ -60,7 +60,7 @@
                 <div class="col-sm-6">
                     @if($user->hasRole([config('permissions.role.admin')]) || Auth::user()->id != $user->id)
                     <div class="form-group is-required">
-                        {{ Form::label('role_id', 'Perfis do utilizador')}}
+                        {{ Form::label('role_id', 'Perfil do utilizador')}}
                         {{ Form::select('role_id[]', $roles, $assignedRoles, array('class' =>'form-control select2', 'multiple' => true, 'style' => 'width: 100%;', Auth::user()->hasRole([config('permissions.role.admin')]) ? '' : 'required')) }}
                     </div>
                     @endif
@@ -75,7 +75,7 @@
                         <tr>
                             <td>
                                 <p class="form-control-static" style="border: none; padding-left: 0;">
-                                    Bloquear acesso à administração <i class="fa fa-info-circle text-blue" data-toggle="tooltip" title="Impede o colaborador de iniciar sessão no programa."></i>
+                                    Bloquear acesso ao programa <i class="fa fa-info-circle text-blue" data-toggle="tooltip" title="Impede o colaborador de iniciar sessão no programa."></i>
                                 </p>
                             </td>
                             <td style="width: 120px">

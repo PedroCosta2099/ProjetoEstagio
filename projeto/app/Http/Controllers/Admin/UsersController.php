@@ -9,6 +9,7 @@ use Yajra\Datatables\Facades\Datatables;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Role;
 use App\Models\User;
+use App\Models\Seller;
 use Auth, App, Html, Session,File,Croppa;
 
 class UsersController extends \App\Http\Controllers\Admin\Controller {
@@ -53,7 +54,11 @@ class UsersController extends \App\Http\Controllers\Admin\Controller {
             '0' => 'Bloqueado'
         );
 
-        return $this->setContent('admin.users.index', compact('roles', 'status'));
+        $seller = Seller::orderBy('name')
+                        ->pluck('name','id')
+                        ->toArray();
+        
+        return $this->setContent('admin.users.index', compact('roles', 'status','seller'));
     }
 
     /**
@@ -84,7 +89,11 @@ class UsersController extends \App\Http\Controllers\Admin\Controller {
 
         $password = str_random(8);
 
-        return $this->setContent('admin.users.edit', compact('action', 'formOptions', 'user', 'password', 'roles', 'assignedRoles'));
+        $sellers = Seller::orderBy('name','asc')
+                            ->pluck('name','id')
+                            ->toArray();
+
+        return $this->setContent('admin.users.edit', compact('action', 'formOptions', 'user', 'password', 'roles', 'assignedRoles','sellers'));
     }
 
     /**
@@ -137,7 +146,11 @@ class UsersController extends \App\Http\Controllers\Admin\Controller {
 
         $formOptions = array('route' => array('admin.users.update', $user->id), 'method' => 'PUT', 'files' => true);
 
-        return $this->setContent('admin.users.edit', compact('user', 'action', 'formOptions', 'roles', 'assignedRoles'));
+        $sellers = Seller::orderBy('name','asc')
+                            ->pluck('name','id')
+                            ->toArray();
+                            
+        return $this->setContent('admin.users.edit', compact('user', 'action', 'formOptions', 'roles', 'assignedRoles','sellers'));
     }
 
     /**
@@ -155,6 +168,8 @@ class UsersController extends \App\Http\Controllers\Admin\Controller {
 
         $input['active'] = !$request->get('active', false);
         $input['email'] = strtolower(@$input['email']);
+
+        $user->seller_id = $input['seller_id'];
 
         $changePass = false;
         $feedback = 'Dados gravados com sucesso.';
@@ -263,9 +278,14 @@ class UsersController extends \App\Http\Controllers\Admin\Controller {
     public function datatable(Request $request) {
 
         $user = Auth::user();
-
+        if($user->isAdmin())
+        {
         $data = User::with('roles')->select();
-
+        }
+        else{
+            $data = User::where('seller_id',Auth::user()->seller_id)
+                        ->select();
+        }
         //filter role
         if($request->role) {
             $data = $data->whereHas('roles', function($q) use($request){
@@ -278,10 +298,18 @@ class UsersController extends \App\Http\Controllers\Admin\Controller {
         if($request->has('active')) {
             $data = $data->where('active', $active);
         }
-
+        //filter seller
+        if($request->seller)
+        {
+            $data = $data->where('seller_id',$request->seller);
+        }
+    
         return Datatables::of($data)
             ->edit_column('name', function($row) {
                 return view('admin.users.datatables.name', compact('row'))->render();
+            })
+            ->edit_column('seller_id', function($row) {
+                return view('admin.users.datatables.seller', compact('row'))->render();
             })
             ->add_column('select', function($row) {
                 return view('admin.partials.datatables.select', compact('row'))->render();

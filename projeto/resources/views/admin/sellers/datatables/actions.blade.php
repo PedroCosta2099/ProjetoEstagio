@@ -11,14 +11,6 @@
         </button>
         <ul class="dropdown-menu pull-right">
             <li>
-                <a href="{{ route('admin.sellers.remote-login', $row->id) }}" class="text-yellow"
-                   data-method="post" data-confirm-title="Iniciar Sessão Remota" data-confirm-class="btn-success"
-                   data-confirm-label="Iniciar Sessão"
-                   data-confirm="Pretende iniciar sessão como {{ $row->name }}?" target="_blank">
-                    <i class="fa fa-sign-in bigger-120"></i> Iniciar Sessão
-                </a>
-            </li>
-            <li>
                 <a href="{{ route('admin.sellers.destroy', $row->id) }}" data-method="delete" data-confirm="Confirma a remoção do registo selecionado?">
                     <i class="fa fa-trash bigger-120"></i> Eliminar
                 </a>
