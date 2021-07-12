@@ -90,9 +90,20 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
     public function create() {
         
         $product = new Product();
-        $categories = Category::where('seller_id',Auth::user()->seller_id)
+        $seller = Seller::orderBy('name','asc')
                         ->pluck('name','id')
                         ->toArray();
+        if(Auth::user()->isAdmin())
+        {
+            $categories = Category::where('id',$product->category_id)
+                                ->pluck('name','id')
+                                ->toArray();
+        }
+        else{
+        $categories = Category::where('seller_id',Auth::user()->seller_id)
+                            ->pluck('name','id')
+                            ->toArray();
+        }
         $subcategories = SubCategory::where('category_id',$product->category_id)
                             ->pluck('name','id')
                             ->toArray();
@@ -109,7 +120,8 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
             'categories',
             'subcategories',
             'formOptions',
-            'operators'
+            'operators',
+            'seller'
         );
 
         return view('admin.products.edit', $data)->render();
@@ -134,9 +146,20 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
     public function edit($id) {
         
         $product = Product::findOrfail($id);
+        $seller = Seller::orderBy('name','asc')
+                        ->pluck('name','id')
+                        ->toArray();
+        if(Auth::user()->isAdmin())
+        {
+            $categories = Category::where('id',$product->category_id)
+                                ->pluck('name','id')
+                                ->toArray();
+        }
+        else{
         $categories = Category::where('seller_id',Auth::user()->seller_id)
                             ->pluck('name','id')
                             ->toArray();
+        }
         $subcategories = SubCategory::where('category_id',$product->category_id)
                             ->pluck('name','id')
                             ->toArray();
@@ -153,7 +176,8 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
             'categories',
             'subcategories',
             'formOptions',
-            'operators'
+            'operators',
+            'seller'
         );
         return view('admin.products.edit', $data)->render();
     }
@@ -217,6 +241,21 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
 
             return response()->json($subcategories);
     }
+
+    public function updateCategoryBySeller($id)
+    {
+        
+            $categories = Category::where('seller_id',$id)
+                            ->pluck('name','id')
+                            ->toArray();
+            if(count($categories) == 0)
+            {
+                $categories = ["NENHUM"];
+            }
+
+            return response()->json($categories);
+    }
+
 
     /**
      * Remove the specified resource from storage.

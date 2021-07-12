@@ -7,12 +7,10 @@ return array(
      */
     'role' => [
         'admin'           => 'administrator',
-        'agency'          => 'agencia',
         'seller'          => 'seller_admin',
-        'guest_agency'    => 'agencia-convidada',
-        'cashier_manager' => 'gestor-de-caixa',
-        'platformer'      => 'plataformista',
-        'operator'        => 'operador',
+        'gestor'          => 'gestor',
+        'employee'        => 'seller_employee'
+        
     ],
 
 
@@ -39,6 +37,10 @@ return array(
         [
             "name" => "admin_sellers",
             "display_name" => "Gestão Restaurante",
+        ],
+        [
+            "name" => "orders",
+            "display_name" => "Pedidos"
         ],
     ],
 

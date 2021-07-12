@@ -14,11 +14,18 @@
                 {{ Form::text('name', null, ['class' => 'form-control uppercase', 'required']) }}
             </div>
         </div>
+        @if(Auth::user()->isAdmin())
+        <div class="col-sm-3">
+            <div class="form-group is-required">
+                {{ Form::label('seller_id', 'Vendedor') }}
+                {{ Form::select('seller_id', ['0' => 'NENHUM'] + $seller, null, ['class' => 'form-control select2', 'required','id'=>'seller_id']) }}
+            </div>
+        </div>
+        @endif
         <div class="col-sm-3">
             <div class="form-group is-required">
                 {{ Form::label('category_id', 'Categoria') }}
-                {{ Form::select('category_id', ['' => 'NENHUM'] + $categories, null, ['class' => 'form-control select2', 'required']) }}
-
+                {{ Form::select('category_id', ['0' => 'NENHUM'] + $categories, null, ['class' => 'form-control select2', 'required','id' => 'category_id']) }}
             </div>
         </div>
     </div>
@@ -33,4 +40,40 @@
     $('.select2').select2(Init.select2());
     $('input').iCheck(Init.iCheck());
     $('[data-toggle="tooltip"]').tooltip();
+
+$('#seller_id').change(function(){
+    var cid = $(this).val();
+    if(cid <= 0)
+    {
+        $("#category_id").empty();
+    }
+});
+
+$('#seller_id').change(function(){
+    var cid = $(this).val();
+    if(cid > 0){
+        $.ajax({
+           type:"get",
+           url:"{{url('admin/subcategories/updateCategory')}}/"+cid,
+           success:function(res)
+           {    
+            $("#category_id").empty();
+                if(res)
+                {
+                    $.each(res,function(key,value){
+                        $('#category_id').append($("<option/>", {
+                           value: key,
+                           text: value
+                        }));
+                    });
+                }
+           },
+           error:function()
+           {
+                
+           }   
+        });
+    }
+});
+
 </script>

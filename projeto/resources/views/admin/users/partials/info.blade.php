@@ -9,12 +9,14 @@
                         {{ Form::text('name', null, array('class' =>'form-control', 'required' => true)) }}
                     </div>
                 </div>
+                @if(Auth::user()->isAdmin())
                 <div class="col-sm-4">
                     <div class="form-group">
                         {{ Form::label('seller_id', 'Vendedor') }}
                         {{ Form::select('seller_id', ['0' => 'NENHUM'] + $sellers, null, ['class' => 'form-control select2']) }}
                     </div>
-                </div> 
+                </div>
+                 @endif 
             </div>
             <div class="form-group is-required col-sm-8">
                 {{ Form::label('email', 'E-mail')}}
@@ -79,7 +81,7 @@
                                 </p>
                             </td>
                             <td style="width: 120px">
-                                {{ Form::select('active', [1 => 'Sim', 0 => 'Não'], $user->active ? 0 : 1, array('class' =>'form-control select2')) }}
+                                {{ Form::select('active', [0 => 'Não', 1 => 'Sim'], $user->active ? 1 : 0, array('class' =>'form-control select2')) }}
                             </td>
                         </tr>
                     </table>

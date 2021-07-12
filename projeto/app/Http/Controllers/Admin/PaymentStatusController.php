@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\Redirect;
 use Yajra\Datatables\Facades\Datatables;
 use App\Models\PaymentStatus;
 use App\Models\User;
+use App\Models\Seller;
+use Auth;
 
 
 class PaymentStatusController extends \App\Http\Controllers\Admin\Controller {
@@ -35,8 +37,14 @@ class PaymentStatusController extends \App\Http\Controllers\Admin\Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
+
         
-        return $this->setContent('admin.paymentstatus.index');
+            $seller = Seller::orderBy('name','asc')
+            ->pluck('name','id')
+            ->toArray();
+        
+        
+        return $this->setContent('admin.paymentstatus.index',compact('seller'));
     }
 
     /**
@@ -54,13 +62,18 @@ class PaymentStatusController extends \App\Http\Controllers\Admin\Controller {
 
         $action = 'Adicionar Estado';
 
+        $seller = Seller::orderBy('name','asc')
+                        ->pluck('name','id')
+                        ->toArray();
+
         $formOptions = array('route' => array('admin.paymentstatus.store'), 'method' => 'POST', 'class' => 'form-status');
 
         $data = compact(
             'paymentstatus',
             'action',
             'formOptions',
-            'operators'
+            'operators',
+            'seller'
         );
 
         return view('admin.paymentstatus.edit', $data)->render();
@@ -94,11 +107,17 @@ class PaymentStatusController extends \App\Http\Controllers\Admin\Controller {
 
         $formOptions = array('route' => array('admin.paymentstatus.update', $paymentstatus->id), 'method' => 'PUT', 'class' => 'form-status');
 
+        
+        $seller = Seller::orderBy('name','asc')
+                        ->pluck('name','id')
+                        ->toArray();
+
         $data = compact(
             'paymentstatus',
             'action',
             'formOptions',
-            'operators'
+            'operators',
+            'seller'
         );
 
         return view('admin.paymentstatus.edit', $data)->render();
@@ -117,6 +136,7 @@ class PaymentStatusController extends \App\Http\Controllers\Admin\Controller {
         User::flushCache(User::CACHE_TAG);
 
         $input = $request->all();
+        
 
         $paymentstatus = PaymentStatus::findOrNew($id);
 
@@ -179,12 +199,27 @@ class PaymentStatusController extends \App\Http\Controllers\Admin\Controller {
      * @return Datatables
      */
     public function datatable(Request $request) {
-
-        $data = PaymentStatus::select();
+        if(Auth::user()->isAdmin())
+        {
+            $data = PaymentStatus::select();
+        }
+        else
+        {
+            $data = PaymentStatus::where('seller_id',Auth::user()->seller_id);
+        }
+         //filter seller
+         if($request->seller)
+         {
+             $data = $data->where('seller_id',$request->seller);
+         }
+        
         
         return Datatables::of($data)
                 ->edit_column('name', function($row) {
                     return view('admin.paymentstatus.datatables.name', compact('row'))->render();
+                })
+                ->edit_column('seller_id', function($row) {
+                    return view('admin.paymentstatus.datatables.seller', compact('row'))->render();
                 })
                 ->add_column('select', function($row) {
                     return view('admin.partials.datatables.select', compact('row'))->render();

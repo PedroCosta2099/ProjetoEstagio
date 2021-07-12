@@ -12,6 +12,7 @@ use App\Models\User;
 use App\Models\Product;
 use App\Models\Status;
 use App\Models\Payment;
+use App\Models\Seller;
 use Auth;
 
 class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
@@ -44,14 +45,24 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
             $status = Status::orderBy('name','asc')
                             ->pluck('name','id')
                             ->toArray();
+
+            $seller = Seller::orderBy('name','asc')
+                            ->pluck('name','id')
+                            ->toArray();
+                            
         }
         else{
         $status = Status::where('seller_id',Auth::user()->seller_id)
                             ->orderBy('name','asc')
                             ->pluck('name','id')
                             ->toArray();
+                           
+        $seller = Seller::where('id',Auth::user()->seller_id) /**CORRIGIR AQUI PQ O FILTRO SÓ VAI TER O PRÓPRIO USER */
+                            ->orderBy('name','asc')
+                            ->pluck('name','id')
+                            ->toArray();
         }
-        return $this->setContent('admin.orderlines.index',compact('status'));
+        return $this->setContent('admin.orderlines.index',compact('status','seller'));
     }
 
     /**
@@ -270,6 +281,11 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
          if($request->status)
          {
              $data = $data->where('status_id',$request->status);
+         }
+         //filter seller
+         if($request->seller)
+         {
+             $data = $data->where('seller_id',$request->seller);
          }
         return Datatables::of($data)
                 ->edit_column('name', function($row) {

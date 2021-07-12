@@ -41,13 +41,23 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
      */
     public function index() {
         
-        
+            
             $paymentType = PaymentType::orderBy('name','asc')
                                     ->pluck('name','id')
                                     ->toArray();
-        
-        
-        return $this->setContent('admin.payments.index',compact('paymentType'));
+            if(Auth::user()->isAdmin())
+            {
+            $paymentStatus = PaymentStatus::orderBy('name','asc')
+                                        ->pluck('name','id')
+                                        ->toArray();
+            }
+            else{
+                $paymentStatus = PaymentStatus::where('seller_id',Auth::user()->seller_id)
+                                        ->orderBy('name','asc')
+                                        ->pluck('name','id')
+                                        ->toArray();
+            }
+        return $this->setContent('admin.payments.index',compact('paymentType','paymentStatus'));
     }
 
     /**
@@ -256,6 +266,10 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
         if($request->paymentType)
         {
             $data = $data->where('payment_type_id',$request->paymentType);
+        }
+        if($request->paymentStatus)
+        {
+            $data = $data->where('payment_status_id',$request->paymentStatus);
         }
         return Datatables::of($data)
                 ->edit_column('payment_type_id', function($row) {

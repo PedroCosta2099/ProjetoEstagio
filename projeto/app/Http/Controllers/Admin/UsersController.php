@@ -168,9 +168,15 @@ class UsersController extends \App\Http\Controllers\Admin\Controller {
 
         $input['active'] = !$request->get('active', false);
         $input['email'] = strtolower(@$input['email']);
-
+        if(Auth::user()->isAdmin())
+        {
         $user->seller_id = $input['seller_id'];
-
+        }
+        else
+        {
+            $user->seller_id = Auth::user()->seller_id;
+        }
+        
         $changePass = false;
         $feedback = 'Dados gravados com sucesso.';
         $rules = [];

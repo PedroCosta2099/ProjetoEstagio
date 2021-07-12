@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 use Yajra\Datatables\Facades\Datatables;
 use App\Models\Status;
 use App\Models\User;
+use App\Models\Seller;
 use Auth;
 
 
@@ -36,8 +37,22 @@ class StatusController extends \App\Http\Controllers\Admin\Controller {
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        
-        return $this->setContent('admin.status.index');
+        if(Auth::user()->isAdmin())
+        {
+
+            $seller = Seller::orderBy('name','asc')
+                            ->pluck('name','id')
+                            ->toArray();
+                            
+        }
+        else{
+     
+        $seller = Seller::where('id',Auth::user()->seller_id)
+                            ->orderBy('name','asc')
+                            ->pluck('name','id')
+                            ->toArray();
+        }
+        return $this->setContent('admin.status.index',compact('seller'));
     }
 
     /**
@@ -187,7 +202,12 @@ class StatusController extends \App\Http\Controllers\Admin\Controller {
             
         }
         else{
-        $data = Status::where('seller_id',Auth::user()->id);
+        $data = Status::where('seller_id',Auth::user()->seller_id);
+        }
+        //filter seller
+        if($request->seller)
+        {
+            $data = $data->where('seller_id',$request->seller);
         }
         return Datatables::of($data)
                 ->edit_column('name', function($row) {

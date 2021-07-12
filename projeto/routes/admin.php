@@ -234,6 +234,7 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'auth.admin', 'namespace
         ->name('admin.products.sort.update');
     
     Route::get('products/updateCategory/{id}','ProductsController@updateCategory');
+    Route::get('products/updateCategoryBySeller/{id}','ProductsController@updateCategoryBySeller');
             
     Route::resource('products', 'ProductsController', [
         'as' => 'admin',
@@ -293,6 +294,8 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'auth.admin', 'namespace
 
     Route::post('subcategories/sort', 'SubCategoriesController@sortUpdate')
         ->name('admin.subcategories.sort.update');
+    
+    Route::get('subcategories/updateCategory/{id}','SubcategoriesController@updateCategory');
 
     Route::resource('subcategories', 'SubCategoriesController', [
         'as' => 'admin',

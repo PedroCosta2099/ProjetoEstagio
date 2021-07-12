@@ -30,7 +30,7 @@ class PaymentStatus extends BaseModel implements Sortable
      * @var array
      */
     protected $fillable = [
-        'name','status_color'
+        'name','status_color','seller_id'
     ];
 
     /**
@@ -59,4 +59,17 @@ class PaymentStatus extends BaseModel implements Sortable
     public $sortable = [
         'order_column_name' => 'sort'
     ];
+        /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    |
+    | Define current model relationships
+    */
+
+
+    public function seller()
+    {
+        return $this->belongsTo('App\Models\Seller','seller_id');
+    }
 }

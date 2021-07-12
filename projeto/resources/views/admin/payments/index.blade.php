@@ -24,6 +24,10 @@
                         <strong>Método de Pagamento</strong> 
                         {{ Form::select('paymentType', array('' => 'Todos') + $paymentType, Request::has('paymentType') ? Request::get('paymentType') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
                     </li>
+                    <li>
+                        <strong>Estado do Pagamento</strong> 
+                        {{ Form::select('paymentStatus', array('' => 'Todos') + $paymentStatus, Request::has('paymentStatus') ? Request::get('paymentStatus') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
+                    </li>
                 </ul>
                 <div class="table-responsive">
                     <table id="datatable" class="table table-striped table-dashed table-hover table-condensed">
@@ -82,6 +86,7 @@
                 type: "POST",
                 data: function (d) {
                     d.paymentType   = $('select[name=paymentType]').val();
+                    d.paymentStatus = $('select[name=paymentStatus]').val();
                     
                 },
                 beforeSend: function () { Datatables.cancelDatatableRequest(oTable) },

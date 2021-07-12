@@ -56,6 +56,14 @@
                 {{ Form::number('vat',number_format($product->vat,2), ['class' => 'form-control', 'required','readonly','step' => '0.01','min'=>'0']) }}
             </div>
         </div>
+        @if(Auth::user()->isAdmin())
+        <div class="col-sm-6">
+            <div class="form-group">
+                {{ Form::label('seller_id', 'Vendedor') }}
+                {{ Form::select('seller_id', ['0' => 'NENHUM'] + $seller, null, ['class' => 'form-control select2','id'=>'seller_id']) }}
+            </div>
+        </div>  
+        @endif
         <div class="col-sm-6">
             <div class="form-group">
                 {{ Form::label('category_id', 'Categoria') }}
@@ -91,6 +99,40 @@
     
 </script>
 <script>
+$('#seller_id').change(function(){
+    var cid = $(this).val();
+    if(cid <= 0)
+    {
+        $("#category_id").empty();
+    }
+});
+
+$('#seller_id').change(function(){
+    var cid = $(this).val();
+    if(cid > 0){
+        $.ajax({
+           type:"get",
+           url:"{{url('admin/products/updateCategoryBySeller')}}/"+cid,
+           success:function(res)
+           {    
+            
+                if(res)
+                {
+                    $.each(res,function(key,value){
+                        $('#category_id').append($("<option/>", {
+                           value: key,
+                           text: value
+                        }));
+                    });
+                }
+           },
+           error:function()
+           {
+                
+           }   
+        });
+    }
+});
 $('#category_id').change(function(){
     var cid = $(this).val();
     if(cid <= 0)

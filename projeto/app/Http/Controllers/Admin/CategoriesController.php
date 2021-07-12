@@ -56,10 +56,15 @@ class CategoriesController extends \App\Http\Controllers\Admin\Controller {
         
         $formOptions = array('route' => array('admin.categories.store'), 'method' => 'POST', 'class' => 'form-status');
 
+        $seller = Seller::orderBy('name','asc')
+                        ->pluck('name','id')
+                        ->toArray();
+
         $data = compact(
             'category',
             'action',
-            'formOptions'
+            'formOptions',
+            'seller'
         );
 
         return view('admin.categories.edit', $data)->render();
@@ -89,10 +94,15 @@ class CategoriesController extends \App\Http\Controllers\Admin\Controller {
 
         $formOptions = array('route' => array('admin.categories.update', $category->id), 'method' => 'PUT', 'class' => 'form-status');
 
+        $seller = Seller::orderBy('name','asc')
+                        ->pluck('name','id')
+                        ->toArray();
+
         $data = compact(
             'category',
             'action',
-            'formOptions'
+            'formOptions',
+            'seller'
 
         );
 

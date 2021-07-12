@@ -25,10 +25,16 @@
             <ul class="nav navbar-nav">
 
                 {{-- USER ACCOUNT --}}
+                <li><i class="fas fa-shopping-cart"></i><span>€{{number_format(CartProvider::instance()->subtotal,2,',','.')}}</span></li>
                 <li class="dropdown user-menu">
+                    
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <?php // <img src="{{ Auth::user()->filepath ? asset(Auth::user()->filepath) : '' }}" class="user-image" alt="{{ Auth::user()->name }}" onerror="this.src='{{ asset('assets/img/default/avatar.png') }}';">
-                        //<span class="hidden-xs">{{ Auth::user()->name }}?></span> <i class="caret"></i> 
+                         
+                        @if(Auth::check())
+                        <span>{{Auth::user()->name}}</span>
+                        @endif
+                    </span> <i class="caret"></i>
+                    
                     </a>
                     <ul class="dropdown-menu">
                         <li>

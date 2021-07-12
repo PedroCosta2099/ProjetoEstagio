@@ -31,6 +31,12 @@
                             <i class="fas fa-sort-amount-down"></i> Ordenar
                         </a>
                     </li>
+                    @if(Auth::user()->isAdmin())
+                    <li>
+                        <strong>Vendedor</strong> 
+                        {{ Form::select('seller', array('' => 'Todos') + $seller, Request::has('seller') ? Request::get('seller') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
+                    </li>
+                    @endif
                 </ul>
                 <div class="table-responsive">
                     <table id="datatable" class="table table-striped table-dashed table-hover table-condensed">
@@ -39,7 +45,9 @@
                                 <th class="w-1">{{ Form::checkbox('select-all', '') }}</th>
                                 <th></th>
                                 <th>Estado</th>
+                                @if(Auth::user()->isAdmin())
                                 <th>Vendedor</th>
+                                @endif
                                 <th class="w-65px">Ações</th>
                             </tr>
                         </thead>
@@ -68,12 +76,17 @@
                 {data: 'select', name: 'select', orderable: false, searchable: false},
                 {data: 'id', name: 'id', visible: false},
                 {data: 'name', name:'name'},
+                @if(Auth::user()->isAdmin())
                 {data:'seller_id',name:'seller_id'},
+                @endif
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},
             ],
             ajax: {
                 url: "{{ route('admin.status.datatable') }}",
                 type: "POST",
+                data: function (d) {
+                    d.seller  = $('select[name=seller]').val();
+                },
                 beforeSend: function () { Datatables.cancelDatatableRequest(oTable) },
                 complete: function () { Datatables.complete() }
             }

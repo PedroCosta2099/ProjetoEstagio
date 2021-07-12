@@ -24,6 +24,12 @@ Linhas de Pedidos
                         <strong>Estado</strong> 
                         {{ Form::select('status', array('' => 'Todos') + $status, Request::has('status') ? Request::get('status') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
                     </li>
+                    @if(Auth::user()->isAdmin())
+                    <li>
+                        <strong>Vendedor</strong> 
+                        {{ Form::select('seller', array('' => 'Todos') + $seller, Request::has('seller') ? Request::get('seller') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
+                    </li>
+                    @endif
                 </ul>
                 <div class="table-responsive">
                     <table id="datatable" class="table table-striped table-dashed table-hover table-condensed">
@@ -38,7 +44,7 @@ Linhas de Pedidos
                                 @if(Auth::user()->isAdmin())
                                 
                                 <th>Vendedor</th>
-                                
+            
                                 @endif
                                 <th class="w-1">Estado</th>
                                 <th class="w-65px">Ações</th>
@@ -86,7 +92,7 @@ Linhas de Pedidos
                 type: "POST",
                 data: function (d) {
                     d.status   = $('select[name=status]').val();
-                    
+                    d.seller  = $('select[name=seller]').val();
                 },
                 beforeSend: function () { Datatables.cancelDatatableRequest(oTable) },
                 complete: function () { Datatables.complete() }
