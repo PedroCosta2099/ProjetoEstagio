@@ -25,7 +25,7 @@
             <ul class="nav navbar-nav">
 
                 {{-- USER ACCOUNT --}}
-                <li><i class="fas fa-shopping-cart"></i><span>€{{number_format(CartProvider::instance()->subtotal,2,',','.')}}</span></li>
+                <li><a class="align-middle" href="{{route('customer.cart.index')}}" style="color:white"><i class="fas fa-shopping-cart"></i><span class="align-bottom">€{{number_format(CartProvider::instance()->subtotal,2,',','.')}}</span></a></li>
                 <li class="dropdown user-menu">
                     
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">

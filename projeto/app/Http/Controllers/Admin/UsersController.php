@@ -61,6 +61,7 @@ class UsersController extends \App\Http\Controllers\Admin\Controller {
         return $this->setContent('admin.users.index', compact('roles', 'status','seller'));
     }
 
+
     /**
      * Show the form for creating a new resource.
      *

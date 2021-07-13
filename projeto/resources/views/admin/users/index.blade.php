@@ -17,15 +17,13 @@
         <div class="box no-border">
             <div class="box-body">
                 <ul class="datatable-filters list-inline hide pull-left" data-target="#datatable"> 
-                    <li>
+                <li>
+                        <button class="btn btn-default btn-sm" id="refresh"><i style="color:rgba(0,0,0,0.6)" class="fas fa-sync"></i></button>
+                    </li>
+                <li>
                         <a href="{{ route('admin.users.create') }}" class="btn btn-success btn-sm">
                             <i class="fa fa-plus"></i> Novo
                         </a>
-                        {{--
-                        <button type="button" class="btn btn-sm btn-default">
-                            <i class="fa fa-filter"></i> Filtrar <i class="fa fa-angle-down"></i>
-                        </button>
-                        --}}
                     </li>
                     <li>
                         <strong>Perfil</strong>
@@ -36,7 +34,7 @@
                         {{ Form::select('active', array('' => 'Todos') + $status, Request::has('active') ? Request::get('active') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
                     </li>
                     <li>
-                        <strong>Restaurante</strong>
+                        <strong>Vendedor</strong>
                         {{ Form::select('seller', array('' => 'Todos') + $seller, Request::has('seller') ? Request::get('seller') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
                     </li>
                 </ul>
@@ -48,7 +46,7 @@
                                 <th></th>
                                 <th>Nome</th>
                                 <th>Perfís</th>
-                                <th class="w-1">Restaurante</th>
+                                <th class="w-1">Vendedor</th>
                                 <th class="w-1">Estado</th>
                                 <th class="w-110px">Último Login</th>
                                 <th class="w-70px">Criado em</th>
@@ -104,6 +102,10 @@
                             {type: 'error', align: 'center', width: 'auto', delay: 8000});
                 }
             }
+        });
+
+        $('#refresh').on('click', function() {
+        oTable.ajax.reload(null,false);
         });
 
         $('.filter-datatable').on('change', function (e) {

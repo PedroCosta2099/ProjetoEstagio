@@ -60,6 +60,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
                             ->toArray();
         
         CartProvider::instance()->add(new Item($product['id'],$product['name'],$quantity,$product['price'],0,true,[],['image' => $product['filepath']]));
+        
         return Redirect::back();
     }
 
@@ -167,7 +168,8 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
             return Redirect::back()->with('error','Inicie sessão e tente novamente');
         }
         $IVA = 0.23;
-        $user = Auth::user();
+        $user = Auth::guard('customer')->user();
+        dd($user);
         if(CartProvider::instance()->getQuantity() == 0)
         {
             return Redirect::back()->with('error','Não pode criar um pedido sem items');

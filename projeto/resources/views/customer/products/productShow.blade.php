@@ -32,5 +32,6 @@
             xhr.open('GET', '/cart/insert/'+id+'/'+quantity);
             xhr.send();
     }
+
 </script>       
 @stop       

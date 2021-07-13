@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Models\Category;
 use App\Models\SubCategory;
 use App\Models\OrderLine;
+use Syscover\ShoppingCart\Facades\CartProvider;
 use Auth;
 use Validator;
 use File,Croppa;
@@ -47,6 +48,7 @@ class ProductsController extends \App\Http\Controllers\Customer\Controller {
         $product = Product::where('id',$id)
                     ->first()
                     ->toArray();
-        return view('customer.products.productShow',compact('product'))->render();
+        $subtotal = CartProvider::instance()->subtotal;
+        return view('customer.products.productShow',compact('product','subtotal'))->render();
     }
 }

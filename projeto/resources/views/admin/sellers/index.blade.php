@@ -17,15 +17,14 @@
         <div class="box no-border">
             <div class="box-body">
                 <ul class="datatable-filters list-inline hide pull-left" data-target="#datatable"> 
+                <li>
+                        <button class="btn btn-default btn-sm" id="refresh"><i style="color:rgba(0,0,0,0.6)" class="fas fa-sync"></i></button>
+                    </li>
+  
                     <li>
                         <a href="{{ route('admin.sellers.create') }}" class="btn btn-success btn-sm">
                             <i class="fa fa-plus"></i> Novo
                         </a>
-                        {{--
-                        <button type="button" class="btn btn-sm btn-default">
-                            <i class="fa fa-filter"></i> Filtrar <i class="fa fa-angle-down"></i>
-                        </button>
-                        --}}
                     </li>
                     <li>
                         <strong>Estado</strong> 
@@ -95,6 +94,11 @@
                             {type: 'error', align: 'center', width: 'auto', delay: 8000});
                 }
             }
+        });
+
+        
+        $('#refresh').on('click', function() {
+        oTable.ajax.reload(null,false);
         });
 
         $('.filter-datatable').on('change', function (e) {

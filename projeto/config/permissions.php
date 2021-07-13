@@ -9,7 +9,8 @@ return array(
         'admin'           => 'administrator',
         'seller'          => 'seller_admin',
         'gestor'          => 'gestor',
-        'employee'        => 'seller_employee'
+        'employee'        => 'seller_employee',
+        'customer'        => 'customer'
         
     ],
 

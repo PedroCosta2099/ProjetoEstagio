@@ -114,16 +114,6 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
         return view('admin.orders.edit', $data)->render();
     }
 
-    /*public function totalPrice(Request $request)
-    {
-        $order = Order::where('id',$request->id);
-        $orderLines = OrderLine::where('order_id',$request->id);
-        $orderTotalPrice = $orderlines->sum('total_price');
-        $order->total_price = $orderTotalPrice;
-        dd($orderTotalPrice);
-        return response()->json($orderTotalPrice);
-    }*/
-
     public function createOrder(Request $request){
 
         $ids = explode(',', $request->ids);

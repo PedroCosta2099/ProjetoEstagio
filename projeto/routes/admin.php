@@ -81,7 +81,26 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'auth.admin', 'namespace
     Route::resource('roles', 'RolesController', [
                     'as' => 'admin', 
                     'except' => ['create', 'edit']]);
-    
+                    
+     /*=================================================================================================================
+     * CUSTOMERS
+     =================================================================================================================*/
+    Route::post('customers/datatable', 'CustomersController@datatable')
+        ->name('admin.customers.datatable');
+
+    Route::post('customers/selected/destroy', 'CustomersController@massDestroy')
+        ->name('admin.customers.selected.destroy');
+
+    Route::post('customers/{id}/remote-login', 'CustomersController@remoteLogin')
+        ->name('admin.customers.remote-login');
+
+    Route::get('customers/{id}/remote-logout', 'HomeController@remoteLogout')
+        ->name('admin.customers.remote-logout');
+
+    Route::resource('customers', 'CustomersController', [
+        'as' => 'admin',
+        'except' => ['show']]);
+
     /*=================================================================================================================
      * SELLERS
      =================================================================================================================*/
