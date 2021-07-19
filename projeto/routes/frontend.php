@@ -3,14 +3,34 @@
 use Syscover\ShoppingCart\Item;
 use Syscover\ShoppingCart\TaxRule;
 
-Route::group(array('prefix' => LaravelLocalization::setLocale(), 'namespace' => 'Customer'), function() {       
+
+/*=================================================================================================================
+ * LOGIN & RESET PASSWORD
+ =================================================================================================================*/
+//LOGIN
+Route::group(array('prefix' => 'login', 'middleware' => 'guest', 'namespace' => 'Auth'), function() {
+
+        Route::get('/', 'LoginController@index')
+                ->name('customer.login');
+    
+        Route::post('/', 'LoginController@login')
+                ->name('customer.login.submit');
+    });
+   
+    Route::get('/','HomeController@index')
+    ->name('home.index');
+    //LOGOUT
+Route::get('customer/logout', 'Auth\LoginController@logout')
+->name('customer.logout')
+->middleware('auth');
+Route::group(array('middleware' => 'auth','namespace' => 'Customer'), function() {  
+        
+     
         /**
          * PRODUCTS
          */
         Route::get('/products','ProductsController@listProducts')
             ->name('customer.products.index');
-        Route::get('/','HomeController@index')
-            ->name('home.index');
         Route::get('/products/{id}/show','ProductsController@showProduct')
             ->name('customer.products.productShow');
 

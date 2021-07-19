@@ -39,6 +39,7 @@ class CheckClientCredentials
      */
     public function handle($request, Closure $next, ...$scopes)
     {
+        
         $psr = (new DiactorosFactory)->createRequest($request);
 
         try{

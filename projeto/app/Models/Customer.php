@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Spatie\EloquentSortable\Sortable;
 use Spatie\EloquentSortable\SortableTrait;
+use Illuminate\Foundation\Auth\Customer as Authenticatable;
 use Auth;
 
-class Customer extends Authenticable
+class Customer extends Authenticatable
 {
 
     use SoftDeletes, SortableTrait;

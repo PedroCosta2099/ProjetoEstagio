@@ -28,7 +28,7 @@ class LoginController extends \App\Http\Controllers\Controller
      *
      * @var string
      */
-    protected $redirectTo = '/area-cliente';
+    protected $redirectTo = '/products';
 
     /**
      * Create a new controller instance.
@@ -56,8 +56,8 @@ class LoginController extends \App\Http\Controllers\Controller
      *
      */
     public function index() {
-        dd(1);
-        return $this->setContent('auth.login');
+        
+        return $this->setContent('customer.auth.login');
     }
 
     /**
@@ -69,17 +69,17 @@ class LoginController extends \App\Http\Controllers\Controller
      */
     protected function credentials(Request $request)
     {
+        
         return [
             $this->username() => trim($request->get($this->username())),
             'password'    => trim($request->get('password')),
             'active'      => 1,
-            'source'      => config('app.source')
         ];
     }
 
     protected function sendFailedLoginResponse(Request $request)
     {
-        return redirect()->route('account.login')
+        return redirect()->route('customer.auth.login')
             ->withInput($request->only($this->username(), 'remember'))
             ->withErrors([$this->username() => Lang::get('auth.failed')]);
     }

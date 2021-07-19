@@ -23,7 +23,7 @@ class HomeController extends \App\Http\Controllers\Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'logout']);
+        
     }
 
     /**

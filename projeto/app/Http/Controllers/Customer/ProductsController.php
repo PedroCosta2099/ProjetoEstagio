@@ -37,6 +37,7 @@ class ProductsController extends \App\Http\Controllers\Customer\Controller {
     
     public function listProducts()
     {
+        
         $products = Product::all()
                         ->toArray();
                         

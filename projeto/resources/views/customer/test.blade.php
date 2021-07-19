@@ -16,8 +16,15 @@
 <div class="container">
     <div class="col-md-12">
         <h1>Página de Utilizador</h1>
+
         <p> Página de Administrador
             <a href="{{ route('admin.dashboard') }}">{{ route('admin.dashboard') }}</a>
+            
+         <br/>
+           
+        </p>   
+        <p> Página de Cliente
+            <a href="{{ route('customer.login') }}">{{ route('customer.login') }}</a>
          <br/>
            
         </p>       

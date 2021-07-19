@@ -18,7 +18,7 @@ class RedirectIfAuthenticated
     public function handle($request, Closure $next, $guard = null)
     {
         if (Auth::guard('customer')->check()) { 
-            return redirect(route('account.index')); //redirect if customer is logged
+            return redirect('/products'); //redirect if customer is logged
         }
         
         return $next($request);
