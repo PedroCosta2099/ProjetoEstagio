@@ -109,15 +109,13 @@ class CustomersController extends \App\Http\Controllers\Admin\Controller {
         $customer  = Customer::findOrNew($id);
 
         $input = $request->all();
-
+        
         $input['active'] = !$request->get('active', false);
         $input['email'] = strtolower(@$input['email']);
         
         $changePass = false;
         $feedback = 'Dados gravados com sucesso.';
         $rules = [];
-        $rules['nif'] = 'required|unique:customers,nif|min:9|max:9';
-        $rules['phone'] = 'required|unique:customers,phone|min:9|max:9';
         if ($customer->exists && empty($input['password'])) {
             $rules['name']  = 'required';
             $rules['email'] = 'required|email|unique:customers,email,' . $customer->id;
@@ -125,9 +123,13 @@ class CustomersController extends \App\Http\Controllers\Admin\Controller {
             $changePass = true;
             $feedback = 'Palavra-passe alterada com sucesso.';
             $rules['password'] = 'confirmed';
+            $rules['nif'] = 'required|unique:customers,nif|min:9|max:9';
+            $rules['phone'] = 'required|unique:customers,phone|min:9|max:9';
         } elseif(!$customer->exists) {
             $rules['name']  = 'required';
             $rules['email'] = 'required|email|unique:customers,email';
+            $rules['nif'] = 'required|unique:customers,nif|min:9|max:9';
+            $rules['phone'] = 'required|unique:customers,phone|min:9|max:9';
         }
 
         $validator = Validator::make($input, $rules);
@@ -141,27 +143,9 @@ class CustomersController extends \App\Http\Controllers\Admin\Controller {
             }
 
             $customer->fill($input);
-            
-            //delete image
-            if ($input['delete_photo'] && !empty($customer->filepath)) {
-                Croppa::delete($customer->filepath);
-                $customer->filepath = null;
-                $customer->filename = null;
-            }
+            $customer->active = $input['active'];
+            $customer->save();
 
-            //upload image
-            if($request->hasFile('image')) {
-                if ($customer->exists && !empty($customer->filepath) && File::exists(public_path(). '/'.$customer->filepath)) {
-                    Croppa::delete($customer->filepath);
-                }
-
-                if (!$customer->upload($request->file('image'), 40, true, [])) {
-                    return Redirect::back()->withInput()->with('error', 'Não foi possível alterar a imagem do perfil.');
-                }
-
-            } else {
-                $customer->save();
-            }
 
 
             return Redirect::route('admin.customers.edit', $customer->id)->with('success', $feedback);

@@ -12,6 +12,7 @@ return [
     ],
     
     'failed'   => 'E-mail ou palavra-passe errados.',
+    'blocked'  => 'Utilizador Bloqueado! Contacte-nos',
     'throttle' => 'O número limite de tentativas de login foi atingido. Por favor tente novamente em :seconds segundos.',
     
     'forgot' => [

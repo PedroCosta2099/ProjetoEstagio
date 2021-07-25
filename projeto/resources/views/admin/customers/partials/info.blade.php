@@ -54,31 +54,7 @@
                     </div>
                 </div>
             @endif
-        </div>
-        <div class="col-sm-4 col-lg-3">
-            {{ Form::label('image', 'Fotografia:', array('class' => 'form-label')) }}<br/>
-            <div class="fileinput {{ $customer->filepath ? 'fileinput-exists' : 'fileinput-new'}}" data-provides="fileinput">
-                <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
-                    <img src="{{ asset('assets/img/default/avatar.png') }}">
-                </div>
-                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 150px; max-height: 150px;">
-                    @if($customer->filepath)
-                        <img src="{{ asset($customer->getCroppa(200, 200)) }}">
-                    @endif
-                </div>
-                <div>
-                    <span class="btn btn-default btn-block btn-sm btn-file">
-                        <span class="fileinput-new">Procurar...</span>
-                        <span class="fileinput-exists"><i class="fa fa-refresh"></i> Alterar</span>
-                        <input type="file" name="image">
-                    </span>
-                    <a href="#" class="btn btn-danger btn-block btn-sm fileinput-exists" data-dismiss="fileinput">
-                        <i class="fa fa-close"></i> Remover
-                    </a>
-                </div>
-            </div>
-        </div>
-        @if($user->hasRole([config('permissions.role.admin')]) || Auth::user()->id != $user->id)
+            @if($user->hasRole([config('permissions.role.admin')]) || Auth::user()->id != $user->id)
             <h4 class="m-t-20 bold text-blue">Opções da conta</h4>
             <div class="row row-5">
                 <div class="col-sm-6">
@@ -97,6 +73,7 @@
                 </div>
             </div>
             @endif
+        </div>
         <div class="col-sm-12">
             {{ Form::hidden('delete_photo') }}
             <button class="btn btn-primary">Gravar</button>

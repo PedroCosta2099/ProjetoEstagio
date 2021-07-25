@@ -11,7 +11,7 @@
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('name', 'Produto') }}
-                {{ Form::text('name', null, ['class' => 'form-control', 'required']) }}
+                {{ Form::text('name', null, ['class' => 'form-control', 'required','maxlength' => '50']) }}
             </div>
         </div>
         <div class="col-sm-4 col-lg-3">
@@ -38,36 +38,42 @@
             </div>
         </div>
         <div class="col-sm-12">
-            <div class="form-group">
+            <div class="form-group is-required">
                 {{ Form::label('description', 'Descrição') }}
-                {{ Form::text('description', null, ['class' => 'form-control']) }}
+                {{ Form::text('description', null, ['class' => 'form-control','required','maxlength' => '200']) }}
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('price', 'Preço') }}
-                {{ Form::number('price', number_format($product->price,2), ['class' => 'form-control', 'required','step' => '0.01','min'=>'0']) }}
+                {{ Form::number('price', number_format($product->price,2), ['class' => 'form-control', 'required','step' => '0.01','min'=>'0.01']) }}
             </div>
         </div>
 
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('vat', 'IVA') }}
-                {{ Form::number('vat',number_format($product->vat,2), ['class' => 'form-control', 'required','readonly','step' => '0.01','min'=>'0']) }}
+                {{ Form::number('vat',number_format($product->vat,2), ['class' => 'form-control', 'required','readonly','step' => '0.01','min'=>'0.00']) }}
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group">
+                {{ Form::label('discount', 'Desconto (em %)') }}
+                {{ Form::number('discount',number_format($product->discount), ['class' => 'form-control','step' => '1','min'=>'0','max'=>'100','id' => 'discount']) }}
             </div>
         </div>
         @if(Auth::user()->isAdmin())
         <div class="col-sm-6">
-            <div class="form-group">
+            <div class="form-group is-required">
                 {{ Form::label('seller_id', 'Vendedor') }}
-                {{ Form::select('seller_id', ['0' => 'NENHUM'] + $seller, null, ['class' => 'form-control select2','id'=>'seller_id']) }}
+                {{ Form::select('seller_id', ['' => 'NENHUM'] + $seller, null, ['class' => 'form-control select2','required','id'=>'seller_id']) }}
             </div>
         </div>  
         @endif
         <div class="col-sm-6">
-            <div class="form-group">
+            <div class="form-group is-required">
                 {{ Form::label('category_id', 'Categoria') }}
-                {{ Form::select('category_id', ['0' => 'NENHUM'] + $categories, null, ['class' => 'form-control select2','id' => 'category_id']) }}
+                {{ Form::select('category_id', ['' => 'NENHUM'] + $categories, null, ['class' => 'form-control select2','required','id' => 'category_id']) }}
             </div>
         </div> 
         <div class="col-sm-6">
@@ -89,6 +95,8 @@
     $('.select2').select2(Init.select2());
     $('input').iCheck(Init.iCheck());
     $('[data-toggle="tooltip"]').tooltip();
+
+    
     
     $('#price').change(function() {
     var IVA = 0.23;

@@ -23,6 +23,7 @@ Route::group(array('prefix' => 'login', 'middleware' => 'guest', 'namespace' => 
 Route::get('customer/logout', 'Auth\LoginController@logout')
 ->name('customer.logout')
 ->middleware('auth');
+
 Route::group(array('middleware' => 'auth','namespace' => 'Customer'), function() {  
         
      

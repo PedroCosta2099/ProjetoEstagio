@@ -4,7 +4,7 @@
             <div class="wrap-login100 @if($errors->has('email')) animated shake @endif">
                 {{ Form::open(array('route' => 'customer.login.submit', 'class' => 'login100-form validate-form')) }}
                 <span class="login100-form-title" style="padding-bottom: 48px">
-                    <h4>ADMINISTRAÇÃO Projeto</h4>
+                    <h4>Bem vindo</h4>
                 </span>
                 <div class="main-block">
                     @if($errors->has('email'))
@@ -73,3 +73,4 @@
         </div>
     </div>
 @stop
+

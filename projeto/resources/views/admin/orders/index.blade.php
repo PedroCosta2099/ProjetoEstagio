@@ -34,6 +34,7 @@
                                 <th>Pedido</th>
                                 <th>Preço</th>
                                 <th>IVA</th>
+                                <th>Data</th>
                                 <th class="w-1">Estado</th>
                                 <th class="w-65px">Ações</th>
                             </tr>
@@ -64,6 +65,7 @@
                 {data: 'id', name: 'id',orderable:false,searchable:true},
                 {data: 'total_price', name:'price', orderable: false, searchable: false},
                 {data: 'vat', name:'vat', orderable: false, searchable: false},
+                {data: 'created_at',name:'created_at',orderable:true,searchable:true},
                 {data: 'status_id', name:'status_id'},
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},
             ],
@@ -86,7 +88,7 @@
             oTable.draw();
             e.preventDefault();
         });
-        $()
+       
     });
 </script>
 @stop

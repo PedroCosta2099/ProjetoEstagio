@@ -46,6 +46,7 @@ Linhas de Pedidos
                                 <th>Vendedor</th>
             
                                 @endif
+                                <th>Data</th>
                                 <th class="w-1">Estado</th>
                                 <th class="w-65px">Ações</th>
                             </tr>
@@ -84,6 +85,7 @@ Linhas de Pedidos
                 @if(Auth::user()->isAdmin())
                     {data: 'seller_id',name:'seller_id'},
                 @endif
+                {data:'created_at',name:'created_at'},
                 {data: 'status_id',name:'status_id'},
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},
             ],

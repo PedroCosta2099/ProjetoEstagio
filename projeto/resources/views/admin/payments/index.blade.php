@@ -37,13 +37,14 @@
                                 
                                 <th>ID</th>
                                 <th>Pedido</th>
-                                <th>Método de Pagamento</th>
+                                <th class="w-1">Método de Pagamento</th>
                                 <th>Entidade</th>
                                 <th>Referência</th>
                                 <th>Número de Telemóvel</th>
                                 <th>Montante</th>
                                 <th class="w-1">Estado do Pagamento </th>
                                 <th class="w-1"></th>
+                                <th class="w-1">Data de Pagamento</th>
                                 <th class="w-65px">Ações</th>
                             </tr>
                         </thead>
@@ -79,6 +80,7 @@
                 {data: 'amount', name:'amount'},
                 {data: 'payment_status_id',name:'payment_status_id'},
                 {data: 'pay', name:'pay',orderable:false,searchable:false},
+                {data: 'paid_at',name:'paid_at'},
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},
             ],
             ajax: {

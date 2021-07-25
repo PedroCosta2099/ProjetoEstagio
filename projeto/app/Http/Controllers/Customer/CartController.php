@@ -163,13 +163,13 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
 
     public function createOrder(){
         
-        if(!Auth::check())
+        if(!Auth::guard('customer')->check())
         {
             return Redirect::back()->with('error','Inicie sessão e tente novamente');
         }
         $IVA = 0.23;
         $user = Auth::guard('customer')->user();
-        dd($user);
+        
         if(CartProvider::instance()->getQuantity() == 0)
         {
             return Redirect::back()->with('error','Não pode criar um pedido sem items');

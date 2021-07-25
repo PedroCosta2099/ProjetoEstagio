@@ -10,13 +10,6 @@ class HomeController extends \App\Http\Controllers\Controller
 {
 
     /**
-     * The layout that should be used for responses
-     *
-     * @var string
-     */
-    protected $layout = 'layouts.master';
-
-    /**
      * Create a new controller instance.
      *
      * @return void

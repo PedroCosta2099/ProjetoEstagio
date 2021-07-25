@@ -289,7 +289,7 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
         Product::flushCache(Product::CACHE_TAG);
         
         $ids = explode(',', $request->ids);
-        dd($request->ids);
+        
         $result = Product::whereIn('id', $ids)
                            ->delete();
         

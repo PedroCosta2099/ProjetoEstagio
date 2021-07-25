@@ -306,6 +306,9 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
                 ->edit_column('order_id', function($row) {
                     return view('admin.orderlines.datatables.order', compact('row'))->render();
                 })
+                ->edit_column('created_at', function($row) {
+                    return date('d-m-Y',strtotime($row->created_at));
+                })
                 ->add_column('select', function($row) {
                     return view('admin.partials.datatables.select', compact('row'))->render();
                 })

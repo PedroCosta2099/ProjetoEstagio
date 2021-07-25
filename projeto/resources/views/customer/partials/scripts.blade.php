@@ -34,13 +34,13 @@
     '/vendor/jquery-mask-plugin/dist/jquery.mask.js',
     '/vendor/jsvat/jsvat.js',
 
-    '/assets/admin/js/template.min.js',
-    '/assets/admin/js/helper.js',
-    '/assets/admin/js/validator.js',
-    '/assets/admin/js/main.js',
+    '/assets/customer/js/template.min.js',
+    '/assets/customer/js/helper.js',
+    '/assets/customer/js/validator.js',
+    '/assets/customer/js/main.js',
 
     //load json files
-    '/assets/admin/json/zipcodes-regex.js'
+    '/assets/customer/json/zipcodes-regex.js'
 
     ])->withFullUrl()
 !!}

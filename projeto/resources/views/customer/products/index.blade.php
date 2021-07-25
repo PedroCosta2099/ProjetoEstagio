@@ -1,7 +1,11 @@
 @extends('customer.layouts.master')
+
 @section('title')
-Produtos 
+
+Produtos
+
 @stop
+
 @section('content')
     <div class="container">
 		<div class="row">
@@ -23,7 +27,6 @@ Produtos
                 </div>
             </div>
         </div>
-        <a type="button" class="btn btn-default" href="{{route('customer.cart.index')}}">Carrinho</a>
 	</div>		
 @stop
 

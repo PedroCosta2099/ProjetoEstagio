@@ -152,7 +152,7 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
 
         $status = PaymentStatus::where('name','like','PAGO')
                             ->first();
-                                       
+        $payment->paid_at = date('Y-m-d H:i:s');                               
         $payment->payment_status_id = $status->id;
         $payment->save();
         return Redirect::back()->with('success', 'Dados gravados com sucesso.');
@@ -298,6 +298,14 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
                 })
                 ->edit_column('amount', function($row) {
                     return view('admin.payments.datatables.amount', compact('row'))->render();
+                })
+                ->edit_column('paid_at', function($row) {
+                    if($row->paid_at == NULL)
+                        return;
+                    else
+                    {
+                    return date('d-m-Y h:s',strtotime($row->paid_at));
+                }
                 })
                 ->add_column('select', function($row) {
                     return view('admin.partials.datatables.select', compact('row'))->render();

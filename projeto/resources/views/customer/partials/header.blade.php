@@ -18,15 +18,20 @@
                 <li class="dropdown user-menu">
                     
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        @if(Auth::check())
-                        <span>{{Auth::user()->name}}</span>
+                        @if(Auth::guard('customer')->check())
+                        <span>{{Auth::guard('customer')->user()->name}}</span>
                         @endif
-                    </span> <i class="caret"></i>
+                    
                     
                     </a>
                     <ul class="dropdown-menu">
                         <li>
                             <ul class="options-menu">
+                                <li>
+                                    <a href="#">
+                                        <i class="fas fa-user"></i> My Enovo Eats
+                                    </a>
+                                </li>
                                 <li>
                                     <a href="#" data-toggle="modal" data-target="#account-password">
                                         <i class="fas fa-fw fa-lock"></i> Alterar Palavra-passe
