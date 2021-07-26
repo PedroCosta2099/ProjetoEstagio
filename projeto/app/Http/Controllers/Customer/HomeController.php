@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Customer;
 
 use App\Models\User;
 use App\Models\Product;
+use App\Models\Customer;
+use App\Models\Address;
+use App\Models\Order;
 use Setting;
 
 class HomeController extends \App\Http\Controllers\Controller
@@ -16,7 +19,7 @@ class HomeController extends \App\Http\Controllers\Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'logout']);
+        $this->middleware('auth', ['except' => 'logout']);
     }
 
     /**
@@ -26,6 +29,19 @@ class HomeController extends \App\Http\Controllers\Controller
      */
     public function index() {
         return $this->setContent('customer.test');
+    }
+
+    public function about($id)
+    {
+        $customer = Customer::findOrFail($id);
+        $addresses = $customer->addresses()
+                              ->get()
+                              ->toArray();
+        $orders = Order::where('customer_id',$id)
+                        ->get()
+                        ->toArray();
+
+        return view('customer.info',compact('customer','addresses','orders'))->render();
     }
 
 }

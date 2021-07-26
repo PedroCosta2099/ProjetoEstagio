@@ -208,6 +208,9 @@ class PaymentTypesController extends \App\Http\Controllers\Admin\Controller {
                 ->edit_column('name', function($row) {
                     return view('admin.paymenttypes.datatables.name', compact('row'))->render();
                 })
+                ->edit_column('active', function($row) {
+                    return view('admin.paymenttypes.datatables.active', compact('row'))->render();
+                })
                 ->add_column('image', function($row) {
                     return view('admin.paymenttypes.datatables.image', compact('row'))->render();
                 })

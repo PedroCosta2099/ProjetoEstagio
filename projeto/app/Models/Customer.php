@@ -34,6 +34,10 @@ class Customer extends Authenticatable
         'name','phone','email','nif','created_at','last_login'
     ];
 
+    protected $hidden = [
+        'password', 'remember_token','ip'
+    ];
+
     /**
      * Validator rules
      * 
@@ -71,6 +75,10 @@ class Customer extends Authenticatable
 
     public function orders(){
         return $this->hasMany('App\Models\Order');
+    }
+
+    public function addresses(){
+        return $this->belongsToMany('App\Models\Address');
     }
  
 }

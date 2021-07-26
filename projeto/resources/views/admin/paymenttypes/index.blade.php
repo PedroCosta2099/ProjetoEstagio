@@ -40,6 +40,7 @@
                                 <th></th>
                                 <th class="w-1"></th>
                                 <th>Método de Pagamento</th>
+                                <th class="w-1">Estado</th>
                                 <th class="w-65px">Ações</th>
                             </tr>
                         </thead>
@@ -69,6 +70,7 @@
                 {data: 'id', name: 'id', visible: false},
                 {data:'image',name:'image',orderable: false, searchable: false},
                 {data: 'name', name:'name'},
+                {data: 'active', name:'active'},
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},
             ],
             ajax: {

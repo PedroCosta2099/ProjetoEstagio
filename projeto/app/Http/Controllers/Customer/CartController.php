@@ -60,7 +60,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
                             ->toArray();
         
         CartProvider::instance()->add(new Item($product['id'],$product['name'],$quantity,$product['price'],0,true,[],['image' => $product['filepath']]));
-        
+       
         return Redirect::back();
     }
 
@@ -93,7 +93,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         $orderTotal = CartProvider::instance()->getTotal();
         
         return view('customer.cart.index',compact('cartProducts','products','orderTotal'))->render();
-    }
+        }
     }
 
 

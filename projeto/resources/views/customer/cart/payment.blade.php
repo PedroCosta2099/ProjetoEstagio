@@ -10,13 +10,16 @@ Método de Pagamento
             {{ Form::label('payment_type', 'Método de Pagamento') }}
             
             @foreach($paymentMethods as $paymentMethod)
+            @if($paymentMethod['active'])
             <div class="col-sm-2">
+                
                 <input type="radio" name="paymentMethod" value="{{$paymentMethod['id']}}" id="{{$paymentMethod['id']}}" class="input"/>
                 <label for="{{$paymentMethod['id']}}">
                     <img class="center-block choice" value="{{$paymentMethod['id']}}" src="<?=Croppa::url($paymentMethod['filepath'],50,50)?>" id="{{$paymentMethod['filename']}}"/>
                     {{$paymentMethod['name']}}
                 </label>
             </div>
+            @endif
             @endforeach
 
             <a type="button" class="btn btn-default" href="{{route('customer.cart.index')}}">Voltar</a>

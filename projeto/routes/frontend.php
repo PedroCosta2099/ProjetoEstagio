@@ -15,8 +15,16 @@ Route::group(array('prefix' => 'login', 'middleware' => 'guest', 'namespace' => 
     
         Route::post('/', 'LoginController@login')
                 ->name('customer.login.submit');
+        
     });
-   
+Route::group(array('prefix' => 'register', 'middleware' => 'guest', 'namespace' => 'Auth'), function() {
+
+        Route::get('/','RegisterController@index')
+                ->name('customer.register');
+        Route::post('/submit','RegisterController@create')
+                ->name('customer.register.submit');
+    });
+
     Route::get('/','HomeController@index')
     ->name('home.index');
     //LOGOUT
@@ -26,7 +34,14 @@ Route::get('customer/logout', 'Auth\LoginController@logout')
 
 Route::group(array('middleware' => 'auth','namespace' => 'Customer'), function() {  
         
-     
+        /**
+         * ABOUT
+         */
+        Route::get('/about/{id}','HomeController@about')
+                ->name('customer.about');
+        Route::get('/test','HomeController@index')
+                ->name('customer.test');
+
         /**
          * PRODUCTS
          */

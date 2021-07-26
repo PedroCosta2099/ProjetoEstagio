@@ -16,7 +16,7 @@ Produtos
                         <p class="text-center">
                             <a href="{{route('customer.products.productShow',$product['id'])}}">
                                 <img class="center-block" src="<?=Croppa::url($product['filepath'],200,200)?>" id="{{$product['filename']}}"/>
-                                {{$product['name']}} 
+                                <span>{{$product['name']}}</span>
                             </a>
                         </p>
                         <p class="text-center"> 

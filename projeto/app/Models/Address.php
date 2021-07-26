@@ -59,4 +59,16 @@ class Address extends BaseModel implements Sortable
     public $sortable = [
         'order_column_name' => 'sort'
     ];
+     /*
+    |--------------------------------------------------------------------------
+    | Relationships
+    |--------------------------------------------------------------------------
+    |
+    | Define current model relationships
+    */
+
+    public function customers(){
+        return $this->belongsToMany('App\Models\Customer');
+    }
+ 
 }

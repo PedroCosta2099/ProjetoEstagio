@@ -14,7 +14,7 @@
                         <input  id="quantity" class="form-control" type="number" min="1" value="1" autocomplete="off"></input>
                         <p class="text-center">
                         <a type="button" class="btn btn-default" href="{{route('customer.products.index')}}">Voltar</a>
-                        <button onclick="save()" type="button" class="btn btn-default">Adicionar ao Carrinho</button>
+                        <button onclick="save();" type="button" class="btn btn-default">Adicionar ao Carrinho</button>
                         </p>
 	    		    </div>
                 </div>
@@ -22,6 +22,9 @@
 	</div>		
 @stop
 @section('scripts')
+<script>
+    
+</script>
 <script>
     function save(){
 
@@ -31,7 +34,7 @@
             xhr.onreadystatechange = function() {};
             xhr.open('GET', '/cart/insert/'+id+'/'+quantity);
             xhr.send();
+            
     }
-
 </script>       
 @stop       

@@ -28,12 +28,5 @@
     <p>
         Depois de iniciar sessão, poderá alterar a sua palavra-passe e os seus dados de expedição e faturação nas definições de conta.
     </p>
-    @else
-        <h5 style="font-size: 16px">Estimado {{ $customer->name }},</h5>
-        <p>
-            Lamentamos, mas o seu pedido de registo na nossa área de cliente não foi aprovado.
-            <br/>
-            Para mais detalhes, por favor entre em contacto connosco.
-        </p>
     @endif
 @stop
