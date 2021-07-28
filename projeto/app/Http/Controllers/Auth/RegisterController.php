@@ -25,6 +25,14 @@ class RegisterController extends Controller
 
     use RegistersUsers;
 
+    
+    /**
+     * The layout that should be used for responses
+     * 
+     * @var string 
+     */
+    protected $layout = 'customer.layouts.auth';
+
     /**
      * Where to redirect users after login / registration.
      *

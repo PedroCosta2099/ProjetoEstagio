@@ -21,15 +21,6 @@
                 {{ Form::text('status_color', null, ['class' => 'form-control uppercase', 'required']) }}
             </div>
         </div>
-
-    @if(Auth::user()->isAdmin())
-    <div class="col-sm-6">
-            <div class="form-group">
-                {{ Form::label('seller_id', 'Vendedor') }}
-                {{ Form::select('seller_id', ['0' => 'NENHUM'] + $seller, null, ['class' => 'form-control select2']) }}
-            </div>
-    </div>  
-    @endif
     </div>
 </div>
 <div class="modal-footer">

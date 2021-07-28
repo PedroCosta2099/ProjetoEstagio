@@ -86,5 +86,10 @@ class Order extends BaseModel implements Sortable
         return $this->belongsTo('App\Models\Payment','payment_id');
     }
 
+    public function orderlines()
+    {
+        return $this->belongsTo('App\Models\OrderLine');
+    }
+
     
 }

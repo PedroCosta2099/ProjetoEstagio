@@ -24,6 +24,7 @@
                     
                     
                     </a>
+                    @if(Auth::guard('customer')->check())
                     <ul class="dropdown-menu">
                         <li>
                             <ul class="options-menu">
@@ -45,6 +46,7 @@
                             </ul>
                         </li>
                     </ul>
+                    @endif
                 </li>
                 <li class="hidden-xs">
                     <a href="{{ route('customer.logout') }}"  data-toggle="tooltip" title="Terminar Sessão" data-placement="bottom">

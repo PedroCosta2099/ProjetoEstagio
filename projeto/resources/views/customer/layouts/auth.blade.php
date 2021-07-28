@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
     <head>
-        <title>Área de Cliente | {{ config('app.name') }}</title>
+        <title>Área de Cliente | Enovo Eats</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}"/>

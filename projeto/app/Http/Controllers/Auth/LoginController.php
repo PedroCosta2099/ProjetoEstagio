@@ -6,6 +6,7 @@ use App\Models\Service;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use App\Models\Customer;
 use Lang;
 
 class LoginController extends \App\Http\Controllers\Controller
@@ -22,6 +23,14 @@ class LoginController extends \App\Http\Controllers\Controller
     */
 
     use AuthenticatesUsers;
+
+    
+    /**
+     * The layout that should be used for responses
+     * 
+     * @var string 
+     */
+    protected $layout = 'customer.layouts.auth';
 
     /**
      * Where to redirect users after login / registration.
@@ -78,16 +87,20 @@ class LoginController extends \App\Http\Controllers\Controller
     }
 
     protected function sendFailedLoginResponse(Request $request)
-    {   if($request->get('active') == 0)
+   
+    {    $customer = Customer::where('email',$request->email)->first();
+       
+
+        if($customer['email'] != $request->email)
         {
             return redirect()->route('customer.login')
             ->withInput($request->only($this->username(), 'remember'))
-            ->withErrors([$this->username() => Lang::get('auth.blocked')]);
+            ->withErrors([$this->username() => Lang::get('auth.failed')]);
         }
-        else{
+        else if($customer['active'] == 0){
         return redirect()->route('customer.login')
             ->withInput($request->only($this->username(), 'remember'))
-            ->withErrors([$this->username() => Lang::get('auth.failed')]);
+            ->withErrors([$this->username() => Lang::get('auth.blocked')]);
         }
     }
 }
