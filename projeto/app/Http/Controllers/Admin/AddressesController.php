@@ -181,10 +181,14 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
     public function datatable(Request $request) {
 
         $data = Address::select();
-        
+       
+          
         return Datatables::of($data)
                 ->edit_column('address', function($row) {
                     return view('admin.addresses.datatables.address', compact('row'))->render();
+                })
+                ->edit_column('customer', function($row) {
+                    return view('admin.addresses.datatables.customer', compact('row'))->render();
                 })
                 ->add_column('select', function($row) {
                     return view('admin.partials.datatables.select', compact('row'))->render();

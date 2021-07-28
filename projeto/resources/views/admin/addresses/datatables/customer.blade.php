@@ -1,0 +1,1 @@
+{{$row->customers[0]->name}}

@@ -59,7 +59,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
                             ->first()
                             ->toArray();
         
-        CartProvider::instance()->add(new Item($product['id'],$product['name'],$quantity,$product['price'],0,true,[],['image' => $product['filepath']]));
+        CartProvider::instance()->add(new Item($product['id'],$product['name'],$quantity,$product['actual_price'],0,true,[],['image' => $product['filepath']]));
        
         return Redirect::back();
     }
@@ -106,7 +106,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         $product = Product::where('id',$id)
                     ->first();
                     
-        $subTotal = number_format((float)$product->price * $quantity, 2, '.', '');
+        $subTotal = number_format((float)$product->actual_price * $quantity, 2, '.', '');
         CartProvider::instance()->setQuantity($rowId,$quantity);
         return response()->json($subTotal);
     }

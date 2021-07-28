@@ -89,18 +89,18 @@ class LoginController extends \App\Http\Controllers\Controller
     protected function sendFailedLoginResponse(Request $request)
    
     {    $customer = Customer::where('email',$request->email)->first();
-       
+        
+        if($customer['active'] == 0){
+        return redirect()->route('customer.login')
+            ->withInput($request->only($this->username(), 'remember'))
+            ->withErrors([$this->username() => Lang::get('auth.blocked')]);
+        }
 
-        if($customer['email'] != $request->email)
+        else
         {
             return redirect()->route('customer.login')
             ->withInput($request->only($this->username(), 'remember'))
             ->withErrors([$this->username() => Lang::get('auth.failed')]);
-        }
-        else if($customer['active'] == 0){
-        return redirect()->route('customer.login')
-            ->withInput($request->only($this->username(), 'remember'))
-            ->withErrors([$this->username() => Lang::get('auth.blocked')]);
         }
     }
 }

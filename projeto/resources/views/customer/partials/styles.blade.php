@@ -8,6 +8,7 @@
 {!! Minify::stylesheet([
         '/assets/customer/css/payment.css',
         '/assets/customer/css/about.css',
+        '/assets/customer/css/products.css',
         '/assets/customer/css/template.css',
         '/assets/customer/css/skins/' . app_skin() . '.css',
 

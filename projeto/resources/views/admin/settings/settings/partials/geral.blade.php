@@ -21,7 +21,8 @@
                                         <div class="skin-preview skin-master" data-current-skin="{{ Setting::get('app_skin') }}" style="height: 22px; width: 22px; margin: 6px -3px 0 0;"></div>
                                     </div>
                                 </td>
-                                <td class="w-200px">{{ Form::select('app_skin', ['skin-red' => 'Vermelho'], Setting::get('app_skin'), ['class' =>'form-control select2']) }}</td>
+                                <td class="w-200px">{{ Form::select('app_skin', ['skin-yellow' => 'Amarelo','skin-red'=>'Vermelho'], Setting::get('app_skin'), ['class' =>'form-control select2']) }}</td>
+                                
                             </tr>
                         </table>
                     </div>

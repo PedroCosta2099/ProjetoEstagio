@@ -20,7 +20,12 @@ Produtos
                             </a>
                         </p>
                         <p class="text-center"> 
+                            @if($product['actual_price'] == $product['price'])
                             €{{ number_format($product['price'], 2,',','.') }} 
+                            @else
+                            <s class="m-r-5">€{{ number_format($product['price'], 2,',','.') }} </s>
+                            €{{ number_format($product['actual_price'], 2,',','.') }} 
+                            @endif
                         </p>
 	    		    </div>
                 @endforeach

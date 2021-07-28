@@ -12,19 +12,21 @@
        
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-
+ 
                 {{-- USER ACCOUNT --}}
                 <li><a class="align-middle" href="{{route('customer.cart.index')}}" style="color:white"><i class="fas fa-shopping-cart"></i><span id="subtotal" class="align-bottom"> €{{number_format(CartProvider::instance()->total,2,',','.')}}</span></a></li>
                 <li class="dropdown user-menu">
-                    
+                    @if(!Auth::guard('customer')->check())
+                        <a href="{{route('customer.login')}}" style="color:white"><i class="fas fa-user"></i> Iniciar sessão</a>
+                    @elseif(Auth::guard('customer')->check())
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        @if(Auth::guard('customer')->check())
-                        <span>{{Auth::guard('customer')->user()->name}}</span>
-                        @endif
+                        
+                        <span style="color:white"><i class="fas fa-user"></i> {{Auth::guard('customer')->user()->name}}</span>
+                       
                     
                     
                     </a>
-                    @if(Auth::guard('customer')->check())
+                   
                     <ul class="dropdown-menu">
                         <li>
                             <ul class="options-menu">
@@ -46,13 +48,13 @@
                             </ul>
                         </li>
                     </ul>
-                    @endif
+                    
                 </li>
                 <li class="hidden-xs">
-                    <a href="{{ route('customer.logout') }}"  data-toggle="tooltip" title="Terminar Sessão" data-placement="bottom">
+                    <a href="{{ route('customer.logout') }}"  data-toggle="tooltip" title="Terminar Sessão" data-placement="bottom" style="color:white">
                         <i class="fas fa-power-off fa-lg"></i>
                     </a>
-                </li>
+                </li>@endif
             </ul>
         </div>
     </nav>

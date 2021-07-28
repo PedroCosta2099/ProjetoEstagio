@@ -57,6 +57,19 @@
             </div>
         </div>
         <div class="col-sm-6">
+            <div class="form-group is-required">
+                {{ Form::label('actual_price', 'Preço (c/Desconto)') }}
+                {{ Form::number('actual_price', number_format($product->actual_price,2), ['class' => 'form-control', 'required','readonly','step' => '0.01','min'=>'0.01']) }}
+            </div>
+        </div>
+
+        <div class="col-sm-6">
+            <div class="form-group is-required">
+                {{ Form::label('actual_vat', 'IVA (c/Desconto)') }}
+                {{ Form::number('actual_vat',number_format($product->actual_vat,2), ['class' => 'form-control', 'required','readonly','step' => '0.01','min'=>'0.00']) }}
+            </div>
+        </div>
+        <div class="col-sm-6">
             <div class="form-group">
                 {{ Form::label('discount', 'Desconto (em %)') }}
                 {{ Form::number('discount',number_format($product->discount), ['class' => 'form-control','step' => '1','min'=>'0','max'=>'100','id' => 'discount']) }}
@@ -66,7 +79,7 @@
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('seller_id', 'Vendedor') }}
-                {{ Form::select('seller_id', ['' => 'NENHUM'] + $seller, null, ['class' => 'form-control select2','required','id'=>'seller_id']) }}
+                {{ Form::select('seller_id', ['' => 'NENHUM'] + $seller, $product->category->seller_id, ['class' => 'form-control select2','required','id'=>'seller_id']) }}
             </div>
         </div>  
         @endif
@@ -103,7 +116,28 @@
     var vat = ($(this).val()*IVA);
     var rounded_vat = parseFloat(vat.toFixed(2));
     document.getElementById("vat").value= rounded_vat;
-    });  
+    });
+
+    $('#actual_price').change(function() {
+    var IVA = 0.23;
+    var vat = ($(this).val()*IVA);
+    var rounded_vat = parseFloat(vat.toFixed(2));
+    document.getElementById("actual_vat").value= rounded_vat;
+    });
+
+    $('#discount').change(function()
+    {
+        var discount = $(this).val();
+        var price = $('#price').val();
+        
+        var actual_price = price - (price * (discount/100));
+        var rounded_actual_price = parseFloat(actual_price.toFixed(2));
+        var actual_vat = rounded_actual_price * 0.23;
+        var rounded_actual_vat = parseFloat(actual_vat.toFixed(2));
+
+        document.getElementById("actual_price").value = rounded_actual_price;
+        document.getElementById("actual_vat").value = rounded_actual_vat;
+    });
     
 </script>
 <script>

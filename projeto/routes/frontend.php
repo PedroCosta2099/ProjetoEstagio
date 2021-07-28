@@ -27,37 +27,47 @@ Route::group(array('prefix' => 'register', 'middleware' => 'guest', 'namespace' 
 
     Route::get('/','HomeController@index')
     ->name('home.index');
+
     //LOGOUT
 Route::get('customer/logout', 'Auth\LoginController@logout')
 ->name('customer.logout')
 ->middleware('auth');
 
+/*=================================================================================================================
+ *              PRODUCTS
+ =================================================================================================================*/
+ Route::get('/products','Customer\ProductsController@listProducts')
+ ->name('customer.products.index');
+ 
+ 
+Route::get('/products/{id}/show','Customer\ProductsController@showProduct')
+ ->name('customer.products.productShow');
+
+ Route::get('/cart','Customer\CartController@cartItems')
+             ->name('customer.cart.index');
+        Route::get('/cart/insert/{id}/{quantity}','Customer\CartController@addToCart')
+                ->name('customer.cart.addToCart');
+        Route::get('customer/cart/updatePrice/{rowId}/{id}/{quantity}','Customer\CartController@updatePrice');
+
+/*=================================================================================================================
+ *              CUSTOMER GLOBAL ROUTES 
+ =================================================================================================================*/            
 Route::group(array('middleware' => 'auth','namespace' => 'Customer'), function() {  
-        
-        /**
-         * ABOUT
-         */
+
+ 
+ 
+/*=================================================================================================================
+ *              ABOUT
+ =================================================================================================================*/
         Route::get('/about/{id}','HomeController@about')
                 ->name('customer.about');
         Route::get('/test','HomeController@index')
                 ->name('customer.test');
 
-        /**
-         * PRODUCTS
-         */
-        Route::get('/products','ProductsController@listProducts')
-            ->name('customer.products.index');
-        Route::get('/products/{id}/show','ProductsController@showProduct')
-            ->name('customer.products.productShow');
-
-        /**
-         * CART
-         */
-        Route::get('/cart','CartController@cartItems')
-             ->name('customer.cart.index');
-        Route::get('/cart/insert/{id}/{quantity}','CartController@addToCart')
-                ->name('customer.cart.addToCart');
-        Route::get('customer/cart/updatePrice/{rowId}/{id}/{quantity}','CartController@updatePrice');
+/*=================================================================================================================
+ *              CART
+ =================================================================================================================*/
+     
         
         Route::get('/cart/destroyRow/{rowId}}','CartController@destroyRow')
                 ->name('customer.cart.destroyRow');

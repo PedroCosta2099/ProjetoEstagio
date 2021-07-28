@@ -41,6 +41,7 @@
                                 <th>Morada</th>
                                 <th>Código Postal</th>
                                 <th>Localidade</th>
+                                <th>Cliente</th>
                                 <th class="w-65px">Ações</th>
                             </tr>
                         </thead>
@@ -71,6 +72,7 @@
                 {data: 'address', name:'address'},
                 {data: 'postal_code', name:'postal_code'},
                 {data: 'city', name:'city'},
+                {data: 'customer',name:'customer'},
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},
             ],
             ajax: {

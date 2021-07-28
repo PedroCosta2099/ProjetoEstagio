@@ -43,10 +43,9 @@ My Enovo Eats
             <h6>{{$address['address']}}</h6>
             <h6>{{$address['postal_code']}}</h6>
             <h6>{{$address['city']}}</h6>
-            
-    
     </div>
-    @elseif($address['shipment_address'])
+    @endif
+    @if($address['shipment_address'])
     
     <div class="col-sm-6 box-details">
     <label>Morada de Envio</label><br> 
@@ -57,6 +56,18 @@ My Enovo Eats
             
     
     </div>
+    @elseif(!$address['shipment_address'] && $address['billing_address'])
+    
+       <div class="col-sm-6 box-details">
+    <label>Morada de Envio</label><br> 
+    <label>Nome</label>
+            <h6>{{$address['address']}}</h6>
+            <h6>{{$address['postal_code']}}</h6>
+            <h6>{{$address['city']}}</h6>
+            
+    
+    </div>
+    
     @endif
     @endforeach
 </div>

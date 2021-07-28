@@ -145,7 +145,8 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
      */
     public function edit($id) {
         
-        $product = Product::findOrfail($id);
+        $product = Product::with('category')->findOrfail($id);
+        
         $seller = Seller::orderBy('name','asc')
                         ->pluck('name','id')
                         ->toArray();
@@ -195,6 +196,7 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
         User::flushCache(User::CACHE_TAG);
 
         $input = $request->all();
+        
         $product = Product::findOrNew($id);
  
         //delete image
@@ -220,6 +222,9 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
 
         if ($product->validate($input)) {
             $product->fill($input);
+            $product->discount = $input['discount'];
+            $product->actual_price = $product->price - (($product->discount/100) * $product->price);
+            $product->actual_vat = $input['vat'];
             $product->save();
             
             return Redirect::back()->with('success', 'Dados gravados com sucesso.');

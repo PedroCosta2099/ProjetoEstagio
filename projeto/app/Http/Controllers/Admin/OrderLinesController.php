@@ -126,8 +126,8 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
                         ->toArray();
         $productId = $product[0]['id'];
         $productName = $product[0]['name'];
-        $productPrice = $product[0]['price'];
-        $totalPriceNotRounded = $product[0]['price']*$orderline->quantity;
+        $productPrice = $product[0]['actual_price'];
+        $totalPriceNotRounded = $product[0]['actual_price']*$orderline->quantity;
         $vatNotRounded = $totalPriceNotRounded*$IVA;
         $orderId = $orderline->order_id;
         $totalPrice = number_format((float)$totalPriceNotRounded, 2, '.', '');
@@ -166,7 +166,7 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
         $product = Product::where('id', $orderline->product_id)
                                 ->get()
                                 ->toArray();
-        $totalPriceNotRounded = $product[0]['price']*$quantity;
+        $totalPriceNotRounded = $product[0]['actual_price']*$quantity;
         $totalPrice = number_format((float)$totalPriceNotRounded,2, '.', '');
         $vatNotRounded = $totalPrice*$IVA;
         $vat = number_format((float)$vatNotRounded,2, '.', '');
