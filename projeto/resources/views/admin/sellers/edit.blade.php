@@ -29,13 +29,7 @@
                 <div class="box-body p-5">
                     <div class="row">
                         <div class="col-sm-8">
-                            <div class="pull-left m-r-10">
-                                @if($seller->filepath)
-                                    <img src="{{ asset($seller->getCroppa(200, 200)) }}" id="" style="border:none" class="w-60px"/>
-                                @else
-                                    <img src="{{ asset('assets/img/default/avatar.png') }}" style="border:none" class="w-60px"/>
-                                @endif
-                            </div>
+                            
                             <div class="pull-left">
                                 <h4 class="m-t-5 pull-left">{{ $seller->name }}</h4>
                                 <div class="clearfix"></div>
@@ -103,8 +97,12 @@
         });
     });
 
-    $('[data-dismiss="fileinput"]').on('click', function () {
-        $('[name=delete_photo]').val(1);
+    $('[data-name="thumbnail"]').on('click', function () {
+       
+        $('[name=delete_photo_thumbnail]').val(1);
+    })
+    $('[data-name="banner"]').on('click', function () {
+        $('[name=delete_photo_banner]').val(1);
     })
 </script>
 @stop

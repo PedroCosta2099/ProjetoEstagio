@@ -58,30 +58,54 @@
     </div>
     
         <div class="col-sm-4 col-lg-3">
-            {{ Form::label('image', 'Fotografia:', array('class' => 'form-label')) }}<br/>
-            <div class="fileinput {{ $seller->filepath ? 'fileinput-exists' : 'fileinput-new'}}" data-provides="fileinput">
+            {{ Form::label('thumbnail_image', 'Thumbnail', array('class' => 'form-label')) }}<br/>
+            <div class="fileinput {{ $seller->thumbnail_filepath ? 'fileinput-exists' : 'fileinput-new'}}" data-provides="fileinput">
                 <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
                     <img src="{{ asset('assets/img/default/avatar.png') }}">
                 </div>
                 <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 150px; max-height: 150px;">
-                    @if($seller->filepath)
-                        <img src="{{ asset($seller->getCroppa(200, 200)) }}">
+                    @if($seller->thumbnail_filepath)
+                        <img src="{{ asset($seller->thumbnail_filepath) }}">
                     @endif
                 </div>
                 <div>
                     <span class="btn btn-default btn-block btn-sm btn-file">
                         <span class="fileinput-new">Procurar...</span>
                         <span class="fileinput-exists"><i class="fa fa-refresh"></i> Alterar</span>
-                        <input type="file" name="image">
+                        <input type="file" name="thumbnail_image">
                     </span>
-                    <a href="#" class="btn btn-danger btn-block btn-sm fileinput-exists" data-dismiss="fileinput">
+                    <a href="#" class="btn btn-danger btn-block btn-sm fileinput-exists" data-dismiss="fileinput" data-name="thumbnail">
+                        <i class="fa fa-close"></i> Remover
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-lg-3">
+            {{ Form::label('banner_image', 'Banner', array('class' => 'form-label')) }}<br/>
+            <div class="fileinput {{ $seller->banner_filepath ? 'fileinput-exists' : 'fileinput-new'}}" data-provides="fileinput">
+                <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
+                    <img src="{{ asset('assets/img/default/avatar.png') }}">
+                </div>
+                <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 150px; max-height: 150px;">
+                    @if($seller->banner_filepath)
+                        <img src="{{ asset($seller->banner_filepath) }}">
+                    @endif
+                </div>
+                <div>
+                    <span class="btn btn-default btn-block btn-sm btn-file">
+                        <span class="fileinput-new">Procurar...</span>
+                        <span class="fileinput-exists"><i class="fa fa-refresh"></i> Alterar</span>
+                        <input type="file" name="banner_image">
+                    </span>
+                    <a href="#" class="btn btn-danger btn-block btn-sm fileinput-exists" data-dismiss="fileinput" data-name="banner">
                         <i class="fa fa-close"></i> Remover
                     </a>
                 </div>
             </div>
         </div>
         <div class="col-sm-12">
-            {{ Form::hidden('delete_photo') }}
+            {{ Form::hidden('delete_photo_banner') }}
+            {{ Form::hidden('delete_photo_thumbnail') }}
             <button class="btn btn-primary">Gravar</button>
         </div>
         {{ Form::close() }}

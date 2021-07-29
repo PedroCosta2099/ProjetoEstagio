@@ -204,7 +204,6 @@ class UsersController extends \App\Http\Controllers\Admin\Controller {
             }
 
             $user->fill($input);
-            
             //delete image
             if ($input['delete_photo'] && !empty($user->filepath)) {
                 Croppa::delete($user->filepath);
@@ -223,9 +222,10 @@ class UsersController extends \App\Http\Controllers\Admin\Controller {
                 }
 
             } else {
+                
                 $user->save();
             }
-
+    
             if(!$changePass && $user->id != Auth::user()->id) {
                 $roles = $request->has('role_id') ? $request->get('role_id') : [];
                 $user->roles()->sync($roles);

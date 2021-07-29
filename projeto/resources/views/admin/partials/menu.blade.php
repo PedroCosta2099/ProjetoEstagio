@@ -33,7 +33,7 @@
             {!! Html::sidebarTreeClose() !!}
             
             {!! Html::sidebarOption('addresses', 'Moradas', route('admin.addresses.index'),'admin','fas fa-home') !!} <!--nome do menu, nome a apresentar,rota,permissão,icone-->
-           
+            
             
         </ul>
     </section>

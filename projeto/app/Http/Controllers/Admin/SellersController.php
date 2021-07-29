@@ -9,7 +9,7 @@ use Yajra\Datatables\Facades\Datatables;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Role;
 use App\Models\Seller;
-use Auth, App, Html, Session;
+use Auth, App, Html, Session,File,Croppa;
 
 class SellersController extends \App\Http\Controllers\Admin\Controller {
 
@@ -110,35 +110,54 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
         $seller  = Seller::findOrNew($id);
         
         $input = $request->except('role_id');
+        
         $seller->nif = $input['nif'];
         $seller->postal_code = $input['postal_code'];
-            $seller->fill($input);
-            
-            //delete image
-            if ($input['delete_photo'] && !empty($seller->filepath)) {
-                Croppa::delete($seller->filepath);
-                $seller->filepath = null;
-                $seller->filename = null;
-                $seller->filehost = null;
-            }
+        $seller->fill($input);
+        
+        //dd($input['thumbnail_image'],$input['banner_image']);
+        
+           if($request->hasFile('thumbnail_image'))
+           {
+               
+               $thumbnail_filepath = explode('/tmp/',$request->file('thumbnail_image')->getRealPath());
+               $thumbnail_filepath = $thumbnail_filepath[1];
+               $seller->thumbnail_filename = $request->file('thumbnail_image')->getClientOriginalName();
+               //dd(public_path().'/'.SELLER::DIRECTORY.'/'.$thumbnail_filepath);
+               $request->file('thumbnail_image')->move(public_path().'/'.SELLER::DIRECTORY.'/thumbnails/',$thumbnail_filepath);
+               $seller->thumbnail_filepath = '/'.SELLER::DIRECTORY.'/thumbnails/'.$thumbnail_filepath;
+               $seller->save();
+           }
+           
+           if(!empty($seller->thumbnail_filepath) && $input['delete_photo_thumbnail'])
+           {
+               $seller->thumbnail_filename = null;
+               $seller->thumbnail_filepath = null;
+               $seller->save();
+           }
 
-            //upload image
-            if($request->hasFile('image')) {
-
-                if ($seller->exists && !empty($seller->filepath) && File::exists(public_path(). '/'.$seller->filepath)) {
-                    Croppa::delete($seller->filepath);
-                }
-
-                if (!$seller->upload($request->file('image'), 40, true, [])) {
-                    return Redirect::back()->withInput()->with('error', 'Não foi possível alterar a imagem do perfil.');
-                }
-
-            } else {
-                
-                $seller->save();
-            }
-
-
+           if($request->hasFile('banner_image'))
+           {
+               
+               $banner_filepath = explode('/tmp/',$request->file('banner_image')->getRealPath());
+               
+               $banner_filepath = $banner_filepath[1];
+               
+               $seller->banner_filename = $request->file('banner_image')->getClientOriginalName();
+               
+               $request->file('banner_image')->move(public_path().'/'.SELLER::DIRECTORY.'/banners/',$banner_filepath);
+               $seller->banner_filepath = '/'.SELLER::DIRECTORY.'/banners/'.$banner_filepath;
+               
+               $seller->save();
+           }
+           
+           if(!empty($seller->banner_filepath) && $input['delete_photo_banner'])
+           {
+               $seller->banner_filename = null;
+               $seller->banner_filepath = null;
+               $seller->save();
+           }
+        
             return Redirect::route('admin.sellers.edit', $seller->id)->with('success', 'Gravado com sucesso');
 
         
