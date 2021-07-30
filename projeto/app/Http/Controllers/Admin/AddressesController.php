@@ -9,7 +9,7 @@ use Yajra\Datatables\Facades\Datatables;
 use App\Models\Address;
 use App\Models\User;
 use App\Models\Customer;
-use DB;
+use DB,Lang,Input;
 
 
 
@@ -50,7 +50,9 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
     public function create() {
 
         $address = new Address();
-
+        
+        $countCustomersAddress = count($address->customers);
+       
         $operators = User::orderBy('code', 'asc')
                         ->pluck('name', 'id')
                         ->toArray();
@@ -66,7 +68,8 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
             'action',
             'formOptions',
             'operators',
-            'customers'
+            'customers',
+            'countCustomersAddress'
         );
 
         return view('admin.addresses.edit', $data)->render();
@@ -90,8 +93,11 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
      */
     public function edit($id) {
 
-        $address = Address::findOrfail($id);
-
+        $address = Address::with('customers')->findOrfail($id);
+        $countCustomersAddress = count($address->customers);
+        $customerAddress = $address->customers->toArray();
+        
+        
         $operators = User::orderBy('code', 'asc')
                 ->pluck('name', 'id')
                 ->toArray();
@@ -106,7 +112,9 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
             'action',
             'formOptions',
             'operators',
-            'customers'
+            'customers',
+            'customerAddress',
+            'countCustomersAddress'
             
         );
 
@@ -125,10 +133,41 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
         Address::flushCache(Address::CACHE_TAG);
         User::flushCache(User::CACHE_TAG);
 
+        
         $input = $request->all();
        
         $address = Address::with('customers')->findOrNew($id);
-        $customer = Customer::where('id',$input['customer'])->first();
+        $customer = Customer::where('id',$input['customer'])->with('addresses')->first();
+        
+        foreach($customer->addresses as $customerAddress)
+        {
+            if(array_key_exists('actual_shipment_address',$input))
+            {
+                $customerAddress->actual_shipment_address = 0;
+            }
+            if(array_key_exists('actual_billing_address',$input))
+            {
+                $customerAddress->actual_billing_address = 0;
+            }
+        }
+
+        if(!array_key_exists('actual_shipment_address',$input))
+        {
+            $address->actual_shipment_address = 0;
+        }
+        else
+        {
+            $address->actual_shipment_address = 1;
+        }
+        if(!array_key_exists('actual_billing_address',$input))
+        {
+            $address->actual_billing_address = 0;
+        }
+        else
+        {
+            $address->actual_billing_address = 1;
+        }
+        
         if(!array_key_exists('shipment_address',$input))
         {
             $address->shipment_address = 0;
@@ -145,10 +184,11 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
         {
             $address->billing_address = 1;
         }
-
-        if(!array_key_exists('shipment_address',$input) && !array_key_exists('billing_address',$input))
+        if($address->billing_address == 0)
         {
-            $address->shipment_address = 1;
+            $address->actual_billing_address = 0;
+            
+            return Redirect::back()->with('error',Lang::get('validation.billing_address'));
         }
         if ($address->validate($input)) {
             $address->fill($input);
