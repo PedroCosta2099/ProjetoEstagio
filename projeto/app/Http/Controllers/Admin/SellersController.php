@@ -98,6 +98,18 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
         return $this->setContent('admin.sellers.edit', compact('seller', 'action', 'formOptions'));
     }
 
+    public function editOneSeller()
+    {
+        $id = Auth::user()->seller_id;
+        $action = 'Editar Vendedor';
+        $seller = Seller::findOrfail($id);
+    
+        
+        $formOptions = array('route' => array('admin.sellers.update', $seller->id), 'method' => 'PUT', 'files' => true);
+
+        return $this->setContent('admin.sellers.edit', compact('seller', 'action', 'formOptions'));
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -124,8 +136,8 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
                $thumbnail_filepath = $thumbnail_filepath[1];
                $seller->thumbnail_filename = $request->file('thumbnail_image')->getClientOriginalName();
                //dd(public_path().'/'.SELLER::DIRECTORY.'/'.$thumbnail_filepath);
-               $request->file('thumbnail_image')->move(public_path().'/'.SELLER::DIRECTORY.'/thumbnails/',$thumbnail_filepath);
-               $seller->thumbnail_filepath = '/'.SELLER::DIRECTORY.'/thumbnails/'.$thumbnail_filepath;
+               $request->file('thumbnail_image')->move(public_path().'/'.SELLER::DIRECTORY.'/thumbnails/',$thumbnail_filepath.'.'.$request->file('thumbnail_image')->getClientOriginalExtension());
+               $seller->thumbnail_filepath = '/'.SELLER::DIRECTORY.'/thumbnails/'.$thumbnail_filepath.'.'.$request->file('thumbnail_image')->getClientOriginalExtension();
                $seller->save();
            }
            
@@ -144,9 +156,9 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
                $banner_filepath = $banner_filepath[1];
                
                $seller->banner_filename = $request->file('banner_image')->getClientOriginalName();
-               
-               $request->file('banner_image')->move(public_path().'/'.SELLER::DIRECTORY.'/banners/',$banner_filepath);
-               $seller->banner_filepath = '/'.SELLER::DIRECTORY.'/banners/'.$banner_filepath;
+
+               $request->file('banner_image')->move(public_path().'/'.SELLER::DIRECTORY.'/banners/',$banner_filepath.'.'.$request->file('banner_image')->getClientOriginalExtension());
+               $seller->banner_filepath = '/'.SELLER::DIRECTORY.'/banners/'.$banner_filepath.'.'.$request->file('banner_image')->getClientOriginalExtension();
                
                $seller->save();
            }

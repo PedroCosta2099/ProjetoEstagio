@@ -38,6 +38,7 @@
                 {{ Form::text('city', null, array('class' =>'form-control', 'required' => true)) }}
             </div>  
         </div>
+        @if(Auth::user()->isAdmin())
         <h4 class="m-t-20 bold text-blue">Opções da conta</h4>
             <div class="row row-5">
                 <div class="col-sm-6">
@@ -55,13 +56,14 @@
                     </table>
                 </div>
             </div>
+            @endif
     </div>
     
         <div class="col-sm-4 col-lg-3">
             {{ Form::label('thumbnail_image', 'Thumbnail', array('class' => 'form-label')) }}<br/>
             <div class="fileinput {{ $seller->thumbnail_filepath ? 'fileinput-exists' : 'fileinput-new'}}" data-provides="fileinput">
                 <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
-                    <img src="{{ asset('assets/img/default/avatar.png') }}">
+                    <img src="{{ asset('assets/img/default/avatar2.jpg') }}">
                 </div>
                 <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 150px; max-height: 150px;">
                     @if($seller->thumbnail_filepath)
@@ -84,7 +86,7 @@
             {{ Form::label('banner_image', 'Banner', array('class' => 'form-label')) }}<br/>
             <div class="fileinput {{ $seller->banner_filepath ? 'fileinput-exists' : 'fileinput-new'}}" data-provides="fileinput">
                 <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
-                    <img src="{{ asset('assets/img/default/avatar.png') }}">
+                    <img src="{{ asset('assets/img/default/avatar2.jpg') }}">
                 </div>
                 <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 150px; max-height: 150px;">
                     @if($seller->banner_filepath)

@@ -59,7 +59,7 @@ Route::group(array('middleware' => 'auth','namespace' => 'Customer'), function()
 /*=================================================================================================================
  *              ABOUT
  =================================================================================================================*/
-        Route::get('/about/{id}','HomeController@about')
+        Route::get('/about','HomeController@about')
                 ->name('customer.about');
         Route::get('/test','HomeController@index')
                 ->name('customer.test');

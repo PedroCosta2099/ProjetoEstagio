@@ -356,11 +356,20 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
                 ->edit_column('name', function($row) {
                     return view('admin.products.datatables.name', compact('row'))->render();
                 })
+                ->edit_column('actual_price', function($row) {
+                    return view('admin.products.datatables.actual_price', compact('row'))->render();
+                })
                 ->edit_column('price', function($row) {
                     return view('admin.products.datatables.price', compact('row'))->render();
                 })
+                ->edit_column('actual_vat', function($row) {
+                    return view('admin.products.datatables.actual_vat', compact('row'))->render();
+                })
                 ->edit_column('vat', function($row) {
                     return view('admin.products.datatables.vat', compact('row'))->render();
+                })
+                ->edit_column('discount', function($row) {
+                    return view('admin.products.datatables.discount', compact('row'))->render();
                 })
                 ->edit_column('category_id', function($row) {
                     return view('admin.products.datatables.category', compact('row'))->render();

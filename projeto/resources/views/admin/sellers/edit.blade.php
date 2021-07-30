@@ -1,14 +1,19 @@
 @section('title')
     Vendedores
 @stop
-
+@if(Auth::user()->isAdmin())
 @section('content-header')
     Vendedores
     <small>
         {{ $action }}
     </small>
 @stop
-
+@else
+@section('content-header')
+{{$seller->name}}
+@stop
+@endif
+@if(Auth::user()->isAdmin())
 @section('breadcrumb')
     <li>Configurações</li>
     <li>
@@ -20,7 +25,7 @@
         {{ $action }}
     </li>
 @stop
-
+@endif
 @section('content')
     @if($seller->exists)
     <div class="row">
@@ -34,6 +39,7 @@
                                 <h4 class="m-t-5 pull-left">{{ $seller->name }}</h4>
                                 <div class="clearfix"></div>
                                 <ul class="list-inline m-b-0">
+                                    @if(Auth::user()->isAdmin())
                                     <li>
                                         @if($seller->active)
                                             <span class="label label-success">
@@ -45,6 +51,7 @@
                                             </span>
                                         @endif
                                     </li>
+                                    @endif
                                     <li>Criado em <b>{{ $seller->created_at }}</b></li>
                                 </ul>
                             </div>

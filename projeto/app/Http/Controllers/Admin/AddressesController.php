@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Redirect;
 use Yajra\Datatables\Facades\Datatables;
 use App\Models\Address;
 use App\Models\User;
+use App\Models\Customer;
+use DB;
+
 
 
 class AddressesController extends \App\Http\Controllers\Admin\Controller {
@@ -52,6 +55,8 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
                         ->pluck('name', 'id')
                         ->toArray();
 
+        $customers = Customer::select(DB::raw('CONCAT(name," - ",nif) AS name_nif,id'))->pluck('name_nif','id');
+        
         $action = 'Adicionar Endereço';
 
         $formOptions = array('route' => array('admin.addresses.store'), 'method' => 'POST', 'class' => 'form-addresses');
@@ -60,7 +65,8 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
             'address',
             'action',
             'formOptions',
-            'operators'
+            'operators',
+            'customers'
         );
 
         return view('admin.addresses.edit', $data)->render();
@@ -90,6 +96,7 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
                 ->pluck('name', 'id')
                 ->toArray();
 
+        $customers = Customer::select(DB::raw('CONCAT(name," - ",nif) AS name_nif,id'))->pluck('name_nif','id');
         $action = 'Editar Endereço';
 
         $formOptions = array('route' => array('admin.addresses.update', $address->id), 'method' => 'PUT', 'class' => 'form-addresses');
@@ -98,7 +105,9 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
             'address',
             'action',
             'formOptions',
-            'operators'
+            'operators',
+            'customers'
+            
         );
 
         return view('admin.addresses.edit', $data)->render();
@@ -117,13 +126,36 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
         User::flushCache(User::CACHE_TAG);
 
         $input = $request->all();
+       
+        $address = Address::with('customers')->findOrNew($id);
+        $customer = Customer::where('id',$input['customer'])->first();
+        if(!array_key_exists('shipment_address',$input))
+        {
+            $address->shipment_address = 0;
+        }
+        else
+        {
+            $address->shipment_address = 1;
+        }
+        if(!array_key_exists('billing_address',$input))
+        {
+            $address->billing_address = 0;
+        }
+        else
+        {
+            $address->billing_address = 1;
+        }
 
-        $address = Address::findOrNew($id);
-
+        if(!array_key_exists('shipment_address',$input) && !array_key_exists('billing_address',$input))
+        {
+            $address->shipment_address = 1;
+        }
         if ($address->validate($input)) {
             $address->fill($input);
-            $address->save();
 
+            $address->save();
+            $address->customers()->detach();
+            $address->customers()->attach($customer);
             return Redirect::back()->with('success', 'Dados gravados com sucesso.');
         }
         

@@ -2,8 +2,10 @@
     <section class="sidebar">
         <ul class="sidebar-menu">
             {!! Html::sidebarOption('dashboard', 'Painel de Resumo', route('admin.dashboard'), null, 'fas fa-fw fa-poll-h') !!}
-
-            @if(Auth::user()->ability(Config::get('permissions.role.admin'),'users,admin_sellers'))
+            @if(Auth::user()->hasRole('seller_admin'))
+            {!! Html::sidebarOption('seller_data', 'Dados do Restaurante',route('admin.sellers.about'),'admin_sellers','fas fa-utensils')!!}
+            @endif
+            @if(Auth::user()->ability(Config::get('permissions.role.admin'),'admin_sellers'))
 
             {!! Html::sidebarTreeOpen('entities', 'Entidades', 'fas fa-fw fa-users') !!}
             {!! Html::sidebarOption('users', 'Colaboradores', route('admin.users.index')) !!}

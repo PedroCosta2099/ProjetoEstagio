@@ -55,6 +55,9 @@
                                 <th>Produto</th>
                                 <th>Preço</th>
                                 <th>IVA</th>
+                                <th>Preço c/Desconto</th>
+                                <th>IVA c/Desconto</th>
+                                <th>Desconto</th>
                                 <th>Categoria</th>
                                 <th>SubCategoria</th>
                                 @if(Auth::user()->isAdmin())
@@ -87,13 +90,16 @@
                 {data: 'select', name: 'select', orderable: false, searchable: false},
                 {data: 'id', name: 'id', visible: false},
                 {data:'image',name:'image',orderable: false, searchable: false},
-                {data: 'name', name:'name'},
-                {data: 'price', name:'price', orderable: false, searchable: false},
+                {data: 'name', name:'name',searchable: true},
+                {data: 'price', name:'price', searchable: true},
                 {data: 'vat', name:'vat', orderable: false, searchable: false},
+                {data: 'actual_price', name:'actual_price', orderable: true, searchable: true},
+                {data: 'actual_vat', name:'actual_vat', orderable: false, searchable: false},
+                {data: 'discount', name:'discount', orderable: true, searchable: true},
                 {data: 'category_id', name:'category_id', orderable: true, searchable: true},
                 {data: 'subcategory_id', name:'subcategory_id', orderable: true, searchable: true},
                 @if(Auth::user()->isAdmin())
-                {data: 'seller_id', name:'seller_id'},
+                {data: 'seller_id', name:'seller_id', orderable: true, searchable:false},
                 @endif
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},
             ],

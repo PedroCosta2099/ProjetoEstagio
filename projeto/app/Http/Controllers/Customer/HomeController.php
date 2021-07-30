@@ -8,7 +8,8 @@ use App\Models\Customer;
 use App\Models\Address;
 use App\Models\Order;
 use App\Models\OrderLine;
-use Setting;
+use Illuminate\Http\Request;
+use Setting,Auth;
 
 class HomeController extends \App\Http\Controllers\Controller
 {
@@ -32,8 +33,9 @@ class HomeController extends \App\Http\Controllers\Controller
         return $this->setContent('customer.test');
     }
 
-    public function about($id)
+    public function about()
     {
+        $id = Auth::guard('customer')->user()->id;
         $customer = Customer::findOrFail($id);
         $addresses = $customer->addresses()
                               ->get()

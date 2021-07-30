@@ -119,6 +119,8 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'auth.admin', 'namespace
     Route::resource('sellers', 'SellersController', [
         'as' => 'admin',
         'except' => ['show']]);
+    Route::get('sellers/edit', 'SellersController@editOneSeller')
+        ->name('admin.sellers.about');
 
     //ROLES & PERMISSIONS
     Route::resource('roles', 'RolesController', [

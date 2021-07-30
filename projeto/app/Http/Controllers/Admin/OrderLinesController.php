@@ -52,11 +52,11 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
                             
         }
         else{
-        $status = Status::where('seller_id',Auth::user()->seller_id)
-                            ->orderBy('name','asc')
+
+            $status = Status::orderBy('name','asc')
                             ->pluck('name','id')
                             ->toArray();
-                           
+                                           
         $seller = Seller::where('id',Auth::user()->seller_id) /**CORRIGIR AQUI PQ O FILTRO SÓ VAI TER O PRÓPRIO USER */
                             ->orderBy('name','asc')
                             ->pluck('name','id')
@@ -277,11 +277,6 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
         $data = OrderLine::where('seller_id',Auth::user()->seller_id);
         }
 
-         //filter status
-         if($request->status)
-         {
-             $data = $data->where('status_id',$request->status);
-         }
          //filter seller
          if($request->seller)
          {
