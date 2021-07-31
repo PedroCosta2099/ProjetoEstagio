@@ -43,7 +43,15 @@ class HomeController extends \App\Http\Controllers\Controller
         $orders = Order::where('customer_id',$id)
                         ->with('status')
                         ->get();
-                        
+        $count = 0;
+        foreach($addresses as $address)
+        {
+            if($address['actual_shipment_address'])
+                {
+                    $count++;
+                }
+
+        }  
         
         $orderIds = [];
         foreach($orders as $order)
@@ -58,7 +66,7 @@ class HomeController extends \App\Http\Controllers\Controller
                                 ->with('product','seller','order')
                                 ->get();
 
-        return view('customer.info',compact('customer','addresses','orders','orderlines'))->render();
+        return view('customer.info',compact('customer','addresses','orders','orderlines','count'))->render();
     }
 
 }

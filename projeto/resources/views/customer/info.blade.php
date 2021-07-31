@@ -35,39 +35,35 @@ My Enovo Eats
     
     @foreach($addresses as $address)
     
-    @if($address['billing_address'])
+    @if($address['actual_billing_address'])
     
     <div class="col-sm-6 box-details">
     <label>Morada de Faturação</label><br>  
-    <label>Nome</label>
+    
             <h6>{{$address['address']}}</h6>
             <h6>{{$address['postal_code']}}</h6>
             <h6>{{$address['city']}}</h6>
     </div>
     @endif
-    @if($address['shipment_address'])
+    @if($address['actual_shipment_address'])
     
     <div class="col-sm-6 box-details">
     <label>Morada de Envio</label><br> 
-    <label>Nome</label>
+    
             <h6>{{$address['address']}}</h6>
             <h6>{{$address['postal_code']}}</h6>
             <h6>{{$address['city']}}</h6>
             
     
     </div>
-    @elseif(!$address['shipment_address'] && $address['billing_address'])
-    
+    @elseif($count == 0 && $address['actual_billing_address'])
        <div class="col-sm-6 box-details">
     <label>Morada de Envio</label><br> 
-    <label>Nome</label>
             <h6>{{$address['address']}}</h6>
             <h6>{{$address['postal_code']}}</h6>
             <h6>{{$address['city']}}</h6>
-            
-    
     </div>
-    
+
     @endif
     @endforeach
 </div>

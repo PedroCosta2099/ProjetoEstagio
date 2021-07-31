@@ -137,8 +137,16 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
         $input = $request->all();
        
         $address = Address::with('customers')->findOrNew($id);
+        if(!array_key_exists('customer',$input))
+        {
+            $addressCustomer = Address::with('customers')->findOrfail($id);
+            $countCustomersAddress = count($addressCustomer->customers);
+            $customerAddressInfo = $address->customers->toArray();
+            $customer = Customer::where('id',$customerAddressInfo[0]['id'])->with('addresses')->first();
+        }
+        else{
         $customer = Customer::where('id',$input['customer'])->with('addresses')->first();
-        
+        }
         foreach($customer->addresses as $customerAddress)
         {
             if(array_key_exists('actual_shipment_address',$input))
@@ -149,45 +157,54 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
             {
                 $customerAddress->actual_billing_address = 0;
             }
+            $customerAddress->save();
         }
 
         if(!array_key_exists('actual_shipment_address',$input))
         {
             $address->actual_shipment_address = 0;
+            $address->save();
         }
         else
         {
             $address->actual_shipment_address = 1;
+            $address->save();
         }
         if(!array_key_exists('actual_billing_address',$input))
         {
             $address->actual_billing_address = 0;
+            $address->save();
         }
         else
         {
             $address->actual_billing_address = 1;
+            $address->save();
         }
         
         if(!array_key_exists('shipment_address',$input))
         {
             $address->shipment_address = 0;
+            $address->save();
         }
         else
         {
             $address->shipment_address = 1;
+            $address->save();
         }
         if(!array_key_exists('billing_address',$input))
         {
             $address->billing_address = 0;
+            $address->save();
         }
         else
         {
             $address->billing_address = 1;
+            $address->save();
         }
         if($address->billing_address == 0)
         {
             $address->actual_billing_address = 0;
-            
+            $address->save();
             return Redirect::back()->with('error',Lang::get('validation.billing_address'));
         }
         if ($address->validate($input)) {
