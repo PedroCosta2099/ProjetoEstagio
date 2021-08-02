@@ -26,6 +26,14 @@ trait FileTrait {
         return defined('static::FILEPATH') ? static::FILEPATH : 'filepath';
     }
 
+    public function getThumbnailFilepathColumn()
+    {
+        return defined('static::FILEPATH') ? static::FILEPATH : 'thumbnail_filepath';
+    }
+    public function getBannerFilepathColumn()
+    {
+        return defined('static::FILEPATH') ? static::FILEPATH : 'banner_filepath';
+    }
     /**
      * Get relative and absolute path for storing file
      *
@@ -94,6 +102,21 @@ trait FileTrait {
 //      return File::exists($this->getFilepath()) ?
 //            Croppa::url($this->getFilepath(), $width, $height, $options) : null;
     }
+    public function getCroppaThumbnail($width, $height = null, $options = null)
+    {
+        return Croppa::url($this->getThumbnailFilepath(), $width, $height, $options);
+
+// 
+    }
+    public function getCroppaBanner($width, $height = null, $options = null)
+    {
+        return Croppa::url($this->getBannerFilepath(), $width, $height, $options);
+
+// 
+    }
+
+
+
 
     /**
      * Get cropped image
@@ -160,6 +183,21 @@ trait FileTrait {
      */
     public function getFilepath(){
         return $this->{$this->getFilepathColumn()};
+    }
+
+     /**
+     *
+     * @return string
+     */
+    public function getThumbnailFilepath(){
+        return $this->{$this->getThumbnailFilepathColumn()};
+    }
+     /**
+     *
+     * @return string
+     */
+    public function getBannerFilepath(){
+        return $this->{$this->getBannerFilepathColumn()};
     }
 
     /**

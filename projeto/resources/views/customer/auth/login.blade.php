@@ -15,7 +15,7 @@
                     @endif
                     <div class="wrap-input100 validate-input" data-validate="Insira um e-mail válido.">
                         {{ Form::text('email', null, ['class' => 'input100 nospace']) }}
-                        <span class="focus-input100" data-placeholder="E-mail ou Código"></span>
+                        <span class="focus-input100" data-placeholder="E-mail"></span>
                     </div>
                     <div class="wrap-input100 validate-input" data-validate="Insira a palavra-passe.">
                         <span class="btn-show-pass">

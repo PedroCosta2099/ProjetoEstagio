@@ -37,7 +37,7 @@ class LoginController extends \App\Http\Controllers\Controller
      *
      * @var string
      */
-    protected $redirectTo = '/products';
+    protected $redirectTo = '/feed';
 
     /**
      * Create a new controller instance.

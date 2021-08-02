@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
-use Setting;
+use Setting,Auth;
 
 class LoginController extends \App\Http\Controllers\Admin\Controller
 {
@@ -54,6 +54,16 @@ class LoginController extends \App\Http\Controllers\Admin\Controller
     public function index() {
         
         return $this->setContent('admin.auth.login');
+    }
+
+    /**
+     * Custom login guard
+     *
+     * @return type
+     */
+    protected function guard()
+    {
+        return Auth::guard('admin');
     }
 
     /**

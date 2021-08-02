@@ -11,6 +11,7 @@
         '/assets/customer/css/about.css',
         '/assets/customer/css/products.css',
         '/assets/customer/css/template.css',
+        '/assets/customer/css/seller.css',
         '/assets/customer/css/skins/' . app_skin() . '.css',
 
         '/vendor/datepicker/datepicker3.css',

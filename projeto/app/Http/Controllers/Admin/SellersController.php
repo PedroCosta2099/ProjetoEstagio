@@ -131,7 +131,7 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
         
            if($request->hasFile('thumbnail_image'))
            {
-               
+                   
                $thumbnail_filepath = explode('/tmp/',$request->file('thumbnail_image')->getRealPath());
                $thumbnail_filepath = $thumbnail_filepath[1];
                $seller->thumbnail_filename = $request->file('thumbnail_image')->getClientOriginalName();

@@ -3,7 +3,9 @@
 use Syscover\ShoppingCart\Item;
 use Syscover\ShoppingCart\TaxRule;
 
-
+   Route::get('/feed','HomeController@index')
+        ->name('home.index');
+          
 /*=================================================================================================================
  * LOGIN & RESET PASSWORD
  =================================================================================================================*/
@@ -25,8 +27,8 @@ Route::group(array('prefix' => 'register', 'middleware' => 'guest', 'namespace' 
                 ->name('customer.register.submit');
     });
 
-    Route::get('/','HomeController@index')
-    ->name('home.index');
+ 
+
 
     //LOGOUT
 Route::get('customer/logout', 'Auth\LoginController@logout')
@@ -49,6 +51,7 @@ Route::get('/products/{id}/show','Customer\ProductsController@showProduct')
                 ->name('customer.cart.addToCart');
         Route::get('customer/cart/updatePrice/{rowId}/{id}/{quantity}','Customer\CartController@updatePrice');
 
+
 /*=================================================================================================================
  *              CUSTOMER GLOBAL ROUTES 
  =================================================================================================================*/            
@@ -63,7 +66,8 @@ Route::group(array('middleware' => 'auth','namespace' => 'Customer'), function()
                 ->name('customer.about');
         Route::get('/test','HomeController@index')
                 ->name('customer.test');
-
+        Route::get('/orderStatus/{id}','HomeController@orderStatus')
+                ->name('customer.orderStatus');
 /*=================================================================================================================
  *              CART
  =================================================================================================================*/
@@ -84,3 +88,9 @@ Route::group(array('middleware' => 'auth','namespace' => 'Customer'), function()
         Route::get('cart/deleteCartAndPayment','CartController@deleteCartAndPayment')
                 ->name('customer.cart.deleteCartAndPayment');
 });
+
+/*=================================================================================================================
+ *              SELLERS
+ =================================================================================================================*/
+ Route::get('/store/{name}','Customer\SellersController@index')
+        ->name('customer.seller');

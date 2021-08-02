@@ -22,13 +22,13 @@
         
             @include('customer.partials.header')
             
-            <div class="content-wrapper">
+            <div class="content-wrapper" id="content-wrapper">
                 
                 <section class="content-header">
                     <h1>@yield('content-header')</h1>
                     @include('customer.partials.breadcrumb')
                 </section>
-                <section class="content">
+                <section class="content" id="content">
                     @yield('content')
                 </section>
             </div>

@@ -14,9 +14,10 @@ Produtos
                 @foreach($products as $product)
 	    		    <div class="col-sm-3">
                         <p class="text-center">
-                            <a href="{{route('customer.products.productShow',$product['id'])}}">
+                            <a name ="product" href="{{route('customer.products.productShow',$product['id'])}}">
                                 <img class="center-block" src="<?=Croppa::url($product['filepath'],200,200)?>" id="{{$product['filename']}}"/>
                                 <span>{{$product['name']}}</span>
+                                
                             </a>
                         </p>
                         <p class="text-center"> 

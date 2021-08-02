@@ -67,7 +67,7 @@
                 </div>
                 <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 150px; max-height: 150px;">
                     @if($seller->thumbnail_filepath)
-                        <img src="{{ asset($seller->thumbnail_filepath) }}">
+                        <img src="{{ asset($seller->getCroppaThumbnail(1440,450)) }}">
                     @endif
                 </div>
                 <div>
@@ -90,7 +90,7 @@
                 </div>
                 <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 150px; max-height: 150px;">
                     @if($seller->banner_filepath)
-                        <img src="{{ asset($seller->banner_filepath) }}">
+                        <img src="{{ asset($seller->getCroppaBanner(1440,450)) }}">
                     @endif
                 </div>
                 <div>

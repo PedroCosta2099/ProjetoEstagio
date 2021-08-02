@@ -1,6 +1,6 @@
 
 <header class="main-header">
-    <a href="" class="logo">
+    <a href="{{route('home.index')}}" class="logo">
         <span class="logo-mini">
             <img src="{{ asset(config('app.logo_square')) }}"/>
         </span>
@@ -71,7 +71,7 @@
                         <li>
                             <ul class="options-menu">
                                 <li>
-                                    <a href="{{route('customer.about',Auth::guard('customer')->user()->id)}}">
+                                    <a href="{{route('customer.about')}}">
                                         <i class="fas fa-user"></i> My Enovo Eats
                                     </a>
                                 </li>

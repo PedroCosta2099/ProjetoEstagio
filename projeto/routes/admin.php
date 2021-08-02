@@ -402,9 +402,5 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'auth.admin', 'namespace
         'as'    => 'admin.logs',
         'only'  => ['index', 'destroy']]);
 
-    /*=================================================================================================================
-     * TEST CONTROLLER
-     =================================================================================================================*/
-    Route::get('test', 'TestController@index')
-        ->name('admin.test.index');
+  
 });
