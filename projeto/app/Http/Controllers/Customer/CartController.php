@@ -10,12 +10,14 @@ use Illuminate\Support\Facades\Session;
 use Yajra\Datatables\Facades\Datatables;
 use App\Models\Product;
 use App\Models\User;
+use App\Models\Customer;
 use App\Models\Category;
 use App\Models\SubCategory;
 use App\Models\OrderLine;
 use App\Models\Status;
 use App\Models\Seller;
 use App\Models\Payment;
+use App\Models\Address;
 use App\Models\PaymentStatus;
 use App\Models\PaymentType;
 use App\Http\Controllers\Customer\ProductsController;
@@ -253,7 +255,7 @@ public function deleteCartAndPayment()
 /**
  * Get all payment methods
  */
-public function paymentMethod()
+public function orderInfo()
 {
     if(CartProvider::instance()->getQuantity() == 0)
         {
@@ -261,7 +263,27 @@ public function paymentMethod()
         }
     else{
     $paymentMethods = PaymentType::get()->toArray();
-    return view('customer.cart.payment',compact('paymentMethods'))->render();
+    $customerId = Auth::guard('customer')->user()->id;
+    $customer = Customer::with('addresses')->where('id',$customerId)->get()->toArray();
+    $customerAddressesIds = [];
+    foreach($customer[0]['addresses'] as $customerAddress)
+    {
+        if(!in_array($customerAddress, $customerAddressesIds, true)){
+                array_push($customerAddressesIds,$customerAddress['id']);
+            }
+            
+    }
+    
+    $billingAddress = Address::whereIn('id',$customerAddressesIds)->where('actual_billing_address',1)->get()->toArray();
+    $shipmentAddress = Address::whereIn('id',$customerAddressesIds)->where('actual_shipment_address',1)->get()->toArray();
+    if(count($shipmentAddress) <= 0)
+    {
+        $shipmentAddress = $billingAddress;
+    }
+
+    $allCustomerAddresses = Address::whereIn('id',$customerAddressesIds)->get()->toArray();
+    
+    return view('customer.cart.orderInfo',compact('paymentMethods'))->render();
 }
 }
 

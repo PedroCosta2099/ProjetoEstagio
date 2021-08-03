@@ -72,22 +72,22 @@ class HomeController extends \App\Http\Controllers\Controller
         }
 
         $countAtualSellerIds = count($sellerIds);
-
-        if($countAtualSellerIds >= 6)
+        
+        if($countAtualSellerIds >= 8)
         {
             
             $sellers = Seller::whereIn('id',$sellerIds)
-                                ->take(6)
-                                ->get()
-                                ->toArray();
+                                ->take(8)
+                                ->get();
+                                
             
         }
         else
         {
             $sellers = Seller::whereNotIn('id',$sellerIds)
-                                ->take(6-$countAtualSellerIds)
-                                ->get()
-                                ->toArray();
+                                ->take(8-$countAtualSellerIds)
+                                ->get();
+                                
 
             foreach($sellers as $seller)
             {
@@ -95,13 +95,22 @@ class HomeController extends \App\Http\Controllers\Controller
                     array_push($sellerIds,$seller['id']);
                 }
             }
-
-            $finalSellers = Seller::whereIn('id',$sellerIds)
-                                ->get()
-                                ->toArray();
+           
+            $finalSellers=[];
+            foreach($sellerIds as $seller) 
+            {
+            if(!in_array($seller, $finalSellers, true)){
+                 $finalSeller = Seller::where('id',$seller)->get();
+                                 
+                                 
+                     array_push($finalSellers,$finalSeller);
+                 }
+                   
+         }
+                              
         }
         
-        if($countAtualSellerIds >= 6)
+        if($countAtualSellerIds >= 8)
         {
             $this->sellers = $sellers;
             return response()->json($this->sellers);
@@ -115,9 +124,9 @@ class HomeController extends \App\Http\Controllers\Controller
     }
     else
     {
-        $sellers = Seller::take(6)
-                           ->get()
-                           ->toArray();
+        $sellers = Seller::take(8)
+                           ->get();
+                           
         $this->sellers = $sellers;
         return response()->json($this->sellers);
     }
