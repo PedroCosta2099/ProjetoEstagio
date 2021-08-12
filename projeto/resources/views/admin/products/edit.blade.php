@@ -116,6 +116,16 @@
     var vat = ($(this).val()*IVA);
     var rounded_vat = parseFloat(vat.toFixed(2));
     document.getElementById("vat").value= rounded_vat;
+    var discount = $('#discount').val();
+    var price = $(this).val();
+        
+        var actual_price = price - (price * (discount/100));
+        var rounded_actual_price = parseFloat(actual_price.toFixed(2));
+        var actual_vat = rounded_actual_price * 0.23;
+        var rounded_actual_vat = parseFloat(actual_vat.toFixed(2));
+
+        document.getElementById("actual_price").value = rounded_actual_price;
+        document.getElementById("actual_vat").value = rounded_actual_vat;
     });
 
     $('#actual_price').change(function() {

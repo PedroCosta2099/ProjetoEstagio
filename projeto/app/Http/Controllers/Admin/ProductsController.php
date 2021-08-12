@@ -224,7 +224,7 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
             $product->fill($input);
             $product->discount = $input['discount'];
             $product->actual_price = $product->price - (($product->discount/100) * $product->price);
-            $product->actual_vat = $input['vat'];
+            $product->actual_vat = $input['actual_vat'];
             $product->save();
             
             return Redirect::back()->with('success', 'Dados gravados com sucesso.');

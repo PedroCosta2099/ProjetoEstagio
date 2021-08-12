@@ -14,6 +14,12 @@
     
 }
 
+.without-banner{
+    height:240px;
+    text-align:center;
+    padding:70px;
+}
+
 @media (max-width:767px) {
     #content-wrapper{
         top:100px !important;
@@ -33,13 +39,24 @@
 .content-header{
     padding:0;
 }
+
 </style>
 @stop
 @section('content')
 <div class="img img-responsive" style="position:relative;">
 @if($seller['banner_filepath'])
 <img src="{{ asset($seller->getCroppaBanner(1440, 240)) }}" style="width:100%;height:auto">
-
+@else
+<div class="without-banner">
+<h1>{{$seller['name']}}</h1>
+</div>
 @endif
+</div>
+<div>
+    @foreach ($productsSeller as $product )
+        <div class="col-sm-3">
+            {{$product['name']}}
+        </div>
+    @endforeach
 </div>
 @stop

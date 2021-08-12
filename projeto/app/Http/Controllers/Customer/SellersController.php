@@ -39,8 +39,15 @@ class SellersController extends \App\Http\Controllers\Customer\Controller {
         
         $sellerName = str_replace('-',' ',$name);
         $seller = Seller::where('name',$sellerName)->first();
-       
-        return view('customer.sellers.showSeller',compact('seller'));
+        $categoriesSeller = Category::where('seller_id',$seller['id'])->pluck('id')->toArray();
+        $productsSeller = Product::whereIn('category_id',$categoriesSeller)->get()->toArray();
+        $data = compact(
+            'seller',
+            'categoriesSeller',
+            'productsSeller'
+        );
+        return view('customer.sellers.showSeller',$data);
     }
+
 
 }

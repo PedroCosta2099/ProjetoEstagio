@@ -39,8 +39,8 @@ class HomeController extends \App\Http\Controllers\Controller
     
         $this->sellerAlgorithm();
         $sellers = $this->sellers;
-        
-        return $this->setContent('customer.index', compact('sellers')); 
+        $count = $this->countAtualSellerIds;
+        return $this->setContent('customer.index', compact('sellers','count')); 
     }
 
     public function sellerAlgorithm()
@@ -73,7 +73,7 @@ class HomeController extends \App\Http\Controllers\Controller
 
         $countAtualSellerIds = count($sellerIds);
         
-        if($countAtualSellerIds >= 8)
+        if($countAtualSellerIds > 8)
         {
             
             $sellers = Seller::whereIn('id',$sellerIds)
@@ -101,34 +101,40 @@ class HomeController extends \App\Http\Controllers\Controller
             {
             if(!in_array($seller, $finalSellers, true)){
                  $finalSeller = Seller::where('id',$seller)->get();
-                                 
-                                 
+                                
                      array_push($finalSellers,$finalSeller);
                  }
+                 
                    
          }
+
                               
         }
         
-        if($countAtualSellerIds >= 8)
+        if($countAtualSellerIds > 8)
         {
+            
             $this->sellers = $sellers;
-            return response()->json($this->sellers);
+            $this->countAtualSellerIds = $countAtualSellerIds;
+            return response()->json([$this->sellers,$this->countAtualSellerIds]);
         }
 
         else
         {
+
             $this->sellers = $finalSellers;
-            return response()->json($this->sellers);
+            $this->countAtualSellerIds = $countAtualSellerIds;
+            return response()->json([$this->sellers,$this->countAtualSellerIds]);
         }
     }
     else
     {
         $sellers = Seller::take(8)
                            ->get();
-                           
+        $countAtualSellerIds = count($sellers);                 
         $this->sellers = $sellers;
-        return response()->json($this->sellers);
+        $this->countAtualSellerIds = $countAtualSellerIds;
+        return response()->json([$this->sellers,$this->countAtualSellerIds]);
     }
     }
 
