@@ -75,26 +75,35 @@
                 {{ Form::number('discount',number_format($product->discount), ['class' => 'form-control','step' => '1','min'=>'0','max'=>'100','id' => 'discount']) }}
             </div>
         </div>
-        @if(Auth::user()->isAdmin())
+       @if(Auth::user()->isAdmin())
+       @if(!$product->category['seller_id'])
+        <div class="col-sm-6">
+            <div class="form-group is-required">
+                {{ Form::label('seller_id', 'Vendedor') }}
+                {{ Form::select('seller_id', ['' => 'NENHUM'] + $seller,null, ['class' => 'form-control select2','required','id'=>'seller_id']) }}
+            </div>
+        </div>
+        @else
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('seller_id', 'Vendedor') }}
                 {{ Form::select('seller_id', ['' => 'NENHUM'] + $seller, $product->category->seller_id, ['class' => 'form-control select2','required','id'=>'seller_id']) }}
             </div>
-        </div>  
+        </div>   
+        @endif
         @endif
         <div class="col-sm-6">
             <div class="form-group is-required">
                 {{ Form::label('category_id', 'Categoria') }}
                 {{ Form::select('category_id', ['' => 'NENHUM'] + $categories, null, ['class' => 'form-control select2','required','id' => 'category_id']) }}
             </div>
-        </div> 
+        </div>
         <div class="col-sm-6">
             <div class="form-group">
                 {{ Form::label('subcategory_id', 'SubCategoria') }}
                 {{ Form::select('subcategory_id', ['0' => 'NENHUM'] + $subcategories, null, ['class' => 'form-control select2','id' => 'subcategory_id']) }}
             </div>
-        </div>  
+        </div>
     </div>
 </div>
 <div class="modal-footer">

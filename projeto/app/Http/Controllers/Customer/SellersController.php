@@ -40,7 +40,7 @@ class SellersController extends \App\Http\Controllers\Customer\Controller {
         $sellerName = str_replace('-',' ',$name);
         $seller = Seller::where('name',$sellerName)->first();
         $categoriesSeller = Category::where('seller_id',$seller['id'])->pluck('id')->toArray();
-        $productsSeller = Product::whereIn('category_id',$categoriesSeller)->get()->toArray();
+        $productsSeller = Product::whereIn('category_id',$categoriesSeller)->get();
         $data = compact(
             'seller',
             'categoriesSeller',

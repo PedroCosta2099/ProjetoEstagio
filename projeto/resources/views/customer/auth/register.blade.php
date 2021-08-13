@@ -3,71 +3,88 @@
 Registo
 @stop
 @section('content')
-<div class="box no-border">
-    <div class="box-body">
-        {!!Form::open(array('route'=>'customer.register.submit','method' => 'post'))!!}
-        <div class="col-sm-8 col-lg-9">
-            <div class="row row-5">
-                <div class="col-sm-8">
-                    <div class="form-group is-required">
-                        {{ Form::label('name', 'Nome')}}
-                        {{ Form::text('name', null, array('class' =>'form-control', 'required' => true)) }}
+<div class="limiter">
+        <div class="container-login100">
+            <div class="col-sm-10 wrap-login100">
+                {{ Form::open(array('route' => 'customer.register.submit', 'class' => 'login100-form validate-form')) }}
+                <span class="login100-form-title" style="padding-bottom: 48px">
+                    <h4>Bem vindo</h4>
+                </span>
+                <div class="main-block">
+                    @if($errors->has('email'))
+                    <div class="help-block">
+                        <i class="zmdi zmdi-alert-circle"></i> {{ $errors->first('email') }}
                     </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group is-required">
-                        {{ Form::label('nif', 'NIF')}}
-                        {{ Form::text('nif', null, array('class' =>'form-control','required'=>true)) }}
+                    @endif
+                    <div class="row">
+                        <div class="col-sm-6  wrap-input100 validate-input">
+                            {{ Form::text('name', null, ['class' => 'input100']) }}
+                            <span class="focus-input100" data-placeholder="Nome"></span>
+                        </div>
+                        <div class="col-sm-5 wrap-input100 validate-input" style="margin-left:8.3333%">
+                            {{ Form::text('nif', null, ['class' => 'input100']) }}
+                            <span class="focus-input100" data-placeholder="NIF"></span>
+                        </div>
+                        <div class="col-sm-12 wrap-input100 validate-input">
+                            {{ Form::text('address', null, ['class' => 'input100 ']) }}
+                            <span class="focus-input100" data-placeholder="Morada"></span>
+                        </div>
+                        <div class="col-sm-6 wrap-input100 validate-input">
+                            {{ Form::text('postal_code', null, ['class' => 'input100 ']) }}
+                            <span class="focus-input100" data-placeholder="Código Postal"></span>
+                        </div>
+                        <div class="col-sm-5 wrap-input100 validate-input" style="margin-left:8.3333%">
+                            {{ Form::text('city', null, ['class' => 'input100 ']) }}
+                            <span class="focus-input100" data-placeholder="Localidade"></span>
+                        </div>
+                        <div class="col-sm-5 wrap-input100 validate-input">
+                            {{ Form::text('phone', null, ['class' => 'input100 ']) }}
+                            <span class="focus-input100" data-placeholder="Telemóvel"></span>
+                        </div>
+                        <div class="col-sm-6 wrap-input100 validate-input" style="margin-left:8.3333%">
+                            {{ Form::text('email', null, ['class' => 'input100']) }}
+                            <span class="focus-input100" data-placeholder="E-mail"></span>
+                        </div>
+                        
+                        <div class="col-sm-5  wrap-input100 validate-input">
+                            <span class="btn-show-pass">
+                                <i class="zmdi zmdi-eye"></i>
+                            </span>
+                                {{ Form::password('password', ['class' => 'input100']) }}
+                            <span class="focus-input100" data-placeholder="Palavra-Passe"></span>
+                        </div>
+</div>
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn">
+                                Registar
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div class="form-group is-required col-sm-8">
-                {{ Form::label('email', 'E-mail')}}
-                {{ Form::email('email', null, array('class' =>'form-control', 'required' => true)) }}
-            </div>
-            <div class="col-sm-4">
-                    <div class="form-group">
-                        {{ Form::label('phone', 'Telemóvel')}}
-                        {{ Form::text('phone', null, array('class' =>'form-control')) }}
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        {{ Form::label('address', 'Morada')}}
-                        {{ Form::text('address', null, array('class' =>'form-control')) }}
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        {{ Form::label('city', 'Localidade')}}
-                        {{ Form::text('city', null, array('class' =>'form-control')) }}
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        {{ Form::label('postal_code', 'Código Postal')}}
-                        {{ Form::text('postal_code', null, array('class' =>'form-control')) }}
+
+                    <div class="text-center" style="padding-top: 20px; line-height: 0;">
+                        <span class="txt1">Já possui conta?<a href="{{route('customer.login')}}"> Inicie Sessão</a></span>
+                        <br/>
                     </div>
                 </div>
 
-                <div class="form-group is-required col-sm-12">
-                    {{ Form::label('password', 'Password')}}
-                    <div class="input-group input-group">
-                        {{ Form::text('password', str_random(8), array('class' =>'form-control', 'required' => true,'autocomplete'=>'off')) }}
-                        <span class="input-group-btn">
-                            <button class="btn btn-default btn-flat" id="random-password" type="button">
-                                <i class="fas fa-redo"></i>
+                <div class="text-center submit-loading" style="padding-top: 0; line-height: 0; display: none">
+                    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                    <h4>Bem-vindo!</h4>
+                    <p>Estamos a registar os seus dados.</p>
+                    <div style="margin-bottom: 30px"></div>
+                    <div class="container-login100-form-btn">
+                        <div class="wrap-login100-form-btn">
+                            <div class="login100-form-bgbtn"></div>
+                            <button class="login100-form-btn">
+                                A Iniciar Sessão...
                             </button>
-                        </span>
+                        </div>
                     </div>
                 </div>
-            
+                {{ Form::close() }}
+            </div>
         </div>
-        <div class="col-sm-12">
-            {{ Form::hidden('delete_photo') }}
-            <button class="btn btn-primary">Gravar</button>
-        </div>
-        {{ Form::close() }}
     </div>
-</div>
 @stop

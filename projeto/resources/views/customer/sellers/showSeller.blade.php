@@ -40,6 +40,12 @@
     padding:0;
 }
 
+.product-description{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
 </style>
 @stop
 @section('content')
@@ -52,11 +58,18 @@
 </div>
 @endif
 </div>
-<div>
-    @foreach ($productsSeller as $product )
+<div class="row">
+    @foreach ($productsSeller as $product)
         <div class="col-sm-3">
+        @if($product['filepath'])
+    <img src="{{ asset($product->getCroppa(200, 200)) }}" style="border:none;float:right" class="w-75px"/>
+        @else
+    <img src="{{ asset('assets/img/default/avatar2.jpg') }}" style="border:none;float:right" class="w-75px"/>
+        @endif
             {{$product['name']}}
+            <h3 class="product-description">{{$product['description']}}</h3>
         </div>
+        
     @endforeach
 </div>
 @stop

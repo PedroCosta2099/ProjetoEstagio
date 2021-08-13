@@ -75,11 +75,11 @@
                                         <i class="fas fa-user"></i> My Enovo Eats
                                     </a>
                                 </li>
-                                <li>
+                               <!-- <li>
                                     <a href="#" data-toggle="modal" data-target="#account-password">
                                         <i class="fas fa-fw fa-lock"></i> Alterar Palavra-passe
                                     </a>
-                                </li>
+                                </li>-->
                                 <li>
                                     <a href="{{ route('customer.logout') }}">
                                         <i class="fas fa-fw fa-power-off"></i> Terminar Sessão

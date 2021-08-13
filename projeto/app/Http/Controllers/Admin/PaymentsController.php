@@ -45,18 +45,11 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
             $paymentType = PaymentType::orderBy('name','asc')
                                     ->pluck('name','id')
                                     ->toArray();
-            if(Auth::user()->isAdmin())
-            {
+          
             $paymentStatus = PaymentStatus::orderBy('name','asc')
                                         ->pluck('name','id')
                                         ->toArray();
-            }
-            else{
-                $paymentStatus = PaymentStatus::where('seller_id',Auth::user()->seller_id)
-                                        ->orderBy('name','asc')
-                                        ->pluck('name','id')
-                                        ->toArray();
-            }
+           
         return $this->setContent('admin.payments.index',compact('paymentType','paymentStatus'));
     }
 
@@ -124,7 +117,7 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
         $payment_status = PaymentStatus::orderBy('id','asc')
                             ->pluck('name','id')
                             ->toArray();
-
+        
         $operators = User::orderBy('code', 'asc')
                 ->pluck('name', 'id')
                 ->toArray();
@@ -174,7 +167,19 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
         $input = $request->all();
 
         $payment = Payment::findOrNew($id);
-
+        
+        $paymentStatus = PaymentStatus::where('id',$input['payment_status_id'])
+                                        ->first();
+                                        
+        
+        if($paymentStatus['name'] == "PAGO")
+        {
+            $payment->paid_at = date('Y-m-d H:i:s');
+        }
+        else
+        {
+            $payment->paid_at = null;
+        }
         if ($payment->validate($input)) {
             $payment->fill($input);
             $payment->save();

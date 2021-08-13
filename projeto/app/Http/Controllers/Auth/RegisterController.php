@@ -38,7 +38,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/area-cliente';
+    protected $redirectTo = '/feed';
 
     /**
      * Create a new controller instance.
@@ -126,8 +126,7 @@ class RegisterController extends Controller
             $address->address          = $input['address'];
             $address->postal_code      = $input['postal_code'];
             $address->city             = $input['city'];
-            //dd($request->name,$request->email,$request->password,$request->nif,$request->phone);
-           // validate doesn't work correctly
+           
             $validate = Validator::make(array($request->name,$request->email,$request->password,$request->nif,$request->phone), [
                 'name' => 'required|max:255',
                 'email' => 'required|email|max:255|unique:customers,email',
@@ -145,7 +144,7 @@ class RegisterController extends Controller
             
             Auth::guard('customer')->login($customer);
 
-            return Redirect::route('customer.products.index')->with('success', 'Conta criada com sucesso!');
+            return Redirect::route('home.index')->with('success', 'Conta criada com sucesso!');
             }
 
 

@@ -38,7 +38,7 @@ class Product extends BaseModel implements Sortable
      * @var array
      */
     protected $fillable = [
-        'name','filepath','filename','price','description','category_id','subcategory_id','quantity','vat'
+        'name','filepath','filename','price','description','category_id','subcategory_id','quantity','vat','actual_price','actual_vat'
     ];
 
     /**

@@ -70,7 +70,7 @@ class HomeController extends \App\Http\Controllers\Controller
                 array_push($sellerIds,$orderline['seller_id']);
             }
         }
-
+        
         $countAtualSellerIds = count($sellerIds);
         
         if($countAtualSellerIds > 8)
@@ -100,14 +100,14 @@ class HomeController extends \App\Http\Controllers\Controller
             foreach($sellerIds as $seller) 
             {
             if(!in_array($seller, $finalSellers, true)){
-                 $finalSeller = Seller::where('id',$seller)->get();
-                                
+                    $finalSeller = Seller::where('id',$seller)->first();         
                      array_push($finalSellers,$finalSeller);
                  }
-                 
-                   
-         }
-
+            }
+          
+            $this->sellers = $finalSellers;
+            $this->countAtualSellerIds = $countAtualSellerIds;
+            return response()->json([$this->sellers,$this->countAtualSellerIds]);
                               
         }
         
@@ -121,7 +121,7 @@ class HomeController extends \App\Http\Controllers\Controller
 
         else
         {
-
+            
             $this->sellers = $finalSellers;
             $this->countAtualSellerIds = $countAtualSellerIds;
             return response()->json([$this->sellers,$this->countAtualSellerIds]);
