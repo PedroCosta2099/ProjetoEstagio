@@ -68,6 +68,10 @@ Route::group(array('middleware' => 'auth','namespace' => 'Customer'), function()
                 ->name('customer.test');
         Route::get('/orderStatus/{id}','HomeController@orderStatus')
                 ->name('customer.orderStatus');
+        Route::get('/edit','HomeController@editPersonalData')
+                        ->name('customer.editPersonalData');
+        Route::post('/savePersonalData','HomeController@savePersonalData')
+                        ->name('customer.savePersonalData');
 /*=================================================================================================================
  *              CART
  =================================================================================================================*/

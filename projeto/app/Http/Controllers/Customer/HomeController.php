@@ -10,7 +10,7 @@ use App\Models\Order;
 use App\Models\OrderLine;
 use App\Models\Status;
 use Illuminate\Http\Request;
-use Setting,Auth;
+use Setting,Auth,Validator,Redirect;
 
 class HomeController extends \App\Http\Controllers\Controller
 {
@@ -69,6 +69,104 @@ class HomeController extends \App\Http\Controllers\Controller
                                 ->get();
 
         return view('customer.about.info',compact('customer','addresses','orders','orderlines','count'))->render();
+    }
+
+    public function editPersonalData()
+    {
+        $id = Auth::guard('customer')->user()->id;
+        $customer = Customer::where('id',$id)->first();
+        $data = compact(
+            'customer'
+        );
+        return view('customer.about.personalDataEdit',$data);
+    }
+
+    public function savePersonalData(Request $request)
+    {
+        $input = $request->all();
+       
+        $id = Auth::guard('customer')->user()->id;
+        $customer = Customer::where('id',$id)->first();
+        $rules = [];
+        if ($customer->exists && empty($input['password'])) {
+            $rules['name']  = 'required';
+            $rules['email'] = 'required|email|unique:customers,email,' . $customer->id;
+            if($customer->phone != $input['phone'])
+            {
+                $rules['phone'] = 'required|unique:customers,phone|min:9|max:9';
+            }
+            else
+            {
+                
+                $rules['phone'] = 'required|min:9|max:9';
+            }
+            if($customer->nif != $input['nif'])
+            {
+                
+            $rules['nif'] = 'required|unique:customers,nif|min:9|max:9';
+            }
+            else
+            {
+                $rules['nif'] = 'required|min:9|max:9';
+            }
+            
+        } elseif($customer->exists) {
+            
+            $rules['name']  = 'required';
+            $rules['email'] = 'required|email|unique:customers,email,' . $customer->id;
+            if($customer->phone != $input['phone'])
+            {
+                $rules['phone'] = 'required|unique:customers,phone|min:9|max:9';
+            }
+            else
+            {
+                
+                $rules['phone'] = 'required|min:9|max:9';
+            }
+            if($customer->nif != $input['nif'])
+            {
+                
+            $rules['nif'] = 'required|unique:customers,nif|min:9|max:9';
+            }
+            else
+            {
+                $rules['nif'] = 'required|min:9|max:9';
+            }
+
+            
+        }
+            $validator = Validator::make($input, $rules);
+           
+        if($validator->passes())
+        {
+            if(empty($input['password']))
+            {
+                $customer->name = $input['name'];
+                $customer->email = $input['email'];
+                $customer->phone = $input['phone'];
+                $customer->nif = $input['nif'];
+                $customer->save();
+                return Redirect::route('customer.editPersonalData')->with('success','Dados gravados com sucesso');
+            }
+            elseif($input['password'] == $input['password_confirmation'])
+            {
+                $customer->password = bcrypt($input['password']);
+                $customer->name = $input['name'];
+                $customer->email = $input['email'];
+                $customer->phone = $input['phone'];
+                $customer->nif = $input['nif'];
+                $customer->save();
+                return Redirect::route('customer.editPersonalData')->with('success','Dados gravados com sucesso');
+            }
+            else
+            {
+                return Redirect::back()->withInput()->with('error', 'Confirme novamente a password');
+            }
+        }
+        else
+        {
+            return Redirect::back()->withInput()->with('error', $validator->errors()->first());
+        }
     }
 
     public function orderStatus($id)

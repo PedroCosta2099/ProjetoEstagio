@@ -7,7 +7,7 @@ My Enovo Eats
 <div class="row row-5">
     <div class="col-sm-6 about-box">
     <div class="info-title"><span>Os meus dados pessoais</span></div>
-    <div><a href="#" class="btn-edit pull-right">Editar</a></div>
+    <div><a href="{{route('customer.editPersonalData')}}" class="btn-edit pull-right">Editar</a></div>
     <div class="col-sm-12 box-details">
         
         
