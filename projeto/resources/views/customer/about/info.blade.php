@@ -7,7 +7,6 @@ My Enovo Eats
 <div class="row row-5">
     <div class="col-sm-6 about-box">
     <div class="info-title"><span>Os meus dados pessoais</span></div>
-    <div><a href="{{route('customer.editPersonalData')}}" class="btn-edit pull-right">Editar</a></div>
     <div class="col-sm-12 box-details">
         
         
@@ -27,7 +26,7 @@ My Enovo Eats
             <label>NIF</label>
             <h6>{{$customer->nif}}</h6>
         </div>
-  
+        <div><a href="{{route('customer.editPersonalData')}}" class="btn-edit pull-left">Editar Dados Pessoais</a></div>
     </div>
     </div>
     <div class="col-sm-5 about-box col-sm-offset-1">
@@ -38,11 +37,12 @@ My Enovo Eats
     @if($address['actual_billing_address'])
     
     <div class="col-sm-6 box-details">
-    <label>Morada de Faturação</label><br>  
+        <label>Morada de Faturação</label><br>  
     
             <h6>{{$address['address']}}</h6>
             <h6>{{$address['postal_code']}}</h6>
             <h6>{{$address['city']}}</h6>
+            <div><a href="{{route('customer.editBillingAddress',$address['id'])}}" class="btn-edit pull-left">Alterar</a></div>
     </div>
     @endif
     @if($address['actual_shipment_address'])
@@ -53,7 +53,7 @@ My Enovo Eats
             <h6>{{$address['address']}}</h6>
             <h6>{{$address['postal_code']}}</h6>
             <h6>{{$address['city']}}</h6>
-            
+            <div><a href="{{route('customer.shipmentAddresses')}}" class="btn-edit pull-left">Alterar</a></div>
     
     </div>
     @elseif($count == 0 && $address['actual_billing_address'])
@@ -62,6 +62,7 @@ My Enovo Eats
             <h6>{{$address['address']}}</h6>
             <h6>{{$address['postal_code']}}</h6>
             <h6>{{$address['city']}}</h6>
+            <div><a href="{{route('customer.shipmentAddresses')}}" class="btn-edit pull-left">Alterar</a></div>
     </div>
 
     @endif
@@ -82,7 +83,7 @@ My Enovo Eats
                                 <th>Pedido</th>
                                 <th>Data</th>
                                 <th>Estado do Pedido</th>
-                                <th>Produto</th>
+                                <th>Produtos</th>
                                 <th>Preço</th>
                                 <th>Seguir</th>
                             </tr>
@@ -91,14 +92,14 @@ My Enovo Eats
                         <tbody>
     
         <td>{{$order['id']}}</td>
-        <td class="order-date">{{$order['created_at']}}</td>
+        <td class="order-date">{{$order['created_at']->format('d/m/Y')}}</td>
         <td>{{$order->status->name}}</td>
         <td>    @foreach($orderlines as $orderline)
                 @if($order['id'] == $orderline->order->id)
                     {{$orderline->product->name}}<br>
                 @endif
             @endforeach</td>
-        <td>€{{$order['total_price']}}</td>      
+        <td>€{{number_format($order['total_price'], 2,',','.')}}</td>      
         <td><a href="{{route('customer.orderStatus',$order->id)}}">Seguir</a></td>
                         </tbody>
         @endforeach
@@ -109,4 +110,24 @@ My Enovo Eats
     
 </div>
 </div>
+@stop
+@section('scripts')
+<script>
+$(document).ready(function(){
+    
+    $.ajax({
+           type:"get",
+           url:"{{url('/savePreviousPage')}}",
+           success:function()
+           {    
+            
+           },
+           error:function()
+           {
+                
+           }   
+        });
+});
+
+</script>
 @stop

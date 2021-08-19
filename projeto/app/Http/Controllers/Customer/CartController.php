@@ -257,6 +257,7 @@ public function deleteCartAndPayment()
  */
 public function orderInfo()
 {
+    
     if(CartProvider::instance()->getQuantity() == 0)
         {
             return Redirect::back()->with('error','Ainda não tem items no seu carrinho');
@@ -280,10 +281,10 @@ public function orderInfo()
     {
         $shipmentAddress = $billingAddress;
     }
-
+    //dd($billingAddress,$shipmentAddress);
     $allCustomerAddresses = Address::whereIn('id',$customerAddressesIds)->get()->toArray();
     
-    return view('customer.cart.orderInfo',compact('paymentMethods'))->render();
+    return view('customer.cart.orderInfo',compact('paymentMethods','billingAddress','shipmentAddress'))->render();
 }
 }
 

@@ -1,13 +1,16 @@
 @extends('customer.layouts.master')
 @section ('title')
-Método de Pagamento
+Informações Gerais
 @stop
 @section('content')
 {{ Form::model($paymentMethods) }}
-<form required>
-<div class="col-sm-12">
-    <div class="form-group">
-            {{ Form::label('payment_type', 'Método de Pagamento') }}
+<div class="about-page">
+<div class="row row-5">
+    <div class="col-sm-12 about-box">
+    <div class="info-title"><span>Métodos de Pagamento</span></div>
+        <div class="col-sm-12 box-details">
+        
+        <div class="col-sm-12">
             
             @foreach($paymentMethods as $paymentMethod)
             @if($paymentMethod['active'])
@@ -24,12 +27,63 @@ Método de Pagamento
 
             <a type="button" class="btn btn-default" href="{{route('customer.cart.index')}}">Voltar</a>
             <a type="submit" id="continue" class="btn btn-primary btn-submit" href="{{route('customer.cart.resumeOrder')}}" style="color:white"><i class="fas fa-plus" style="color:white"></i> Continuar</a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="info-title"><span>Moradas</span></div>
+        <div class="col-sm-12 about-box box-details">
+        
+        <div class="col-sm-6 m-b-5">
+            <h4><b>Morada de Faturação</b></h4>
+            
+            <label>Morada</label>
+            <h6>{{$billingAddress[0]['address']}}</h6>
+            <label>Código Postal</label>
+            <h6>{{$billingAddress[0]['postal_code']}}</h6>
+            <label>Localidade</label>
+            <h6>{{$billingAddress[0]['city']}}</h6>
+
+            <div><a href="{{route('customer.editBillingAddress',$billingAddress[0]['id'])}}" class="btn-edit pull-left">Alterar</a></div>
+        </div>
+        <div class="col-sm-6 m-b-5">
+            <h4><b>Morada de Envio</b></h4>
+            
+            <label>Morada</label>
+            <h6>{{$shipmentAddress[0]['address']}}</h6>
+            <label>Código Postal</label>
+            <h6>{{$shipmentAddress[0]['postal_code']}}</h6>
+            <label>Localidade</label>
+            <h6>{{$shipmentAddress[0]['city']}}</h6>
+
+            <div class="m-b-5"><a href="{{route('customer.shipmentAddresses')}}" class="btn-edit pull-left change">Alterar</a></div>
+        </div>
+    </div>
     </div>
 </div>
-</form> 
+</div>
+    
+</div>
+</div>
+ 
 @stop
 @section('scripts')
 <script>
+$(document).ready(function(){
+    
+    $.ajax({
+           type:"get",
+           url:"{{url('/savePreviousPage')}}",
+           success:function()
+           {    
+            
+           },
+           error:function()
+           {
+                
+           }   
+        });
+});
 $('.choice').click(function(){
     var id = $(this).attr('value');
     $.ajax({

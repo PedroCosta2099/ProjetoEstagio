@@ -72,6 +72,18 @@ Route::group(array('middleware' => 'auth','namespace' => 'Customer'), function()
                         ->name('customer.editPersonalData');
         Route::post('/savePersonalData','HomeController@savePersonalData')
                         ->name('customer.savePersonalData');
+        Route::post('/saveAddress/{id}','HomeController@saveAddress')
+                        ->name('customer.saveAddress');
+        Route::get('/editBillingAddress/{id}','HomeController@editBillingAddress')
+                        ->name('customer.editBillingAddress');
+        Route::get('/editShipmentAddress/{id}','HomeController@editShipmentAddress')
+                        ->name('customer.editShipmentAddress');
+        Route::get('/shipmentAddresses','HomeController@shipmentAddresses')
+                        ->name('customer.shipmentAddresses');
+        Route::get('/updateActualShipmentAddress/{id}','HomeController@updateActualShipmentAddress')
+                        ->name('customer.updateActualShipmentAddress');
+        Route::get('/savePreviousPage','HomeController@savePreviousPage')
+                        ->name('customer.savePreviousPage');   
 /*=================================================================================================================
  *              CART
  =================================================================================================================*/
