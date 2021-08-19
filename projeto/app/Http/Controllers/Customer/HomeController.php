@@ -172,15 +172,55 @@ class HomeController extends \App\Http\Controllers\Controller
 
     public function saveAddress(Request $request,$id)
     {
+       
         $input = $request->all();
-
+        
         $address = Address::findOrFail($id);
         $address->address = $input['address'];
         $address->postal_code = $input['postal_code'];
         $address->city = $input['city'];
+        if(!array_key_exists('actual_shipment_address',$input))
+        {
+            $address->actual_shipment_address = 0;
+        }
+        else
+        {
+            $address->actual_shipment_address = 1;
+        }
         $address->save();
         return Redirect::back()->with('success','Dados atualizados com sucesso!');
         
+    }
+
+    public function saveNewAddress(Request $request)
+    {
+        $input = $request->all();
+        $address = new Address();
+        $customer = Customer::where('id',Auth::guard('customer')->user()->id)->with('addresses')->first();
+        $address->address = $input['address'];
+        $address->postal_code = $input['postal_code'];
+        $address->city = $input['city'];
+        $address->shipment_address = 1;
+        foreach($customer->addresses as $customerAddress)
+        {
+            if(array_key_exists('actual_shipment_address',$input))
+            {
+                $customerAddress->actual_shipment_address = 0;
+            }
+            $customerAddress->save();
+        }
+        if(!array_key_exists('actual_shipment_address',$input))
+        {
+            $address->actual_shipment_address = 0;
+        }
+        else
+        {
+            $address->actual_shipment_address = 1;
+        }
+        $address->save();
+        $address->customers()->detach();
+        $address->customers()->attach($customer);
+        return Redirect::back()->with('success','Morada gravada com sucesso!');
     }
 
     public function editBillingAddress($id)
@@ -198,6 +238,12 @@ class HomeController extends \App\Http\Controllers\Controller
         
     }
 
+    public function createAddress()
+    {
+        $address = new Address();
+        return view('customer.about.editShipmentAddress',compact('address'));
+    }
+
     public function editShipmentAddress($id)
     {
         
@@ -208,7 +254,7 @@ class HomeController extends \App\Http\Controllers\Controller
         }
         else
         {
-
+            
             return view('customer.about.editShipmentAddress',compact('address'));
         }
         

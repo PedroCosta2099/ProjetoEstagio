@@ -17,7 +17,7 @@ Morada de Envio
     <div class="col-sm-12 about-box">
     <div class="info-title"><span>Morada de Envio</span></div>
     <div class="pull-right">
-        <a class="btn btn-success" style="margin-top:20px" href="#"><i class="fas fa-plus"></i> Novo</a>
+        <a class="btn btn-success" style="margin-top:20px" href="{{route('customer.createAddress')}}"><i class="fas fa-plus"></i> Novo</a>
         @if($previousPage == route('customer.cart.payment'))
             <a class="btn btn-edit " href="{{route('customer.cart.payment')}}">Voltar</a>
         @elseif($previousPage == route('customer.about'))

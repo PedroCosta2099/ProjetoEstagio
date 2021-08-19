@@ -1,5 +1,8 @@
+@if($address['id'] != null)
 {{Form::open(array('route'=>['customer.saveAddress',$address['id']]))}}
-        
+@else
+{{Form::open(array('route'=>['customer.saveNewAddress']))}}
+@endif
                 <div class="col-sm-12">
                     <div class="form-group is-required">
                         {{ Form::label('address', 'Morada')}}
@@ -18,6 +21,10 @@
                         {{ Form::text('city', $address['city'], array('class' =>'form-control', 'required' => true)) }}
                     </div>
                 </div>
+                <div class="form-group">
+                {{ Form::label('actual_shipment_address', 'Morada de Envio Atual') }}&nbsp
+                {{ Form::checkbox('actual_shipment_address',$address['actual_shipment_address'],$address['actual_shipment_address'], ['class' => 'form-control']) }}
+            </div>
                 <div class="m-t-5">
                 <button class="btn btn-edit pull-right">Guardar</button>
                 </div>
