@@ -16,7 +16,7 @@ Enovo Eats
 </style>
 @stop
 <div class="row row-5">
-    <star - rating v-model="rating"></star-rating>
+    
     <h1>Restaurantes</h1>
     @foreach($sellers as $seller)
     @if(!Auth::guard('customer')->check() || $count >8)

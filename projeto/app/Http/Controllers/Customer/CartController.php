@@ -280,9 +280,6 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         $order->billing_address = $billingAddress[0]['id'];
         $order->shipment_address = $shipmentAddress[0]['id'];
         $order->delivery_fee = $seller->delivery_fee;
-        $productsPrice = $order->total_price;
-        $totalWithDeliveryFee = $order->total_price + $seller->delivery_fee;
-        $order->total_price = $totalWithDeliveryFee;
         
         $order->save();
         $data = compact('order','orderlines','payment','paymentMethod','billingAddress','shipmentAddress');
@@ -360,8 +357,14 @@ public function resumeOrder()
     }
     
     $products = Product::whereIn('id',$productIds)->get()->toArray();
-    $orderTotal = CartProvider::instance()->getTotal();
-}
+    $productToSeller = Product::whereIn('id',$productIds)->first();
+    $productCategories = Category::where('id',$productToSeller->category_id)->first();
+    $seller = Seller::where('id',$productCategories->seller_id)->first();
+    $deliveryFee = $seller->delivery_fee;
+    $productsTotal = CartProvider::instance()->total;
+    $orderTotal = CartProvider::instance()->total+$deliveryFee;
+    
+    }   
     $paymentMethod = PaymentType::where('id',Session::get('paymentMethodAux'))->first();
     $customerId = Auth::guard('customer')->user()->id;
     $customer = Customer::with('addresses')->where('id',$customerId)->get()->toArray();
@@ -386,7 +389,9 @@ public function resumeOrder()
         'orderTotal',
         'paymentMethod',
         'billingAddress',
-        'shipmentAddress'
+        'shipmentAddress',
+        'deliveryFee',
+        'productsTotal'
     );
     
     return view('customer.cart.resumeOrder',$data)->render();

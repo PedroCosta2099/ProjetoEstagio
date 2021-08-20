@@ -32,6 +32,7 @@ class HomeController extends \App\Http\Controllers\Controller
      */
     public function index()
     {
+
         return $this->setContent('customer.about.info');
     }
 

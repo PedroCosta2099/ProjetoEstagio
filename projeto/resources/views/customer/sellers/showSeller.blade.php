@@ -46,6 +46,7 @@
     text-overflow:ellipsis;
 }
 
+
 </style>
 @stop
 @section('content')
@@ -58,6 +59,33 @@
 </div>
 @endif
 </div>
+@if($countCustomerToSellerRating > 0)
+<div class="cont">
+    <div class="stars">
+        <h2>A sua avaliação para este restaurante é: {{$customerToSellerRating->rating}}/5
+    </div>
+</div>
+@else
+<div class="cont">
+    <div class="stars">
+        {{Form::open(array('route'=>['customer.sellerRating',$seller['id']]))}}
+        {{Form::radio('star_1',1,null)}}
+        {{Form::label('star_1',1,['class' => 'star'])}}
+        {{Form::radio('star_2',2)}}
+        {{Form::label('star_2',2,['class' => 'star'])}}
+        {{Form::radio('star_3',3)}}
+        {{Form::label('star_3',3,['class' => 'star'])}}
+        {{Form::radio('star_4',4)}}
+        {{Form::label('star_4',4,['class' => 'star'])}}
+        {{Form::radio('star_5',5)}}
+        {{Form::label('star_5',5,['class' => 'star'])}}
+       
+        <button type="submit" class="btn btn-edit">Guardar</button>
+        {{Form::close()}}
+    </div>
+</div>
+@endif
+
 <div class="row">
     @foreach ($productsSeller as $product)
         <div class="col-sm-3">
