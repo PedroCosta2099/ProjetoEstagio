@@ -14,19 +14,18 @@ Informações Gerais
             
             @foreach($paymentMethods as $paymentMethod)
             @if($paymentMethod['active'])
-            <div class="col-sm-2">
+            <div class="col-sm-12" style="padding-right:30px !important">
                 
                 <input type="radio" name="paymentMethod" value="{{$paymentMethod['id']}}" id="{{$paymentMethod['id']}}" class="input"/>
                 <label for="{{$paymentMethod['id']}}">
                     <img class="center-block choice" value="{{$paymentMethod['id']}}" src="<?=Croppa::url($paymentMethod['filepath'],50,50)?>" id="{{$paymentMethod['filename']}}"/>
                     {{$paymentMethod['name']}}
                 </label>
+                <hr></hr>
             </div>
             @endif
             @endforeach
 
-            <a type="button" class="btn btn-default" href="{{route('customer.cart.index')}}">Voltar</a>
-            <a type="submit" id="continue" class="btn btn-primary btn-submit" href="{{route('customer.cart.resumeOrder')}}" style="color:white"><i class="fas fa-plus" style="color:white"></i> Continuar</a>
             </div>
         </div>
     </div>
@@ -60,6 +59,8 @@ Informações Gerais
         </div>
     </div>
     </div>
+    <a type="button" class="btn btn-default" href="{{route('customer.cart.index')}}">Voltar</a>
+            <a type="submit" id="continue" class="btn btn-primary btn-submit" href="{{route('customer.cart.resumeOrder')}}" style="color:white"><i class="fas fa-plus" style="color:white"></i> Continuar</a>
 </div>
 </div>
     

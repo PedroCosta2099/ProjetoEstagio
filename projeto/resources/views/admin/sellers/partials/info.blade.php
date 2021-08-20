@@ -36,7 +36,20 @@
             <div class="form-group is-required col-sm-5">
                 {{ Form::label('city', 'Localidade')}}
                 {{ Form::text('city', null, array('class' =>'form-control', 'required' => true)) }}
-            </div>  
+            </div>
+            <div class="form-group is-required col-sm-5">
+                {{ Form::label('minimum_delivery_time', 'Tempo mínimo de entrega (em minutos)')}}
+                {{ Form::number('minimum_delivery_time', null, array('class' =>'form-control', 'required' => true,'step'=>'5','min'=>'5','max'=>'60')) }}
+            </div>
+            <div class="form-group is-required col-sm-5">
+                {{ Form::label('maximum_delivery_time', 'Tempo máximo de entrega (em minutos)')}}
+                {{ Form::number('maximum_delivery_time', null, array('class' =>'form-control', 'required' => true,'step'=>'5','min'=>'5','max'=>'60')) }}
+            </div>
+            <div class="form-group is-required col-sm-5">
+                {{ Form::label('delivery_fee', 'Taxa de Entrega (em €)')}}
+                {{ Form::number('delivery_fee',number_format($seller->delivery_fee,2), array('class' =>'form-control', 'required' => true,'step'=>'0.01','min'=>'0.01')) }}
+            </div>
+              
         </div>
         @if(Auth::user()->isAdmin())
         <h4 class="m-t-20 bold text-blue">Opções da conta</h4>

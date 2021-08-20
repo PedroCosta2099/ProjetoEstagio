@@ -125,8 +125,22 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
         
         $seller->nif = $input['nif'];
         $seller->postal_code = $input['postal_code'];
-        $seller->fill($input);
         
+        if($input['minimum_delivery_time'] > $input['maximum_delivery_time'] )
+        {
+            $seller->minimum_delivery_time = $input['maximum_delivery_time'];
+            $seller->maximum_delivery_time = $input['minimum_delivery_time'];
+            $seller->save();
+        }
+        else
+        {
+            $seller->minimum_delivery_time = $input['minimum_delivery_time'];
+            $seller->maximum_delivery_time = $input['maximum_delivery_time'];
+            $seller->save();
+        }
+        $seller->delivery_fee = $input['delivery_fee'];
+        $seller->fill($input);
+        $seller->save();
         //dd($input['thumbnail_image'],$input['banner_image']);
         
            if($request->hasFile('thumbnail_image'))
@@ -245,6 +259,15 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
             })
             ->edit_column('address', function($row) {
                 return view('admin.sellers.datatables.address', compact('row'))->render();
+            })
+            ->edit_column('minimum_delivery_time', function($row) {
+                return view('admin.sellers.datatables.minimumDeliveryTime', compact('row'))->render();
+            })
+            ->edit_column('maximum_delivery_time', function($row) {
+                return view('admin.sellers.datatables.maximumDeliveryTime', compact('row'))->render();
+            })
+            ->edit_column('delivery_fee', function($row) {
+                return view('admin.sellers.datatables.deliveryFee', compact('row'))->render();
             })
             ->add_column('select', function($row) {
                 return view('admin.partials.datatables.select', compact('row'))->render();

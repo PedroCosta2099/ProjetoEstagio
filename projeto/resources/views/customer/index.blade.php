@@ -8,10 +8,15 @@ Enovo Eats
     #content-wrapper{
     margin-right:50px !important;  
 }
-
+.seller-name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
 </style>
 @stop
 <div class="row row-5">
+    <star - rating v-model="rating"></star-rating>
     <h1>Restaurantes</h1>
     @foreach($sellers as $seller)
     @if(!Auth::guard('customer')->check() || $count >8)
@@ -24,7 +29,7 @@ Enovo Eats
         @else
         <img src="{{ asset('assets/img/default/unavailable.png') }}">
         @endif
-        <h3>{{$seller['name']}}<h3></a>
+        <h3 class="seller-name">{{$seller['name']}}<h3></a>
     </div>
     @elseif($count > 0)
     <div class="col-sm-3">

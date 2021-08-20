@@ -42,6 +42,9 @@
                                 <th>Telefone</th>
                                 <th>NIF</th>
                                 <th>Morada</th>
+                                <th>Tempo mínimo de entrega</th>
+                                <th>Tempo máximo de entrega</th>
+                                <th>Taxa de Entrega</th>
                                 <th class="w-1">Estado</th>
                                 <th class="w-70px">Criado em</th>
                                 <th class="w-65px">Ações</th>
@@ -74,6 +77,9 @@
                 {data: 'phone',name:'phone'},
                 {data: 'nif',name:'nif'},
                 {data : 'address',name:'address'},
+                {data: 'minimum_delivery_time', name:'minimum_delivery_time'},
+                {data: 'maximum_delivery_time', name:'maximum_delivery_time'},
+                {data: 'delivery_fee', name:'delivery_fee'},
                 {data: 'active', name: 'active', orderable: false, searchable: false},
                 {data: 'created_at', name: 'created_at'},
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},

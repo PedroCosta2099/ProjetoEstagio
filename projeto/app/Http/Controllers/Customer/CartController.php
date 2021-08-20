@@ -57,13 +57,31 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
      */
     public function addToCart($id,$quantity)
     {
-        $product = Product::where('id',$id)
-                            ->first()
-                            ->toArray();
         
-        CartProvider::instance()->add(new Item($product['id'],$product['name'],$quantity,$product['actual_price'],0,true,[],['image' => $product['filepath']]));
-       
-        return Redirect::back();
+            $product = Product::where('id',$id)->first();
+            $productCategory = Category::where('id',$product->category_id)->first();
+            $seller = Seller::where('id',$productCategory->seller_id)->first();
+            $rememberSeller = Session::get('seller');
+            
+            if($rememberSeller == null)
+            {
+                 Session::put('seller',$seller->id);
+                 
+                 CartProvider::instance()->add(new Item($product['id'],$product['name'],$quantity,$product['actual_price'],0,true,[],['image' => $product['filepath']]));
+                 return Redirect::back()->with('success','Item adicionado com sucesso');
+            }
+            elseif($rememberSeller != $seller->id)
+            {
+                
+                return Redirect::back()->with('error','Só pode adicionar produtos do mesmo vendedor');
+            }
+            else
+            {
+                CartProvider::instance()->add(new Item($product['id'],$product['name'],$quantity,$product['actual_price'],0,true,[],['image' => $product['filepath']]));
+                
+                return Redirect::back()->with('success','Item adicionado com sucesso');
+            }
+            
     }
 
 
@@ -122,6 +140,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         CartProvider::instance()->remove($rowId);
         if(CartProvider::instance()->getQuantity() == 0)
         {
+            Session::forget('seller');
             return Redirect::route('customer.products.index')->with('error','Ainda não tem items no seu carrinho');
         }
         else{
@@ -136,6 +155,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
     public function cleanCart()
     {
         CartProvider::instance()->destroy();
+        Session::forget('seller');
         return Redirect::route('customer.products.index')->with('success', 'Produtos removidos com sucesso.');
     }
 
@@ -160,7 +180,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
 
 
     /**
-     * Create order with order lines/ create payment 
+     * Create order with order lines/create payment 
      */
 
     public function createOrder(){
@@ -204,7 +224,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
             $orderline->status_id = $orderlineStatus['id'];
             $orderline->save();
         }
-
+        
         $status = Status::where('name','like','EM PREPARAÇÃO')
                             ->first();
         
@@ -214,12 +234,12 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         
         
         $paymentMethod = Session::get('paymentMethodAux');
-        //dd('a',$paymentMethod);
+        
         
         $payment = new Payment();
         $paymentType = PaymentType::where('id',$paymentMethod)->first()->name;
         
-        $payment->amount = $order->total_price;
+        $payment->amount = $order->total_price + $seller->delivery_fee;
         $payment->payment_type_id = $paymentMethod;
         $payment->payment_status_id = PaymentStatus::where('name','like','PENDENTE')
                                             ->first()
@@ -239,21 +259,48 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         $payment->save();
         
         $order->payment_id = $payment->id;
-        $order->save();
+        $customerId = Auth::guard('customer')->user()->id;
+        $customer = Customer::with('addresses')->where('id',$customerId)->get()->toArray();
+        $customerAddressesIds = [];
+        foreach($customer[0]['addresses'] as $customerAddress)
+        {
+            if(!in_array($customerAddress, $customerAddressesIds, true)){
+                    array_push($customerAddressesIds,$customerAddress['id']);
+                }
+            
+        }
+    
+        $billingAddress = Address::whereIn('id',$customerAddressesIds)->where('actual_billing_address',1)->get()->toArray();
+        $shipmentAddress = Address::whereIn('id',$customerAddressesIds)->where('actual_shipment_address',1)->get()->toArray();
+        if(count($shipmentAddress) <= 0)
+        {
+            $shipmentAddress = $billingAddress;
+        }
+
+        $order->billing_address = $billingAddress[0]['id'];
+        $order->shipment_address = $shipmentAddress[0]['id'];
+        $order->delivery_fee = $seller->delivery_fee;
+        $productsPrice = $order->total_price;
+        $totalWithDeliveryFee = $order->total_price + $seller->delivery_fee;
+        $order->total_price = $totalWithDeliveryFee;
         
-        return view('customer.cart.finalizeOrder',compact('order','orderlines','payment'))->render();
+        $order->save();
+        $data = compact('order','orderlines','payment','paymentMethod','billingAddress','shipmentAddress');
+        return view('customer.cart.finalizeOrder',$data)->render();
     }
 }
-
+/**
+ * Delete all cart
+ */
 public function deleteCartAndPayment()
 {
     CartProvider::instance()->destroy();
     Session::forget('paymentMethodAux');
-    return Redirect('products');
+    return Redirect('feed');
 }
 
 /**
- * Get all payment methods
+ * Get all payment methods/ get billing and shipment address
  */
 public function orderInfo()
 {
@@ -316,7 +363,32 @@ public function resumeOrder()
     $orderTotal = CartProvider::instance()->getTotal();
 }
     $paymentMethod = PaymentType::where('id',Session::get('paymentMethodAux'))->first();
+    $customerId = Auth::guard('customer')->user()->id;
+    $customer = Customer::with('addresses')->where('id',$customerId)->get()->toArray();
+    $customerAddressesIds = [];
+    foreach($customer[0]['addresses'] as $customerAddress)
+    {
+        if(!in_array($customerAddress, $customerAddressesIds, true)){
+                array_push($customerAddressesIds,$customerAddress['id']);
+            }
+            
+    }
     
-    return view('customer.cart.resumeOrder',compact('cartProducts','orderTotal','paymentMethod'))->render();
+    $billingAddress = Address::whereIn('id',$customerAddressesIds)->where('actual_billing_address',1)->get()->toArray();
+    $shipmentAddress = Address::whereIn('id',$customerAddressesIds)->where('actual_shipment_address',1)->get()->toArray();
+    if(count($shipmentAddress) <= 0)
+    {
+        $shipmentAddress = $billingAddress;
+    }
+
+    $data = compact(
+        'cartProducts',
+        'orderTotal',
+        'paymentMethod',
+        'billingAddress',
+        'shipmentAddress'
+    );
+    
+    return view('customer.cart.resumeOrder',$data)->render();
 }
 }
