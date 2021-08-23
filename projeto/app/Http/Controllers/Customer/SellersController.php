@@ -47,6 +47,7 @@ class SellersController extends \App\Http\Controllers\Customer\Controller {
             $customerToSellerRating = SellerRating::where('customer_id',Auth::guard('customer')->user()->id)->where('seller_id',$seller->id)->first();
             $countCustomerToSellerRating = count($customerToSellerRating);
         }
+        
         $data = compact(
             'seller',
             'categoriesSeller',
@@ -63,7 +64,7 @@ class SellersController extends \App\Http\Controllers\Customer\Controller {
     
         $customerToSellerRating = SellerRating::where('customer_id',Auth::guard('customer')->user()->id)->where('seller_id',$id)->first();
         $countCustomerToSellerRating = count($customerToSellerRating);
-
+        
         if($countCustomerToSellerRating >= 1)
         {
             if(array_key_exists('star_5',$input))
@@ -115,6 +116,10 @@ class SellersController extends \App\Http\Controllers\Customer\Controller {
         }
         $sellerRating->save();
         }
+        $avgRatingSeller = SellerRating::where('seller_id',$id)->avg('rating');
+        $seller = Seller::where('id',$id)->first();
+        $seller->rating = number_format($avgRatingSeller,2);
+        $seller->save();
         return Redirect::back()->with('success', 'Avaliação guardada com sucesso');
         
     }

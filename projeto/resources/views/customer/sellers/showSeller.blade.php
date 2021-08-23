@@ -41,12 +41,33 @@
 }
 
 .product-description{
+    
     white-space: nowrap;
     overflow: hidden;
     text-overflow:ellipsis;
+    margin-bottom:0px;
+
 }
 .cont{
     padding-top:0px !important;
+}
+
+.contSeller{
+    
+    padding:0px !important;
+    width:calc(33% - 10px)!important;
+    height:158px;
+    margin-top:15px;
+    margin-right:10px;
+    margin-bottom:15px;
+    background:white;
+    box-shadow: 1px 3px 13px 0px #524e4e70;
+    
+}
+
+.contSeller:hover{
+    transform:scale(1.1);
+    z-index:1000;
 }
 
 
@@ -62,9 +83,14 @@
 </div>
 @endif
 </div>
+<div>
+    <h1 style="color:#0B3354">{{$seller['name']}}</h1>
+    <h5>A sua avaliação: {{number_format($customerToSellerRating->rating,1)}}</h5>
+    
+</div>
 @if(Auth::guard('customer')->check())
 @if($countCustomerToSellerRating > 0)
-<div class="cont">
+<div class="col-sm-3 cont">
     <div class="info-title text-center" style="padding-left:0px">A sua avaliação</div>
     <div class="stars"><h2>A sua avaliação para este restaurante é: {{$customerToSellerRating->rating}}/5</h2>
         <button class="btn btn-edit" id="edit" onclick="changeVisibility()" style="margin-right:0px">Editar</button>
@@ -109,23 +135,27 @@
 @endif
 @endif
 <div class="row row-5" style="padding-left:35px;padding-right:35px;">
-    <div class="info-title">Os nossos produtos</div>
-    <div class="col-sm-12 about-box box-details">
+    
+    <div class="col-sm-12 about-box box-details" style="background-color:transparent !important;padding-left:0px !important">
+    <h1 style="color:#0B3354">Os nossos produtos</h1>
         @if(count($productsSeller) != 0)
     @foreach ($productsSeller as $product)
-        <div class="col-sm-3">
+     <a href="{{route('customer.products.productShow',$product['id'])}}">   <div class="col-sm-4 contSeller">
         @if($product['filepath'])
-    <img src="{{ asset($product->getCroppa(200, 200)) }}" style="border:none;float:right" class="w-75px"/>
+    <img src="{{ asset($product->getCroppa(200, 200)) }}" style="border:none;float:right;height:100%" />
         @else
     <img src="{{ asset('assets/img/default/avatar2.jpg') }}" style="border:none;float:right" class="w-75px"/>
         @endif
-            {{$product['name']}}
-            <h3 class="product-description">{{$product['description']}}</h3>
+            <p><h4 class="product-description" style="color:#0B3354;padding-left:10px;">{{$product['name']}}</h4><br>
+            @if($product['description'] == null)
+            &nbsp
+            @endif
+            <h5 class="product-description" style="color:#0B3354;padding-left:10px;">{{$product['description']}}</h5></p>
         </div>
-        
+    </a> 
     @endforeach
     @else
-    <div class="col-sm-12 about-box box-details text-center">
+    <div class="col-sm-12 about-box box-details text-center" style="background-color:transparent !important,padding-left:0px !important">
     <h2>Ainda não tem produtos disponíveis</h2>
     </div>
     @endif

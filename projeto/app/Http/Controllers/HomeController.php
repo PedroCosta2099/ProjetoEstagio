@@ -79,8 +79,7 @@ class HomeController extends \App\Http\Controllers\Controller
             
             $sellers = Seller::whereIn('id',$sellerIds)
                                 ->take(8)
-                                ->get();
-                                
+                                ->get();                    
             
         }
         else

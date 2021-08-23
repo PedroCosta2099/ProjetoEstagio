@@ -745,6 +745,11 @@ class Seller extends Authenticatable
     | Define current model relationships
     */
 
+    public function sellerRating()
+    {
+        return $this->belongsTo('App\Models\SellerRating','seller_id');
+    }
+
     public function vehicle_data()
     {
         if(hasModule('fleet')) {
