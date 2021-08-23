@@ -45,6 +45,9 @@
     overflow: hidden;
     text-overflow:ellipsis;
 }
+.cont{
+    padding-top:0px !important;
+}
 
 
 </style>
@@ -59,15 +62,14 @@
 </div>
 @endif
 </div>
+@if(Auth::guard('customer')->check())
 @if($countCustomerToSellerRating > 0)
 <div class="cont">
-    <div class="stars">
-        <h2>A sua avaliação para este restaurante é: {{$customerToSellerRating->rating}}/5
+    <div class="info-title text-center" style="padding-left:0px">A sua avaliação</div>
+    <div class="stars"><h2>A sua avaliação para este restaurante é: {{$customerToSellerRating->rating}}/5</h2>
+        <button class="btn btn-edit" id="edit" onclick="changeVisibility()" style="margin-right:0px">Editar</button>
     </div>
-</div>
-@else
-<div class="cont">
-    <div class="stars">
+    <div class="stars" id="rated" style="display:none">
         {{Form::open(array('route'=>['customer.sellerRating',$seller['id']]))}}
         {{Form::radio('star_1',1,null)}}
         {{Form::label('star_1',1,['class' => 'star'])}}
@@ -80,13 +82,36 @@
         {{Form::radio('star_5',5)}}
         {{Form::label('star_5',5,['class' => 'star'])}}
        
-        <button type="submit" class="btn btn-edit">Guardar</button>
+        <button type="submit" class="btn btn-edit" style="margin-right:0px">Guardar</button>
+        {{Form::close()}}
+    </div>
+</div>
+@else
+<div class="cont">
+<div class="info-title text-center" style="padding-left:0px">A sua avaliação</div>
+    <div class="stars"><h2>Faça já a sua avaliação</h2>
+        {{Form::open(array('route'=>['customer.sellerRating',$seller['id']]))}}
+        {{Form::radio('star_1',1,null)}}
+        {{Form::label('star_1',1,['class' => 'star'])}}
+        {{Form::radio('star_2',2)}}
+        {{Form::label('star_2',2,['class' => 'star'])}}
+        {{Form::radio('star_3',3)}}
+        {{Form::label('star_3',3,['class' => 'star'])}}
+        {{Form::radio('star_4',4)}}
+        {{Form::label('star_4',4,['class' => 'star'])}}
+        {{Form::radio('star_5',5)}}
+        {{Form::label('star_5',5,['class' => 'star'])}}
+       
+        <button type="submit" class="btn btn-edit" style="margin-right:0px">Guardar</button>
         {{Form::close()}}
     </div>
 </div>
 @endif
-
-<div class="row">
+@endif
+<div class="row row-5" style="padding-left:35px;padding-right:35px;">
+    <div class="info-title">Os nossos produtos</div>
+    <div class="col-sm-12 about-box box-details">
+        @if(count($productsSeller) != 0)
     @foreach ($productsSeller as $product)
         <div class="col-sm-3">
         @if($product['filepath'])
@@ -99,5 +124,20 @@
         </div>
         
     @endforeach
+    @else
+    <div class="col-sm-12 about-box box-details text-center">
+    <h2>Ainda não tem produtos disponíveis</h2>
+    </div>
+    @endif
+    </div>
 </div>
+@stop
+@section('scripts')
+<script>
+    function changeVisibility()
+    {
+        document.getElementById('rated').style.display = "inline-block";
+        document.getElementById('edit').style.display = "none";
+    }
+</script>
 @stop

@@ -40,6 +40,7 @@ class HomeController extends \App\Http\Controllers\Controller
         $this->sellerAlgorithm();
         $sellers = $this->sellers;
         $count = $this->countAtualSellerIds;
+        
         return $this->setContent('customer.index', compact('sellers','count')); 
     }
 

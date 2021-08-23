@@ -9,6 +9,8 @@ use App\Models\Address;
 use App\Models\Order;
 use App\Models\OrderLine;
 use App\Models\Status;
+use App\Models\Payment;
+
 use Illuminate\Http\Request;
 use Setting,Auth,Validator,Redirect,Session;
 
@@ -330,9 +332,12 @@ class HomeController extends \App\Http\Controllers\Controller
                         
         if(Auth::guard('customer')->user()->id == $order['customer_id'])
         {
+
             $orderStatusId = $order['status_id'];
             $orderStatus = Status::where('id',$orderStatusId)
                                     ->first();
+            $payment = Payment::where('id',$order->payment_id)->first();
+            
             if($orderStatus->name == "FALHA NA ENTREGA")
             {
                 $failed = 1;
@@ -346,7 +351,7 @@ class HomeController extends \App\Http\Controllers\Controller
                                 ->toArray();
             }
             
-            return view('customer.about.orderStatus',compact('order','status','orderStatus','failed'))->render();
+            return view('customer.about.orderStatus',compact('order','status','orderStatus','failed','payment'))->render();
         }
         else
         {

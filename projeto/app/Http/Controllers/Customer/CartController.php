@@ -225,7 +225,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
             $orderline->save();
         }
         
-        $status = Status::where('name','like','EM PREPARAÇÃO')
+        $status = Status::where('name','like','PENDENTE')
                             ->first();
         
         $order->status_id = $status['id'];                      
@@ -280,9 +280,9 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         $order->billing_address = $billingAddress[0]['id'];
         $order->shipment_address = $shipmentAddress[0]['id'];
         $order->delivery_fee = $seller->delivery_fee;
-        
+        $orderTotalWithDeliveryFee = $order->total_price + $seller->delivery_fee;
         $order->save();
-        $data = compact('order','orderlines','payment','paymentMethod','billingAddress','shipmentAddress');
+        $data = compact('order','orderlines','payment','paymentMethod','billingAddress','shipmentAddress','orderTotalWithDeliveryFee','paymentType');
         return view('customer.cart.finalizeOrder',$data)->render();
     }
 }

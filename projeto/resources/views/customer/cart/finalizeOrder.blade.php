@@ -3,10 +3,15 @@
 Resumo
 @stop
 @section('content')
-<table class="table table-striped table-bordered refresh" style="width:50%">
-  <thead>
+<div class="row row-5" style="padding-right:35px !important">
+<div class="col-sm-12 about-box">
+<div class="info-title"><span>Pagamentos</span></div>
+  
+    <div class="table-responsive">
+                    <table id="datatable" class="table" style="margin-bottom:0px !important">
+                    <thead>
     <tr>
-      <th scope="col">#</th>
+      <th scope="col">Pedido</th>
       <th scope="col">Preço</th>
       <th scope="col">Quantidade</th>
     </tr>
@@ -14,19 +19,41 @@ Resumo
   <tbody>
     @foreach($orderlines as $orderline)
     <tr>
-      <th scope="row" >{{$order->id}}</th>
+      <td scope="row">{{$order->id}}</td>
       <td>€{{ number_format($orderline->total_price, 2,',','.') }}</td>
       <td class=" w-1 subTotal">{{$orderline->quantity}}</td>
     </tr>
     @endforeach
   </tbody>
-</table>
-<div class="col-sm-12">
-    <p>{{$payment->entity}}</p>
-    <p>{{$payment->reference}}</p>
-    <p>€{{ number_format($payment->amount, 2,',','.') }}</p>
+                    </table>
+                    <hr style="margin-bottom:5px !important;margin-top:5px !important;"></hr>
+                    <div class="pull-right" style="padding-right:8px;margin-top:0 !important">
+                    <p class="text-right totalPrice"  id="total_price" ><h4 style="margin-top:0 !important">Total: €{{number_format($order->total_price,2,',','.')}}</h4></p>
+                    <p class="text-right totalPrice"  id="total_price" ><h4 style="margin-top:0 !important">Total: €{{number_format($order->delivery_fee,2,',','.')}}</h4></p>
+                   <p class="text-right totalPrice"  id="total_price" ><h2 style="margin-top:0 !important">Total: €{{number_format($orderTotalWithDeliveryFee,2,',','.')}}</h2></p></div>
+                </div>
 </div>
-<a type="button"  class="btn btn-default" href="{{route('customer.cart.deleteCartAndPayment')}}">Continuar</a>
+</div>
+<div class="row row-5" style="padding-right:35px !important">
+<div class="info-title">Dados de Pagamento</div>
+<div class="col-sm-12 about-box text-center" >
+  
+  @if($paymentType == "DINHEIRO")
+  <h1>A pagar no Ato de Entrega</h1>
+  <h3>Montante: €{{ number_format($payment->amount, 2,',','.') }}</h3>
+  @else
+    <h3>Entidade: {{$payment->entity}}</h3>
+    <h3>Referência: {{$payment->reference}}</h3>
+    <h3>Montante: €{{ number_format($payment->amount, 2,',','.') }}</h3>
+  @endif
+    
+
+</div>
+</div>
+<a type="button"  class="btn btn-edit" style="margin-top:0px !important" href="{{route('customer.cart.deleteCartAndPayment')}}">Continuar</a>
+</div>
+
+</div>
 @stop
 @section('scripts')
 

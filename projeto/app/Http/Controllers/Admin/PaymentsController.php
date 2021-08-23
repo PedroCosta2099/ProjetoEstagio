@@ -142,7 +142,9 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
 
         $payment = Payment::where('id',$id)
                             ->first();
-
+        $order = Order::where('payment_id',$id)->first();
+        $orderStatus = Status::where('name','like','EM PREPARAÇÃO')->first();
+        $order->status_id = $orderStatus->id;
         $status = PaymentStatus::where('name','like','PAGO')
                             ->first();
         $payment->paid_at = date('Y-m-d H:i:s');                               
@@ -167,13 +169,17 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
         $input = $request->all();
 
         $payment = Payment::findOrNew($id);
-        
+        $order = Order::where('payment_id',$id)->first();
+
+        $status = Status::where('name','like','EM PREPARAÇÃO')->first();
+         
         $paymentStatus = PaymentStatus::where('id',$input['payment_status_id'])
                                         ->first();
                                         
         
         if($paymentStatus['name'] == "PAGO")
         {
+            $order->status_id = $status->id;
             $payment->paid_at = date('Y-m-d H:i:s');
         }
         else

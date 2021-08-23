@@ -106,8 +106,6 @@ My Enovo Eats
     @endif  
                     </table>
                 </div>
-  
-    
 </div>
 </div>
 @stop

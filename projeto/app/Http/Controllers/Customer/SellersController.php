@@ -60,7 +60,36 @@ class SellersController extends \App\Http\Controllers\Customer\Controller {
     public function sellerRating(Request $request,$id)
     {
         $input = $request->all();
-       
+    
+        $customerToSellerRating = SellerRating::where('customer_id',Auth::guard('customer')->user()->id)->where('seller_id',$id)->first();
+        $countCustomerToSellerRating = count($customerToSellerRating);
+
+        if($countCustomerToSellerRating >= 1)
+        {
+            if(array_key_exists('star_5',$input))
+        {
+            $customerToSellerRating->rating = $input['star_5'];
+        }
+        elseif(array_key_exists('star_4',$input))
+        {
+            $customerToSellerRating->rating = $input['star_4'];
+        }
+        elseif(array_key_exists('star_3',$input))
+        {
+            $customerToSellerRating->rating = $input['star_3'];
+        }
+        elseif(array_key_exists('star_2',$input))
+        {
+            $customerToSellerRating->rating = $input['star_2'];
+        }
+        elseif(array_key_exists('star_1',$input))
+        {
+            $customerToSellerRating->rating = $input['star_1'];
+        }
+        $customerToSellerRating->save();
+        }
+        elseif($countCustomerToSellerRating == 0)
+        {
         $sellerRating = new SellerRating();
         $sellerRating->customer_id = Auth::guard('customer')->user()->id;
         $sellerRating->seller_id = $id;
@@ -85,6 +114,7 @@ class SellersController extends \App\Http\Controllers\Customer\Controller {
             $sellerRating->rating = $input['star_1'];
         }
         $sellerRating->save();
+        }
         return Redirect::back()->with('success', 'Avaliação guardada com sucesso');
         
     }
