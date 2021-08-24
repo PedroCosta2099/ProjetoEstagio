@@ -98,7 +98,7 @@ Route::group(array('middleware' => 'auth','namespace' => 'Customer'), function()
                 ->name('customer.cart.destroyRow');
         Route::get('/cart/cleanCart','CartController@cleanCart')
                 ->name('customer.cart.cleanCart');
-        Route::get('cart/finalizeOrder','CartController@createOrder')
+        Route::post('cart/finalizeOrder','CartController@createOrder')
                 ->name('customer.cart.finalizeOrder');
         Route::get('cart/orderInfo','CartController@orderInfo')
                 ->name('customer.cart.payment');

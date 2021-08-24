@@ -47,10 +47,10 @@
                     </div>
 
                     <div class="text-center" style="padding-top: 20px; line-height: 0;">
-                        <span class="txt1">Não consegue Iniciar Sessão?</span>
+                        <span class="txt1">Não possui conta? Crie já a sua!</span>
                         <br/>
-                        <a href="{{ route('admin.password.forgot') }}" class="txt2">
-                            Recuperar Palavra-Passe
+                        <a href="{{ route('customer.register') }}" class="txt2">
+                            Criar Conta
                         </a>
                     </div>
                 </div>

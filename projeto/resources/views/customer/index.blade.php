@@ -23,9 +23,12 @@ Enovo Eats
     box-shadow: 1px 3px 13px 0px #524e4e70;
     
 }
+.contSeller:hover{
+    transform:scale(1.1);
+    z-index:1000;
+}
 .circle{
     background-color:#0B3354;
-    
     display:flex;
     justify-content:center;
     align-items:center;
@@ -38,10 +41,18 @@ Enovo Eats
 }
 
 </style>
-@stop
+@stop<form method="post" action="{{route('home.index')}}">
 <div class="row row-5">
     <div class="col-sm-12" style="width:100%;">
-    <h1 style="color:#0B3354">Restaurantes</h1>
+    <div class="col-sm-12">
+        <div class="col-sm-9">
+            <h1 style="color:#0B3354">Restaurantes</h1>
+        </div>
+        <div class="pull-right" style="margin-top:20px;margin-bottom:10px">
+        <label>Ordenar por:</label>
+        {{ Form::select('orderBy', array('' => 'Nenhum','1'=>'Classificação','2'=>'Tempo de Entrega','3'=>'Taxa de Entrega'), Request::has('orderBy') ? Request::get('orderBy') : null, array('class' => 'form-control input-sm filter-datatable select2')) }}
+        </div>
+    </div>
     @foreach($sellers as $seller)
     @if(!Auth::guard('customer')->check() || $count > 0)
     
@@ -99,5 +110,30 @@ Enovo Eats
    @endforeach
    
     </div>
-</div>
+</div></form>
+@stop
+@section('scripts')
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        $.ajax({
+           type:"get",
+           url:"{{route('home.index')}}",
+           data: function (d) {
+               
+                    d.orderBy   = $('select[name=orderBy]').val();
+                    
+                },
+           success:function()
+           {    
+                
+           },
+           error:function()
+           {
+                
+           }   
+        });
+    
+});
+</script>
 @stop

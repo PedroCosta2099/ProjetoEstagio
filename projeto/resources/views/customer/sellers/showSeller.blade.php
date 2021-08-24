@@ -70,6 +70,21 @@
     z-index:1000;
 }
 
+.txt-color{
+    color:#0B3354;
+}
+.circleSeller{
+    background-color:#0B3354;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    width:40px;
+    height:40px;
+    
+    margin-top:20px !important;
+    border-radius:50%;
+}
 
 </style>
 @stop
@@ -83,35 +98,29 @@
 </div>
 @endif
 </div>
-<div>
-    <h1 style="color:#0B3354">{{$seller['name']}}</h1>
-    <h5>A sua avaliação: {{number_format($customerToSellerRating->rating,1)}}</h5>
+<div class="row row-5" style="padding-left:35px;padding-right:35px;padding-top:10px">
+<!--<div style="background-color:yellow;height:140px;width;1000px">
+
     
-</div>
+    @foreach($categoriesIdsSeller as $categoryIdSeller)
+    @foreach($categoriesSeller as $categorySeller)
+    @if($categorySeller['id'] == $categoryIdSeller)
+    Categoria:{{$categorySeller['name']}}
+       @foreach($productsSeller as $product)
+            @if($product['category_id'] == $categorySeller['id'])
+                {{$product['name']}}
+            @endif
+       @endforeach
+    @endif
+    @endforeach
+    @endforeach</div>-->
+    <div class="col-sm-12 about-box box-details">
+    <div class="col-sm-3"><h1 class="txt-color" style="float:left;margin-right:10px">{{$seller['name']}}</h1><div class="circleSeller" ><b>{{number_format($seller->rating,1)}}</b></div>
+    <h5 class="txt-color"><i class="fas fa-hand-holding-usd"></i> €{{number_format($seller['delivery_fee'],2,',','.')}} &nbsp <i class="fas fa-clock"></i> {{$seller['minimum_delivery_time']}} min - {{$seller['maximum_delivery_time']}} min</h5>
+    <h5 class="txt-color">{{$seller['address']}} {{$seller['postal_code']}} {{$seller['city']}}</h5>
 @if(Auth::guard('customer')->check())
-@if($countCustomerToSellerRating > 0)
-<div class="col-sm-3 cont">
-    <div class="info-title text-center" style="padding-left:0px">A sua avaliação</div>
-    <div class="stars"><h2>A sua avaliação para este restaurante é: {{$customerToSellerRating->rating}}/5</h2>
-        <button class="btn btn-edit" id="edit" onclick="changeVisibility()" style="margin-right:0px">Editar</button>
-    </div>
-    <div class="stars" id="rated" style="display:none">
-        {{Form::open(array('route'=>['customer.sellerRating',$seller['id']]))}}
-        {{Form::radio('star_1',1,null)}}
-        {{Form::label('star_1',1,['class' => 'star'])}}
-        {{Form::radio('star_2',2)}}
-        {{Form::label('star_2',2,['class' => 'star'])}}
-        {{Form::radio('star_3',3)}}
-        {{Form::label('star_3',3,['class' => 'star'])}}
-        {{Form::radio('star_4',4)}}
-        {{Form::label('star_4',4,['class' => 'star'])}}
-        {{Form::radio('star_5',5)}}
-        {{Form::label('star_5',5,['class' => 'star'])}}
-       
-        <button type="submit" class="btn btn-edit" style="margin-right:0px">Guardar</button>
-        {{Form::close()}}
-    </div>
-</div>
+
+@if($customerToSellerRating != null)<h5 class="txt-color">A sua avaliação: {{number_format($customerToSellerRating->rating,1)}}</h5></div>
 @else
 <div class="cont">
 <div class="info-title text-center" style="padding-left:0px">A sua avaliação</div>
@@ -132,35 +141,54 @@
         {{Form::close()}}
     </div>
 </div>
+
 @endif
 @endif
-<div class="row row-5" style="padding-left:35px;padding-right:35px;">
-    
+</div>
+ @if(count($productsSeller) != 0)
+        @foreach($categoriesIdsSeller as $categoryIdSeller)
+    @foreach($categoriesSeller as $categorySeller)
+    @if($categorySeller['id'] == $categoryIdSeller)
+    <h1 class="txt-color">{{$categorySeller['name']}}</h1>
+<div class="row row-5">
+
+
     <div class="col-sm-12 about-box box-details" style="background-color:transparent !important;padding-left:0px !important">
-    <h1 style="color:#0B3354">Os nossos produtos</h1>
-        @if(count($productsSeller) != 0)
     @foreach ($productsSeller as $product)
+       
+    @if($product->where('category_id',$categorySeller['id'])->count() == 0)
+        <h2 class="txt-color">Não tem produtos</h2>
+        @break;
+     @endif   
+        @if($product['category_id'] == $categorySeller['id'])
      <a href="{{route('customer.products.productShow',$product['id'])}}">   <div class="col-sm-4 contSeller">
         @if($product['filepath'])
     <img src="{{ asset($product->getCroppa(200, 200)) }}" style="border:none;float:right;height:100%" />
         @else
-    <img src="{{ asset('assets/img/default/avatar2.jpg') }}" style="border:none;float:right" class="w-75px"/>
+    <img src="{{ asset('assets/img/default/avatar2.jpg') }}" style="border:none;float:right;height:100%"/>
         @endif
-            <p><h4 class="product-description" style="color:#0B3354;padding-left:10px;">{{$product['name']}}</h4><br>
+            <p><h4 class="product-description txt-color" style="padding-left:10px;">{{$product['name']}}</h4><br>
             @if($product['description'] == null)
             &nbsp
+            @else
+            <h5 class="product-description txt-color" style="padding-left:10px;">{{$product['description']}}</h5></p>
             @endif
-            <h5 class="product-description" style="color:#0B3354;padding-left:10px;">{{$product['description']}}</h5></p>
+            <h5 class="txt-color" style="padding-left:10px;position:absolute;bottom:5px">€{{number_format($product['price'],2,',','.')}}</h5>
         </div>
     </a> 
+        @endif
+    @endforeach
+     </div> 
+</div>
+    @endif
+    @endforeach
     @endforeach
     @else
     <div class="col-sm-12 about-box box-details text-center" style="background-color:transparent !important,padding-left:0px !important">
     <h2>Ainda não tem produtos disponíveis</h2>
     </div>
     @endif
-    </div>
-</div>
+   
 @stop
 @section('scripts')
 <script>

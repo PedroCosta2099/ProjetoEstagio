@@ -183,7 +183,9 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
      * Create order with order lines/create payment 
      */
 
-    public function createOrder(){
+    public function createOrder(Request $request){
+        
+        $input = $request->all();
         
         if(!Auth::guard('customer')->check())
         {
@@ -256,7 +258,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
             $payment->reference = $reference;
             $payment->entity = 12345;
         }
-        $payment->save();
+        
         
         $order->payment_id = $payment->id;
         $customerId = Auth::guard('customer')->user()->id;
@@ -281,19 +283,35 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         $order->shipment_address = $shipmentAddress[0]['id'];
         $order->delivery_fee = $seller->delivery_fee;
         $orderTotalWithDeliveryFee = $order->total_price + $seller->delivery_fee;
+        if(array_key_exists('comments',$input))
+        {
+            $order->comments = $input['comments'];
+        }
+        else
+        {
+            $order->comments = null;
+        }
+        
+        $payment->save();
         $order->save();
+        
         $data = compact('order','orderlines','payment','paymentMethod','billingAddress','shipmentAddress','orderTotalWithDeliveryFee','paymentType');
+        
         return view('customer.cart.finalizeOrder',$data)->render();
     }
 }
+
 /**
  * Delete all cart
  */
 public function deleteCartAndPayment()
 {
+    
     CartProvider::instance()->destroy();
     Session::forget('paymentMethodAux');
-    return Redirect('feed');
+        return Redirect('/feed')->with('success','A sua encomenda foi registada com sucesso!');
+    
+
 }
 
 /**
@@ -338,6 +356,10 @@ public function orderInfo()
  */
 public function resumeOrder()
 {
+    if(Session::get('paymentMethodAux') == null)
+    {
+        return Redirect::back()->with('error','Escolha um método de pagamento');
+    }
     if(CartProvider::instance()->getQuantity() == 0)
     {
         return Redirect::back()->with('error','Ainda não tem items no seu carrinho');

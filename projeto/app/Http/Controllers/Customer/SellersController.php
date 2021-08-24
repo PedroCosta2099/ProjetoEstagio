@@ -40,8 +40,12 @@ class SellersController extends \App\Http\Controllers\Customer\Controller {
         
         $sellerName = str_replace('-',' ',$name);
         $seller = Seller::where('name',$sellerName)->first();
-        $categoriesSeller = Category::where('seller_id',$seller['id'])->pluck('id')->toArray();
-        $productsSeller = Product::whereIn('category_id',$categoriesSeller)->get();
+        $categoriesSeller = Category::where('seller_id',$seller['id'])->get()->toArray();
+        $categoriesIdsSeller = Category::where('seller_id',$seller['id'])->pluck('id')->toArray();
+        
+        $productsSeller = Product::whereIn('category_id',$categoriesIdsSeller)->get();
+        $productsWithCategories = Product::with('category')->get()->toArray();
+       
         if(Auth::guard('customer')->check())
         {
             $customerToSellerRating = SellerRating::where('customer_id',Auth::guard('customer')->user()->id)->where('seller_id',$seller->id)->first();
@@ -52,8 +56,10 @@ class SellersController extends \App\Http\Controllers\Customer\Controller {
             'seller',
             'categoriesSeller',
             'productsSeller',
+            'categoriesIdsSeller',
             'customerToSellerRating',
-            'countCustomerToSellerRating'
+            'countCustomerToSellerRating',
+            'productsWithCategories'
         );
         return view('customer.sellers.showSeller',$data);
     }

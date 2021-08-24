@@ -10,6 +10,7 @@ Resumo
 </style>
 @stop
 @section('content')
+<form method="post" action="{{route('customer.cart.finalizeOrder')}}">
 <div class="row row-5">
 <div class="col-sm-12 about-box">
 <div class="info-title"><span>Pagamentos</span></div>
@@ -50,6 +51,14 @@ Resumo
 </div>
 </div>
 <div class="row row-5">
+  <div class="info-title"><span>Observações <i class="fa fa-info-circle" data-toggle="tooltip" title="Ex: Alergias alimentares, alimentos não pretendidos"></i></span></div>
+    <div class="col-sm-12 about-box text-center">
+      
+      {{ Form::text('comments', null, ['class' => 'form-control','style'=>'width:100%','placeholder'=>'Insira aqui as suas observações','id'=>'comments']) }}
+      
+    </div>
+  </div>
+  <div class="row row-5">
   <div class="info-title"><span>Método de Pagamento</span></div>
     <div class="col-sm-12 about-box text-center">
   
@@ -90,19 +99,29 @@ Resumo
 </div>
 
 <div class="row row-5">
-<a type="button" class="btn btn-edit" href="{{route('customer.cart.finalizeOrder')}}" style="color:white;margin-top:0px !important;margin-right:10px !important"><i class="fas fa-plus" style="color:white"></i> Confirmar Pedido</a>
+<button type="submit" class="btn btn-edit" style="color:white;margin-top:0px !important;margin-right:10px !important"><i class="fas fa-plus" style="color:white"></i> Confirmar Pedido</button>
 <a type="button" class="btn btn-default" href="{{route('customer.cart.payment')}}">Voltar</a>
 </div>
 
 </div>
 
-
+</form>
 
 
 
 @stop
 @section('scripts')
 <script>
+$('#submit').click(function(){
+  
+  var comments = $('#comments').val();
+  
+  $.ajax({
+    type:"post",
+    url:"{{url('cart/finalizeOrder')}}",
+    data: comments
+  });
+});
 $(document).ready(function(){
     
     $.ajax({

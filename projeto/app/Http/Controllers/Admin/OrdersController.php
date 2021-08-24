@@ -272,6 +272,7 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
      * @return Datatables
      */
     public function datatable(Request $request) {
+        
         if(Auth::user()->isAdmin())
         {
             $data = Order::select();

@@ -7,7 +7,8 @@ use App\Models\Seller;
 use App\Models\Product;
 use App\Models\Order;
 use App\Models\OrderLine;
-use Setting,Auth;
+use Setting,Auth,Redirect;
+use Illuminate\Http\Request;
 
 class HomeController extends \App\Http\Controllers\Controller
 {
@@ -34,15 +35,42 @@ class HomeController extends \App\Http\Controllers\Controller
      *
      * @return \App\Http\Controllers\type
      */
-    public function index() {
+    public function index(Request $request) {
 
     
         $this->sellerAlgorithm();
         $sellers = $this->sellers;
         $count = $this->countAtualSellerIds;
-        
+        if($request->orderBy)
+        {
+            dd($request->orderBy);
+        }
         return $this->setContent('customer.index', compact('sellers','count')); 
     }
+
+    /*public function filterSellers($value)
+    {
+        
+        if($value == 1)
+        {
+            $count = 0;
+            $sellers = Seller::orderBy('rating','desc')->take(8)->get();
+        }
+        if($value == 2)
+        {
+            $count = 0;
+            $sellers = Seller::orderBy('minimum_delivery_time','asc')->take(8)->get();
+        }
+        if($value == 3)
+        {
+            $count = 0;
+            $sellers = Seller::orderBy('delivery_fee','asc')->take(8)->get();
+        }
+
+        $data = compact('sellers','count');
+        return view('customer.index',$data);
+
+    }*/
 
     public function sellerAlgorithm()
     {
