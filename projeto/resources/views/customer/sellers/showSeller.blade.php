@@ -115,7 +115,7 @@
     @endforeach
     @endforeach</div>-->
     <div class="col-sm-12 about-box box-details">
-    <div class="col-sm-3"><h1 class="txt-color" style="float:left;margin-right:10px">{{$seller['name']}}</h1><div class="circleSeller" ><b>{{number_format($seller->rating,1)}}</b></div>
+    <div class="col-sm-6"><h1 class="txt-color" style="float:left;margin-right:10px">{{$seller['name']}}</h1><div class="circleSeller" ><b>{{number_format($seller->rating,1)}}</b></div>
     <h5 class="txt-color"><i class="fas fa-hand-holding-usd"></i> €{{number_format($seller['delivery_fee'],2,',','.')}} &nbsp <i class="fas fa-clock"></i> {{$seller['minimum_delivery_time']}} min - {{$seller['maximum_delivery_time']}} min</h5>
     <h5 class="txt-color">{{$seller['address']}} {{$seller['postal_code']}} {{$seller['city']}}</h5>
 @if(Auth::guard('customer')->check())
@@ -149,15 +149,19 @@
         @foreach($categoriesIdsSeller as $categoryIdSeller)
     @foreach($categoriesSeller as $categorySeller)
     @if($categorySeller['id'] == $categoryIdSeller)
-    <h1 class="txt-color">{{$categorySeller['name']}}</h1>
+    
 <div class="row row-5">
 
 
     <div class="col-sm-12 about-box box-details" style="background-color:transparent !important;padding-left:0px !important">
+    @if($product->where('category_id',$categorySeller['id'])->count() != 0)
+        <h1 class="txt-color catName">{{$categorySeller['name']}}</h1>
+     @endif 
+    
     @foreach ($productsSeller as $product)
        
     @if($product->where('category_id',$categorySeller['id'])->count() == 0)
-        <h2 class="txt-color">Não tem produtos</h2>
+        
         @break;
      @endif   
         @if($product['category_id'] == $categorySeller['id'])
@@ -173,7 +177,14 @@
             @else
             <h5 class="product-description txt-color" style="padding-left:10px;">{{$product['description']}}</h5></p>
             @endif
-            <h5 class="txt-color" style="padding-left:10px;position:absolute;bottom:5px">€{{number_format($product['price'],2,',','.')}}</h5>
+            <h5 class="txt-color" style="padding-left:10px;position:absolute;bottom:5px">
+            @if($product['actual_price'] == $product['price'])
+                            €{{ number_format($product['price'], 2,',','.') }} 
+                            @else
+                            <s class="m-r-5">€{{ number_format($product['price'], 2,',','.') }} </s>
+                            €{{ number_format($product['actual_price'], 2,',','.') }} 
+                            @endif
+            </h5>
         </div>
     </a> 
         @endif

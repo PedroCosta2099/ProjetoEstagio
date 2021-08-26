@@ -243,9 +243,20 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         
         $payment->amount = $order->total_price + $seller->delivery_fee;
         $payment->payment_type_id = $paymentMethod;
+        
         $payment->payment_status_id = PaymentStatus::where('name','like','PENDENTE')
                                             ->first()
                                             ->id;
+        if($paymentType == "DINHEIRO")
+        {
+            $status = Status::where('name','like','EM PREPARAÇÃO')
+                            ->first();
+            $order->status_id = $status['id'];  
+            $payment->payment_status_id = PaymentStatus::where('name','like','PENDENTE')
+                                            ->first()
+                                            ->id;                
+        }
+        
         if($paymentType != "DINHEIRO")
         {
             $min = 100000000;
