@@ -1056,6 +1056,8 @@ label {
  * -------------------------
  */
 /*Dropdowns in general*/
+
+
 .dropdown-menu {
     box-shadow: none;
     border-color: #eee;
@@ -5163,7 +5165,7 @@ table.text-center th {
 }
 
 .pace .pace-progress {
-    background: #dc4e41;
+    background:  #F7941E;
     position: fixed;
     z-index: 950;
     top: 50px;

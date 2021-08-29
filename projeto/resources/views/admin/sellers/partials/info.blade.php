@@ -3,10 +3,16 @@
         {{ Form::model($seller, $formOptions) }}
         <div class="col-sm-8 col-lg-9">
             <div class="row row-5">
-                <div class="col-sm-8">
+                <div class="col-sm-6">
                     <div class="form-group is-required">
                         {{ Form::label('name', 'Nome a apresentar no sistema')}}
                         {{ Form::text('name', null, array('class' =>'form-control', 'required' => true)) }}
+                    </div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="form-group is-required">
+                        {{ Form::label('payment_entity', 'Entidade')}}
+                        {{ Form::text('payment_entity', null, array('class' =>'form-control','required' => true)) }}
                     </div>
                 </div>
                 <div class="col-sm-2">

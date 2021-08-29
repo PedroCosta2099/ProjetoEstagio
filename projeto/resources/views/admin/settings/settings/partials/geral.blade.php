@@ -5,12 +5,6 @@
                 <div class="row">
                     <div class="col-sm-6">
                         <h4 class="section-title">
-                            <a href="?tab=customization"
-                               data-toggle="tooltip"
-                               title="Altere a cor da aplicação só para a sua conta sem afetar outros utilizadores."
-                               style="margin: -4px;" class="btn btn-xs btn-primary pull-right">
-                                Personalizar para mim
-                            </a>
                             Design e Usabilidade
                         </h4>
                         <table class="table table-condensed m-0">

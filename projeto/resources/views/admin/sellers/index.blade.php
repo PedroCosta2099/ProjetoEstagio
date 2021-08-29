@@ -40,6 +40,7 @@
                                 <th></th>
                                 <th>Nome</th>
                                 <th>Telefone</th>
+                                <th>Entidade</th>
                                 <th>NIF</th>
                                 <th>Morada</th>
                                 <th>Tempo mínimo de entrega</th>
@@ -75,6 +76,7 @@
                 {data: 'id', name: 'id', visible: false},
                 {data: 'name', name: 'name'},
                 {data: 'phone',name:'phone'},
+                {data: 'payment_entity',name:'payment_entity'},
                 {data: 'nif',name:'nif'},
                 {data : 'address',name:'address'},
                 {data: 'minimum_delivery_time', name:'minimum_delivery_time'},

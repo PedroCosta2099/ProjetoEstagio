@@ -64,7 +64,7 @@ Carrinho
 -->
 <a type="button" class="btn btn-default btn-danger" href="{{route('customer.cart.cleanCart')}}" style="color:white"><i class="fas fa-trash-alt" style="color:white"></i> Limpar Carrinho</a>
 <a type="button" class="btn btn-edit" href="{{route('customer.cart.payment')}}" style="color:white;margin-left:10px;margin-top:0px !important;margin-right:10px !important"><i class="fas fa-plus" style="color:white"></i> Continuar</a>
-<a type="button" class="btn btn-default" href="{{url()->previous()}}" >Voltar</a>
+<a type="button" class="btn btn-default" href="{{route('home.index')}}" >Voltar</a>
 @stop
 @section('scripts')
 <script type="text/javascript">

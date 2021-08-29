@@ -260,26 +260,6 @@ Route::group(array('prefix' => 'admin', 'middleware' => 'auth.admin', 'namespace
     Route::resource('products', 'ProductsController', [
         'as' => 'admin',
         'except' => ['show']]);
-    
-    
-    /*=================================================================================================================
-     * EXTRA PRODUCTS
-     =================================================================================================================*/
-    Route::post('extraproducts/datatable', 'ExtraProductsController@datatable')
-        ->name('admin.extraproducts.datatable');
-
-    Route::post('extraproducts/selected/destroy', 'ExtraProductsController@massDestroy')
-        ->name('admin.extraproducts.selected.destroy');
-
-    Route::get('extraproducts/sort', 'ExtraProductsController@sortEdit')
-        ->name('admin.extraproducts.sort');
-
-    Route::post('extraproducts/sort', 'ExtraProductsController@sortUpdate')
-        ->name('admin.extraproducts.sort.update');
-
-    Route::resource('extraproducts', 'ExtraProductsController', [
-        'as' => 'admin',
-        'except' => ['show']]);
         
     /*=================================================================================================================
      * CATEGORIES

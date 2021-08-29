@@ -43,11 +43,6 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('admin.logs.errors.index') }}" target="_blank" class="text-red">
-                                           <i class="fas fa-fw fa-exclamation-triangle"></i> Erros do sistema
-                                        </a>
-                                    </li>
-                                    <li>
                                         <a href="{{ route('admin.roles.index') }}" class="text-info">
                                             <i class="fas fa-fw fa-users"></i> Perfis e Permissões
                                         </a>

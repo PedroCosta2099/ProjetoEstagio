@@ -143,12 +143,20 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
         $payment = Payment::where('id',$id)
                             ->first();
         $order = Order::where('payment_id',$id)->first();
+        $orderlines = OrderLine::where('order_id',$order->id)->get();
+        
         $orderStatus = Status::where('name','like','EM PREPARAÇÃO')->first();
+        foreach($orderlines as $orderline)
+        {
+            $orderline['status_id'] = $orderStatus->id;
+            $orderline->save();
+        }
         $order->status_id = $orderStatus->id;
         $status = PaymentStatus::where('name','like','PAGO')
                             ->first();
         $payment->paid_at = date('Y-m-d H:i:s');                               
         $payment->payment_status_id = $status->id;
+        $order->save();
         $payment->save();
         return Redirect::back()->with('success', 'Dados gravados com sucesso.');
 
@@ -170,9 +178,13 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
 
         $payment = Payment::findOrNew($id);
         $order = Order::where('payment_id',$id)->first();
-
+        $orderlines = OrderLine::where('order_id',$order->id)->get();
         $status = Status::where('name','like','EM PREPARAÇÃO')->first();
-         
+        foreach($orderlines as $orderline)
+        {
+            $orderline['status_id'] = $status->id;
+            $orderline->save();
+        }
         $paymentStatus = PaymentStatus::where('id',$input['payment_status_id'])
                                         ->first();
                                         
@@ -184,8 +196,16 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
         }
         else
         {
+            $status = Status::where('name','like','PENDENTE')->first();
+            $order->status_id = $status->id;
+            foreach($orderlines as $orderline)
+        {
+            $orderline['status_id'] = $status->id;
+            $orderline->save();
+        }
             $payment->paid_at = null;
         }
+        $order->save();
         if ($payment->validate($input)) {
             $payment->fill($input);
             $payment->save();

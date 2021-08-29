@@ -25,7 +25,6 @@
             {!! Html::sidebarOption('products', 'Produtos', route('admin.products.index'), 'admin_sellers') !!}
             {!! Html::sidebarOption('categories', 'Categorias', route('admin.categories.index'), 'admin_sellers') !!}
             {!! Html::sidebarOption('subcategories', 'SubCategorias', route('admin.subcategories.index'), 'admin_sellers') !!}
-            {!! Html::sidebarOption('extraproducts', 'Acompanhamentos', route('admin.extraproducts.index'), 'admin_sellers') !!}
             {!! Html::sidebarTreeClose() !!}
             @endif
             {!! Html::sidebarTreeOpen('payments', 'Pagamentos', 'fas fa-credit-card') !!}

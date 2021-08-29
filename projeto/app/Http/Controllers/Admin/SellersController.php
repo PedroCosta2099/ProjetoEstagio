@@ -121,7 +121,7 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
 
         $seller  = Seller::findOrNew($id);
         
-        $input = $request->except('role_id');
+        $input = $request->all();
         
         $seller->nif = $input['nif'];
         $seller->postal_code = $input['postal_code'];
@@ -139,6 +139,7 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
             $seller->save();
         }
         $seller->delivery_fee = $input['delivery_fee'];
+        $seller->payment_entity = $input['payment_entity'];
         $seller->fill($input);
         $seller->save();
         //dd($input['thumbnail_image'],$input['banner_image']);
@@ -239,13 +240,6 @@ class SellersController extends \App\Http\Controllers\Admin\Controller {
         $user = Auth::user();
 
         $data = Seller::with('roles')->select();
-
-        //filter role
-        if($request->role) {
-            $data = $data->whereHas('roles', function($q) use($request){
-                $q->where('role_id', $request->role);
-            });
-        }
 
         //filter active
         $active = $request->active;

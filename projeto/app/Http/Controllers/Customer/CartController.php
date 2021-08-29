@@ -254,7 +254,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
             $order->status_id = $status['id'];  
             $payment->payment_status_id = PaymentStatus::where('name','like','PENDENTE')
                                             ->first()
-                                            ->id;                
+                                            ->id; 
         }
         
         if($paymentType != "DINHEIRO")
@@ -267,11 +267,13 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
                 $referenceExists = Payment::where('reference', $reference)->first();
             }while($referenceExists !== null);
             $payment->reference = $reference;
-            $payment->entity = 12345;
+            $payment->entity = $seller->payment_entity;
         }
+        $payment->save();
         
         
         $order->payment_id = $payment->id;
+        
         $customerId = Auth::guard('customer')->user()->id;
         $customer = Customer::with('addresses')->where('id',$customerId)->get()->toArray();
         $customerAddressesIds = [];
@@ -303,7 +305,6 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
             $order->comments = null;
         }
         
-        $payment->save();
         $order->save();
         
         $data = compact('order','orderlines','payment','paymentMethod','billingAddress','shipmentAddress','orderTotalWithDeliveryFee','paymentType');

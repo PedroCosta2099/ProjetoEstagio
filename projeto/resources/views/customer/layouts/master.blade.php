@@ -19,7 +19,7 @@
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudfare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/css/bootstrap-colorpicker.min.css" rel="stylesheet">
     </head>
-    <body class="{{ app_skin() }} fixed sidebar-mini sidebar-collapse">
+    <body class=" fixed sidebar-mini sidebar-collapse">
         
             @include('customer.partials.header')
             

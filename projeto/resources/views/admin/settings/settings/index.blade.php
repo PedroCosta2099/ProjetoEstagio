@@ -46,7 +46,6 @@ Definições Gerais
         </div>
     </div>
     {{ Form::close() }}
-    @include('admin.settings.settings.modals.clean_storage')
 @stop
 
 @section('styles')

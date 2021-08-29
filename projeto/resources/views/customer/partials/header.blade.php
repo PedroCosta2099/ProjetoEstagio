@@ -1,5 +1,5 @@
 
-<header class="main-header">
+<header class="main-header" style="background-color: #0B3354 !important">
     <a href="{{route('home.index')}}" class="logo">
         <span class="logo-mini">
             <img src="{{ asset(config('app.logo_square')) }}"/>
@@ -61,7 +61,7 @@
                     @elseif(Auth::guard('customer')->check())
                     
 
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="#" class="dropdown-toggle dropdown-color"  data-toggle="dropdown">
                         
                         <span style="color:white"><i class="fas fa-user"></i> {{Auth::guard('customer')->user()->name}}</span>
 

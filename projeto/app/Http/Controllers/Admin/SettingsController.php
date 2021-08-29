@@ -124,6 +124,7 @@ class SettingsController extends \App\Http\Controllers\Admin\Controller {
     public function store(Request $request) {
 
         $input = $request->except('_token');
+    
         $input['customization_disable_notification_sound'] = $request->get('customization_disable_notification_sound', false);
 
         $allSettings = Setting::all();
