@@ -192,9 +192,11 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
         $IVA = 0.23;
         $input = $request->all();
 
-        $orderline = OrderLine::findOrNew($id);       
+        $orderline = OrderLine::findOrNew($id);  
+            
         $order = Order::findOrFail($orderline->order_id);
         
+
         if ($orderline->validate($input)) {
             $orderline->fill($input);
 
@@ -203,11 +205,23 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
                 $this->destroy($orderline->id);
             }
             $orderline->save();
+
             $orderTotalPrice = Orderline::where('order_id',$orderline->order_id)
                                     ->sum('total_price');
             $order->total_price = $orderTotalPrice;
             $orderVatNotRounded = $orderTotalPrice * $IVA;
             $order->vat = number_format((float)$orderVatNotRounded,2, '.', '');
+            $orderlines = OrderLine::with('status')->where('order_id',$order->id)->get();
+        
+            $orderStatus = $order->status_id;
+            $orderlinesStatus = [];
+            foreach($orderlines as $orderlineStatus)
+            {
+                array_push($orderlinesStatus,$orderlineStatus->status->sort);
+            }
+        
+            $order->status_id = Status::where('sort',min($orderlinesStatus))->first()->id;
+
             $order->save();
             $payment = Payment::findOrFail($order->payment_id);
             $payment->amount = $order->total_price;

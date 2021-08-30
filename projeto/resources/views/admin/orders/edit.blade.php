@@ -8,12 +8,17 @@
 </div>
 <div class="modal-body">
     <div class="row row-5">
-        <div class="col-sm-12">
+        <div class="col-sm-6">
 
             {{ Form::label('order_id', 'Pedido') }} : {{ Form::label('', $order['id'])}}
-            <span class="pull-right label label "  style="background-color:{{ $status['status_color'] }};color:white;">{{ $status['name'] }}</span>
-            <p></p>
-        </div>   
+            
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group is-required">
+                {{ Form::label('status_id', 'Estado') }}
+                {{ Form::select('status_id',$allStatus, $order['status_id'], ['class' => 'form-control select2','id' => 'status_id']) }}
+            </div>
+        </div> 
     @foreach($orderlines as $orderline)
        <div class="col-sm-3">
             <div class="form-group is-required">

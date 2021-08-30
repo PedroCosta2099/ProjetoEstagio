@@ -41,11 +41,13 @@ class HomeController extends \App\Http\Controllers\Controller
         $this->sellerAlgorithm();
         $sellers = $this->sellers;
         $count = $this->countAtualSellerIds;
+        $productsWithDiscount = Product::where('discount','>',0)->take(9)->get();
+        
         if($request->orderBy)
         {
             dd($request->orderBy);
         }
-        return $this->setContent('customer.index', compact('sellers','count')); 
+        return $this->setContent('customer.index', compact('sellers','count','productsWithDiscount')); 
     }
 
     /*public function filterSellers($value)

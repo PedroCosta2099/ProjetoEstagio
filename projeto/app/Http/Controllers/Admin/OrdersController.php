@@ -95,7 +95,7 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
         $operators = User::orderBy('code', 'asc')
                 ->pluck('name', 'id')
                 ->toArray();
-        
+        $allStatus = Status::orderBy('sort','asc')->pluck('name','id')->toArray();
         $action = 'Editar Pedido';
 
         $formOptions = array('route' => array('admin.orders.update', $order->id), 'method' => 'PUT', 'class' => 'form-orders');
@@ -108,7 +108,8 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
             'status',
             'orderlines',
             'formOptions',
-            'operators'
+            'operators',
+            'allStatus'
         );
 
         return view('admin.orders.edit', $data)->render();

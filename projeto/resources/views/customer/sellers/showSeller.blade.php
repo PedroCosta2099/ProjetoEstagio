@@ -165,11 +165,12 @@
         @break;
      @endif   
         @if($product['category_id'] == $categorySeller['id'])
-     <a href="{{route('customer.products.productShow',$product['id'])}}">   <div class="col-sm-4 contSeller">
+     <a href="{{route('customer.products.productShow',$product['id'])}}">   
+         <div class="col-sm-4 contSeller">
         @if($product['filepath'])
     <img src="{{ asset($product->getCroppa(200, 200)) }}" style="border:none;float:right;height:100%" />
         @else
-    <img src="{{ asset('assets/img/default/avatar2.jpg') }}" style="border:none;float:right;height:100%"/>
+    <img src="{{ asset('assets/img/default/unavailable.png') }}" style="border:none;float:right;height:100%"/>
         @endif
             <p><h4 class="product-description txt-color" style="padding-left:10px;">{{$product['name']}}</h4><br>
             @if($product['description'] == null)

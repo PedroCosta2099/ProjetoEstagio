@@ -64,6 +64,14 @@ class SellersController extends \App\Http\Controllers\Customer\Controller {
         return view('customer.sellers.showSeller',$data);
     }
 
+    public function allSellers()
+    {
+        $sellers = Seller::orderBy('name','asc')
+                            ->get();
+        $count = count($sellers);
+        return view('customer.sellers.allSellers',compact('sellers','count'))->render();
+    }
+
     public function sellerRating(Request $request,$id)
     {
         $input = $request->all();

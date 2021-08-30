@@ -46,8 +46,10 @@ class HomeController extends \App\Http\Controllers\Controller
                               ->get()
                               ->toArray();
         $orders = Order::where('customer_id',$id)
-                        ->with('status')
+                        ->orderBy('created_at','desc')
+                        ->with('status','payments')
                         ->get();
+                      
         $count = 0;
         foreach($addresses as $address)
         {
@@ -59,19 +61,25 @@ class HomeController extends \App\Http\Controllers\Controller
         }  
         
         $orderIds = [];
+        $orderPayments = [];
         foreach($orders as $order)
         {
             if(!in_array($orders,$orderIds, true)){
                 array_push($orderIds,$order['id']);
             }
+            if(!in_array($orders,$orderPayments, true)){
+                array_push($orderPayments,$order['payment_id']);
+            }
             
-        }      
+            
+        }   
+        $payments = Payment::with('payment_status')->whereIn('id',$orderPayments)->get();
+        
         
         $orderlines = OrderLine::whereIn('order_id',$orderIds)
                                 ->with('product','seller','order')
-                                ->get();
-                                
-        return view('customer.about.info',compact('customer','addresses','orders','orderlines','count'))->render();
+                                ->get();               
+        return view('customer.about.info',compact('customer','addresses','orders','orderlines','count','payments'))->render();
     }
 
     public function editPersonalData()

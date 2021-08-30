@@ -83,6 +83,7 @@ My Enovo Eats
                                 <th>Pedido</th>
                                 <th>Data</th>
                                 <th>Estado do Pedido</th>
+                                <th>Estado do Pagamento</th>
                                 <th>Produtos</th>
                                 <th>Preço</th>
                                 <th>Seguir</th>
@@ -94,6 +95,7 @@ My Enovo Eats
         <td>{{$order['id']}}</td>
         <td class="order-date">{{$order['created_at']->format('d/m/Y')}}</td>
         <td>{{$order->status->name}}</td>
+        <td>{{$payments->where('id',$order->payment_id)->first()->payment_status->name}}</td>
         <td>    @foreach($orderlines as $orderline)
                 @if($order['id'] == $orderline->order->id)
                     {{$orderline->product->name}}<br>
