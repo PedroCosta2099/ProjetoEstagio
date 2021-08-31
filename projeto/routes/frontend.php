@@ -5,7 +5,8 @@ use Syscover\ShoppingCart\TaxRule;
 
    Route::get('/feed','HomeController@index')
         ->name('home.index');
-          
+        Route::get('/','HomeController@index')
+                ->name('home.index');
 /*=================================================================================================================
  * LOGIN & RESET PASSWORD
  =================================================================================================================*/
