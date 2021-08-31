@@ -10,62 +10,101 @@
      .cont{
     
     padding:0px !important;
+    max-width:487.66px;
     margin-top:10px;
-    margin-left:10px;
+    
+    display:inline-flex;
+    flex-wrap:wrap;
+    justify-content: center;
     background:white;
     box-shadow: 1px 3px 13px 0px #524e4e70;
     
 }
-.cont2{
-    
-    
-    padding:0px !important;
-    
-    margin-right:6px;
-    background:white;
-    box-shadow: 1px 3px 13px 0px #524e4e70;
-    
-}
-.container
+@media screen and (min-width:1320px)
 {
-    margin:0px !important;
+    .cont{
+        min-width:510px;
+    }
+    .text-size{
+        font-size:24px !important;
+        
+    }
+        
+    
 }
+@media screen and (max-width:1319px)
+{
+    .cont{
+        min-width:447.33px;
+        
+    }
+
+}
+@media screen and (max-width:478px)
+{
+    .cont{
+        min-width:calc(100% - 20px);
+    }
+}
+@media screen and (max-width:360px)
+{
+    .cont{
+        min-width:320px;
+    }
+}
+@media screen and (max-width:320px)
+{
+    .cont{
+        min-width:calc(100% - 20px);
+    }
+    .size{
+        max-width:290px;
+    }
+    h3{
+        width:280px;
+    }
+    
+    
+}
+@media screen and (min-width:280px)
+{
+    .cont{
+        width:280px;
+    }
+    
+    .text-size{
+        font-size:20px;
+    }
+    .size{
+        max-width:250px !important;
+    }
+}
+
+.cont2 {
+  --gap: 10px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  margin: calc(-1 * var(--gap)) 0 0 calc(-1 * var(--gap));
+  width: calc(100% + var(--gap));
+}
+
+.cont2 > * {
+  margin: var(--gap) 0 0 var(--gap);
+}
+
 </style>
 @stop
 @section('content')
- @if(Auth::user()->isAdmin())   
-     <div class="row ">
-        <div class="col-sm-12">
+ @if(Auth::user()->isAdmin())  
             
-<div class="row">
-    <div class="col-sm-4 cont">
-        <h3 class="text-center">
-            Vendas por Restaurante
-            <hr style="height:1px;background-color:gray">
-            <canvas id="orders_seller_chart"></canvas>
-        </h3>
-    </div>
-    <div class="col-sm-4 cont">
-        <h3 class="text-center">
-            Clientes com mais Pedidos
-            <hr style="height:1px;background-color:gray">
-            <canvas id="orders_customers_chart"></canvas>
-        </h3>
-    </div>
-    <div class="col-sm-4 cont">
-        <h3 class="text-center">
-            Produtos mais Vendidos
-            <hr style="height:1px;background-color:gray">
-            <canvas id="products_chart"></canvas>
-        </h3>
-    </div>
-    <div class="col-sm-4 cont" style="margin-right:10px;">
-    <h3 class="text-center">
+<div class="row cont2">
+    
+<div class="col-sm-4 cont">
+                <h3 class="text-center text-size">
     Pedidos Recentes Ativos
-    <hr style="height:1px;background-color:gray;margin-bottom:1px !important">
+    <hr class="size" style="height:1px;background-color:gray;margin-bottom:1px !important">
     </h3>
-        <div class="row">
-            <div class="col-sm-12">
             <div class="table-responsive">
                     <table id="datatable" class="table" style="margin-bottom:1px !important">
                         <thead>
@@ -99,15 +138,21 @@
                     </table>
                 </div>
             </div>
-            </div>
-        </div>
-        <div class="col-sm-4 cont" style="margin-right:10px;margin-top:10px">
-    <h3 class="text-center">
-    Pagamentos Recentes
-    <hr style="height:1px;background-color:gray;margin-bottom:1px !important">
+    <!---->
+    
+    <div class="col-sm-4 cont" >
+        
+    <h3 class="text-center text-size">
+    Pagamentos Pendentes
+
+    
+    <hr class="size"  style="height:1px;background-color:gray;margin-bottom:1px !important">
+    <br>    @if(count($paymentsWithPendingStatus) == 0)
+<p>Sem Pagamentos Pendentes</p>
+            @endif
     </h3>
-        <div class="row">
-            <div class="col-sm-12">
+    
+    @if(count($paymentsWithPendingStatus) > 0)
             <div class="table-responsive">
                     <table id="datatable" class="table" style="margin-bottom:1px !important">
                         <thead>
@@ -135,24 +180,37 @@
         <td><a href="{{ route('admin.payments.payed', $paymentWithOrder['id']) }}" class="btn  btn-sm btn-default">
         Pago
     </a></td>
-                        </tbody>
+                        
                         @endif
        @endforeach
-                    </table>
-                </div>
+                </tbody>
+                </table>
             </div>
-            </div>
-        </div>
-        
-</div>
-</div>
-    
-    
-
-</div>
-            
-        </div>
+ 
+    @endif           </div>
+<!----><div class="col-sm-3 cont">
+<h3 class="text-center text-size">
+            Vendas por Restaurante
+            <hr class="size"  style="height:1px;background-color:gray">
+            <canvas id="orders_seller_chart"></canvas>
+        </h3>
     </div>
+    <!----><div class="col-sm-3 cont">
+        <h3 class="text-center text-size">
+            Clientes com mais Pedidos
+            <hr class="size" style="height:1px;background-color:gray">
+            <canvas id="orders_customers_chart"></canvas>
+        </h3>
+    </div>
+    <!----><div class="col-sm-3 cont" >
+        <h3 class="text-center text-size">
+            Produtos mais Vendidos
+            <hr class="size"  style="height:1px;background-color:gray">
+            <canvas id="products_chart"></canvas>
+        </h3>       
+    </div>
+    <!---->       
+</div>
     @endif
 @stop
 

@@ -34,7 +34,8 @@ class HomeController extends \App\Http\Controllers\Admin\Controller
         
         $orders = Order::orderBy('id','asc')->get();
         $ordersWithStatus = Order::with('status')->orderBy('id','asc')->get();
-        $paymentsWithOrders = Payment::limit(6)->orderBy('created_at','desc')->with('order','payment_status')->orderBy('id','asc')->get()->toArray();
+        $paymentsWithOrders = Payment::limit(6)->orderBy('created_at','asc')->with('order','payment_status')->orderBy('id','asc')->get()->toArray();
+        $paymentsWithPendingStatus = Payment::where('payment_status_id',2)->get()->toArray();
         
         $customers = Customer::orderBy('id','asc')->get();
         $sellers = Seller::orderBy('id','asc')->get();
@@ -214,6 +215,7 @@ class HomeController extends \App\Http\Controllers\Admin\Controller
         $data = compact(
             'paymentsWithOrders',
             'ordersWithStatus',
+            'paymentsWithPendingStatus',
             'countOrdersSeller_labels',
             'countOrdersSeller_data',
             'countOrdersSeller_colours',
