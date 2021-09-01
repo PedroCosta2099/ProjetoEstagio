@@ -1,0 +1,420 @@
+[2021-09-01 09:36:12] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:36:58] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:37:12] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:38:06] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:38:51] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:39:16] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:39:27] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:42:17] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:43:00] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:44:23] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:45:16] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:45:17] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:45:30] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:47:39] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:47:55] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:47:58] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:49:23] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:51:34] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:52:21] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:53:03] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:54:29] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:55:18] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:58:26] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:59:09] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 09:59:16] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:24:51] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:24:59] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:25:02] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:25:26] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:25:43] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:25:44] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:25:53] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:25:54] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:25:59] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:26:00] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:26:02] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:26:03] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:26:14] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:26:15] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:26:25] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:26:32] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:26:33] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:26:40] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:26:50] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:26:51] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:27:14] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:27:15] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:27:26] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:27:38] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:27:39] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:29:51] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:29:52] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:30:33] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:30:48] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:31:16] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:31:17] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:32:33] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:32:34] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:33:03] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  
+[2021-09-01 10:42:30] local.WARNING: Symfony\Component\HttpKernel\Exception\NotFoundHttpException in [GET] https://projeto.test/assets/customer/auth/css/bootstrap.min.css.map:999999
+Method: GET
+File: /home/vagrant/Projetos/ProjetoEstagio/projeto/vendor/laravel/framework/src/Illuminate/Routing/RouteCollection.php
+Line: 161
+User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36
+IP: 192.168.10.1
+  

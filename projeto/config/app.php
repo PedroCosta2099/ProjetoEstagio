@@ -267,6 +267,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        
        
         
 
@@ -376,6 +377,7 @@ return [
         'PdfMerger'             => LynX39\LaraPdfMerger\Facades\PdfMerger::class,
         'Client'                => Webklex\IMAP\Facades\Client::class,
         'DotenvEditor'          => Brotzka\DotenvEditor\DotenvEditorFacade::class,
+        
 
         /**
          * Carriers

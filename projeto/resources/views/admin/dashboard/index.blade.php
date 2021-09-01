@@ -117,23 +117,22 @@
                                 <th>Envio</th>
                             </tr>
                         </thead>
-                     @foreach($paymentsWithOrders as $paymentWithOrder)  
+                     @foreach($ordersStatusPayments as $orderStatusPayment)  
                         <tbody>
-                    
-                        
-        <td>{{$paymentWithOrder['order']['id']}}</td>
-        <td class="order-date">{{date('d/m/Y',strtotime($paymentWithOrder['order']['created_at']))}}</td>
-        @foreach($ordersWithStatus as $order)
-        @if($order->id == $paymentWithOrder['order']['id'])
-        <td>
-            {{$order->status->name}}
-        </td>
+                            @if($orderStatusPayment['status']['name'] != "ENTREGUE" )
+        <td>{{$orderStatusPayment['id']}}</td>
+        <td class="order-date">{{date('d/m/Y',strtotime($orderStatusPayment['created_at']))}}</td>
+            <td>{{$orderStatusPayment['status']['name']}}
+            </td>
+            @foreach($paymentsWithOrders as $paymentWithOrder)
+            @if($paymentWithOrder['order']['id'] == $orderStatusPayment['id'])
+        <td>{{$paymentWithOrder['payment_status']['name']}}</td>
         @endif
         @endforeach
-        <td>{{$paymentWithOrder['payment_status']['name']}}</td>
         <td>€ {{number_format($paymentWithOrder['order']['total_price'],2,',','.')}}</td>      
         <td>€ {{number_format($paymentWithOrder['order']['delivery_fee'],2,',','.')}}</td>
                         </tbody>
+                        @endif
        @endforeach
                     </table>
                 </div>
