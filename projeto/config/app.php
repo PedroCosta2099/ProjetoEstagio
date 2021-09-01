@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_TITLE', 'Plataforma Logística - Demonstração'),
+    'name' => env('APP_TITLE', 'ENOVO EATS'),
 
     /*
     |--------------------------------------------------------------------------
@@ -242,6 +242,7 @@ return [
 
     'providers' => [
 
+        
         /*
          * Laravel Framework Service Providers
          */
@@ -305,9 +306,9 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+       
         Syscover\ShoppingCart\ShoppingCartServiceProvider::class,
-        
+        'Servit\Mpdf\ServiceProvider',
 
        
 
@@ -377,7 +378,7 @@ return [
         'PdfMerger'             => LynX39\LaraPdfMerger\Facades\PdfMerger::class,
         'Client'                => Webklex\IMAP\Facades\Client::class,
         'DotenvEditor'          => Brotzka\DotenvEditor\DotenvEditorFacade::class,
-        
+        'PDF'                   => 'Servit\Mpdf\Facades\Pdf',
 
         /**
          * Carriers

@@ -87,6 +87,7 @@ My Enovo Eats
                                 <th>Produtos</th>
                                 <th>Preço</th>
                                 <th>Seguir</th>
+                                <th>Fatura</th>
                             </tr>
                         </thead>
                         @foreach($orders as $order)
@@ -103,6 +104,7 @@ My Enovo Eats
             @endforeach</td>
         <td>€{{number_format($order['total_price'], 2,',','.')}}</td>      
         <td><a href="{{route('customer.orderStatus',$order->id)}}">Seguir</a></td>
+        <td><a href="{{route('customer.downloadPDF',$order->id)}}">Fatura</a></td>
                         </tbody>
         @endforeach
     @endif  

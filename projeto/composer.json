@@ -25,7 +25,7 @@
         "watson/rememberable": "^2.0",
         "predis/predis": "^1.1",
         "unikent/tfilecache": "^2.0",
-        "mpdf/mpdf": "^7.0",
+        "mpdf/mpdf": "6.1.*",
         "maatwebsite/excel": "~2.1.0",
         "lynx39/lara-pdf-merger": "1.0.0",
         "econea/nusoap": "v0.9.5.3",
@@ -40,7 +40,11 @@
         "mpdf/qrcode": "^1.0",
         "doctrine/dbal": "^2.9",
         "phpseclib/phpseclib": "^2.0",
-        "syscover/shopping-cart": "~2.0"
+        "syscover/shopping-cart": "~2.0",
+        "kendu/l5-mpdf" : "dev-master",
+        "donnykurnia/l5mpdf": "^0.0.5"
+
+    
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

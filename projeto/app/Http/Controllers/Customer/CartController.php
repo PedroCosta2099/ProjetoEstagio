@@ -219,7 +219,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
             $product = Product::where('id',$orderline['product_id'])->first();
             $productCategory = Category::where('id',$product->category_id)->first();
             $seller = Seller::where('id',$productCategory->seller_id)->first();
-        
+            $orderline->product_name = $product->name;
             $orderline->seller_id = $seller->id;
             $orderline->created_at = date("Y-m-d H:i:s", time());
             $orderline->vat = number_format((float)$orderline->total_price * $IVA, 2, '.', '');

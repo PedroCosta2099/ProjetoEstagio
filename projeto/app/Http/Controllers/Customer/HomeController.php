@@ -10,9 +10,8 @@ use App\Models\Order;
 use App\Models\OrderLine;
 use App\Models\Status;
 use App\Models\Payment;
-
 use Illuminate\Http\Request;
-use Setting,Auth,Validator,Redirect,Session;
+use Setting,Auth,Validator,Redirect,Session,PDF,PdfMerger;
 
 class HomeController extends \App\Http\Controllers\Controller
 {
@@ -90,6 +89,44 @@ class HomeController extends \App\Http\Controllers\Controller
             'customer'
         );
         return view('customer.about.personalDataEdit',$data);
+    }
+
+    public function downloadPDF($id)
+    {
+        $orderlines = OrderLine::with('order','product')->where('order_id',$id)->get()->toArray();
+        
+        $order = Order::with('customers')->where('id',$id)->first();
+        $customer = Customer::where('id',$order['customers']['id'])->first();
+        $addresses = $customer->addresses()->get()->toArray();
+        foreach($addresses as $address)
+        {
+            if($address['actual_billing_address'] == 1)
+            {
+                $billingAddress = $address;
+            }
+            if($address['actual_shipment_address'] == 1)
+            {
+                $shipmentAddress = $address;
+            }
+        }
+        if($shipmentAddress == null)
+        {
+            $shipmentAddress = $billingAddress;
+        }
+        
+        /*$pdf->WriteHTML('<h1>1</h1>');
+        $pdf->WriteHTML('<table><thead><tr><th>id</th></tr></thead><tbody><td>'.$order['id'].'</td></tbody></table>');
+        */
+        $data = compact(
+            'order',
+            'orderlines',
+            'billingAddress',
+            'shipmentAddress'
+        );
+        $pdf = PDF::loadView('customer.pdf',$data);
+        
+        return $pdf->download();
+        
     }
 
     public function savePersonalData(Request $request)

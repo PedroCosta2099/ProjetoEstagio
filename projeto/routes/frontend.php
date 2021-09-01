@@ -69,6 +69,8 @@ Route::group(array('middleware' => 'auth','namespace' => 'Customer'), function()
                 ->name('customer.test');
         Route::get('/orderStatus/{id}','HomeController@orderStatus')
                 ->name('customer.orderStatus');
+        Route::get('/download/{id}','HomeController@downloadPDF')
+                ->name('customer.downloadPDF');
         Route::get('/edit','HomeController@editPersonalData')
                         ->name('customer.editPersonalData');
         Route::post('/savePersonalData','HomeController@savePersonalData')

@@ -91,5 +91,10 @@ class Order extends BaseModel implements Sortable
         return $this->belongsTo('App\Models\OrderLine');
     }
 
+    public function customers()
+    {
+        return $this->belongsTo('App\Models\Customer','customer_id');
+    }
+
     
 }
