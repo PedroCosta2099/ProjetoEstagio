@@ -14,6 +14,7 @@ use App\Models\Customer;
 use App\Models\Category;
 use App\Models\SubCategory;
 use App\Models\OrderLine;
+use App\Models\Order;
 use App\Models\Status;
 use App\Models\Seller;
 use App\Models\Payment;
@@ -68,7 +69,10 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
                  Session::put('seller',$seller->id);
                  
                  CartProvider::instance()->add(new Item($product['id'],$product['name'],$quantity,$product['actual_price'],0,true,[],['image' => $product['filepath']]));
-                 return Redirect::back()->with('success','Item adicionado com sucesso');
+                 $subtotal =  CartProvider::instance()->subtotal;
+                    $returnHTML = view('customer.products.productShow',compact('product','subtotal'))->render();
+                    return response()->json(array('success' => 'Produto adicionado com sucesso', 'html'=>$returnHTML,'subtotal'=>$subtotal)); 
+    
             }
             elseif($rememberSeller != $seller->id)
             {
@@ -78,8 +82,10 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
             else
             {
                 CartProvider::instance()->add(new Item($product['id'],$product['name'],$quantity,$product['actual_price'],0,true,[],['image' => $product['filepath']]));
+                $subtotal =  CartProvider::instance()->subtotal;
+                $returnHTML = view('customer.products.productShow',compact('product','subtotal'))->render();
+                return response()->json(array('success' => 'Produto adicionado com sucesso', 'html'=>$returnHTML,'subtotal'=>$subtotal));
                 
-                return Redirect::back()->with('success','Item adicionado com sucesso');
             }
             
     }
@@ -141,7 +147,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         if(CartProvider::instance()->getQuantity() == 0)
         {
             Session::forget('seller');
-            return Redirect::route('customer.products.index')->with('error','Ainda não tem items no seu carrinho');
+            return Redirect::route('home.index')->with('error','Ainda não tem items no seu carrinho');
         }
         else{
         return Redirect::route('customer.cart.index')->with('success', 'Produto removido com sucesso.');
@@ -156,7 +162,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
     {
         CartProvider::instance()->destroy();
         Session::forget('seller');
-        return Redirect::route('customer.products.index')->with('success', 'Produtos removidos com sucesso.');
+        return Redirect::route('home.index')->with('success', 'Produtos removidos com sucesso.');
     }
 
     /**
@@ -193,26 +199,31 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         }
         $IVA = 0.23;
         $user = Auth::guard('customer')->user();
-        
         if(CartProvider::instance()->getQuantity() == 0)
         {
             return Redirect::back()->with('error','Não pode criar um pedido sem items');
         }
         else {
-        $order = $user->orders()->create([]);
+        $order = new Order();
+        //$user->orders()->create([]);
+        $order->save();
+        
         foreach(CartProvider::instance()->getCartItems() as $item){
-           $order->orderCols()->attach($item->id,[
-               'total_price' => $item->subtotal,
-               'quantity' => $item->quantity
-           ]);
+            $orderline = new Orderline();
+            $orderline->order_id = $order->id;
+            $orderline->product_id = $item->id;
+            $orderline->total_price = $item->subtotal;
+            $orderline->quantity = $item->quantity;
+            $orderline->save();
         }
         
+        $order->customer_id = Auth::guard('customer')->user()->id;
         $order->total_price = Orderline::where('order_id',$order->id)
                                         ->sum('total_price');
 
         $orderlines = Orderline::where('order_id',$order->id)
                                     ->get();
-                                    
+                                   
         $orderlineStatus = Status::where('name','like','PENDENTE')
                                     ->first();
         foreach($orderlines as $orderline){
@@ -225,6 +236,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
             $orderline->vat = number_format((float)$orderline->total_price * $IVA, 2, '.', '');
             $orderline->status_id = $orderlineStatus['id'];
             $orderline->save();
+            $order->seller_id = $seller->id;
         }
         
         $status = Status::where('name','like','PENDENTE')
@@ -234,10 +246,8 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         $order->vat = number_format((float)$order->total_price * $IVA, 2, '.', '');
         
         
-        
         $paymentMethod = Session::get('paymentMethodAux');
-        
-        
+
         $payment = new Payment();
         $paymentType = PaymentType::where('id',$paymentMethod)->first()->name;
         
@@ -295,6 +305,7 @@ class CartController extends \App\Http\Controllers\Customer\Controller {
         $order->billing_address = $billingAddress[0]['id'];
         $order->shipment_address = $shipmentAddress[0]['id'];
         $order->delivery_fee = $seller->delivery_fee;
+
         $orderTotalWithDeliveryFee = $order->total_price + $seller->delivery_fee;
         if(array_key_exists('comments',$input))
         {

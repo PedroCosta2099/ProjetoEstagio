@@ -8,12 +8,17 @@
 </div>
 <div class="modal-body">
     <div class="row row-5">
-        <div class="col-sm-6">
+        <div class="col-sm-4">
 
             {{ Form::label('order_id', 'Pedido') }} : {{ Form::label('', $order['id'])}}
             
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-4">
+
+            {{ Form::label('seller_id', 'Vendedor') }} : {{ Form::label('', $seller->name)}}
+            
+        </div>
+        <div class="col-sm-4">
             <div class="form-group is-required">
                 {{ Form::label('status_id', 'Estado') }}
                 {{ Form::select('status_id',$allStatus, $order['status_id'], ['class' => 'form-control select2','id' => 'status_id']) }}

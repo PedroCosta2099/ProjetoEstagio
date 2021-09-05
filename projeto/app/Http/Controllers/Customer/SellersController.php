@@ -64,10 +64,53 @@ class SellersController extends \App\Http\Controllers\Customer\Controller {
         return view('customer.sellers.showSeller',$data);
     }
 
-    public function allSellers()
+    public function allSellers(Request $request)
     {
-        $sellers = Seller::orderBy('name','asc')
+        $input = $request->all();
+        
+       
+        if($input['filter'] == 0 || !array_key_exists('filter',$input))
+        { 
+            $sellers = Seller::orderBy('name','asc')
                             ->get();
+            $count = count($sellers);
+            if($input['filter'] == 0 && array_key_exists('filter',$input))
+            {
+            $returnHTML = view('customer.sellers.allSellers',compact('sellers','count'))->render();
+            return response()->json(array('success' => true, 'html'=>$returnHTML));
+            }
+            else
+            {
+                return view('customer.sellers.allSellers',compact('sellers','count'))->render();
+            }
+
+        }
+        if($input['filter'] == 1)
+        {
+            $sellers = Seller::orderBy('rating','desc')
+                            ->get();
+            $count = count($sellers);
+            $returnHTML = view('customer.sellers.allSellers',compact('sellers','count'))->render();
+            return response()->json(array('success' => true, 'html'=>$returnHTML));
+        }
+        if($input['filter'] == 2)
+        {
+            $sellers = Seller::orderBy('minimum_delivery_time','asc')
+                            ->get();
+            $count = count($sellers);
+            $returnHTML = view('customer.sellers.allSellers',compact('sellers','count'))->render();
+            return response()->json(array('success' => true, 'html'=>$returnHTML));
+        }
+        if($input['filter'] == 3)
+        {
+            $sellers = Seller::orderBy('delivery_fee','asc')
+                            ->get();
+            $count = count($sellers);
+            $returnHTML = view('customer.sellers.allSellers',compact('sellers','count'))->render();
+            return response()->json(array('success' => true, 'html'=>$returnHTML));
+        }
+     
+        
         $count = count($sellers);
         return view('customer.sellers.allSellers',compact('sellers','count'))->render();
     }

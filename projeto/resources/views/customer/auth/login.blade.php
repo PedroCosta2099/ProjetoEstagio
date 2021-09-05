@@ -62,7 +62,7 @@
                     <div style="margin-bottom: 30px"></div>
                     <div class="container-login100-form-btn">
                         <div class="wrap-login100-form-btn">
-                            <div class="login100-form-bgbtn"></div>
+                            <div class="login100-form-bgbtn" style="background:#0B3354 !important"></div>
                             <button class="login100-form-btn">
                                 A Iniciar Sessão...
                             </button>

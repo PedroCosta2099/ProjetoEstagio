@@ -76,6 +76,7 @@ class LoginController extends \App\Http\Controllers\Admin\Controller
     protected function credentials(Request $request)
     {
         $login = $request->input('email');
+        
         $field = filter_var($login, FILTER_VALIDATE_EMAIL) ? 'email' : 'code';
         $request->merge([$field => $login]);
 

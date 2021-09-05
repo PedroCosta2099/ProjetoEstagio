@@ -61,7 +61,8 @@ Enovo Eats
 }
 
 </style>
-@stop<form method="post" action="{{route('home.index')}}">
+@stop
+<form method="post" action="{{route('home.index')}}">
 <div class="row row-5">
     <div class="col-sm-12" style="width:100%;">
     <div class="col-sm-12">

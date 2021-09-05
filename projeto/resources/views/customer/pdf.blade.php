@@ -117,11 +117,11 @@
   </tr>
   <tr>
     <th style="border:none">Portes</th>
-    <td style="border:none"> €{{number_format($order['tdelivery_fee'],2,',','.')}}</td>
+    <td style="border:none"> €{{number_format($order['delivery_fee'],2,',','.')}}</td>
   </tr>
   <tr>
     <th style="border:none">Total</th>
-    <td style="border-top:1px dashed grey;border-left:none;border-bottom:none"> €{{number_format($order['tdelivery_fee']+$order['total_price'],2,',','.')}}</td>
+    <td style="border-top:1px dashed grey;border-left:none;border-bottom:none"> €{{number_format($order['delivery_fee']+$order['total_price'],2,',','.')}}</td>
   </tr>
 </table>
 </footer>

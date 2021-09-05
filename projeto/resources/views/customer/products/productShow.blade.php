@@ -25,8 +25,8 @@
                         @else
                         <img class="center-block unique-product-img" src="{{ asset('assets/img/default/unavailable.png') }}" id="{{$product['filename']}}"/>
                         @endif
-
                     </div>
+                    <div id="message"></div>
                     <div class="col-sm-4 col-sm-offset-1" style="position:relative;height:100%;display:flex;align-items:center;justify-content:center;" >
                         <div class="p-4">
                             
@@ -47,7 +47,7 @@
                                     <br>
                                 <input  id="quantity" style="width:100px" class="form-control" type="number" min="1" value="1" autocomplete="off">
                                 <!--<a type="button" class="btn btn-default" href="{{route('customer.products.index')}}">Voltar</a>-->
-                                <button onclick="save();" type="button" class="btn btn-primary m-l-5">Adicionar ao Carrinho <i class="fas fa-shopping-cart ml-1"></i></button>
+                                <button id="add" type="button" class="btn btn-primary m-l-5">Adicionar ao Carrinho <i class="fas fa-shopping-cart ml-1"></i></button>
                                 </form>
                         </div>
                     
@@ -59,18 +59,26 @@
 @stop
 @section('scripts')
 <script>
-    
-</script>
-<script>
-    function save(){
 
-        var id = {{$product['id'] }};    
+    $('#add').click(function(){
+        var id = {{ $product['id']  }};
         var quantity = document.getElementById('quantity').value;
-            var xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {};
-            xhr.open('GET', '/cart/insert/'+id+'/'+quantity);
-            xhr.send();
-            
-    }
-</script>       
+        $.ajax({
+            type:"get",
+            url:"/cart/insert/"+id+'/'+quantity,
+            data:{
+                add:1
+            },
+            success:function(data){
+                
+                document.getElementById('subtotal').innerHTML = data.subtotal;
+                return $("body").html(data.html);
+            },
+            error:function(){
+
+            }
+        });
+    });
+</script>
+    
 @stop       

@@ -54,8 +54,10 @@ class ProductsController extends \App\Http\Controllers\Customer\Controller {
         $seller = Seller::where('id',$productCategory->seller_id)->first();
         $sellerCategories = Category::where('seller_id',$seller->id)->pluck('id')->toArray();
         $sellerProducts = Product::whereIn('category_id',$sellerCategories)->pluck('name','id')->toArray();
-        
         $subtotal = CartProvider::instance()->subtotal;
-        return view('customer.products.productShow',compact('product','subtotal'))->render();
+        
+            return view('customer.products.productShow',compact('product','subtotal'))->render();
+
+       
     }
 }

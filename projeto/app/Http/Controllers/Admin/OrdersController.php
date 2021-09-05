@@ -13,6 +13,7 @@ use App\Models\Product;
 use App\Models\Orderline;
 use App\Models\Payment;
 use App\Models\Status;
+use App\Models\Seller;
 
 
 
@@ -91,7 +92,8 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
         $status = Status::where('id',$order->status_id)
                             ->first()
                             ->toArray(); 
-    
+        $seller = Seller::where('id',$order->seller_id)->first();
+       
         $operators = User::orderBy('code', 'asc')
                 ->pluck('name', 'id')
                 ->toArray();
@@ -109,7 +111,8 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
             'orderlines',
             'formOptions',
             'operators',
-            'allStatus'
+            'allStatus',
+            'seller'
         );
 
         return view('admin.orders.edit', $data)->render();

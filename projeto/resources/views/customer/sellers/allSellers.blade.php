@@ -61,14 +61,20 @@ Enovo Eats
 }
 
 </style>
-@stop<form method="post" action="{{route('home.index')}}">
+@stop
+@section('content')
 <div class="row row-5">
     <div class="col-sm-12" style="width:100%;">
     <div class="col-sm-12">
         <div class="col-sm-9">
             <h1 class="txt-color">Restaurantes</h1>
         </div>
+        <div class="col-sm-3" style="align-items:center">
+            {{Form::label('filter','Ordenar por:')}}
+            {{Form::select('filter',['0'=>'Nome','1'=>'Classificação','2'=>'Tempo de Entrega','3'=>'Taxa de Entrega'],null,array('class'=>'form-control'))}}
+        </div>
     </div>
+
     @foreach($sellers as $seller)
     @if(!Auth::guard('customer')->check() || $count > 0)
     
@@ -128,7 +134,6 @@ Enovo Eats
     </div>
 </div>
 
-</form>
 @stop
 @section('scripts')
 <script type="text/javascript">
@@ -145,6 +150,33 @@ Enovo Eats
            success:function()
            {    
                 
+           },
+           error:function()
+           {
+                
+           }   
+        });
+    
+});
+
+
+
+</script>
+
+<script>$('#filter').change(function(){
+    var filter = $('#filter').val();
+ 
+    $.ajax({
+           type:"get",
+           url:"{{route('customer.allSellers')}}",
+           data: {
+               
+                    filter:filter,
+                    
+                },
+           success:function(data)
+           {    
+                return $("body").html(data.html);
            },
            error:function()
            {

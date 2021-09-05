@@ -120,5 +120,5 @@ Route::group(array('middleware' => 'auth','namespace' => 'Customer'), function()
         ->name('customer.seller');
  Route::post('/sellerRating/{id}','Customer\SellersController@sellerRating')
         ->name('customer.sellerRating');
-Route::get('/show/sellers','Customer\SellersController@allSellers')
+Route::get('/show/sellers/','Customer\SellersController@allSellers')
         ->name('customer.allSellers');

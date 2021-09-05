@@ -96,16 +96,24 @@
 </style>
 @stop
 @section('content')
- @if(Auth::user()->isAdmin())  
+   
             
 <div class="row cont2">
     
 <div class="col-sm-4 cont">
-                <h3 class="text-center text-size">
+            <div class="table-responsive">              
+        @if(count($countOrdersStatusPayments) == 0)
+    <h3 class="text-center text-size">
+    Pedidos Recentes Ativos
+    <hr class="size" style="height:1px;background-color:gray;margin-bottom:1px !important">
+    <p>Sem Pedidos Recentes Ativos</p>
+    </h3>
+    @else
+    <h3 class="text-center text-size">
     Pedidos Recentes Ativos
     <hr class="size" style="height:1px;background-color:gray;margin-bottom:1px !important">
     </h3>
-            <div class="table-responsive">
+    @endif
                     <table id="datatable" class="table" style="margin-bottom:1px !important">
                         <thead>
                             <tr>
@@ -120,13 +128,18 @@
                      @foreach($ordersStatusPayments as $orderStatusPayment)  
                         <tbody>
                             @if($orderStatusPayment['status']['name'] != "ENTREGUE" )
-        <td>{{$orderStatusPayment['id']}}</td>
+                            <td><a href="{{ route('admin.orders.edit',$orderStatusPayment['id']) }}" data-toggle="modal" data-target="#modal-remote">
+                            {{$orderStatusPayment['id']}}
+</a>
+</td>
         <td class="order-date">{{date('d/m/Y',strtotime($orderStatusPayment['created_at']))}}</td>
-            <td>{{$orderStatusPayment['status']['name']}}
+            <td>
+            <span class="label label"  style="background-color:{{$orderStatusPayment['status']['status_color']}};">{{$orderStatusPayment['status']['name']}} </span>
             </td>
             @foreach($paymentsWithOrders as $paymentWithOrder)
             @if($paymentWithOrder['order']['id'] == $orderStatusPayment['id'])
-        <td>{{$paymentWithOrder['payment_status']['name']}}</td>
+        <td>
+        <span class="label label"  style="background-color:{{$paymentWithOrder['payment_status']['status_color']}};">{{$paymentWithOrder['payment_status']['name']}} </span></td>
         @endif
         @endforeach
         <td>€ {{number_format($paymentWithOrder['order']['total_price'],2,',','.')}}</td>      
@@ -140,43 +153,60 @@
     <!---->
     
     <div class="col-sm-4 cont" >
-        
+     
+    
+    @if(count($paymentsWithPendingStatus) > 0)
+    <div class="table-responsive">
+         @if(count($paymentsWithPendingStatus) == 0)  
     <h3 class="text-center text-size">
     Pagamentos Pendentes
 
-    
     <hr class="size"  style="height:1px;background-color:gray;margin-bottom:1px !important">
-    <br>    @if(count($paymentsWithPendingStatus) == 0)
+       
 <p>Sem Pagamentos Pendentes</p>
-            @endif
+
     </h3>
-    
-    @if(count($paymentsWithPendingStatus) > 0)
-            <div class="table-responsive">
-                    <table id="datatable" class="table" style="margin-bottom:1px !important">
+    @else
+    <h3 class="text-center text-size">
+    Pagamentos Pendentes
+
+    <hr class="size"  style="height:1px;background-color:gray;margin-bottom:1px !important">
+</h3>
+    @endif
+                    <table id="datatable" class="table" style="margin-bottom:1px !important;">
                         <thead>
                             <tr>
                                 <th class="w-1">Pedido</th>
                                 <th class="w-1">Data</th>
-                                <th>Estado do Pedido</th>
+                                <th>Valor</th>
                                 <th class="w-1">Estado do Pagamento</th>
+                                <th class="text-center w-1">Método de Pagamento</th>
                                 <th>Pagar <i class="fa fa-info-circle" data-toggle="tooltip" title="Marcar como Pago"></i><th>
                             </tr>
                         </thead>
-                     @foreach($paymentsWithOrders as $paymentWithOrder)  
+                     @foreach($paymentsWithPendingStatus as $paymentWithOrder)  
                      @if($paymentWithOrder['payment_status']['name'] == "PENDENTE")
                         <tbody>
-        <td>{{$paymentWithOrder['order']['id']}}</td>
+        <td><a href="{{ route('admin.orders.edit', $paymentWithOrder['order']['id']) }}" data-toggle="modal" data-target="#modal-remote">
+        {{$paymentWithOrder['order']['id']}}
+</a>
+</td>
         <td class="order-date">{{date('d/m/Y',strtotime($paymentWithOrder['order']['created_at']))}}</td>
         @foreach($ordersWithStatus as $order)
         @if($order->id == $paymentWithOrder['order']['id'])
         <td>
-            {{$order->status->name}}
+        €{{number_format($order->total_price + $order->delivery_fee,2,',','.')}}
         </td>
         @endif
         @endforeach
-        <td>{{$paymentWithOrder['payment_status']['name']}}</td>
-        <td><a href="{{ route('admin.payments.payed', $paymentWithOrder['id']) }}" class="btn  btn-sm btn-default">
+        <td><span class="label label"  style="background-color:{{$paymentWithOrder['payment_status']['status_color']}};">{{$paymentWithOrder['payment_status']['name']}} </span></td>
+        <td class="text-center">@if($paymentWithOrder['payment_type']['filepath'] )
+        <img src="{{ asset($paymentWithOrder['payment_type']->getCroppa(20, 20)) }}" title="{{$paymentWithOrder['payment_type']['name']}}" style="border:none" class="w-20px"/>
+            @else
+            {{$paymentWithOrder['payment_type']['name']}}
+            @endif
+        </td>
+        <td><a href="{{ route('admin.payments.payed', $paymentWithOrder['id']) }}" class="btn  btn-sm">
         Pago
     </a></td>
                         
@@ -187,6 +217,7 @@
             </div>
  
     @endif           </div>
+    @if(Auth::user()->isAdmin())
 <!----><div class="col-sm-3 cont">
 <h3 class="text-center text-size">
             Vendas por Restaurante
@@ -210,7 +241,16 @@
     </div>
     <!---->       
 </div>
-    @endif
+@else
+<div class="col-sm-6 cont">
+        <h3 class="text-center text-size">
+            Pedidos por mês
+            <hr class="size"  style="height:1px;background-color:gray">
+        </h3>       
+        <canvas id="orders_chart" style="padding-left:10px;padding-right:10px;"></canvas>
+    </div>
+@endif
+
 @stop
 
 @section('scripts')
@@ -271,6 +311,46 @@
                 }]
             }
         });
+    </script>
+    @else
+    <script>
+        var ctx2 = document.getElementById('orders_chart');
+        
+        let months=["Janeiro","Fevereiro","Março","Abril","Maio","Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+        let currentMonth=new Date().getMonth();
+        
+        var orders_chart = new Chart(ctx2,{
+            type:'line',
+            options: {
+                elements:{
+                    line:{
+                        tension:0
+                    }
+                },
+    scales: {
+      y: {
+      
+        min: 0,
+        ticks: {
+          // forces step size to be 50 units
+          stepSize: 1
+        }
+      }
+    }
+  },
+     
+            data:{
+                labels: months.slice(currentMonth-5,currentMonth+1),
+                datasets:[{
+                    label:"Pedidos por mês",
+                    data:{!! json_encode($ordersMonthData) !!},
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    
+                }]
+            }
+        });
+        console.log(currentMonth,months.slice(currentMonth-5,currentMonth+1));
     </script>
     @endif
 @stop

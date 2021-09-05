@@ -34,22 +34,29 @@ class HomeController extends \App\Http\Controllers\Admin\Controller
         
         $orders = Order::orderBy('id','asc')->get();
         $ordersWithStatus = Order::with('status')->orderBy('id','asc')->get();
-        $paymentsWithOrders = Payment::limit(6)->orderBy('created_at','desc')->with('order','payment_status')->orderBy('id','asc')->get()->toArray();
+        $paymentsWithOrders = Payment::limit(6)->orderBy('created_at','desc')->with('order','payment_status','payment_type')->orderBy('id','asc')->get()->toArray();
+   
         $ordersStatusPayments = Order::limit(6)->with('status','payments')->orderBy('created_at','desc')->get()->toArray();
+        $countOrdersStatusPayments = Order::with('status','payments')->where('status_id','!=',2)->orderBy('created_at','desc')->get()->toArray();
         
-        $paymentsWithPendingStatus = Payment::where('payment_status_id',2)->get()->toArray();
+        $paymentsWithPendingStatus = Payment::where('payment_status_id',2)->with('order','payment_status','payment_type')->limit(6)->orderBy('created_at','desc')->get();
         
         $customers = Customer::orderBy('id','asc')->get();
         $sellers = Seller::orderBy('id','asc')->get();
         $orderlines = OrderLine::orderBy('id','asc')->get();
+        /**
+         * System Admin Statistics
+         */
         if(Auth::user()->isAdmin())
         {
+            
             /**
              * Count orders per customer
              */
             $customerOrders = [];
         foreach($customers as $customer)
         {
+            
             $count = count($orders->where('customer_id',$customer->id)->where('created_at','>',Date::now()->subDays(30)));
             
             array_push($customerOrders,['customer'=>[$customer->name],'count'=>$count]);
@@ -102,7 +109,7 @@ class HomeController extends \App\Http\Controllers\Admin\Controller
         }
 
         $topCustomerOrders_colours = ['#229954','#ffcc00','#000066','#af0000','#D35400','#AF7AC5'];
-
+       
         /**
          * Order count per seller
          */
@@ -214,11 +221,65 @@ class HomeController extends \App\Http\Controllers\Admin\Controller
        
         $orderlinesGroupByProduct_colours = ['#229954','#ffcc00','#000066','#af0000','#D35400','#AF7AC5'];
         }
+        else
+        {
+
+        
+         /**
+         * Seller Admin Statistics
+         */
+        $ordersSeller = OrderLine::with('order')
+                                    ->where('created_at','>',Date::now()->subDays(30))
+                                    ->where('seller_id',Auth::user()->seller_id)
+                                    ->groupBy('order_id')
+                                    ->get();
+        $orderIds = [];
+        foreach($ordersSeller as $order)
+        {
+            array_push($orderIds,$order->order_id);
+        }
+        
+        $ordersStatusPayments = Order::limit(6)->whereIn('id',$orderIds)->with('status','payments')->orderBy('created_at','desc')->get()->toArray();
+        $orderPaymentsIds = [];
+        foreach($ordersStatusPayments as $order)
+        {
+            array_push($orderPaymentsIds,$order['payment_id']);
+        }
+        
+        $paymentsWithOrders = Payment::limit(6)->whereIn('id',$orderPaymentsIds)->orderBy('created_at','desc')->with('order','payment_status','payment_type')->orderBy('id','asc')->get()->toArray();
+        $ordersWithStatus = Order::with('status')->whereIn('id',$orderIds)->orderBy('id','asc')->get();
+        $paymentsWithPendingStatus = Payment::where('payment_status_id',2)->whereIn('id',$orderPaymentsIds)->with('order','payment_status','payment_type')->limit(6)->orderBy('created_at','desc')->get();
+        $months = [];
+        for($i = 5; $i>=0;$i--)
+        {
+            $month = Date::today()->startOfMonth()->subMonth($i);
+            $number = Date::parse($month)->month;
+            array_push($months,$number); 
+        }
+     
+        $ordersMonth = [];
+        foreach($months as $month)
+        {
+            
+                $orders = Order::whereMonth('created_at',$month)->where('seller_id',Auth::user()->seller_id)->get();
+                $count = count($orders);
+                
+                array_push($ordersMonth,['month'=>$month,'count'=>$count]);
+        }
+        $ordersMonthData = [];
+        foreach($ordersMonth as $key)
+        {
+           array_push($ordersMonthData,$key['count']);
+        }
+       
+        
+    }
         $data = compact(
             'paymentsWithOrders',
             'ordersWithStatus',
             'paymentsWithPendingStatus',
             'ordersStatusPayments',
+            'countOrdersStatusPayments',
             'countOrdersSeller_labels',
             'countOrdersSeller_data',
             'countOrdersSeller_colours',
@@ -227,7 +288,8 @@ class HomeController extends \App\Http\Controllers\Admin\Controller
             'topCustomerOrders_colours',
             'orderlinesGroupByProduct_labels',
             'orderlinesGroupByProduct_data',
-            'orderlinesGroupByProduct_colours'
+            'orderlinesGroupByProduct_colours',
+            'ordersMonthData'
         );
         
                 return $this->setContent('admin.dashboard.index',$data);
