@@ -2,7 +2,6 @@
 namespace App\Exceptions;
 
 use App\Models\LogViewer;
-use App\Models\Notification;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Database\QueryException;
@@ -93,12 +92,6 @@ class Handler extends ExceptionHandler
             }
         }
 
-        $notification = Notification::firstOrNew(['source_class' => 'ErrorLog']);
-        $notification->message   = 'Erro na plataforma ' . env('APP_SOURCE');
-        $notification->recipient = 1;
-        $notification->alert_at  = date('Y-m-d H:i:s');
-        $notification->read      = false;
-        $notification->save();
         //$notification->setPusher(BroadcastPusher::getChannel(1));
 
         if(Setting::get('error_log_email_active')) {

@@ -137,7 +137,7 @@ class OrderLinesController extends \App\Http\Controllers\Admin\Controller {
                 ->pluck('name', 'id')
                 ->toArray();   
         
-        $action = 'Editar Estado';
+        $action = 'Editar Linha do Pedido';
         
         $formOptions = array('route' => array('admin.orderlines.update', $orderline->id), 'method' => 'PUT', 'class' => 'form-orderlines');
 

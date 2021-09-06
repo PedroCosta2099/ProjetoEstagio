@@ -148,7 +148,9 @@
                         @endif
        @endforeach
                     </table>
+                    <div class="text-center"><a class="btn btn-default btn-sm" style="margin:10px auto;" href="{{route('admin.orders.index')}}">Ver Mais</a></div>
                 </div>
+                
             </div>
     <!---->
     
@@ -214,6 +216,7 @@
        @endforeach
                 </tbody>
                 </table>
+                <div class="text-center"><a class="btn btn-default btn-sm" style="margin:10px auto;" href="{{route('admin.payments.index')}}">Ver Mais</a></div>
             </div>
  
     @endif           </div>

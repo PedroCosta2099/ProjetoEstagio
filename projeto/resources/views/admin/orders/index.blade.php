@@ -14,6 +14,7 @@
 
 @section('content')
 <div class="row">
+   
     <div class="col-xs-12">
         <div class="box no-border">
             <div class="box-body">
@@ -34,6 +35,7 @@
                                 <th>Pedido</th>
                                 <th>Preço</th>
                                 <th>IVA</th>
+                                @if(Auth::user()->isAdmin())<th>Cliente</th>@endif
                                 <th>Data</th>
                                 <th class="w-1">Estado</th>
                                 <th class="w-65px">Ações</th>
@@ -65,6 +67,9 @@
                 {data: 'id', name: 'id',orderable:false,searchable:true},
                 {data: 'total_price', name:'price', orderable: false, searchable: false},
                 {data: 'vat', name:'vat', orderable: false, searchable: false},
+                @if(Auth::user()->isAdmin())
+                {data: 'customer_id',name:'customer_id'},
+                @endif
                 {data: 'created_at',name:'created_at',orderable:true,searchable:true},
                 {data: 'status_id', name:'status_id'},
                 {data: 'actions', name: 'actions', orderable: false, searchable: false},

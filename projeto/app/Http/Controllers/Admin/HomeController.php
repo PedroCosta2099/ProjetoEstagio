@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Models\Orderline;
+use App\Models\OrderLine;
 use App\Models\Customer;
 use App\Models\User;
 use App\Models\Order;
@@ -228,27 +228,29 @@ class HomeController extends \App\Http\Controllers\Admin\Controller
          /**
          * Seller Admin Statistics
          */
-        $ordersSeller = OrderLine::with('order')
-                                    ->where('created_at','>',Date::now()->subDays(30))
+        $ordersSeller = Order::where('created_at','>',Date::now()->subDays(30))
                                     ->where('seller_id',Auth::user()->seller_id)
-                                    ->groupBy('order_id')
+                                    ->groupBy('id')
                                     ->get();
         $orderIds = [];
         foreach($ordersSeller as $order)
         {
-            array_push($orderIds,$order->order_id);
+            array_push($orderIds,$order->id);
         }
         
         $ordersStatusPayments = Order::limit(6)->whereIn('id',$orderIds)->with('status','payments')->orderBy('created_at','desc')->get()->toArray();
+        $ordersStatusPayments2 = Order::whereIn('id',$orderIds)->with('status','payments')->orderBy('created_at','desc')->get()->toArray();
         $orderPaymentsIds = [];
-        foreach($ordersStatusPayments as $order)
+        foreach($ordersStatusPayments2 as $order)
         {
             array_push($orderPaymentsIds,$order['payment_id']);
         }
         
-        $paymentsWithOrders = Payment::limit(6)->whereIn('id',$orderPaymentsIds)->orderBy('created_at','desc')->with('order','payment_status','payment_type')->orderBy('id','asc')->get()->toArray();
+        $paymentsWithOrders = Payment::whereIn('id',$orderPaymentsIds)->orderBy('created_at','desc')->with('order','payment_status','payment_type')->orderBy('id','asc')->get()->toArray();
+        
         $ordersWithStatus = Order::with('status')->whereIn('id',$orderIds)->orderBy('id','asc')->get();
         $paymentsWithPendingStatus = Payment::where('payment_status_id',2)->whereIn('id',$orderPaymentsIds)->with('order','payment_status','payment_type')->limit(6)->orderBy('created_at','desc')->get();
+       
         $months = [];
         for($i = 5; $i>=0;$i--)
         {

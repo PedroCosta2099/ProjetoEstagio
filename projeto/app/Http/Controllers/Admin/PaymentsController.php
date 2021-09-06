@@ -188,7 +188,10 @@ class PaymentsController extends \App\Http\Controllers\Admin\Controller {
         $paymentStatus = PaymentStatus::where('id',$input['payment_status_id'])
                                         ->first();
                                         
-        
+        if($paymentStatus['name'] != "PAGO")
+        {
+            $payment->paid_at = null;
+        }
         if($paymentStatus['name'] == "PAGO")
         {
             $order->status_id = $status->id;

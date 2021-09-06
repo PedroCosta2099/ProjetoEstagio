@@ -99,30 +99,16 @@
 @endif
 </div>
 <div class="row row-5" style="padding-left:35px;padding-right:35px;padding-top:10px">
-<!--<div style="background-color:yellow;height:140px;width;1000px">
 
-    
-    @foreach($categoriesIdsSeller as $categoryIdSeller)
-    @foreach($categoriesSeller as $categorySeller)
-    @if($categorySeller['id'] == $categoryIdSeller)
-    Categoria:{{$categorySeller['name']}}
-       @foreach($productsSeller as $product)
-            @if($product['category_id'] == $categorySeller['id'])
-                {{$product['name']}}
-            @endif
-       @endforeach
-    @endif
-    @endforeach
-    @endforeach</div>-->
     <div class="col-sm-12 about-box box-details">
     <div class="col-sm-6"><h1 class="txt-color" style="float:left;margin-right:10px">{{$seller['name']}}</h1><div class="circleSeller" ><b>{{number_format($seller->rating,1)}}</b></div>
     <h5 class="txt-color"><i class="fas fa-hand-holding-usd"></i> €{{number_format($seller['delivery_fee'],2,',','.')}} &nbsp <i class="fas fa-clock"></i> {{$seller['minimum_delivery_time']}} min - {{$seller['maximum_delivery_time']}} min</h5>
     <h5 class="txt-color">{{$seller['address']}} {{$seller['postal_code']}} {{$seller['city']}}</h5>
 @if(Auth::guard('customer')->check())
 
-@if($customerToSellerRating != null)<h5 class="txt-color">A sua avaliação: {{number_format($customerToSellerRating->rating,1)}}</h5></div>
-@else
-<div class="cont">
+@if($customerToSellerRating != null)<h5 class="txt-color">A sua avaliação: {{number_format($customerToSellerRating->rating,1)}}</h5><button class="btn btn-edit" id="edit" onclick="changeVisibilityRating();" style="margin-bottom:10px">Editar</button></div>
+<div class="cont" id="rating-cont" style="display:none;">
+    
 <div class="info-title text-center" style="padding-left:0px">A sua avaliação</div>
     <div class="stars"><h2>Faça já a sua avaliação</h2>
         {{Form::open(array('route'=>['customer.sellerRating',$seller['id']]))}}
@@ -141,10 +127,33 @@
         {{Form::close()}}
     </div>
 </div>
-
-@endif
-@endif
 </div>
+@else
+<button class="btn btn-edit" id="edit" onclick="changeVisibilityRating();">Faça já a sua avaliação</button>
+<div class="cont" id="rating-cont" style="display:none;">
+    
+<div class="info-title text-center" style="padding-left:0px">A sua avaliação</div>
+    <div class="stars"><h2>Faça já a sua avaliação</h2>
+        {{Form::open(array('route'=>['customer.sellerRating',$seller['id']]))}}
+        {{Form::radio('star_1',1,null)}}
+        {{Form::label('star_1',1,['class' => 'star'])}}
+        {{Form::radio('star_2',2)}}
+        {{Form::label('star_2',2,['class' => 'star'])}}
+        {{Form::radio('star_3',3)}}
+        {{Form::label('star_3',3,['class' => 'star'])}}
+        {{Form::radio('star_4',4)}}
+        {{Form::label('star_4',4,['class' => 'star'])}}
+        {{Form::radio('star_5',5)}}
+        {{Form::label('star_5',5,['class' => 'star'])}}
+       
+        <button type="submit" class="btn btn-edit" style="margin-right:0px">Guardar</button>
+        {{Form::close()}}
+    </div>
+</div>
+</div>
+@endif
+@endif
+
  @if(count($productsSeller) != 0)
         @foreach($categoriesIdsSeller as $categoryIdSeller)
     @foreach($categoriesSeller as $categorySeller)
@@ -207,6 +216,11 @@
     function changeVisibility()
     {
         document.getElementById('rated').style.display = "inline-block";
+        document.getElementById('edit').style.display = "none";
+    }
+    function changeVisibilityRating()
+    {
+        document.getElementById('rating-cont').style.display = "inline-block";
         document.getElementById('edit').style.display = "none";
     }
 </script>

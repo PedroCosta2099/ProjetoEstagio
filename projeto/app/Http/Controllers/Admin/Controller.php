@@ -10,7 +10,6 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Support\Facades\Mail;
 use App\Models\BroadcastPusher;
-use App\Models\Notification;
 use Carbon\Carbon;
 
 class Controller extends BaseController

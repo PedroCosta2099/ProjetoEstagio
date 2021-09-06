@@ -201,11 +201,17 @@ class AddressesController extends \App\Http\Controllers\Admin\Controller {
             $address->billing_address = 1;
             $address->save();
         }
-        if($address->billing_address == 0)
+        if($address->billing_address == 0 && $address->actual_billing_address == 1)
         {
             $address->actual_billing_address = 0;
             $address->save();
             return Redirect::back()->with('error',Lang::get('validation.billing_address'));
+        }
+        if($address->actual_shipment_address == 1 && $address->shipment_address == 0 && $address->billing_address == 0)
+        {
+            $address->actual_shipment_address = 0;
+            $address->save();
+            return Redirect::back()->with('error',Lang::get('validation.shipment_address'));
         }
         if ($address->validate($input)) {
             $address->fill($input);

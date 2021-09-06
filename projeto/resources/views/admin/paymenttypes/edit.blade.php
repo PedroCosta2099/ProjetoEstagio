@@ -18,7 +18,7 @@
             {{ Form::label('image', 'Símbolo', array('class' => 'form-label')) }}<br/>
             <div class="fileinput {{ $type->filepath ? 'fileinput-exists' : 'fileinput-new'}}" data-provides="fileinput">
                 <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
-                    <img src="{{ asset('assets/img/default/avatar.png') }}">
+                    <img src="{{ asset('assets/img/default/avatar2.jpg') }}">
                 </div>
                 <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 150px; max-height: 150px;">
                     @if($type->filepath)

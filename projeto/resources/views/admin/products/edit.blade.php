@@ -40,7 +40,7 @@
         <div class="col-sm-12">
             <div class="form-group is-required">
                 {{ Form::label('description', 'Descrição') }}
-                {{ Form::text('description', null, ['class' => 'form-control','required','maxlength' => '200']) }}
+                {{ Form::text('description', $product->description, ['class' => 'form-control','required','maxlength' => '200']) }}
             </div>
         </div>
         <div class="col-sm-6">

@@ -15,10 +15,14 @@
             </div>
         </div>
     
-        <div class="col-sm-12">
-            <div class="form-group is-required">
-                {{ Form::label('status_color', 'Cor') }}
-                {{ Form::text('status_color', null, ['class' => 'form-control uppercase', 'required']) }}
+        <div class="col-sm-2">
+        <div class="form-group is-required">
+                {{ Form::label('pickr', 'Cor Atribuida') }}
+                {{ Form::text('pickr', null, ['class' => 'form-control pickr']) }}
+            </div>
+            <div class="form-group is-required hidden">
+                {{ Form::label('status_color', 'Cor Atribuida') }}
+                {{ Form::text('status_color', null, ['class' => 'form-control ', 'required']) }}
             </div>
         </div>
     </div>
@@ -36,7 +40,34 @@
     
 </script>
 </script>@section('javascript')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/js/bootstrap-colorpicker.min.js"></script>
-    <script>
-        $('#status_color').colorpicker();
-    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.5.3/js/bootstrap-colorpicker.min.js">
+</script>
+<script>
+    const inputElement = document.querySelector('.pickr');
+    const pickr = new Pickr({
+        el: inputElement,
+        useAsButton: true,
+        theme: 'classic',
+
+        components: {
+            // Main components
+            preview: true,
+            opacity: true,
+            hue: true,
+
+            // Input / output Options
+            interaction: {
+                input: true,
+                clear: true,
+                save: true
+            }
+        }
+    }).on('init', pickr => {
+        //inputElement.value = pickr.getSelectedColor().toRGBA().toString(0)
+        inputElement.style.backgroundColor = pickr.getSelectedColor().toRGBA().toString(0)
+    }).on('save', color => {
+        inputElement.style.backgroundColor = pickr.getSelectedColor().toRGBA().toString(0)
+        $('#status_color').val(color.toRGBA().toString(0))
+        pickr.hide()
+    });
+</script>

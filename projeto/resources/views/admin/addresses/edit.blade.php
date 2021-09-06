@@ -36,7 +36,7 @@
         @if($countCustomersAddress <= 0)
         <div class="col-sm-12">
             <div class="form-group is-required">
-                {{ Form::label('customer', 'Cliente (NIF - Nome)') }}
+                {{ Form::label('customer', 'Cliente (Nome - NIF)') }}
                 {{ Form::select('customer', $customers,null, ['class' => 'form-control select2', 'required']) }}
             </div>
         </div>

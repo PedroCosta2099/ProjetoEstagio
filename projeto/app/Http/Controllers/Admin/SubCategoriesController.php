@@ -116,9 +116,7 @@ class SubCategoriesController extends \App\Http\Controllers\Admin\Controller {
     public function edit($id) {
 
         $subcategory = SubCategory::findOrfail($id);
-        $seller = Seller::orderBy('name','asc')
-                        ->pluck('name','id')
-                        ->toArray();
+        
         if(Auth::user()->isAdmin())
         {
             $categories = Category::orderBy('name','asc')

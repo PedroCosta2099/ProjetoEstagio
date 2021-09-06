@@ -16,9 +16,9 @@
             @endif
             
             {!! Html::sidebarTreeOpen('orders', 'Pedidos', 'fas fa-fw fa-clipboard-list') !!}
-            {!! Html::sidebarOption('status', 'Estados dos Pedidos', route('admin.status.index'),'admin') !!}
+            {!! Html::sidebarOption('orders', 'Pedidos', route('admin.orders.index'),'admin_sellers') !!} 
             {!! Html::sidebarOption('orderlines', 'Linhas de Pedidos', route('admin.orderlines.index')) !!}
-            {!! Html::sidebarOption('orders', 'Pedidos', route('admin.orders.index'),'admin') !!} 
+            {!! Html::sidebarOption('status', 'Estados dos Pedidos', route('admin.status.index'),'admin') !!}
             {!! Html::sidebarTreeClose() !!}
             @if(Auth::user()->ability(Config::get('permissions.role.admin'),'admin_sellers'))
             {!! Html::sidebarTreeOpen('products', 'Produtos', 'fas fa-fw fa-clipboard-list','admin_sellers') !!}

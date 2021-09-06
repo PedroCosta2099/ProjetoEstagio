@@ -12,20 +12,21 @@ Estado do Pedido
 <p><h1>{{$orderStatus['name']}}</h1></p>
 </div>
 @if($failed == 0)
+<div class="progress" style="height:30px !important">
+  <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:{{($orderStatus['sort']/count($status))*100}}%;"></div>
+</div>
 <div class="text-center" style="padding-bottom:10px;"><button class="btn btn-edit" id="show" onclick="data()">Ver dados de Pagamento</button></div>
 
 <div class="cont text-center" id="cont" style="padding-top:0px !important;visibility:hidden">
   <div class="info-title">Dados de Pagamento</div>
   <div style="padding-top:10px;">
-  <p>{{$payment->entity}}</p>
-  <p>{{$payment->reference}}</p>
-  <p>€{{number_format($payment->amount,2,',','.')}}</p>
+  <p>Entidade: {{$payment->entity}}</p>
+  <p>Referência: {{$payment->reference}}</p>
+  <p>Montante: €{{number_format($payment->amount,2,',','.')}}</p>
 </div>
 </div>
 
-<div class="progress" style="height:30px !important">
-  <div class="progress-bar bg-warning progress-bar-striped" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:{{($orderStatus['sort']/count($status))*100}}%"></div>
-</div>
+
 @else
 <div class="progress" style="height:30px !important">
   <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" style="width:100%;background-color:red"></div>

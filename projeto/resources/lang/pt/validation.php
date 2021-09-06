@@ -79,6 +79,7 @@ return [
     'unique'               => 'O valor indicado para o campo :attribute já se encontra registado.',
     'url'                  => 'O formato do URL indicado para o campo :attribute é inválido.',
     'billing_address'      => 'Defina como Morada de Faturação e tente novamente!',
+    'shipment_address'      => 'Defina como Morada de Faturação ou Morada de Envio e tente novamente!',
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines

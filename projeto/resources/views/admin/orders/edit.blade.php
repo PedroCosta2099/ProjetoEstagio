@@ -13,10 +13,10 @@
             {{ Form::label('order_id', 'Pedido') }} : {{ Form::label('', $order['id'])}}
             
         </div>
-        <div class="col-sm-4">
+        @if(Auth::user()->isAdmin())<div class="col-sm-4">
 
             {{ Form::label('seller_id', 'Vendedor') }} : {{ Form::label('', $seller->name)}}
-            
+        @endif   
         </div>
         <div class="col-sm-4">
             <div class="form-group is-required">

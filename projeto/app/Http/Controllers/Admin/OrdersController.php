@@ -14,6 +14,8 @@ use App\Models\Orderline;
 use App\Models\Payment;
 use App\Models\Status;
 use App\Models\Seller;
+use App\Models\Customer;
+
 
 
 
@@ -43,19 +45,13 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
      */
     public function index() {
 
-        if(Auth::user()->isAdmin())
-        {
+        
+
             $status = Status::orderBy('name','asc')
                             ->pluck('name','id')
                             ->toArray();
-        }
-        else
-        {
-        $status = Status::where('seller_id',Auth::user()->seller_id)
-                        ->orderBy('name','asc')
-                        ->pluck('name','id')
-                        ->toArray();
-        }
+            
+    
         return $this->setContent('admin.orders.index',compact('status'));
     }
 
@@ -282,16 +278,8 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
             $data = Order::select();
         }
         else{
-        $orderIds = [];
-        $orderlines = OrderLine::where('seller_id',Auth::user()->seller_id)->get()->toArray();
-        foreach($orderlines as $orderline)
-        {
-            if(!in_array($orderline['order_id'], $orderIds, true)){
-                array_push($orderIds,$orderline['order_id']);
-            }
-            
-        }
-        $data = Order::whereIn('id',$orderIds);
+        
+        $data = Order::with('customers')->where('seller_id',Auth::user()->seller_id);
         }
 
          //filter status
@@ -311,6 +299,9 @@ class OrdersController extends \App\Http\Controllers\Admin\Controller {
                 })
                 ->edit_column('status_id', function($row) {
                     return view('admin.orders.datatables.status', compact('row'))->render();
+                })
+                ->edit_column('customer_id', function($row) {
+                    return view('admin.orders.datatables.customer', compact('row'))->render();
                 })
                 
                 ->edit_column('created_at', function($row) {

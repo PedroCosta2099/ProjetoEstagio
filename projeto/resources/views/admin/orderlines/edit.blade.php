@@ -41,7 +41,7 @@
         </div>
         <div class="col-sm-6">
             <div class="form-group is-required">
-                {{ Form::label('status_id', 'Estados') }}
+                {{ Form::label('status_id', 'Estado') }}
                 {{ Form::select('status_id',$status, null, ['class' => 'form-control select2','id' => 'status_id']) }}
             </div>
         </div> 
