@@ -40,8 +40,9 @@ class HomeController extends \App\Http\Controllers\Controller
     
         $this->sellerAlgorithm();
         $sellers = $this->sellers;
+        
         $count = $this->countAtualSellerIds;
-        $productsWithDiscount = Product::where('discount','>',0)->take(9)->get();
+        $productsWithDiscount = Product::orderBy('discount','desc')->orderBy('price')->where('discount','>',0)->take(9)->get();
         
         if($request->orderBy)
         {
@@ -50,29 +51,6 @@ class HomeController extends \App\Http\Controllers\Controller
         return $this->setContent('customer.index', compact('sellers','count','productsWithDiscount')); 
     }
 
-    /*public function filterSellers($value)
-    {
-        
-        if($value == 1)
-        {
-            $count = 0;
-            $sellers = Seller::orderBy('rating','desc')->take(8)->get();
-        }
-        if($value == 2)
-        {
-            $count = 0;
-            $sellers = Seller::orderBy('minimum_delivery_time','asc')->take(8)->get();
-        }
-        if($value == 3)
-        {
-            $count = 0;
-            $sellers = Seller::orderBy('delivery_fee','asc')->take(8)->get();
-        }
-
-        $data = compact('sellers','count');
-        return view('customer.index',$data);
-
-    }*/
 
     public function sellerAlgorithm()
     {

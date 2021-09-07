@@ -61,6 +61,7 @@ class SellersController extends \App\Http\Controllers\Customer\Controller {
             'countCustomerToSellerRating',
             'productsWithCategories'
         );
+        
         return view('customer.sellers.showSeller',$data);
     }
 

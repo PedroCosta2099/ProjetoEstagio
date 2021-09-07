@@ -20,6 +20,15 @@
     box-shadow: 1px 3px 13px 0px #524e4e70;
     
 }
+.contEmployee{
+    
+    display:inline-flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    background:white;
+    box-shadow: 1px 3px 13px 0px #524e4e70;
+    
+}
 @media screen and (min-width:1320px)
 {
     .cont{
@@ -99,7 +108,128 @@
    
             
 <div class="row cont2">
+@if(Auth::user()->roles[0]['name'] == "seller_employee")
+<div class="col-sm-5 contEmployee">
+            <div class="table-responsive" style="width:100%">              
+        @if(count($countOrdersStatusPayments) == 0)
+    <h3 class="text-center text-size">
+    Pedidos Recentes Ativos
+    <hr class="size" style="height:1px;background-color:gray;margin-bottom:1px !important">
+    <p>Sem Pedidos Recentes Ativos</p>
+    </h3>
+    @else
+    <h3 class="text-center text-size">
+    Pedidos Recentes Ativos
+    <hr class="size" style="height:1px;background-color:gray;margin-bottom:1px !important">
+    </h3>
+    @endif
+                    <table id="datatable" class="table" style="margin-bottom:1px !important">
+                        <thead>
+                            <tr>
+                                <th>Pedido</th>
+                                <th>Data</th>
+                                <th >Estado do Pedido</th>
+                                <th>Estado do Pagamento</th>
+                                <th>Preço</th>
+                                <th>Envio</th>
+                            </tr>
+                        </thead>
+                     @foreach($ordersStatusPayments as $orderStatusPayment)  
+                        <tbody>
+                            @if($orderStatusPayment['status']['name'] != "ENTREGUE" )
+                            <td><a href="{{ route('admin.orders.edit',$orderStatusPayment['id']) }}" data-toggle="modal" data-target="#modal-remote">
+                            {{$orderStatusPayment['id']}}
+</a>
+</td>
+        <td class="order-date">{{date('d/m/Y',strtotime($orderStatusPayment['created_at']))}}</td>
+            <td>
+            <span class="label label"  style="background-color:{{$orderStatusPayment['status']['status_color']}};">{{$orderStatusPayment['status']['name']}} </span>
+            </td>
+            @foreach($paymentsWithOrders as $paymentWithOrder)
+            @if($paymentWithOrder['order']['id'] == $orderStatusPayment['id'])
+        <td>
+        <span class="label label"  style="background-color:{{$paymentWithOrder['payment_status']['status_color']}};">{{$paymentWithOrder['payment_status']['name']}} </span></td>
+        @endif
+        @endforeach
+        <td>€ {{number_format($paymentWithOrder['order']['total_price'],2,',','.')}}</td>      
+        <td>€ {{number_format($paymentWithOrder['order']['delivery_fee'],2,',','.')}}</td>
+                        </tbody>
+                        @endif
+       @endforeach
+                    </table>
+                    <div class="text-center"><a class="btn btn-default btn-sm" style="margin:10px auto;" href="{{route('admin.orders.index')}}">Ver Mais</a></div>
+                </div>
+                
+            </div>
+            <div class="col-sm-5 contEmployee" >
+     
     
+    @if(count($paymentsWithPendingStatus) > 0)
+    <div class="table-responsive">
+         @if(count($paymentsWithPendingStatus) == 0)  
+    <h3 class="text-center text-size">
+    Pagamentos Pendentes
+
+    <hr class="size"  style="height:1px;background-color:gray;margin-bottom:1px !important">
+       
+<p>Sem Pagamentos Pendentes</p>
+
+    </h3>
+    @else
+    <h3 class="text-center text-size">
+    Pagamentos Pendentes
+
+    <hr class="size"  style="height:1px;background-color:gray;margin-bottom:1px !important">
+</h3>
+    @endif
+                    <table id="datatable" class="table" style="margin-bottom:1px !important;">
+                        <thead>
+                            <tr>
+                                <th class="w-1">Pedido</th>
+                                <th class="w-1">Data</th>
+                                <th>Valor</th>
+                                <th class="w-1">Estado do Pagamento</th>
+                                <th class="text-center w-1">Método de Pagamento</th>
+                                <th>Pagar <i class="fa fa-info-circle" data-toggle="tooltip" title="Marcar como Pago"></i><th>
+                            </tr>
+                        </thead>
+                     @foreach($paymentsWithPendingStatus as $paymentWithOrder)  
+                     @if($paymentWithOrder['payment_status']['name'] == "PENDENTE")
+                        <tbody>
+        <td><a href="{{ route('admin.orders.edit', $paymentWithOrder['order']['id']) }}" data-toggle="modal" data-target="#modal-remote">
+        {{$paymentWithOrder['order']['id']}}
+</a>
+</td>
+        <td class="order-date">{{date('d/m/Y',strtotime($paymentWithOrder['order']['created_at']))}}</td>
+        @foreach($ordersWithStatus as $order)
+        @if($order->id == $paymentWithOrder['order']['id'])
+        <td>
+        €{{number_format($order->total_price + $order->delivery_fee,2,',','.')}}
+        </td>
+        @endif
+        @endforeach
+        <td><span class="label label"  style="background-color:{{$paymentWithOrder['payment_status']['status_color']}};">{{$paymentWithOrder['payment_status']['name']}} </span></td>
+        <td class="text-center">@if($paymentWithOrder['payment_type']['filepath'] )
+        <img src="{{ asset($paymentWithOrder['payment_type']->getCroppa(20, 20)) }}" title="{{$paymentWithOrder['payment_type']['name']}}" style="border:none" class="w-20px"/>
+            @else
+            {{$paymentWithOrder['payment_type']['name']}}
+            @endif
+        </td>
+        <td><a href="{{ route('admin.payments.payed', $paymentWithOrder['id']) }}" class="btn  btn-sm">
+        Pago
+    </a></td>
+                        
+                        @endif
+       @endforeach
+                </tbody>
+                </table>
+                <div class="text-center"><a class="btn btn-default btn-sm" style="margin:10px auto;" href="{{route('admin.payments.index')}}">Ver Mais</a></div>
+            </div>
+ </div>
+ @endif
+@else
+
+
 <div class="col-sm-4 cont">
             <div class="table-responsive">              
         @if(count($countOrdersStatusPayments) == 0)
@@ -219,7 +349,8 @@
                 <div class="text-center"><a class="btn btn-default btn-sm" style="margin:10px auto;" href="{{route('admin.payments.index')}}">Ver Mais</a></div>
             </div>
  
-    @endif           </div>
+    @endif           
+</div>@endif
     @if(Auth::user()->isAdmin())
 <!----><div class="col-sm-3 cont">
 <h3 class="text-center text-size">
@@ -244,7 +375,7 @@
     </div>
     <!---->       
 </div>
-@else
+@elseif(Auth::user()->roles[0]['name'] != "seller_employee")
 <div class="col-sm-6 cont">
         <h3 class="text-center text-size">
             Pedidos por mês
@@ -259,6 +390,7 @@
             <canvas id="orderlines_chart"></canvas>
         </h3>       
     </div>
+
 @endif
 
 @stop

@@ -16,7 +16,7 @@
             @endif
             
             {!! Html::sidebarTreeOpen('orders', 'Pedidos', 'fas fa-fw fa-clipboard-list') !!}
-            {!! Html::sidebarOption('orders', 'Pedidos', route('admin.orders.index'),'admin_sellers') !!} 
+            {!! Html::sidebarOption('orders', 'Pedidos', route('admin.orders.index'),'orders') !!} 
             {!! Html::sidebarOption('orderlines', 'Linhas de Pedidos', route('admin.orderlines.index')) !!}
             {!! Html::sidebarOption('status', 'Estados dos Pedidos', route('admin.status.index'),'admin') !!}
             {!! Html::sidebarTreeClose() !!}
