@@ -14,7 +14,11 @@
                 {{ Form::text('name', null, ['class' => 'form-control uppercase', 'required']) }}
             </div>
         </div>
-        <div class="col-sm-4 col-lg-3">
+           <div class="col-sm-4">
+                                {{ Form::label('active', 'Estado') }}
+                                {{ Form::select('active', [0 => 'Bloqueado', 1 => 'Ativo'], $type->active ? 1 : 0, array('class' =>'form-control select2')) }}
+</div>
+        <div class="col-sm-4 col-sm-offset-3 col-lg-3">
             {{ Form::label('image', 'Símbolo', array('class' => 'form-label')) }}<br/>
             <div class="fileinput {{ $type->filepath ? 'fileinput-exists' : 'fileinput-new'}}" data-provides="fileinput">
                 <div class="fileinput-new thumbnail" style="width: 150px; height: 150px;">
@@ -37,6 +41,7 @@
                 </div>
             </div>
         </div>
+     
     </div>
 </div>
 <div class="modal-footer">

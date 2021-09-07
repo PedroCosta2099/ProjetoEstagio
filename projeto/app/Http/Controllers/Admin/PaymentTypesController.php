@@ -120,7 +120,7 @@ class PaymentTypesController extends \App\Http\Controllers\Admin\Controller {
         $input = $request->all();
 
         $type = PaymentType::findOrNew($id);
-
+        $type->active = $input['active'];
         //delete image
         if ($input['delete_photo'] && !empty($type->filepath)) {
             Croppa::delete($type->filepath);

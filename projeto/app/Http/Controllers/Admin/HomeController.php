@@ -274,6 +274,19 @@ class HomeController extends \App\Http\Controllers\Admin\Controller
            array_push($ordersMonthData,$key['count']);
         }
        
+        $orderlinesPerSeller = OrderLine::with('product')->where('seller_id',Auth::user()->seller_id)->where('created_at','>',Date::now()->subDays(30))->groupBy('product_id')->select('product_id',DB::raw('count(order_lines.quantity) as total'))->orderBy('total','desc')->get()->toArray();
+        $orderlinesPerSeller_labels = [];
+        $orderlinesPerSeller_data = [];
+        foreach($orderlinesPerSeller as $orderline)
+        {
+            array_push($orderlinesPerSeller_labels ,$orderline['product']['name']);
+        }
+        foreach($orderlinesPerSeller as $orderline)
+        {
+            array_push($orderlinesPerSeller_data,$orderline['total']);
+        }
+        
+        $orderlinesPerSeller_colours = ['#229954','#ffcc00','#000066','#af0000','#D35400','#AF7AC5'];
         
     }
         $data = compact(
@@ -291,7 +304,10 @@ class HomeController extends \App\Http\Controllers\Admin\Controller
             'orderlinesGroupByProduct_labels',
             'orderlinesGroupByProduct_data',
             'orderlinesGroupByProduct_colours',
-            'ordersMonthData'
+            'ordersMonthData',
+            'orderlinesPerSeller_labels',
+            'orderlinesPerSeller_data',
+            'orderlinesPerSeller_colours'
         );
         
                 return $this->setContent('admin.dashboard.index',$data);

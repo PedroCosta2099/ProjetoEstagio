@@ -7,23 +7,38 @@
     <h4 class="modal-title">{{ $action }}</h4>
 </div>
 <div class="modal-body">
+    @if(Auth::user()->isAdmin()) 
     <div class="row row-5">
         <div class="col-sm-4">
 
             {{ Form::label('order_id', 'Pedido') }} : {{ Form::label('', $order['id'])}}
             
         </div>
-        @if(Auth::user()->isAdmin())<div class="col-sm-4">
+       <div class="col-sm-4">
 
             {{ Form::label('seller_id', 'Vendedor') }} : {{ Form::label('', $seller->name)}}
-        @endif   
+          
         </div>
         <div class="col-sm-4">
             <div class="form-group is-required">
                 {{ Form::label('status_id', 'Estado') }}
                 {{ Form::select('status_id',$allStatus, $order['status_id'], ['class' => 'form-control select2','id' => 'status_id']) }}
             </div>
-        </div> 
+        </div>
+        @else
+        <div class="row row-5">
+        <div class="col-sm-6">
+
+            {{ Form::label('order_id', 'Pedido') }} : {{ Form::label('', $order['id'])}}
+            
+        </div>
+        <div class="col-sm-6">
+            <div class="form-group is-required">
+                {{ Form::label('status_id', 'Estado') }}
+                {{ Form::select('status_id',$allStatus, $order['status_id'], ['class' => 'form-control select2','id' => 'status_id']) }}
+            </div>
+        </div>
+        @endif  
     @foreach($orderlines as $orderline)
        <div class="col-sm-3">
             <div class="form-group is-required">

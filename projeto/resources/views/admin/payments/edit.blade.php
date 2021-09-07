@@ -17,13 +17,13 @@
         <div class="col-sm-6">
             <div class="form-group">
                 {{ Form::label('entity', 'Entidade') }}
-                {{ Form::number('entity',null, ['class' => 'form-control uppercase']) }}
+                {{ Form::number('entity',null, ['class' => 'form-control uppercase','readonly']) }}
             </div>
         </div>
         <div class="col-sm-6">
             <div class="form-group">
                 {{ Form::label('reference', 'Referência') }}
-                {{ Form::number('reference',null, ['class' => 'form-control uppercase']) }}
+                {{ Form::number('reference',null, ['class' => 'form-control uppercase','readonly']) }}
             </div>
         </div>
         <div class="col-sm-6">
@@ -44,6 +44,7 @@
                 {{ Form::select('payment_status_id',$payment_status, null, ['class' => 'form-control select2']) }}
             </div>
         </div>
+        
     </div>
 </div>
 <div class="modal-footer">

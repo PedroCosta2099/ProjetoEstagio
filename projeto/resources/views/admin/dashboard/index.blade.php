@@ -252,6 +252,13 @@
         </h3>       
         <canvas id="orders_chart" style="padding-left:10px;padding-right:10px;"></canvas>
     </div>
+    <div class="col-sm-3 cont" >
+        <h3 class="text-center text-size">
+            Produtos mais Vendidos 
+            <hr class="size"  style="height:1px;background-color:gray">
+            <canvas id="orderlines_chart"></canvas>
+        </h3>       
+    </div>
 @endif
 
 @stop
@@ -354,6 +361,25 @@
             }
         });
         console.log(currentMonth,months.slice(currentMonth-5,currentMonth+1));
+    </script>
+    <script>
+        var ctx = document.getElementById('orderlines_chart').getContext('2d');
+        
+        var estado_chart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: {!!json_encode($orderlinesPerSeller_labels)!!},
+                datasets: [{
+                    label: 'Vendas nos últimos 30 dias',
+                    backgroundColor: {!! json_encode($orderlinesPerSeller_colours)!!} ,
+                    data:  {!! json_encode($orderlinesPerSeller_data)!!} ,
+                    borderWidth: 1,
+                    hoverOffset: 4,
+                    responsive:true
+
+                }]
+            }
+        });
     </script>
     @endif
 @stop

@@ -55,13 +55,14 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-sm-4">
+                        @if(Auth::user()->isAdmin())<div class="col-sm-4">
                             @if($user->password)
                                 <a href="{{ route('admin.users.remote-login', $user->id) }}" class="btn btn-sm btn-warning pull-right"  data-method="post" data-confirm-title="Iniciar Sessão Remota" data-confirm-class="btn-success" data-confirm-label="Iniciar Sessão" data-confirm="Pretende iniciar sessão como {{ $user->display_name }}?" target="_blank">
                                     <i class="fa fa-sign-in bigger-120"></i> Iniciar Sessão
                                 </a>
                             @endif
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>

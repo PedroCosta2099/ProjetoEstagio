@@ -10,7 +10,7 @@
             <span class="sr-only">Toggle Dropdown</span>
         </button>
         <ul class="dropdown-menu pull-right">
-            <li>
+            @if(Auth::user()->isAdmin())<li>
                 <a href="{{ route('admin.users.remote-login', $row->id) }}" class="text-yellow"
                    data-method="post" data-confirm-title="Iniciar Sessão Remota" data-confirm-class="btn-success"
                    data-confirm-label="Iniciar Sessão"
@@ -18,6 +18,7 @@
                     <i class="fa fa-sign-in bigger-120"></i> Iniciar Sessão
                 </a>
             </li>
+            @endif
             <li>
                 <a href="{{ route('admin.users.destroy', $row->id) }}" data-method="delete" data-confirm="Confirma a remoção do registo selecionado?">
                     <i class="fa fa-trash bigger-120"></i> Eliminar
