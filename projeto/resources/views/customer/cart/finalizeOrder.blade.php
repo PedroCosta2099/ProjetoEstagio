@@ -28,8 +28,8 @@ Resumo
                     </table>
                     <hr style="margin-bottom:5px !important;margin-top:5px !important;"></hr>
                     <div class="pull-right" style="padding-right:8px;margin-top:0 !important">
-                    <p class="text-right totalPrice"  id="total_price" ><h4 style="margin-top:0 !important">Total: €{{number_format($order->total_price,2,',','.')}}</h4></p>
-                    <p class="text-right totalPrice"  id="total_price" ><h4 style="margin-top:0 !important">Total: €{{number_format($order->delivery_fee,2,',','.')}}</h4></p>
+                    <p class="text-right totalPrice"  id="total_price" ><h4 style="margin-top:0 !important">Total dos produtos: €{{number_format($order->total_price,2,',','.')}}</h4></p>
+                    <p class="text-right totalPrice"  id="total_price" ><h4 style="margin-top:0 !important">Taxa de Entrega: €{{number_format($order->delivery_fee,2,',','.')}}</h4></p>
                    <p class="text-right totalPrice"  id="total_price" ><h2 style="margin-top:0 !important">Total: €{{number_format($orderTotalWithDeliveryFee,2,',','.')}}</h2></p></div>
                 </div>
 </div>

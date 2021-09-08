@@ -224,6 +224,8 @@ class HomeController extends \App\Http\Controllers\Controller
         $input = $request->all();
         
         $address = Address::findOrFail($id);
+        $customer = Customer::where('id',Auth::guard('customer')->user()->id)->with('addresses')->first();
+        
         $address->address = $input['address'];
         $address->postal_code = $input['postal_code'];
         $address->city = $input['city'];
@@ -233,7 +235,24 @@ class HomeController extends \App\Http\Controllers\Controller
         }
         else
         {
+            foreach($customer->addresses as $customerAddress)
+            {
+                $customerAddress->actual_shipment_address = 0;
+            }
             $address->actual_shipment_address = 1;
+        }
+        if(!array_key_exists('actual_billing_address',$input))
+        {
+            $address->actual_billing_address = 0;
+        }
+        else
+        {
+            foreach($customer->addresses as $customerAddress)
+            {
+                $customerAddress->actual_billing_address = 0;
+            }
+            $address->billing_address = 1;
+            $address->actual_billing_address = 1;
         }
         $address->save();
         return Redirect::back()->with('success','Dados atualizados com sucesso!');
@@ -249,21 +268,30 @@ class HomeController extends \App\Http\Controllers\Controller
         $address->postal_code = $input['postal_code'];
         $address->city = $input['city'];
         $address->shipment_address = 1;
-        foreach($customer->addresses as $customerAddress)
-        {
-            if(array_key_exists('actual_shipment_address',$input))
-            {
-                $customerAddress->actual_shipment_address = 0;
-            }
-            $customerAddress->save();
-        }
         if(!array_key_exists('actual_shipment_address',$input))
         {
             $address->actual_shipment_address = 0;
         }
         else
         {
+            foreach($customer->addresses as $customerAddress)
+            {
+                $customerAddress->actual_shipment_address = 0;
+            }
             $address->actual_shipment_address = 1;
+        }
+        if(!array_key_exists('actual_billing_address',$input))
+        {
+            $address->actual_billing_address = 0;
+        }
+        else
+        {
+            foreach($customer->addresses as $customerAddress)
+            {
+                $customerAddress->actual_billing_address = 0;
+            }
+            $address->billing_address = 1;
+            $address->actual_billing_address = 1;
         }
         $address->save();
         $address->customers()->detach();

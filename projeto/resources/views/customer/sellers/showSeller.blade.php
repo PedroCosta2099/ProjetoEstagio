@@ -69,6 +69,13 @@
 
     }
 
+    .contCategories{
+        margin-top:25px;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-around;
+    }
+
     .contSeller:hover {
         transform: scale(1.1);
         z-index: 1000;
@@ -105,7 +112,7 @@
 <div class="row row-5" style="padding-left:35px;padding-right:35px;padding-top:10px">
 
     <div class="col-sm-12 about-box box-details">
-        <div class="col-sm-6">
+        <div class="col-sm-12">
             <h1 class="txt-color" style="float:left;margin-right:10px">{{$seller['name']}}</h1>
             <div class="circleSeller"><b>{{number_format($seller->rating,1)}}</b></div>
             <h5 class="txt-color"><i class="fas fa-hand-holding-usd"></i> €{{number_format($seller['delivery_fee'],2,',','.')}} &nbsp <i class="fas fa-clock"></i> {{$seller['minimum_delivery_time']}} min - {{$seller['maximum_delivery_time']}} min</h5>
@@ -163,6 +170,22 @@
 @endif
 @endif
 
+<div class="row row-5">
+<div class="col-sm-12 contCategories">
+@foreach($categoriesIdsSeller as $categoryIdSeller)
+    @foreach($categoriesSeller as $categorySeller)
+    @if($categorySeller['id'] == $categoryIdSeller)
+    @if($productsSeller->where('category_id',$categorySeller['id'])->count() != 0)
+    <a href="#{{$categorySeller['name']}}" style="text-decoration:none !important;color:#0B3354;font-size:20px;"><span>{{$categorySeller['name']}}</span></a>
+    @endif
+    @endif
+    @endforeach
+    @endforeach
+    
+</div> 
+
+</div><hr style="margin-right:30px">
+
 @if(count($productsSeller) != 0)
 @foreach($categoriesIdsSeller as $categoryIdSeller)
 @foreach($categoriesSeller as $categorySeller)
@@ -173,7 +196,7 @@
 
     <div class="col-sm-12 about-box box-details" style="background-color:transparent !important;padding-left:0px !important">
         @if($productsSeller->where('category_id',$categorySeller['id'])->count() != 0)
-        <h1 class="txt-color catName">{{$categorySeller['name']}}</h1>
+        <h1 class="txt-color catName" id="{{$categorySeller['name']}}">{{$categorySeller['name']}}</h1>
         @endif
 
         @foreach ($productsSeller as $product)
@@ -223,7 +246,9 @@
 @endif
 </div>
 </div>
+
 @stop
+
 @section('scripts')
 <script>
     function changeVisibility() {

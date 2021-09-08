@@ -33,8 +33,9 @@
                     @yield('content')
                 </section>
             </div>
+            
             @include('customer.partials.footer')
-        
+      
 
         @yield('modals')
 

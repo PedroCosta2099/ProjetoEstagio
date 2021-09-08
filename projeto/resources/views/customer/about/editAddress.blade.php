@@ -22,6 +22,10 @@
                     </div>
                 </div>
                 <div class="form-group">
+                {{ Form::label('actual_billing_address', 'Morada de Faturação Atual') }}&nbsp
+                {{ Form::checkbox('actual_billing_address',$address['actual_billing_address'],$address['actual_billing_address'], ['class' => 'form-control']) }}
+            </div>
+            <div class="form-group">
                 {{ Form::label('actual_shipment_address', 'Morada de Envio Atual') }}&nbsp
                 {{ Form::checkbox('actual_shipment_address',$address['actual_shipment_address'],$address['actual_shipment_address'], ['class' => 'form-control']) }}
             </div>
