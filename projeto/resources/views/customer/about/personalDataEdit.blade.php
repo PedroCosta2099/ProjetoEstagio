@@ -50,7 +50,9 @@ My Enovo Eats
                 </div>
                 <div class="m-t-5">
                 <button class="btn btn-edit pull-right">Guardar</button>
+                <a class="btn btn-edit pull-right" href="{{route('customer.about')}}">Voltar</a>
                 </div>
+                
         {{Form::close()}}
     </div>
     </div>

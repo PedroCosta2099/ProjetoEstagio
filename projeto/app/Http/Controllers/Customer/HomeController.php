@@ -308,8 +308,8 @@ class HomeController extends \App\Http\Controllers\Controller
         }
         else
         {
-
-            return view('customer.about.editBillingAddress',compact('address'));
+            $previousPage = Session::get('previousPage');
+            return view('customer.about.editBillingAddress',compact('address','previousPage'));
         }
         
     }
@@ -330,8 +330,8 @@ class HomeController extends \App\Http\Controllers\Controller
         }
         else
         {
-            
-            return view('customer.about.editShipmentAddress',compact('address'));
+            $previousPage = Session::get('previousPage');
+            return view('customer.about.editShipmentAddress',compact('address','previousPage'));
         }
         
     }

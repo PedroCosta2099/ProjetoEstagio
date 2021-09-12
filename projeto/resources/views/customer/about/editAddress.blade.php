@@ -32,4 +32,5 @@
                 <div class="m-t-5">
                 <button class="btn btn-edit pull-right">Guardar</button>
                 </div>
+              
         {{Form::close()}}

@@ -10,7 +10,12 @@ Morada de Envio
     <div class="col-sm-12 box-details">
         @include('customer.about.editAddress')
 
+        
+        @if($previousPage == route('customer.shipmentAddresses'))
         <a class="btn btn-edit pull-right" href="{{route('customer.shipmentAddresses')}}">Voltar</a>
+    @elseif($previousPage == route('customer.cart.payment'))
+        <a class="btn btn-edit pull-right" href="{{route('customer.cart.payment')}}">Voltar</a>
+    @endif
     </div>
     </div>
    

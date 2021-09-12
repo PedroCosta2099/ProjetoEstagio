@@ -78,7 +78,7 @@ Linhas de Pedidos
             columns: [
                 {data: 'select', name: 'select', orderable: false, searchable: false},
                 {data: 'order_id', name: 'order_id'},
-                {data: 'name', name:'name'},
+                {data: 'name', name:'name', searchable: false},
                 {data: 'total_price', name:'total_price', orderable: false, searchable: false},
                 {data: 'vat', name:'vat', orderable: false, searchable: false},
                 {data: 'quantity',name: 'quantity'},

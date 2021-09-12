@@ -73,7 +73,7 @@ class SubCategoriesController extends \App\Http\Controllers\Admin\Controller {
             $categories = Category::where('id',$subcategory->category_id)
                                 ->orderBy('name','asc')
                                 ->pluck('name','id')
-                                ->toArray();               
+                                ->toArray();             
         }
         else{
         $categories = Category::where('seller_id',Auth::user()->seller_id)
@@ -116,12 +116,15 @@ class SubCategoriesController extends \App\Http\Controllers\Admin\Controller {
     public function edit($id) {
 
         $subcategory = SubCategory::findOrfail($id);
-        
+        $seller = Seller::orderBy('name','asc')
+                        ->pluck('name','id')
+                        ->toArray();
         if(Auth::user()->isAdmin())
         {
             $categories = Category::orderBy('name','asc')
                                 ->pluck('name','id')
                                 ->toArray();
+            
         }
         else{
         $categories = Category::where('seller_id',Auth::user()->id)
@@ -130,9 +133,7 @@ class SubCategoriesController extends \App\Http\Controllers\Admin\Controller {
         }
         $action = 'Editar SubCategoria';
 
-        $seller = Seller::orderBy('name','asc')
-                        ->pluck('name','id')
-                        ->toArray();
+        
 
         $formOptions = array('route' => array('admin.subcategories.update', $subcategory->id), 'method' => 'PUT', 'class' => 'form-status');
 

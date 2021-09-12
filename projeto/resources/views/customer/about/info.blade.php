@@ -9,7 +9,10 @@ My Enovo Eats
     <div class="info-title"><span>Os meus dados pessoais</span></div>
     <div class="col-sm-12 box-details">
         
-        
+    <div class="col-sm-12">
+            <label>Número de cliente</label>
+            <h6>{{$customer->id}}</h6>
+        </div>
         <div class="col-sm-6">
             <label>Nome</label>
             <h6>{{$customer->name}}</h6>

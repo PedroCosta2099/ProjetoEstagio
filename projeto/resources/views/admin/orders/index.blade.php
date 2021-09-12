@@ -68,7 +68,7 @@
                 {data: 'total_price', name:'price', orderable: false, searchable: false},
                 {data: 'vat', name:'vat', orderable: false, searchable: false},
                 @if(Auth::user()->isAdmin())
-                {data: 'customer_id',name:'customer_id'},
+                {data: 'customer_id',name:'customer_id',searchable:true},
                 @endif
                 {data: 'created_at',name:'created_at',orderable:true,searchable:true},
                 {data: 'status_id', name:'status_id'},

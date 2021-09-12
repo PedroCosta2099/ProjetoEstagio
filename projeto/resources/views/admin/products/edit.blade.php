@@ -170,13 +170,16 @@ $('#seller_id').change(function(){
 
 $('#seller_id').change(function(){
     var cid = $(this).val();
+    
     if(cid > 0){
         $.ajax({
            type:"get",
            url:"{{url('admin/products/updateCategoryBySeller')}}/"+cid,
            success:function(res)
            {    
-            
+                $("#category_id").empty();
+                $("#subcategory_id").empty();
+                
                 if(res)
                 {
                     $.each(res,function(key,value){

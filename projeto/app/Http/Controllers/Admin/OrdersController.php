@@ -10,7 +10,7 @@ use Yajra\Datatables\Facades\Datatables;
 use App\Models\Order;
 use App\Models\User;
 use App\Models\Product;
-use App\Models\Orderline;
+use App\Models\OrderLine;
 use App\Models\Payment;
 use App\Models\Status;
 use App\Models\Seller;

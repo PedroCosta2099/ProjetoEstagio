@@ -255,7 +255,7 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
                             ->toArray();
             if(count($categories) == 0)
             {
-                $categories = ["NENHUM"];
+                $categories = [];
             }
 
             return response()->json($categories);
@@ -276,10 +276,10 @@ class ProductsController extends \App\Http\Controllers\Admin\Controller {
                             ->delete();
 
         if (!$result) {
-            return Redirect::back()->with('error', 'Ocorreu um erro ao tentar remover o estado');
+            return Redirect::back()->with('error', 'Ocorreu um erro ao tentar remover o pedido');
         }
 
-        return Redirect::route('admin.products.index')->with('success', 'Estado removido com sucesso.');
+        return Redirect::route('admin.products.index')->with('success', 'Produto removido com sucesso.');
     }
     
     /**
