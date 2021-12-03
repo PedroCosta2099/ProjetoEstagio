@@ -1,0 +1,1 @@
+<a href="{{route('admin.customers.edit',$row->customers[0]->id)}}">{{$row->customers[0]->name}}</a>

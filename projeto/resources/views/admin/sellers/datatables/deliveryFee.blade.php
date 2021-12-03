@@ -1,0 +1,1 @@
+€ {{number_format($row->delivery_fee, 2,',','.')}}
